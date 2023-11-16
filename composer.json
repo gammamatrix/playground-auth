@@ -1,0 +1,48 @@
+{
+    "name": "gammamatrix/playground-auth",
+    "description": "Playground: Provide authentication for Laravel applications using Blade for the UI.",
+    "keywords": [
+        "gammamatrix",
+        "laravel",
+        "playground",
+        "playground-auth",
+        "blade",
+        "authentication"
+    ],
+    "homepage": "https://github.com/gammamatrix/playground-auth",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jeremy Postlethwaite",
+            "email": "jeremy.postlethwaite@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "gammamatrix/playground": "dev-develop"
+    },
+    "autoload": {
+        "psr-4": {
+            "GammaMatrix\\Playground\\Auth\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\Unit\\GammaMatrix\\Playground\\Auth\\": "tests/Unit/",
+            "Tests\\Feature\\GammaMatrix\\Playground\\Auth\\": "tests/Feature/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "GammaMatrix\\Playground\\Auth\\ServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
