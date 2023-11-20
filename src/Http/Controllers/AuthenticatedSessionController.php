@@ -65,18 +65,20 @@ class AuthenticatedSessionController extends Controller
         $isAdmin = $hasRoles && $user->hasRole(['admin', 'wheel', 'root']);
         $isManager = $hasRoles && $user->hasRole(['amanager']);
 
-        // TODO DEV override - remove before merging
-        if (in_array($user->email, [
-            'root@example.com',
-            'admin@example.com',
-        ])) {
-            $isAdmin = true;
-            $isManager = false;
-        } elseif (in_array($user->email, [
-            'manager@example.com',
-        ])) {
-            $isAdmin = false;
-            $isManager = true;
+        $managers = config('playground-auth.managers');
+        if (is_array($managers)) {
+            if ($user->email && in_array($user->email, $managers) ) {
+                $isAdmin = false;
+                $isManager = true;
+            }
+        }
+
+        $admins = config('playground-auth.admins');
+        if (is_array($admins)) {
+            if ($user->email && in_array($user->email, $admins) ) {
+                $isAdmin = true;
+                $isManager = false;
+            }
         }
 
         if ($isAdmin) {
@@ -199,7 +201,6 @@ class AuthenticatedSessionController extends Controller
         $all = $request->has('all') || $request->has('everywhere');
 
         if (!empty(config('playground-auth.token.sanctum'))) {
-
             $user = $request->user();
 
             if ($user) {

@@ -18,11 +18,34 @@ return [
         'routes' => (bool) env('PLAYGROUND_AUTH_LOAD_ROUTES', true),
         'views' => (bool) env('PLAYGROUND_AUTH_LOAD_VIEWS', true),
     ],
+    'routes' => [
+        'confirm' => (bool) env('PLAYGROUND_AUTH_ROUTES_RESET', true),
+        'forgot' => (bool) env('PLAYGROUND_AUTH_ROUTES_FORGOT', true),
+        'logout' => (bool) env('PLAYGROUND_AUTH_ROUTES_LOGOUT', true),
+        'login' => (bool) env('PLAYGROUND_AUTH_ROUTES_LOGIN', true),
+        'register' => (bool) env('PLAYGROUND_AUTH_ROUTES_REGISTER', true),
+        'reset' => (bool) env('PLAYGROUND_AUTH_ROUTES_RESET', true),
+        'token' => (bool) env('PLAYGROUND_AUTH_ROUTES_TOKEN', true),
+        'verify' => (bool) env('PLAYGROUND_AUTH_ROUTES_RESET', true),
+    ],
     'sitemap' => [
         'enable' => (bool) env('PLAYGROUND_AUTH_SITEMAP_ENABLE', true),
         'guest' => (bool) env('PLAYGROUND_AUTH_SITEMAP_GUEST', true),
         'user' => (bool) env('PLAYGROUND_AUTH_SITEMAP_USER', true),
         'view' => (string) env('PLAYGROUND_AUTH_SITEMAP_VIEW', 'playground-auth::sitemap'),
+    ],
+    /**
+     * Provide an array of email addresses for admin privileges.
+     */
+    'admins' => [
+        // 'root@example.com',
+        // 'admin@example.com',
+    ],
+    /**
+     * Provide an array of email addresses for manager privileges.
+     */
+    'managers' => [
+        // 'manager@example.com',
     ],
     'privileges' => [
         'root' => [
@@ -30,6 +53,7 @@ return [
             'app:*',
             'playground:*',
             'playground-auth:*',
+
             'playground-matrix:*',
             'playground-matrix-resource:*',
 
@@ -71,7 +95,6 @@ return [
             'playground-matrix-resource:team:*',
             'playground-matrix-resource:ticket:*',
             'playground-matrix-resource:version:*',
-
         ],
         'manager' => [
             'app:view',
@@ -146,37 +169,44 @@ return [
             'playground-matrix-resource:version:view',
             'playground-matrix-resource:version:viewAny',
         ],
-        // 'guest' => [
-        //     'playground-matrix-resource:backlog:view',
-        //     'playground-matrix-resource:backlog:viewAny',
-        //     'playground-matrix-resource:board:view',
-        //     'playground-matrix-resource:board:viewAny',
-        //     'playground-matrix-resource:epic:view',
-        //     'playground-matrix-resource:epic:viewAny',
-        //     'playground-matrix-resource:flow:view',
-        //     'playground-matrix-resource:flow:viewAny',
-        //     'playground-matrix-resource:milestone:view',
-        //     'playground-matrix-resource:milestone:viewAny',
-        //     'playground-matrix-resource:note:view',
-        //     'playground-matrix-resource:note:viewAny',
-        //     'playground-matrix-resource:project:view',
-        //     'playground-matrix-resource:project:viewAny',
-        //     'playground-matrix-resource:release:view',
-        //     'playground-matrix-resource:release:viewAny',
-        //     'playground-matrix-resource:roadmap:view',
-        //     'playground-matrix-resource:roadmap:viewAny',
-        //     'playground-matrix-resource:source:view',
-        //     'playground-matrix-resource:source:viewAny',
-        //     'playground-matrix-resource:sprint:view',
-        //     'playground-matrix-resource:sprint:viewAny',
-        //     'playground-matrix-resource:tag:view',
-        //     'playground-matrix-resource:tag:viewAny',
-        //     'playground-matrix-resource:team:view',
-        //     'playground-matrix-resource:team:viewAny',
-        //     'playground-matrix-resource:ticket:view',
-        //     'playground-matrix-resource:ticket:viewAny',
-        //     'playground-matrix-resource:version:view',
-        //     'playground-matrix-resource:version:viewAny',
-        // ],
+        'guest' => [
+            'app:view',
+
+            'playground:view',
+
+            'playground-auth:logout',
+            'playground-auth:reset-password',
+
+            'playground-matrix-resource:backlog:view',
+            'playground-matrix-resource:backlog:viewAny',
+            'playground-matrix-resource:board:view',
+            'playground-matrix-resource:board:viewAny',
+            'playground-matrix-resource:epic:view',
+            'playground-matrix-resource:epic:viewAny',
+            'playground-matrix-resource:flow:view',
+            'playground-matrix-resource:flow:viewAny',
+            'playground-matrix-resource:milestone:view',
+            'playground-matrix-resource:milestone:viewAny',
+            'playground-matrix-resource:note:view',
+            'playground-matrix-resource:note:viewAny',
+            'playground-matrix-resource:project:view',
+            'playground-matrix-resource:project:viewAny',
+            'playground-matrix-resource:release:view',
+            'playground-matrix-resource:release:viewAny',
+            'playground-matrix-resource:roadmap:view',
+            'playground-matrix-resource:roadmap:viewAny',
+            'playground-matrix-resource:source:view',
+            'playground-matrix-resource:source:viewAny',
+            'playground-matrix-resource:sprint:view',
+            'playground-matrix-resource:sprint:viewAny',
+            'playground-matrix-resource:tag:view',
+            'playground-matrix-resource:tag:viewAny',
+            'playground-matrix-resource:team:view',
+            'playground-matrix-resource:team:viewAny',
+            'playground-matrix-resource:ticket:view',
+            'playground-matrix-resource:ticket:viewAny',
+            'playground-matrix-resource:version:view',
+            'playground-matrix-resource:version:viewAny',
+        ],
     ],
 ];
