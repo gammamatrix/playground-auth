@@ -1,13 +1,14 @@
 {
     "name": "gammamatrix/playground-auth",
-    "description": "Playground: Provide authentication for Laravel applications using Blade for the UI.",
+    "description": "Playground: Provide authentication for Laravel applications using Blade for the UI. Allows using Sanctum.",
     "keywords": [
+        "authentication",
+        "blade",
         "gammamatrix",
         "laravel",
         "playground",
         "playground-auth",
-        "blade",
-        "authentication"
+        "sanctum"
     ],
     "homepage": "https://github.com/gammamatrix/playground-auth",
     "license": "MIT",
