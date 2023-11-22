@@ -13,6 +13,7 @@
     ],
     "homepage": "https://github.com/gammamatrix/playground-auth",
     "license": "MIT",
+    "version": "73.0.0",
     "authors": [
         {
             "name": "Jeremy Postlethwaite",
@@ -32,10 +33,10 @@
     ],
     "require": {
         "php": "^8.1",
-        "gammamatrix/playground": "dev-feature/PG-4"
+        "gammamatrix/playground": "dev-develop|dev-master|^73.0"
     },
     "require-dev": {
-        "gammamatrix/playground-test": "dev-feature/PG-5"
+        "gammamatrix/playground-test": "dev-develop|dev-master|^73.0"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
