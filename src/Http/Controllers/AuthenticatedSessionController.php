@@ -67,7 +67,7 @@ class AuthenticatedSessionController extends Controller
 
         $managers = config('playground-auth.managers');
         if (is_array($managers)) {
-            if ($user->email && in_array($user->email, $managers) ) {
+            if ($user->email && in_array($user->email, $managers)) {
                 $isAdmin = false;
                 $isManager = true;
             }
@@ -75,7 +75,7 @@ class AuthenticatedSessionController extends Controller
 
         $admins = config('playground-auth.admins');
         if (is_array($admins)) {
-            if ($user->email && in_array($user->email, $admins) ) {
+            if ($user->email && in_array($user->email, $admins)) {
                 $isAdmin = true;
                 $isManager = false;
             }

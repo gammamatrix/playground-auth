@@ -3,14 +3,13 @@
  * GammaMatrix
  */
 
-namespace Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers;
+namespace Tests\Feature\Http\Controllers;
 
-use App\Models\User;
-use App\Providers\RouteServiceProvider;
-use GammaMatrix\Playground\Test\TestCase;
+use GammaMatrix\Playground\Test\Models\User;
+use Tests\TestCase;
 
 /**
- * \Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\AuthenticationRouteTest
+ * \Tests\Feature\Http\Controllers\AuthenticationRouteTest
  *
  */
 class AuthenticationRouteTest extends TestCase
@@ -30,11 +29,11 @@ class AuthenticationRouteTest extends TestCase
             'email' => $user->email,
             'password' => 'password',
         ]);
-
+        // $response->dump();
         $response->assertStatus(302);
 
         $this->assertAuthenticated();
-        $response->assertRedirect(RouteServiceProvider::HOME);
+        $response->assertRedirect('/');
     }
 
     public function test_users_cannot_authenticate_with_invalid_password()
@@ -126,7 +125,7 @@ class AuthenticationRouteTest extends TestCase
         $response->assertStatus(302);
 
         $this->assertAuthenticated();
-        $response->assertRedirect(RouteServiceProvider::HOME);
+        $response->assertRedirect('/');
     }
 
     public function test_login_repeat_and_hit_rate_limit()

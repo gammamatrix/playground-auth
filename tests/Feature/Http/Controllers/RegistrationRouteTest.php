@@ -4,13 +4,12 @@
  *
  */
 
-namespace Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers;
+namespace Tests\Feature\Http\Controllers;
 
-use App\Providers\RouteServiceProvider;
-use GammaMatrix\Playground\Test\TestCase;
+use Tests\TestCase;
 
 /**
- * \Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\RegistrationRouteTest
+ * \Tests\Feature\Http\Controllers\RegistrationRouteTest
  *
  */
 class RegistrationRouteTest extends TestCase
@@ -38,6 +37,6 @@ class RegistrationRouteTest extends TestCase
         // ]);
 
         $this->assertAuthenticated();
-        $response->assertRedirect(RouteServiceProvider::HOME);
+        $response->assertRedirect('/');
     }
 }

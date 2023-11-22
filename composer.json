@@ -2,6 +2,7 @@
     "name": "gammamatrix/playground-auth",
     "description": "Playground: Provide authentication for Laravel applications using Blade for the UI. Allows using Sanctum.",
     "keywords": [
+        "auth",
         "authentication",
         "blade",
         "gammamatrix",
@@ -19,10 +20,25 @@
             "role": "Developer"
         }
     ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:gammamatrix/playground.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:gammamatrix/playground-test.git"
+        }
+    ],
     "require": {
         "php": "^8.1",
-        "gammamatrix/playground": "dev-develop"
+        "gammamatrix/playground": "dev-feature/PG-4"
     },
+    "require-dev": {
+        "gammamatrix/playground-test": "dev-feature/PG-5"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "autoload": {
         "psr-4": {
             "GammaMatrix\\Playground\\Auth\\": "src/"
@@ -30,20 +46,30 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\Unit\\GammaMatrix\\Playground\\Auth\\": "tests/Unit/",
-            "Tests\\Feature\\GammaMatrix\\Playground\\Auth\\": "tests/Feature/"
+            "Tests\\": "tests/"
         }
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "preferred-install": {
+            "gammamatrix/*": "source",
+            "*": "dist"
+        }
     },
     "extra": {
+        "branch-alias": {
+            "dev-develop": "73.x-dev",
+            "dev-master": "73.x-dev"
+        },
         "laravel": {
             "providers": [
                 "GammaMatrix\\Playground\\Auth\\ServiceProvider"
             ]
         }
     },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    "scripts": {
+        "test": "phpunit",
+        "format": "php-cs-fixer fix --allow-risky=yes",
+        "analyse": "phpstan analyse"
+    }
 }

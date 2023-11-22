@@ -3,11 +3,10 @@
  * GammaMatrix
  */
 
-namespace Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers;
+namespace Tests\Feature\Http\Controllers;
 
-use App\Models\User;
-use App\Providers\RouteServiceProvider;
-use GammaMatrix\Playground\Test\TestCase;
+use GammaMatrix\Playground\Test\Models\User;
+use Tests\TestCase;
 use Illuminate\Auth\Events\Verified;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Event;
@@ -16,7 +15,7 @@ use Illuminate\Support\Facades\URL;
 use Illuminate\Auth\Notifications\VerifyEmail;
 
 /**
- * \Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\EmailVerificationRouteTest
+ * \Tests\Feature\Http\Controllers\EmailVerificationRouteTest
  *
  */
 class EmailVerificationRouteTest extends TestCase
@@ -140,7 +139,7 @@ class EmailVerificationRouteTest extends TestCase
 
         Event::assertDispatched(Verified::class);
         $this->assertTrue($user->fresh()->hasVerifiedEmail());
-        $response->assertRedirect(RouteServiceProvider::HOME.'?verified=1');
+        $response->assertRedirect('/?verified=1');
     }
 
     public function test_email_is_not_verified_with_invalid_hash()
@@ -204,6 +203,6 @@ class EmailVerificationRouteTest extends TestCase
 
         Event::assertNotDispatched(Verified::class);
         $this->assertTrue($user->fresh()->hasVerifiedEmail());
-        $response->assertRedirect(RouteServiceProvider::HOME.'?verified=1');
+        $response->assertRedirect('/?verified=1');
     }
 }
