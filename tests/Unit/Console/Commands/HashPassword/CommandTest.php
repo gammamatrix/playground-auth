@@ -3,13 +3,15 @@
  * GammaMatrix
  */
 
-namespace Tests\Unit\Console\Commands\HashPassword;
+namespace Tests\Unit\GammaMatrix\Playground\Auth\Console\Commands\HashPassword;
+
+use Tests\Unit\GammaMatrix\Playground\Auth\TestCase;
 
 /**
- * \Tests\Unit\Console\Commands\HashPassword\CommandTest
+ * \Tests\Unit\GammaMatrix\Playground\Auth\Console\Commands\HashPassword\CommandTest
  *
  */
-class CommandTest extends \Tests\TestCase
+class CommandTest extends TestCase
 {
     public function test_command_auth_hash_password_with_json()
     {

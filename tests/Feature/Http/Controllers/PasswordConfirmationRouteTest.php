@@ -6,7 +6,7 @@
 namespace Tests\Feature\Http\Controllers;
 
 use GammaMatrix\Playground\Test\Models\User;
-use Tests\TestCase;
+use Tests\Feature\GammaMatrix\Playground\Auth\TestCase;
 
 class PasswordConfirmationRouteTest extends TestCase
 {

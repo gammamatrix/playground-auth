@@ -4,12 +4,12 @@
  *
  */
 
-namespace Tests\Feature\Http\Controllers;
+namespace Tests\Feature\GammaMatrix\Playground\Http\Controllers;
 
-use Tests\TestCase;
+use Tests\Feature\GammaMatrix\Playground\Auth\TestCase;
 
 /**
- * \Tests\Feature\Http\Controllers\RegistrationRouteTest
+ * \Tests\Feature\GammaMatrix\Playground\Http\Controllers\RegistrationRouteTest
  *
  */
 class RegistrationRouteTest extends TestCase
@@ -29,12 +29,6 @@ class RegistrationRouteTest extends TestCase
             'password' => 'password',
             'password_confirmation' => 'password',
         ]);
-        // dd([
-        //     '__METHOD__' => __METHOD__,
-        //     '__FILE__' => __FILE__,
-        //     '__LINE__' => __LINE__,
-        //     '$response' => $response,
-        // ]);
 
         $this->assertAuthenticated();
         $response->assertRedirect('/');
