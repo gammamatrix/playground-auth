@@ -7,7 +7,7 @@
 namespace Tests\Unit\GammaMatrix\Playground\Auth;
 
 use GammaMatrix\Playground\Test\OrchestraTestCase;
-// use Illuminate\Foundation\Testing\DatabaseTransactions;
+use Illuminate\Foundation\Testing\DatabaseTransactions;
 use GammaMatrix\Playground\ServiceProvider as PlaygroundServiceProvider;
 use GammaMatrix\Playground\Auth\ServiceProvider;
 use Illuminate\Contracts\Config\Repository;
@@ -18,7 +18,7 @@ use Illuminate\Contracts\Config\Repository;
  */
 class TestCase extends OrchestraTestCase
 {
-    // use DatabaseTransactions;
+    use DatabaseTransactions;
 
     protected function getPackageProviders($app)
     {

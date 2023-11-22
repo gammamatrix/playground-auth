@@ -47,8 +47,8 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\Feature\\GammaMatrix\\Playground\\Auth\\": "tests/feature/",
-            "Tests\\Unit\\GammaMatrix\\Playground\\Auth\\": "tests/unit/"
+            "Tests\\Feature\\GammaMatrix\\Playground\\Auth\\": "tests/Feature/",
+            "Tests\\Unit\\GammaMatrix\\Playground\\Auth\\": "tests/Unit/"
         }
     },
     "config": {
