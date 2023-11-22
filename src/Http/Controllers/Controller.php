@@ -22,11 +22,6 @@ abstract class Controller extends BaseController
     public function getRedirectUrl(): string
     {
         $path = config('playground-auth.redirect');
-
-        if (is_null($path) && defined('\App\Providers\RouteServiceProvider::HOME')) {
-            $path = \App\Providers\RouteServiceProvider::HOME;
-        }
-
         return is_string($path) ? $path : '';
     }
 }

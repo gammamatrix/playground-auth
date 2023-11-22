@@ -6,7 +6,6 @@
 
 namespace GammaMatrix\Playground\Auth\Http\Controllers;
 
-use App\Models\User;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -51,7 +50,8 @@ class RegisteredUserController extends Controller
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
-        $user = User::create([
+        $c = config('auth.providers.users.model', '\\App\\Models\\User');
+        $user = $c::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),

@@ -3,10 +3,10 @@
  * GammaMatrix
  */
 
-namespace Tests\Unit\GammaMatrix\Playground\Auth\Console\Commands\HashPassword;
+namespace Tests\Unit\Console\Commands\HashPassword;
 
 /**
- * \Tests\Unit\GammaMatrix\Playground\Auth\Console\Commands\HashPassword\CommandTest
+ * \Tests\Unit\Console\Commands\HashPassword\CommandTest
  *
  */
 class CommandTest extends \Tests\TestCase
