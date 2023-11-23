@@ -8,7 +8,7 @@ namespace Tests\Feature\Http\Controllers;
 use GammaMatrix\Playground\Test\Models\User;
 use Illuminate\Auth\Notifications\ResetPassword;
 use Illuminate\Support\Facades\Notification;
-use Tests\TestCase;
+use Tests\Feature\GammaMatrix\Playground\Auth\TestCase;
 
 /**
  * \Tests\Feature\Http\Controllers\PasswordResetRouteTest
@@ -28,7 +28,7 @@ class PasswordResetRouteTest extends TestCase
         Notification::fake();
 
         $user = User::factory()->create();
-        // dump($user->toArray());
+
         $this->post('/forgot-password', ['email' => $user->email]);
 
         Notification::assertSentTo($user, ResetPassword::class);

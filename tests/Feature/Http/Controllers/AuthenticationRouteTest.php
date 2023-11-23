@@ -6,7 +6,7 @@
 namespace Tests\Feature\Http\Controllers;
 
 use GammaMatrix\Playground\Test\Models\User;
-use Tests\TestCase;
+use Tests\Feature\GammaMatrix\Playground\Auth\TestCase;
 
 /**
  * \Tests\Feature\Http\Controllers\AuthenticationRouteTest
@@ -29,7 +29,7 @@ class AuthenticationRouteTest extends TestCase
             'email' => $user->email,
             'password' => 'password',
         ]);
-        // $response->dump();
+
         $response->assertStatus(302);
 
         $this->assertAuthenticated();
@@ -53,7 +53,10 @@ class AuthenticationRouteTest extends TestCase
     public function test_users_can_logout_on_get_request()
     {
         $user = User::factory()->create();
-
+        // dd([
+        //     'playground' => config('playground'),
+        //     'playground-auth' => config('playground-auth'),
+        // ]);
         $response = $this->actingAs($user)->get('/logout');
 
         $response->assertStatus(302);

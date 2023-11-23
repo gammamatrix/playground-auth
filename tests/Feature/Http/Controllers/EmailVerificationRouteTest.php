@@ -6,13 +6,13 @@
 namespace Tests\Feature\Http\Controllers;
 
 use GammaMatrix\Playground\Test\Models\User;
-use Tests\TestCase;
 use Illuminate\Auth\Events\Verified;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Auth\Notifications\VerifyEmail;
+use Tests\Feature\GammaMatrix\Playground\Auth\TestCase;
 
 /**
  * \Tests\Feature\Http\Controllers\EmailVerificationRouteTest
