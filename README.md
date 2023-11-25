@@ -26,8 +26,6 @@ You can publish the routes file with:
 php artisan vendor:publish --provider="GammaMatrix\Playground\Auth\ServiceProvider" --tag="playground-routes"
 ```
 
-See the authentication routes: [routes/auth.php](routes/auth.php)
-
 ### Environment Variables
 
 #### Loading
@@ -42,7 +40,10 @@ See the authentication routes: [routes/auth.php](routes/auth.php)
 
 #### Routes
 
-All routes are disabled by default in the base Playground package.
+All routes are enabled by default in the base Playground Auth package.
+- They may be disabled in the configuration.
+
+See the authentication routes: [routes/auth.php](routes/auth.php)
 
 | env()                             | config()                     |
 |-----------------------------------|------------------------------|
