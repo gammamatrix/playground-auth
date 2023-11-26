@@ -89,14 +89,12 @@ class ServiceProvider extends AuthServiceProvider
 
         $version = $this->version();
 
-        $redirect = defined('\App\Providers\RouteServiceProvider::HOME') ? \App\Providers\RouteServiceProvider::HOME : null;
-
         AboutCommand::add('Playground Auth', fn () => [
             '<fg=yellow;options=bold>Load</> Commands' => !empty($config['load']['commands']) ? '<fg=green;options=bold>ENABLED</>' : '<fg=yellow;options=bold>DISABLED</>',
             '<fg=yellow;options=bold>Load</> Routes' => !empty($config['load']['routes']) ? '<fg=green;options=bold>ENABLED</>' : '<fg=yellow;options=bold>DISABLED</>',
             '<fg=yellow;options=bold>Load</> Views' => !empty($config['load']['views']) ? '<fg=green;options=bold>ENABLED</>' : '<fg=yellow;options=bold>DISABLED</>',
 
-            '<fg=blue;options=bold>Redirect</>' => empty($config['redirect']) ? $redirect : $config['redirect'],
+            '<fg=blue;options=bold>Redirect</>' => empty($config['redirect']) ? '' : $config['redirect'],
             '<fg=blue;options=bold>View</> [layout]' => sprintf('[%s]', $config['layout']),
             '<fg=blue;options=bold>View</> [prefix]' => sprintf('[%s]', $config['view']),
 

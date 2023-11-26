@@ -4,6 +4,8 @@ The Playground authentication package for [Laravel](https://laravel.com/docs/10.
 
 This package provides endpoints and a Blade UI for handling authentication and authorization.
 
+More information is avaialble [on the Playground Auth wiki.](https://github.com/gammamatrix/playground-auth/wiki)
+
 ## Installation
 
 You can install the package via composer:
