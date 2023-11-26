@@ -30,8 +30,8 @@ php artisan vendor:publish --provider="GammaMatrix\Playground\Auth\ServiceProvid
 
 #### Loading
 
-| env()                           | config()                   |
-|---------------------------------|----------------------------|
+| env()                           | config()                        |
+|---------------------------------|---------------------------------|
 | `PLAYGROUND_AUTH_LOAD_COMMANDS` | `playground-auth.load.commands` |
 | `PLAYGROUND_LOAD_ROUTES`        | `playground-auth.load.routes`   |
 | `PLAYGROUND_LOAD_VIEWS`         | `playground-auth.load.views`    |
@@ -45,8 +45,8 @@ All routes are enabled by default in the base Playground Auth package.
 
 See the authentication routes: [routes/auth.php](routes/auth.php)
 
-| env()                             | config()                     |
-|-----------------------------------|------------------------------|
+| env()                             | config()                          |
+|-----------------------------------|-----------------------------------|
 | `PLAYGROUND_AUTH_ROUTES_RESET`    | `playground-auth.routes.confirm`  |
 | `PLAYGROUND_AUTH_ROUTES_FORGOT`   | `playground-auth.routes.forgot`   |
 | `PLAYGROUND_AUTH_ROUTES_LOGOUT`   | `playground-auth.routes.logout`   |
@@ -92,9 +92,9 @@ composer test
 
 ## About
 
-Playground provides information in the `artisan about` command.
+Playground Auth provides information in the `artisan about` command.
 
-<img src="resources/docs/artisan-about-playground-auth.png" alt="screenshot of artisan about command with Playground.">
+<img src="resources/docs/artisan-about-playground-auth.png" alt="screenshot of artisan about command with Playground Auth.">
 
 ## Changelog
 
