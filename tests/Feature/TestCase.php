@@ -28,16 +28,18 @@ class TestCase extends OrchestraTestCase
         ];
     }
 
-    // /**
-    //  * Define database migrations.
-    //  *
-    //  * @return void
-    //  */
-    // protected function defineDatabaseMigrations()
-    // {
-    //     $this->loadLaravelMigrations(['--database' => 'testbench']);
-    //     $this->loadMigrationsFrom(workbench_path('database/migrations'));
-    // }
+    /**
+     * Setup the test environment.
+     */
+    protected function setUp(): void
+    {
+        parent::setUp();
+
+        if (!empty(env('TEST_DB_MIGRATIONS'))) {
+            // $this->loadLaravelMigrations();
+            $this->loadMigrationsFrom(dirname(dirname(__DIR__)) . '/database/migrations-laravel');
+        }
+    }
 
     /**
      * Set up the environment.
@@ -77,6 +79,5 @@ class TestCase extends OrchestraTestCase
 
         $app['config']->set('playground-auth.admins', []);
         $app['config']->set('playground-auth.managers', []);
-
     }
 }

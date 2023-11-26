@@ -11,9 +11,8 @@
         "playground-auth",
         "sanctum"
     ],
-    "homepage": "https://github.com/gammamatrix/playground-auth",
+    "homepage": "https://github.com/gammamatrix/playground-auth/wiki",
     "license": "MIT",
-    "version": "73.0.0",
     "authors": [
         {
             "name": "Jeremy Postlethwaite",

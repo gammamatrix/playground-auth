@@ -4,7 +4,7 @@ return [
     'layout' => (string) env('PLAYGROUND_AUTH_LAYOUT', 'playground::layouts.site'),
     'view' => (string) env('PLAYGROUND_AUTH_VIEW', 'playground-auth::'),
     'redirect' => env('PLAYGROUND_AUTH_REDIRECT', null),
-    'session' => false,
+    // 'session' => false,
     'token' => [
         // 'expires' => 60 * 24,
         'expires' => 'tomorrow midnight',
