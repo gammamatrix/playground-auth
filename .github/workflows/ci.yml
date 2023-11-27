@@ -1,4 +1,4 @@
-name: Playground tests
+name: Playground Auth tests
 
 on:
   push:
