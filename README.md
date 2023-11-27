@@ -1,5 +1,8 @@
 # Playground Auth
 
+![Test Coverage](https://raw.githubusercontent.com/gammamatrix/playground-auth/image-data/coverage.svg)
+![Playground CI Workflow](https://github.com/gammamatrix/playground-auth/actions/workflows/ci.yml/badge.svg?)
+
 The Playground authentication package for [Laravel](https://laravel.com/docs/10.x) applications.
 
 This package provides endpoints and a Blade UI for handling authentication and authorization.
