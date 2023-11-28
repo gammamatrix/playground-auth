@@ -4,12 +4,12 @@
  *
  */
 
-namespace Tests\Feature\GammaMatrix\Playground\Http\Controllers;
+namespace Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers;
 
 use Tests\Feature\GammaMatrix\Playground\Auth\TestCase;
 
 /**
- * \Tests\Feature\GammaMatrix\Playground\Http\Controllers\RegistrationRouteTest
+ * \Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\RegistrationRouteTest
  *
  */
 class RegistrationRouteTest extends TestCase

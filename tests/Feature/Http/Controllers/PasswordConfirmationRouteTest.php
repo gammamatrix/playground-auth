@@ -3,11 +3,15 @@
  * GammaMatrix
  */
 
-namespace Tests\Feature\Http\Controllers;
+namespace Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers;
 
 use GammaMatrix\Playground\Test\Models\User;
 use Tests\Feature\GammaMatrix\Playground\Auth\TestCase;
 
+/**
+ * \Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\PasswordConfirmationRouteTest
+ *
+ */
 class PasswordConfirmationRouteTest extends TestCase
 {
     public function test_confirm_password_screen_can_be_rendered()

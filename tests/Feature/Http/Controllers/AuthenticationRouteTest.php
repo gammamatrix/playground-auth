@@ -3,13 +3,13 @@
  * GammaMatrix
  */
 
-namespace Tests\Feature\Http\Controllers;
+namespace Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers;
 
 use GammaMatrix\Playground\Test\Models\User;
 use Tests\Feature\GammaMatrix\Playground\Auth\TestCase;
 
 /**
- * \Tests\Feature\Http\Controllers\AuthenticationRouteTest
+ * \Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\AuthenticationRouteTest
  *
  */
 class AuthenticationRouteTest extends TestCase

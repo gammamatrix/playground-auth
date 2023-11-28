@@ -3,7 +3,7 @@
  * GammaMatrix
  */
 
-namespace Tests\Feature\Http\Controllers;
+ namespace Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers;
 
 use GammaMatrix\Playground\Test\Models\User;
 use Illuminate\Auth\Notifications\ResetPassword;
@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Notification;
 use Tests\Feature\GammaMatrix\Playground\Auth\TestCase;
 
 /**
- * \Tests\Feature\Http\Controllers\PasswordResetRouteTest
+ * \Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\PasswordResetRouteTest
  *
  */
 class PasswordResetRouteTest extends TestCase
