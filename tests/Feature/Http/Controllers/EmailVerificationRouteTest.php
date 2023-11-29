@@ -3,7 +3,7 @@
  * GammaMatrix
  */
 
-namespace Tests\Feature\Http\Controllers;
+namespace Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers;
 
 use GammaMatrix\Playground\Test\Models\User;
 use Illuminate\Auth\Events\Verified;
@@ -15,7 +15,7 @@ use Illuminate\Auth\Notifications\VerifyEmail;
 use Tests\Feature\GammaMatrix\Playground\Auth\TestCase;
 
 /**
- * \Tests\Feature\Http\Controllers\EmailVerificationRouteTest
+ * \Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\EmailVerificationRouteTest
  *
  */
 class EmailVerificationRouteTest extends TestCase

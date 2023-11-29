@@ -3,13 +3,13 @@
  * GammaMatrix
  */
 
-namespace Tests\Feature\Http\Controllers;
+namespace Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers;
 
 use GammaMatrix\Playground\Test\Models\User;
 use Tests\Feature\GammaMatrix\Playground\Auth\TestCase;
 
 /**
- * \Tests\Feature\Http\Controllers\AuthenticationRouteTest
+ * \Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\AuthenticationRouteTest
  *
  */
 class AuthenticationRouteTest extends TestCase
@@ -112,7 +112,7 @@ class AuthenticationRouteTest extends TestCase
 
         $limit = 2;
 
-        for ($i=0; $i < $limit; $i++) {
+        for ($i = 0; $i < $limit; $i++) {
             $response = $this->post('/login', [
                 'email' => $user->email,
                 'password' => 'wrong-password',
@@ -137,7 +137,7 @@ class AuthenticationRouteTest extends TestCase
 
         $limit = 6;
 
-        for ($i=0; $i < $limit; $i++) {
+        for ($i = 0; $i < $limit; $i++) {
             $response = $this->post('/login', [
                 'email' => $user->email,
                 'password' => 'wrong-password',
