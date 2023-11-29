@@ -112,7 +112,7 @@ class AuthenticationRouteTest extends TestCase
 
         $limit = 2;
 
-        for ($i=0; $i < $limit; $i++) {
+        for ($i = 0; $i < $limit; $i++) {
             $response = $this->post('/login', [
                 'email' => $user->email,
                 'password' => 'wrong-password',
@@ -137,7 +137,7 @@ class AuthenticationRouteTest extends TestCase
 
         $limit = 6;
 
-        for ($i=0; $i < $limit; $i++) {
+        for ($i = 0; $i < $limit; $i++) {
             $response = $this->post('/login', [
                 'email' => $user->email,
                 'password' => 'wrong-password',

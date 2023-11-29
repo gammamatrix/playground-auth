@@ -9,6 +9,7 @@ return [
         // 'expires' => 60 * 24,
         'expires' => 'tomorrow midnight',
         'name' => 'app',
+        // @see playground.auth.token.name
         'roles' => false,
         'privileges' => true,
         'sanctum' => true,

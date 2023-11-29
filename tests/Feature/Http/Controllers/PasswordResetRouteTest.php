@@ -3,7 +3,7 @@
  * GammaMatrix
  */
 
- namespace Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers;
+namespace Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers;
 
 use GammaMatrix\Playground\Test\Models\User;
 use Illuminate\Auth\Notifications\ResetPassword;

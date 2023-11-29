@@ -24,12 +24,12 @@ class EmailVerificationRequest extends BaseRequest
         $user = $this->user();
 
         if (!$user
-            || ! hash_equals((string) $this->route('id'), (string) $user->id)
+            || !hash_equals((string) $this->route('id'), (string) $user->id)
         ) {
             return false;
         }
 
-        if (! hash_equals((string) $this->route('hash'), sha1($user->email))) {
+        if (!hash_equals((string) $this->route('hash'), sha1($user->email))) {
             return false;
         }
 
