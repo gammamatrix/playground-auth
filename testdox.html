@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Test Documentation</title>
+        <style>
+            body {
+                text-rendering: optimizeLegibility;
+                font-family: Source SansSerif Pro, Arial, sans-serif;
+                font-variant-ligatures: common-ligatures;
+                font-kerning: normal;
+                margin-left: 2rem;
+                background-color: #fff;
+                color: #000;
+            }
+
+            body > ul > li {
+                font-size: larger;
+            }
+
+            h2 {
+                font-size: larger;
+                text-decoration-line: underline;
+                text-decoration-thickness: 2px;
+                margin: 0;
+                padding: 0.5rem 0;
+            }
+
+            ul {
+                list-style: none;
+                margin: 0 0 2rem;
+                padding: 0 0 0 1rem;
+                text-indent: -1rem;
+            }
+
+            .success:before {
+                color: #4e9a06;
+                content: '✓';
+                padding-right: 0.5rem;
+            }
+
+            .defect {
+                color: #a40000;
+            }
+
+            .defect:before {
+                color: #a40000;
+                content: '✗';
+                padding-right: 0.5rem;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Authentication Route (Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\AuthenticationRoute)</h2>
+        <ul>
+            <li class="success">Login screen can be rendered</li>
+            <li class="success">Users can authenticate using the login screen</li>
+            <li class="success">Users cannot authenticate with invalid password</li>
+            <li class="success">Users can logout on get request</li>
+            <li class="success">Users can logout on post request</li>
+            <li class="success">Guests can logout on get request</li>
+            <li class="success">Csfr token request</li>
+            <li class="success">Login repeat under rate limit and clear</li>
+            <li class="success">Login repeat and hit rate limit</li>
+        </ul>
+        <h2>Command (Tests\Unit\GammaMatrix\Playground\Auth\Console\Commands\HashPassword\Command)</h2>
+        <ul>
+            <li class="success">Command auth hash password with json</li>
+            <li class="success">Command auth hash password</li>
+            <li class="success">Command auth hash password without argument and fail</li>
+        </ul>
+        <h2>Email Verification Route (Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\EmailVerificationRoute)</h2>
+        <ul>
+            <li class="success">Email verification screen can be rendered</li>
+            <li class="success">Email verification screen is not rendered if already verified</li>
+            <li class="success">Json send email verification notification as guest</li>
+            <li class="success">Send email verification notification as guest and redirect</li>
+            <li class="success">Send email verification notification as user</li>
+            <li class="success">Send email verification notification when already verified</li>
+            <li class="success">Email can be verified</li>
+            <li class="success">Email is not verified with invalid hash</li>
+            <li class="success">Email is not verified with invalid user id</li>
+            <li class="success">Email verified with already verified</li>
+        </ul>
+        <h2>Password Confirmation Route (Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\PasswordConfirmationRoute)</h2>
+        <ul>
+            <li class="success">Confirm password screen can be rendered</li>
+            <li class="success">Password can be confirmed</li>
+            <li class="success">Password is not confirmed with invalid password</li>
+        </ul>
+        <h2>Password Reset Route (Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\PasswordResetRoute)</h2>
+        <ul>
+            <li class="success">Reset password link screen can be rendered</li>
+            <li class="success">Reset password link can be requested</li>
+            <li class="success">Reset password screen can be rendered</li>
+            <li class="success">Password can be reset with valid token</li>
+            <li class="success">Password reset with invalid token</li>
+            <li class="success">Password reset with invalid user</li>
+        </ul>
+        <h2>Registration Route (Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\RegistrationRoute)</h2>
+        <ul>
+            <li class="success">Registration screen can be rendered</li>
+            <li class="success">New users can register</li>
+        </ul>
+    </body>
+</html>

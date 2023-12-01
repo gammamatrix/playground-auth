@@ -1,0 +1,170 @@
+
+##teamcity[testCount count='33' flowId='1']
+
+##teamcity[testSuiteStarted name='/app/phpunit.xml.dist' flowId='1']
+
+##teamcity[testSuiteStarted name='Unit' flowId='1']
+
+##teamcity[testSuiteStarted name='Tests\Unit\GammaMatrix\Playground\Auth\Console\Commands\HashPassword\CommandTest' locationHint='php_qn:///app/tests/Unit/Console/Commands/HashPassword/CommandTest.php::\Tests\Unit\GammaMatrix\Playground\Auth\Console\Commands\HashPassword\CommandTest' flowId='1']
+
+##teamcity[testStarted name='test_command_auth_hash_password_with_json' locationHint='php_qn:///app/tests/Unit/Console/Commands/HashPassword/CommandTest.php::\Tests\Unit\GammaMatrix\Playground\Auth\Console\Commands\HashPassword\CommandTest::test_command_auth_hash_password_with_json' flowId='1']
+
+##teamcity[testFinished name='test_command_auth_hash_password_with_json' duration='195' flowId='1']
+
+##teamcity[testStarted name='test_command_auth_hash_password' locationHint='php_qn:///app/tests/Unit/Console/Commands/HashPassword/CommandTest.php::\Tests\Unit\GammaMatrix\Playground\Auth\Console\Commands\HashPassword\CommandTest::test_command_auth_hash_password' flowId='1']
+
+##teamcity[testFinished name='test_command_auth_hash_password' duration='10' flowId='1']
+
+##teamcity[testStarted name='test_command_auth_hash_password_without_argument_and_fail' locationHint='php_qn:///app/tests/Unit/Console/Commands/HashPassword/CommandTest.php::\Tests\Unit\GammaMatrix\Playground\Auth\Console\Commands\HashPassword\CommandTest::test_command_auth_hash_password_without_argument_and_fail' flowId='1']
+
+##teamcity[testFinished name='test_command_auth_hash_password_without_argument_and_fail' duration='8' flowId='1']
+
+##teamcity[testSuiteFinished name='Tests\Unit\GammaMatrix\Playground\Auth\Console\Commands\HashPassword\CommandTest' flowId='1']
+
+##teamcity[testSuiteFinished name='Unit' flowId='1']
+
+##teamcity[testSuiteStarted name='Feature' flowId='1']
+
+##teamcity[testSuiteStarted name='Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\AuthenticationRouteTest' locationHint='php_qn:///app/tests/Feature/Http/Controllers/AuthenticationRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\AuthenticationRouteTest' flowId='1']
+
+##teamcity[testStarted name='test_login_screen_can_be_rendered' locationHint='php_qn:///app/tests/Feature/Http/Controllers/AuthenticationRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\AuthenticationRouteTest::test_login_screen_can_be_rendered' flowId='1']
+
+##teamcity[testFinished name='test_login_screen_can_be_rendered' duration='108' flowId='1']
+
+##teamcity[testStarted name='test_users_can_authenticate_using_the_login_screen' locationHint='php_qn:///app/tests/Feature/Http/Controllers/AuthenticationRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\AuthenticationRouteTest::test_users_can_authenticate_using_the_login_screen' flowId='1']
+
+##teamcity[testFinished name='test_users_can_authenticate_using_the_login_screen' duration='59' flowId='1']
+
+##teamcity[testStarted name='test_users_cannot_authenticate_with_invalid_password' locationHint='php_qn:///app/tests/Feature/Http/Controllers/AuthenticationRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\AuthenticationRouteTest::test_users_cannot_authenticate_with_invalid_password' flowId='1']
+
+##teamcity[testFinished name='test_users_cannot_authenticate_with_invalid_password' duration='232' flowId='1']
+
+##teamcity[testStarted name='test_users_can_logout_on_get_request' locationHint='php_qn:///app/tests/Feature/Http/Controllers/AuthenticationRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\AuthenticationRouteTest::test_users_can_logout_on_get_request' flowId='1']
+
+##teamcity[testFinished name='test_users_can_logout_on_get_request' duration='24' flowId='1']
+
+##teamcity[testStarted name='test_users_can_logout_on_post_request' locationHint='php_qn:///app/tests/Feature/Http/Controllers/AuthenticationRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\AuthenticationRouteTest::test_users_can_logout_on_post_request' flowId='1']
+
+##teamcity[testFinished name='test_users_can_logout_on_post_request' duration='24' flowId='1']
+
+##teamcity[testStarted name='test_guests_can_logout_on_get_request' locationHint='php_qn:///app/tests/Feature/Http/Controllers/AuthenticationRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\AuthenticationRouteTest::test_guests_can_logout_on_get_request' flowId='1']
+
+##teamcity[testFinished name='test_guests_can_logout_on_get_request' duration='21' flowId='1']
+
+##teamcity[testStarted name='test_csfr_token_request' locationHint='php_qn:///app/tests/Feature/Http/Controllers/AuthenticationRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\AuthenticationRouteTest::test_csfr_token_request' flowId='1']
+
+##teamcity[testFinished name='test_csfr_token_request' duration='21' flowId='1']
+
+##teamcity[testStarted name='test_login_repeat_under_rate_limit_and_clear' locationHint='php_qn:///app/tests/Feature/Http/Controllers/AuthenticationRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\AuthenticationRouteTest::test_login_repeat_under_rate_limit_and_clear' flowId='1']
+
+##teamcity[testFinished name='test_login_repeat_under_rate_limit_and_clear' duration='441' flowId='1']
+
+##teamcity[testStarted name='test_login_repeat_and_hit_rate_limit' locationHint='php_qn:///app/tests/Feature/Http/Controllers/AuthenticationRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\AuthenticationRouteTest::test_login_repeat_and_hit_rate_limit' flowId='1']
+
+##teamcity[testFinished name='test_login_repeat_and_hit_rate_limit' duration='1062' flowId='1']
+
+##teamcity[testSuiteFinished name='Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\AuthenticationRouteTest' flowId='1']
+
+##teamcity[testSuiteStarted name='Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\EmailVerificationRouteTest' locationHint='php_qn:///app/tests/Feature/Http/Controllers/EmailVerificationRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\EmailVerificationRouteTest' flowId='1']
+
+##teamcity[testStarted name='test_email_verification_screen_can_be_rendered' locationHint='php_qn:///app/tests/Feature/Http/Controllers/EmailVerificationRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\EmailVerificationRouteTest::test_email_verification_screen_can_be_rendered' flowId='1']
+
+##teamcity[testFinished name='test_email_verification_screen_can_be_rendered' duration='41' flowId='1']
+
+##teamcity[testStarted name='test_email_verification_screen_is_not_rendered_if_already_verified' locationHint='php_qn:///app/tests/Feature/Http/Controllers/EmailVerificationRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\EmailVerificationRouteTest::test_email_verification_screen_is_not_rendered_if_already_verified' flowId='1']
+
+##teamcity[testFinished name='test_email_verification_screen_is_not_rendered_if_already_verified' duration='23' flowId='1']
+
+##teamcity[testStarted name='test_json_send_email_verification_notification_as_guest' locationHint='php_qn:///app/tests/Feature/Http/Controllers/EmailVerificationRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\EmailVerificationRouteTest::test_json_send_email_verification_notification_as_guest' flowId='1']
+
+##teamcity[testFinished name='test_json_send_email_verification_notification_as_guest' duration='26' flowId='1']
+
+##teamcity[testStarted name='test_send_email_verification_notification_as_guest_and_redirect' locationHint='php_qn:///app/tests/Feature/Http/Controllers/EmailVerificationRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\EmailVerificationRouteTest::test_send_email_verification_notification_as_guest_and_redirect' flowId='1']
+
+##teamcity[testFinished name='test_send_email_verification_notification_as_guest_and_redirect' duration='22' flowId='1']
+
+##teamcity[testStarted name='test_send_email_verification_notification_as_user' locationHint='php_qn:///app/tests/Feature/Http/Controllers/EmailVerificationRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\EmailVerificationRouteTest::test_send_email_verification_notification_as_user' flowId='1']
+
+##teamcity[testFinished name='test_send_email_verification_notification_as_user' duration='31' flowId='1']
+
+##teamcity[testStarted name='test_send_email_verification_notification_when_already_verified' locationHint='php_qn:///app/tests/Feature/Http/Controllers/EmailVerificationRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\EmailVerificationRouteTest::test_send_email_verification_notification_when_already_verified' flowId='1']
+
+##teamcity[testFinished name='test_send_email_verification_notification_when_already_verified' duration='24' flowId='1']
+
+##teamcity[testStarted name='test_email_can_be_verified' locationHint='php_qn:///app/tests/Feature/Http/Controllers/EmailVerificationRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\EmailVerificationRouteTest::test_email_can_be_verified' flowId='1']
+
+##teamcity[testFinished name='test_email_can_be_verified' duration='33' flowId='1']
+
+##teamcity[testStarted name='test_email_is_not_verified_with_invalid_hash' locationHint='php_qn:///app/tests/Feature/Http/Controllers/EmailVerificationRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\EmailVerificationRouteTest::test_email_is_not_verified_with_invalid_hash' flowId='1']
+
+##teamcity[testFinished name='test_email_is_not_verified_with_invalid_hash' duration='29' flowId='1']
+
+##teamcity[testStarted name='test_email_is_not_verified_with_invalid_user_id' locationHint='php_qn:///app/tests/Feature/Http/Controllers/EmailVerificationRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\EmailVerificationRouteTest::test_email_is_not_verified_with_invalid_user_id' flowId='1']
+
+##teamcity[testFinished name='test_email_is_not_verified_with_invalid_user_id' duration='26' flowId='1']
+
+##teamcity[testStarted name='test_email_verified_with_already_verified' locationHint='php_qn:///app/tests/Feature/Http/Controllers/EmailVerificationRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\EmailVerificationRouteTest::test_email_verified_with_already_verified' flowId='1']
+
+##teamcity[testFinished name='test_email_verified_with_already_verified' duration='26' flowId='1']
+
+##teamcity[testSuiteFinished name='Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\EmailVerificationRouteTest' flowId='1']
+
+##teamcity[testSuiteStarted name='Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\PasswordConfirmationRouteTest' locationHint='php_qn:///app/tests/Feature/Http/Controllers/PasswordConfirmationRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\PasswordConfirmationRouteTest' flowId='1']
+
+##teamcity[testStarted name='test_confirm_password_screen_can_be_rendered' locationHint='php_qn:///app/tests/Feature/Http/Controllers/PasswordConfirmationRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\PasswordConfirmationRouteTest::test_confirm_password_screen_can_be_rendered' flowId='1']
+
+##teamcity[testFinished name='test_confirm_password_screen_can_be_rendered' duration='40' flowId='1']
+
+##teamcity[testStarted name='test_password_can_be_confirmed' locationHint='php_qn:///app/tests/Feature/Http/Controllers/PasswordConfirmationRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\PasswordConfirmationRouteTest::test_password_can_be_confirmed' flowId='1']
+
+##teamcity[testFinished name='test_password_can_be_confirmed' duration='25' flowId='1']
+
+##teamcity[testStarted name='test_password_is_not_confirmed_with_invalid_password' locationHint='php_qn:///app/tests/Feature/Http/Controllers/PasswordConfirmationRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\PasswordConfirmationRouteTest::test_password_is_not_confirmed_with_invalid_password' flowId='1']
+
+##teamcity[testFinished name='test_password_is_not_confirmed_with_invalid_password' duration='226' flowId='1']
+
+##teamcity[testSuiteFinished name='Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\PasswordConfirmationRouteTest' flowId='1']
+
+##teamcity[testSuiteStarted name='Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\PasswordResetRouteTest' locationHint='php_qn:///app/tests/Feature/Http/Controllers/PasswordResetRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\PasswordResetRouteTest' flowId='1']
+
+##teamcity[testStarted name='test_reset_password_link_screen_can_be_rendered' locationHint='php_qn:///app/tests/Feature/Http/Controllers/PasswordResetRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\PasswordResetRouteTest::test_reset_password_link_screen_can_be_rendered' flowId='1']
+
+##teamcity[testFinished name='test_reset_password_link_screen_can_be_rendered' duration='36' flowId='1']
+
+##teamcity[testStarted name='test_reset_password_link_can_be_requested' locationHint='php_qn:///app/tests/Feature/Http/Controllers/PasswordResetRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\PasswordResetRouteTest::test_reset_password_link_can_be_requested' flowId='1']
+
+##teamcity[testFinished name='test_reset_password_link_can_be_requested' duration='31' flowId='1']
+
+##teamcity[testStarted name='test_reset_password_screen_can_be_rendered' locationHint='php_qn:///app/tests/Feature/Http/Controllers/PasswordResetRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\PasswordResetRouteTest::test_reset_password_screen_can_be_rendered' flowId='1']
+
+##teamcity[testFinished name='test_reset_password_screen_can_be_rendered' duration='53' flowId='1']
+
+##teamcity[testStarted name='test_password_can_be_reset_with_valid_token' locationHint='php_qn:///app/tests/Feature/Http/Controllers/PasswordResetRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\PasswordResetRouteTest::test_password_can_be_reset_with_valid_token' flowId='1']
+
+##teamcity[testFinished name='test_password_can_be_reset_with_valid_token' duration='39' flowId='1']
+
+##teamcity[testStarted name='test_password_reset_with_invalid_token' locationHint='php_qn:///app/tests/Feature/Http/Controllers/PasswordResetRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\PasswordResetRouteTest::test_password_reset_with_invalid_token' flowId='1']
+
+##teamcity[testFinished name='test_password_reset_with_invalid_token' duration='34' flowId='1']
+
+##teamcity[testStarted name='test_password_reset_with_invalid_user' locationHint='php_qn:///app/tests/Feature/Http/Controllers/PasswordResetRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\PasswordResetRouteTest::test_password_reset_with_invalid_user' flowId='1']
+
+##teamcity[testFinished name='test_password_reset_with_invalid_user' duration='25' flowId='1']
+
+##teamcity[testSuiteFinished name='Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\PasswordResetRouteTest' flowId='1']
+
+##teamcity[testSuiteStarted name='Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\RegistrationRouteTest' locationHint='php_qn:///app/tests/Feature/Http/Controllers/RegistrationRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\RegistrationRouteTest' flowId='1']
+
+##teamcity[testStarted name='test_registration_screen_can_be_rendered' locationHint='php_qn:///app/tests/Feature/Http/Controllers/RegistrationRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\RegistrationRouteTest::test_registration_screen_can_be_rendered' flowId='1']
+
+##teamcity[testFinished name='test_registration_screen_can_be_rendered' duration='38' flowId='1']
+
+##teamcity[testStarted name='test_new_users_can_register' locationHint='php_qn:///app/tests/Feature/Http/Controllers/RegistrationRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\RegistrationRouteTest::test_new_users_can_register' flowId='1']
+
+##teamcity[testFinished name='test_new_users_can_register' duration='26' flowId='1']
+
+##teamcity[testSuiteFinished name='Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\RegistrationRouteTest' flowId='1']
+
+##teamcity[testSuiteFinished name='Feature' flowId='1']
+
+##teamcity[testSuiteFinished name='/app/phpunit.xml.dist' flowId='1']

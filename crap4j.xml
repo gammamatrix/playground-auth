@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<crap_result>
+  <project/>
+  <timestamp>2023-12-01 02:04:57</timestamp>
+  <stats>
+    <name>Method Crap Stats</name>
+    <methodCount>31</methodCount>
+    <crapMethodCount>1</crapMethodCount>
+    <crapLoad>27</crapLoad>
+    <totalCrap>788.67</totalCrap>
+    <crapMethodPercent>3.23</crapMethodPercent>
+  </stats>
+  <methods>
+    <method>
+      <package>GammaMatrix\Playground\Auth\Console\Commands</package>
+      <className>GammaMatrix\Playground\Auth\Console\Commands\HashPassword</className>
+      <methodName>handle</methodName>
+      <methodSignature>handle()</methodSignature>
+      <fullMethod>handle()</fullMethod>
+      <crap>4</crap>
+      <complexity>4</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>GammaMatrix\Playground\Auth\Http\Controllers</package>
+      <className>GammaMatrix\Playground\Auth\Http\Controllers\AuthenticatedSessionController</className>
+      <methodName>create</methodName>
+      <methodSignature>create(): Illuminate\View\View</methodSignature>
+      <fullMethod>create(): Illuminate\View\View</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>GammaMatrix\Playground\Auth\Http\Controllers</package>
+      <className>GammaMatrix\Playground\Auth\Http\Controllers\AuthenticatedSessionController</className>
+      <methodName>privileges</methodName>
+      <methodSignature>privileges(Illuminate\Foundation\Auth\User $user): array</methodSignature>
+      <fullMethod>privileges(Illuminate\Foundation\Auth\User $user): array</fullMethod>
+      <crap>702</crap>
+      <complexity>26</complexity>
+      <coverage>0</coverage>
+      <crapLoad>27</crapLoad>
+    </method>
+    <method>
+      <package>GammaMatrix\Playground\Auth\Http\Controllers</package>
+      <className>GammaMatrix\Playground\Auth\Http\Controllers\AuthenticatedSessionController</className>
+      <methodName>issue</methodName>
+      <methodSignature>issue(Illuminate\Http\Request $request): array</methodSignature>
+      <fullMethod>issue(Illuminate\Http\Request $request): array</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>GammaMatrix\Playground\Auth\Http\Controllers</package>
+      <className>GammaMatrix\Playground\Auth\Http\Controllers\AuthenticatedSessionController</className>
+      <methodName>store</methodName>
+      <methodSignature>store(GammaMatrix\Playground\Auth\Http\Requests\LoginRequest $request): \Illuminate\Http\JsonResponse|\Illuminate\Http\RedirectResponse</methodSignature>
+      <fullMethod>store(GammaMatrix\Playground\Auth\Http\Requests\LoginRequest $request): \Illuminate\Http\JsonResponse|\Illuminate\Http\RedirectResponse</fullMethod>
+      <crap>4.06</crap>
+      <complexity>4</complexity>
+      <coverage>84.62</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>GammaMatrix\Playground\Auth\Http\Controllers</package>
+      <className>GammaMatrix\Playground\Auth\Http\Controllers\AuthenticatedSessionController</className>
+      <methodName>destroy</methodName>
+      <methodSignature>destroy(Illuminate\Http\Request $request): \Illuminate\Http\JsonResponse|\Illuminate\Http\RedirectResponse</methodSignature>
+      <fullMethod>destroy(Illuminate\Http\Request $request): \Illuminate\Http\JsonResponse|\Illuminate\Http\RedirectResponse</fullMethod>
+      <crap>22.61</crap>
+      <complexity>8</complexity>
+      <coverage>38.89</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>GammaMatrix\Playground\Auth\Http\Controllers</package>
+      <className>GammaMatrix\Playground\Auth\Http\Controllers\AuthenticatedSessionController</className>
+      <methodName>token</methodName>
+      <methodSignature>token(Illuminate\Http\Request $request): Illuminate\Http\JsonResponse</methodSignature>
+      <fullMethod>token(Illuminate\Http\Request $request): Illuminate\Http\JsonResponse</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>GammaMatrix\Playground\Auth\Http\Controllers</package>
+      <className>GammaMatrix\Playground\Auth\Http\Controllers\ConfirmablePasswordController</className>
+      <methodName>show</methodName>
+      <methodSignature>show(): Illuminate\View\View</methodSignature>
+      <fullMethod>show(): Illuminate\View\View</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>GammaMatrix\Playground\Auth\Http\Controllers</package>
+      <className>GammaMatrix\Playground\Auth\Http\Controllers\ConfirmablePasswordController</className>
+      <methodName>store</methodName>
+      <methodSignature>store(Illuminate\Http\Request $request): \Illuminate\Http\JsonResponse|\Illuminate\Http\RedirectResponse</methodSignature>
+      <fullMethod>store(Illuminate\Http\Request $request): \Illuminate\Http\JsonResponse|\Illuminate\Http\RedirectResponse</fullMethod>
+      <crap>2</crap>
+      <complexity>2</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>GammaMatrix\Playground\Auth\Http\Controllers</package>
+      <className>GammaMatrix\Playground\Auth\Http\Controllers\Controller</className>
+      <methodName>getRedirectUrl</methodName>
+      <methodSignature>getRedirectUrl(): string</methodSignature>
+      <fullMethod>getRedirectUrl(): string</fullMethod>
+      <crap>2</crap>
+      <complexity>2</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>GammaMatrix\Playground\Auth\Http\Controllers</package>
+      <className>GammaMatrix\Playground\Auth\Http\Controllers\EmailVerificationController</className>
+      <methodName>show</methodName>
+      <methodSignature>show(Illuminate\Http\Request $request): \Illuminate\Http\Response|\Illuminate\Http\JsonResponse|\Illuminate\Http\RedirectResponse|\Illuminate\View\View</methodSignature>
+      <fullMethod>show(Illuminate\Http\Request $request): \Illuminate\Http\Response|\Illuminate\Http\JsonResponse|\Illuminate\Http\RedirectResponse|\Illuminate\View\View</fullMethod>
+      <crap>2</crap>
+      <complexity>2</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>GammaMatrix\Playground\Auth\Http\Controllers</package>
+      <className>GammaMatrix\Playground\Auth\Http\Controllers\EmailVerificationController</className>
+      <methodName>send</methodName>
+      <methodSignature>send(Illuminate\Http\Request $request): \Illuminate\Http\RedirectResponse|\Illuminate\Http\Response</methodSignature>
+      <fullMethod>send(Illuminate\Http\Request $request): \Illuminate\Http\RedirectResponse|\Illuminate\Http\Response</fullMethod>
+      <crap>2</crap>
+      <complexity>2</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>GammaMatrix\Playground\Auth\Http\Controllers</package>
+      <className>GammaMatrix\Playground\Auth\Http\Controllers\EmailVerificationController</className>
+      <methodName>verify</methodName>
+      <methodSignature>verify(GammaMatrix\Playground\Auth\Http\Requests\EmailVerificationRequest $request): \Illuminate\Http\Response|\Illuminate\Http\JsonResponse|\Illuminate\Http\RedirectResponse|\Illuminate\View\View</methodSignature>
+      <fullMethod>verify(GammaMatrix\Playground\Auth\Http\Requests\EmailVerificationRequest $request): \Illuminate\Http\Response|\Illuminate\Http\JsonResponse|\Illuminate\Http\RedirectResponse|\Illuminate\View\View</fullMethod>
+      <crap>3</crap>
+      <complexity>3</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>GammaMatrix\Playground\Auth\Http\Controllers</package>
+      <className>GammaMatrix\Playground\Auth\Http\Controllers\NewPasswordController</className>
+      <methodName>create</methodName>
+      <methodSignature>create(Illuminate\Http\Request $request)</methodSignature>
+      <fullMethod>create(Illuminate\Http\Request $request)</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>GammaMatrix\Playground\Auth\Http\Controllers</package>
+      <className>GammaMatrix\Playground\Auth\Http\Controllers\NewPasswordController</className>
+      <methodName>store</methodName>
+      <methodSignature>store(Illuminate\Http\Request $request)</methodSignature>
+      <fullMethod>store(Illuminate\Http\Request $request)</fullMethod>
+      <crap>2</crap>
+      <complexity>2</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>GammaMatrix\Playground\Auth\Http\Controllers</package>
+      <className>GammaMatrix\Playground\Auth\Http\Controllers\PasswordResetLinkController</className>
+      <methodName>create</methodName>
+      <methodSignature>create(): Illuminate\View\View</methodSignature>
+      <fullMethod>create(): Illuminate\View\View</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>GammaMatrix\Playground\Auth\Http\Controllers</package>
+      <className>GammaMatrix\Playground\Auth\Http\Controllers\PasswordResetLinkController</className>
+      <methodName>store</methodName>
+      <methodSignature>store(GammaMatrix\Playground\Auth\Http\Requests\PasswordResetRequest $request): Illuminate\Http\RedirectResponse</methodSignature>
+      <fullMethod>store(GammaMatrix\Playground\Auth\Http\Requests\PasswordResetRequest $request): Illuminate\Http\RedirectResponse</fullMethod>
+      <crap>2</crap>
+      <complexity>2</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>GammaMatrix\Playground\Auth\Http\Controllers</package>
+      <className>GammaMatrix\Playground\Auth\Http\Controllers\RegisteredUserController</className>
+      <methodName>create</methodName>
+      <methodSignature>create()</methodSignature>
+      <fullMethod>create()</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>GammaMatrix\Playground\Auth\Http\Controllers</package>
+      <className>GammaMatrix\Playground\Auth\Http\Controllers\RegisteredUserController</className>
+      <methodName>store</methodName>
+      <methodSignature>store(Illuminate\Http\Request $request)</methodSignature>
+      <fullMethod>store(Illuminate\Http\Request $request)</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>GammaMatrix\Playground\Auth\Http\Requests</package>
+      <className>GammaMatrix\Playground\Auth\Http\Requests\EmailVerificationRequest</className>
+      <methodName>authorize</methodName>
+      <methodSignature>authorize()</methodSignature>
+      <fullMethod>authorize()</fullMethod>
+      <crap>4</crap>
+      <complexity>4</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>GammaMatrix\Playground\Auth\Http\Requests</package>
+      <className>GammaMatrix\Playground\Auth\Http\Requests\LoginRequest</className>
+      <methodName>authorize</methodName>
+      <methodSignature>authorize()</methodSignature>
+      <fullMethod>authorize()</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>GammaMatrix\Playground\Auth\Http\Requests</package>
+      <className>GammaMatrix\Playground\Auth\Http\Requests\LoginRequest</className>
+      <methodName>rules</methodName>
+      <methodSignature>rules()</methodSignature>
+      <fullMethod>rules()</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>GammaMatrix\Playground\Auth\Http\Requests</package>
+      <className>GammaMatrix\Playground\Auth\Http\Requests\LoginRequest</className>
+      <methodName>authenticate</methodName>
+      <methodSignature>authenticate()</methodSignature>
+      <fullMethod>authenticate()</fullMethod>
+      <crap>2</crap>
+      <complexity>2</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>GammaMatrix\Playground\Auth\Http\Requests</package>
+      <className>GammaMatrix\Playground\Auth\Http\Requests\LoginRequest</className>
+      <methodName>ensureIsNotRateLimited</methodName>
+      <methodSignature>ensureIsNotRateLimited()</methodSignature>
+      <fullMethod>ensureIsNotRateLimited()</fullMethod>
+      <crap>2</crap>
+      <complexity>2</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>GammaMatrix\Playground\Auth\Http\Requests</package>
+      <className>GammaMatrix\Playground\Auth\Http\Requests\LoginRequest</className>
+      <methodName>throttleKey</methodName>
+      <methodSignature>throttleKey()</methodSignature>
+      <fullMethod>throttleKey()</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>GammaMatrix\Playground\Auth\Http\Requests</package>
+      <className>GammaMatrix\Playground\Auth\Http\Requests\PasswordResetRequest</className>
+      <methodName>authorize</methodName>
+      <methodSignature>authorize()</methodSignature>
+      <fullMethod>authorize()</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>GammaMatrix\Playground\Auth\Http\Requests</package>
+      <className>GammaMatrix\Playground\Auth\Http\Requests\PasswordResetRequest</className>
+      <methodName>rules</methodName>
+      <methodSignature>rules()</methodSignature>
+      <fullMethod>rules()</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>GammaMatrix\Playground\Auth</package>
+      <className>GammaMatrix\Playground\Auth\ServiceProvider</className>
+      <methodName>boot</methodName>
+      <methodSignature>boot()</methodSignature>
+      <fullMethod>boot()</fullMethod>
+      <crap>6</crap>
+      <complexity>6</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>GammaMatrix\Playground\Auth</package>
+      <className>GammaMatrix\Playground\Auth\ServiceProvider</className>
+      <methodName>register</methodName>
+      <methodSignature>register()</methodSignature>
+      <fullMethod>register()</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>GammaMatrix\Playground\Auth</package>
+      <className>GammaMatrix\Playground\Auth\ServiceProvider</className>
+      <methodName>about</methodName>
+      <methodSignature>about()</methodSignature>
+      <fullMethod>about()</fullMethod>
+      <crap>11</crap>
+      <complexity>11</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>GammaMatrix\Playground\Auth</package>
+      <className>GammaMatrix\Playground\Auth\ServiceProvider</className>
+      <methodName>version</methodName>
+      <methodSignature>version()</methodSignature>
+      <fullMethod>version()</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+  </methods>
+</crap_result>

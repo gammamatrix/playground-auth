@@ -1,0 +1,45 @@
+Authentication Route (Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\AuthenticationRoute)
+ [x] Login screen can be rendered
+ [x] Users can authenticate using the login screen
+ [x] Users cannot authenticate with invalid password
+ [x] Users can logout on get request
+ [x] Users can logout on post request
+ [x] Guests can logout on get request
+ [x] Csfr token request
+ [x] Login repeat under rate limit and clear
+ [x] Login repeat and hit rate limit
+
+Command (Tests\Unit\GammaMatrix\Playground\Auth\Console\Commands\HashPassword\Command)
+ [x] Command auth hash password with json
+ [x] Command auth hash password
+ [x] Command auth hash password without argument and fail
+
+Email Verification Route (Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\EmailVerificationRoute)
+ [x] Email verification screen can be rendered
+ [x] Email verification screen is not rendered if already verified
+ [x] Json send email verification notification as guest
+ [x] Send email verification notification as guest and redirect
+ [x] Send email verification notification as user
+ [x] Send email verification notification when already verified
+ [x] Email can be verified
+ [x] Email is not verified with invalid hash
+ [x] Email is not verified with invalid user id
+ [x] Email verified with already verified
+
+Password Confirmation Route (Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\PasswordConfirmationRoute)
+ [x] Confirm password screen can be rendered
+ [x] Password can be confirmed
+ [x] Password is not confirmed with invalid password
+
+Password Reset Route (Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\PasswordResetRoute)
+ [x] Reset password link screen can be rendered
+ [x] Reset password link can be requested
+ [x] Reset password screen can be rendered
+ [x] Password can be reset with valid token
+ [x] Password reset with invalid token
+ [x] Password reset with invalid user
+
+Registration Route (Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\RegistrationRoute)
+ [x] Registration screen can be rendered
+ [x] New users can register
+
