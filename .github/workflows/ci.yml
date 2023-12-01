@@ -1,4 +1,4 @@
-name: Playground Auth tests
+name: 'Tests: Playground Auth'
 
 on:
   push:
@@ -19,23 +19,30 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - uses: php-actions/composer@v6
+    # - uses: php-actions/composer@v6
+    - name: Run php-actions/composer@v6
+      uses: php-actions/composer@v6
+      with:
+        php_version: "8.2"
+        php_extensions: intl
+        version: 2.x
     - uses: php-actions/phpunit@v3
       env:
         XDEBUG_MODE: coverage
       with:
         php_extensions: xdebug
         coverage_clover: clover.xml
+        coverage_text: true
     - name: Make code coverage badge
       uses: timkrase/phpunit-coverage-badge@v1.2.1
       with:
         coverage_badge_path: output/coverage.svg
         push_badge: false
-    - name: Git push to image-data branch
+    - name: Git push to testing/develop branch
       uses: peaceiris/actions-gh-pages@v3
       with:
         publish_dir: ./output
-        publish_branch: image-data
+        publish_branch: testing/develop
         github_token: ${{ secrets.GITHUB_TOKEN }}
         user_name: 'github-actions[bot]'
         user_email: 'github-actions[bot]@users.noreply.github.com'

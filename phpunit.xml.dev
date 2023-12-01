@@ -12,8 +12,8 @@
     failOnRisky="true"
     failOnWarning="true"
     processIsolation="false"
-    stopOnError="false"
-    stopOnFailure="false"
+    stopOnError="true"
+    stopOnFailure="true"
     cacheDirectory=".phpunit.cache"
     backupStaticProperties="false"
     displayDetailsOnIncompleteTests="true"
@@ -37,20 +37,20 @@
         ignoreDeprecatedCodeUnits="true"
         disableCodeCoverageIgnore="true">
         <report>
-            <clover outputFile="output/clover.xml"/>
-            <cobertura outputFile="output/cobertura.xml"/>
-            <crap4j outputFile="output/crap4j.xml" threshold="50"/>
-            <!-- <html outputDirectory="output/html" lowUpperBound="50" highLowerBound="90"/> -->
-            <php outputFile="output/coverage.php"/>
-            <text outputFile="output/coverage.txt" showUncoveredFiles="false" showOnlySummary="true"/>
-            <!-- <xml outputDirectory="output/xml"/> -->
+            <clover outputFile="tests/logs/clover.xml"/>
+            <cobertura outputFile="tests/logs/cobertura.xml"/>
+            <crap4j outputFile="tests/logs/crap4j.xml" threshold="50"/>
+            <html outputDirectory="tests/logs/html" lowUpperBound="50" highLowerBound="90"/>
+            <php outputFile="tests/logs/coverage.php"/>
+            <text outputFile="tests/logs/coverage.txt" showUncoveredFiles="false" showOnlySummary="true"/>
+            <xml outputDirectory="tests/logs/xml"/>
         </report>
     </coverage>
     <logging>
-        <junit outputFile="output/junit.xml"/>
-        <teamcity outputFile="output/teamcity.txt"/>
-        <testdoxHtml outputFile="output/testdox.html"/>
-        <testdoxText outputFile="output/testdox.txt"/>
+        <junit outputFile="tests/logs/junit.xml"/>
+        <teamcity outputFile="tests/logs/teamcity.txt"/>
+        <testdoxHtml outputFile="tests/logs/testdox.html"/>
+        <testdoxText outputFile="tests/logs/testdox.txt"/>
     </logging>
     <source>
         <include>
@@ -63,6 +63,7 @@
         <env name="APP_KEY" value="base64:lNTGdmOOxP5uNUVuCj9FB//Ssn8JmRXBdtPEE4/QReE="/>
         <env name="BCRYPT_ROUNDS" value="4"/>
         <env name="CACHE_DRIVER" value="array"/>
+        <env name="LOG_CHANNEL" value="stderr"/>
         <env name="DB_CONNECTION" value="sqlite"/>
         <env name="DB_DATABASE" value=":memory:"/>
         <env name="TEST_DB_MIGRATIONS" value="true"/>

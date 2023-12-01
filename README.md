@@ -1,7 +1,7 @@
 # Playground Auth
 
-![Test Coverage](https://raw.githubusercontent.com/gammamatrix/playground-auth/image-data/coverage.svg)
-![Playground CI Workflow](https://github.com/gammamatrix/playground-auth/actions/workflows/ci.yml/badge.svg?)
+[![Playground CI Workflow](https://github.com/gammamatrix/playground-auth/actions/workflows/ci.yml/badge.svg?branch=develop)](https://raw.githubusercontent.com/gammamatrix/playground-auth/testing/develop/testdox.txt)
+[![Test Coverage](https://raw.githubusercontent.com/gammamatrix/playground-auth/testing/develop/coverage.svg)](tests)
 
 The Playground authentication package for [Laravel](https://laravel.com/docs/10.x) applications.
 
