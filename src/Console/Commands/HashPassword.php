@@ -1,17 +1,16 @@
 <?php
 /**
- * GammaMatrix
- *
+ * Playground
  */
-
-namespace GammaMatrix\Playground\Auth\Console\Commands;
+namespace Playground\Auth\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Hash;
 
+use function Laravel\Prompts\password;
+
 /**
- * \GammaMatrix\Playground\Auth\Console\Commands\HashPassword
- *
+ * \Playground\Auth\Console\Commands\HashPassword
  */
 class HashPassword extends Command
 {
@@ -19,10 +18,9 @@ class HashPassword extends Command
      * @var string The console command name.
      */
     protected $signature = 'auth:hash-password
-        {password : The password to hash.}
+        {password? : The password to hash.}
         {--pretty : Format the JSON output}
-        {--json : Output the result as JSON}'
-    ;
+        {--json : Output the result as JSON}';
 
     /**
      * @var string The console command description.
@@ -30,7 +28,7 @@ class HashPassword extends Command
     protected $description = 'Hash a password.';
 
     /**
-     * @var boolean Return a JSON response.
+     * @var bool Return a JSON response.
      */
     protected $json = false;
 
@@ -42,18 +40,28 @@ class HashPassword extends Command
     public function handle()
     {
         $this->json = $this->option('json');
-        $password = Hash::make($this->argument('password'));
 
-        if (!$this->json) {
+        if ($this->hasArgument('password')) {
+            $password = $this->argument('password');
+        } else {
+            $password = password('Please provide the password to hash:');
+        }
+
+        $hashed = $password && is_string($password) ? Hash::make($password) : '';
+
+        if (! $this->json && $hashed) {
             $this->line(PHP_EOL);
-            $this->comment($password);
+            $this->comment($hashed);
         }
 
         if ($this->json) {
-            $this->line(json_encode(
-                ['password' => $password],
-                $this->option('pretty') ? JSON_PRETTY_PRINT : null
-            ));
+            $output = json_encode(
+                ['hashed' => $hashed],
+                $this->option('pretty') ? JSON_PRETTY_PRINT : 0
+            );
+            if ($output) {
+                $this->line($output);
+            }
         } else {
             $this->line(PHP_EOL);
         }

@@ -3,9 +3,7 @@
 [![Playground CI Workflow](https://github.com/gammamatrix/playground-auth/actions/workflows/ci.yml/badge.svg?branch=develop)](https://raw.githubusercontent.com/gammamatrix/playground-auth/testing/develop/testdox.txt)
 [![Test Coverage](https://raw.githubusercontent.com/gammamatrix/playground-auth/testing/develop/coverage.svg)](tests)
 
-The Playground authentication package for [Laravel](https://laravel.com/docs/10.x) applications.
-
-This package provides endpoints and a Blade UI for handling authentication and authorization.
+The Playground authentication and authorization package for [Laravel](https://laravel.com/docs/10.x) applications.
 
 More information is available [on the Playground Auth wiki.](https://github.com/gammamatrix/playground-auth/wiki)
 
@@ -21,56 +19,20 @@ composer require gammamatrix/playground-auth
 
 You can publish the config file with:
 ```bash
-php artisan vendor:publish --provider="GammaMatrix\Playground\Auth\ServiceProvider" --tag="playground-config"
+php artisan vendor:publish --provider="Playground\Auth\ServiceProvider" --tag="playground-config"
 ```
 
 See the contents of the published config file: [config/playground-auth.php](config/playground-auth.php)
-
-You can publish the routes file with:
-```bash
-php artisan vendor:publish --provider="GammaMatrix\Playground\Auth\ServiceProvider" --tag="playground-routes"
-```
 
 ### Environment Variables
 
 #### Loading
 
-| env()                           | config()                        |
-|---------------------------------|---------------------------------|
-| `PLAYGROUND_AUTH_LOAD_COMMANDS` | `playground-auth.load.commands` |
-| `PLAYGROUND_LOAD_ROUTES`        | `playground-auth.load.routes`   |
-| `PLAYGROUND_LOAD_VIEWS`         | `playground-auth.load.views`    |
+| env()                               | config()                            |
+|-------------------------------------|-------------------------------------|
+| `PLAYGROUND_AUTH_LOAD_COMMANDS`     | `playground-auth.load.commands`     |
+| `PLAYGROUND_AUTH_LOAD_TRANSLATIONS` | `playground-auth.load.translations` |
 
-`PLAYGROUND_LOAD_ROUTES` must be enabled to load the routes in the application (unless published to your app - the control for this is in the [ServiceProvider.php](src/ServiceProvider.php))
-
-#### Routes
-
-All routes are enabled by default in the base Playground Auth package.
-- They may be disabled in the configuration.
-
-See the authentication routes: [routes/auth.php](routes/auth.php)
-
-| env()                             | config()                          |
-|-----------------------------------|-----------------------------------|
-| `PLAYGROUND_AUTH_ROUTES_RESET`    | `playground-auth.routes.confirm`  |
-| `PLAYGROUND_AUTH_ROUTES_FORGOT`   | `playground-auth.routes.forgot`   |
-| `PLAYGROUND_AUTH_ROUTES_LOGOUT`   | `playground-auth.routes.logout`   |
-| `PLAYGROUND_AUTH_ROUTES_LOGIN`    | `playground-auth.routes.login`    |
-| `PLAYGROUND_AUTH_ROUTES_REGISTER` | `playground-auth.routes.register` |
-| `PLAYGROUND_AUTH_ROUTES_RESET`    | `playground-auth.routes.reset`    |
-| `PLAYGROUND_AUTH_ROUTES_TOKEN`    | `playground-auth.routes.token`    |
-| `PLAYGROUND_AUTH_ROUTES_RESET`    | `playground-auth.routes.verify`   |
-
-### UI
-
-| env()                            | config()                         |
-|----------------------------------|----------------------------------|
-| `PLAYGROUND_AUTH_LAYOUT`         | `playground-auth.layout`         |
-| `PLAYGROUND_AUTH_VIEW`           | `playground-auth.view`           |
-| `PLAYGROUND_AUTH_SITEMAP_ENABLE` | `playground-auth.sitemap.enable` |
-| `PLAYGROUND_AUTH_SITEMAP_GUEST`  | `playground-auth.sitemap.guest`  |
-| `PLAYGROUND_AUTH_SITEMAP_USER`   | `playground-auth.sitemap.user`   |
-| `PLAYGROUND_AUTH_SITEMAP_VIEW`   | `playground-auth.sitemap.view`   |
 
 ## Commands
 
@@ -85,7 +47,7 @@ artisan auth:hash-password 'some password' --json --pretty
 ```
 ```json
 {
-    "password": "$2y$10$langzXKRw1GgO6VgF0IrSecqxi3gAsU5NgmmERT\/2pQXg06mSbEjS"
+    "hashed": "$2y$10$langzXKRw1GgO6VgF0IrSecqxi3gAsU5NgmmERT\/2pQXg06mSbEjS"
 }
 ```
 

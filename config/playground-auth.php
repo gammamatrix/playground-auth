@@ -1,8 +1,6 @@
 <?php
 
 return [
-    'layout' => (string) env('PLAYGROUND_AUTH_LAYOUT', 'playground::layouts.site'),
-    'view' => (string) env('PLAYGROUND_AUTH_VIEW', 'playground-auth::'),
     'redirect' => env('PLAYGROUND_AUTH_REDIRECT', null),
     // 'session' => false,
     'token' => [
@@ -16,24 +14,7 @@ return [
     ],
     'load' => [
         'commands' => (bool) env('PLAYGROUND_AUTH_LOAD_COMMANDS', true),
-        'routes' => (bool) env('PLAYGROUND_AUTH_LOAD_ROUTES', true),
-        'views' => (bool) env('PLAYGROUND_AUTH_LOAD_VIEWS', true),
-    ],
-    'routes' => [
-        'confirm' => (bool) env('PLAYGROUND_AUTH_ROUTES_RESET', true),
-        'forgot' => (bool) env('PLAYGROUND_AUTH_ROUTES_FORGOT', true),
-        'logout' => (bool) env('PLAYGROUND_AUTH_ROUTES_LOGOUT', true),
-        'login' => (bool) env('PLAYGROUND_AUTH_ROUTES_LOGIN', true),
-        'register' => (bool) env('PLAYGROUND_AUTH_ROUTES_REGISTER', true),
-        'reset' => (bool) env('PLAYGROUND_AUTH_ROUTES_RESET', true),
-        'token' => (bool) env('PLAYGROUND_AUTH_ROUTES_TOKEN', true),
-        'verify' => (bool) env('PLAYGROUND_AUTH_ROUTES_RESET', true),
-    ],
-    'sitemap' => [
-        'enable' => (bool) env('PLAYGROUND_AUTH_SITEMAP_ENABLE', true),
-        'guest' => (bool) env('PLAYGROUND_AUTH_SITEMAP_GUEST', true),
-        'user' => (bool) env('PLAYGROUND_AUTH_SITEMAP_USER', true),
-        'view' => (string) env('PLAYGROUND_AUTH_SITEMAP_VIEW', 'playground-auth::sitemap'),
+        'translations' => (bool) env('PLAYGROUND_AUTH_LOAD_TRANSLATIONS', true),
     ],
     /**
      * Provide an array of email addresses for admin privileges.

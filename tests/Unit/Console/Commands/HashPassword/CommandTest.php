@@ -1,40 +1,50 @@
 <?php
 /**
- * GammaMatrix
+ * Playground
  */
+namespace Tests\Unit\Playground\Auth\Console\Commands\HashPassword;
 
-namespace Tests\Unit\GammaMatrix\Playground\Auth\Console\Commands\HashPassword;
-
-use Tests\Unit\GammaMatrix\Playground\Auth\TestCase;
+// use Illuminate\Support\Facades\Artisan;
+use Tests\Unit\Playground\Auth\TestCase;
 
 /**
- * \Tests\Unit\GammaMatrix\Playground\Auth\Console\Commands\HashPassword\CommandTest
- *
+ * \Tests\Unit\Playground\Auth\Console\Commands\HashPassword\CommandTest
  */
 class CommandTest extends TestCase
 {
-    public function test_command_auth_hash_password_with_json()
+    public function test_command_auth_hash_password_with_json(): void
     {
-        $result = $this->artisan('auth:hash-password --json "my-password"')
-            ->assertExitCode(0)
-            ->expectsOutputToContain('password')
-        ;
+        // $result = $this->withoutMockingConsoleOutput()->artisan('auth:hash-password --json "my-password"');
+        // dump(Artisan::output());
+        /**
+         * @var \Illuminate\Testing\PendingCommand $result
+         */
+        $result = $this->artisan('auth:hash-password --json "my-password"');
+        $result->assertExitCode(0);
+        $result->expectsOutputToContain('hashed');
     }
 
-    public function test_command_auth_hash_password()
+    public function test_command_auth_hash_password(): void
     {
-        $this->artisan('auth:hash-password some-passord')
-            ->assertExitCode(0)
-        ;
+        /**
+         * @var \Illuminate\Testing\PendingCommand $result
+         */
+        $result = $this->artisan('auth:hash-password some-passord');
+        $result->assertExitCode(0);
     }
 
-    public function test_command_auth_hash_password_without_argument_and_fail()
+    public function test_command_auth_hash_password_without_argument_and_fail(): void
     {
-        $this->expectException(\Symfony\Component\Console\Exception\RuntimeException::class);
-        $this->expectExceptionMessage('Not enough arguments (missing: "password").');
+        // $result = $this->withoutMockingConsoleOutput()->artisan('auth:hash-password --no-interaction');
+        // dump(Artisan::output());
+        // $this->expectException(\Symfony\Component\Console\Exception\RuntimeException::class);
+        // $this->expectExceptionMessage('Not enough arguments (missing: "password").');
 
-        $this->artisan('auth:hash-password')
-            ->assertExitCode(1)
-        ;
+        /**
+         * @var \Illuminate\Testing\PendingCommand $result
+         */
+        $result = $this->artisan('auth:hash-password --no-interaction');
+        $result->assertExitCode(0);
+        $result->doesntExpectOutputToContain('hashed');
     }
 }

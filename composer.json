@@ -4,7 +4,6 @@
     "keywords": [
         "auth",
         "authentication",
-        "blade",
         "gammamatrix",
         "laravel",
         "playground",
@@ -20,16 +19,6 @@
             "role": "Developer"
         }
     ],
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "git@github.com:gammamatrix/playground.git"
-        },
-        {
-            "type": "vcs",
-            "url": "git@github.com:gammamatrix/playground-test.git"
-        }
-    ],
     "require": {
         "php": "^8.1",
         "gammamatrix/playground": "dev-develop|dev-master|^73.0"
@@ -41,13 +30,13 @@
     "prefer-stable": true,
     "autoload": {
         "psr-4": {
-            "GammaMatrix\\Playground\\Auth\\": "src/"
+            "Playground\\Auth\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\Feature\\GammaMatrix\\Playground\\Auth\\": "tests/Feature/",
-            "Tests\\Unit\\GammaMatrix\\Playground\\Auth\\": "tests/Unit/"
+            "Tests\\Feature\\Playground\\Auth\\": "tests/Feature/",
+            "Tests\\Unit\\Playground\\Auth\\": "tests/Unit/"
         }
     },
     "config": {
@@ -64,7 +53,7 @@
         },
         "laravel": {
             "providers": [
-                "GammaMatrix\\Playground\\Auth\\ServiceProvider"
+                "Playground\\Auth\\ServiceProvider"
             ]
         }
     },
