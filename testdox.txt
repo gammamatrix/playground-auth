@@ -1,45 +1,69 @@
-Authentication Route (Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\AuthenticationRoute)
- [x] Login screen can be rendered
- [x] Users can authenticate using the login screen
- [x] Users cannot authenticate with invalid password
- [x] Users can logout on get request
- [x] Users can logout on post request
- [x] Guests can logout on get request
- [x] Csfr token request
- [x] Login repeat under rate limit and clear
- [x] Login repeat and hit rate limit
+Abstract (Tests\Unit\Playground\Auth\Policies\Policy\Abstract)
+ [x] Before with root
+ [x] Before with root as secondary fails
+ [x] Index without role
+ [x] Index with admin
+ [x] View without role
+ [x] View with admin
+ [x] View with admin in roles
 
-Command (Tests\Unit\GammaMatrix\Playground\Auth\Console\Commands\HashPassword\Command)
+Abstract Role (Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRole)
+ [x] Create without role
+ [x] Create with admin
+ [x] Delete without role
+ [x] Delete with admin
+ [x] Delete locked with admin
+ [x] Detail without role
+ [x] Detail with admin
+ [x] Edit without role
+ [x] Edit with admin
+ [x] ForceDelete without role
+ [x] ForceDelete with admin
+ [x] Lock without role
+ [x] Lock with admin
+ [x] Manage without role
+ [x] Manage with admin
+ [x] Restore without role
+ [x] Restore with admin
+ [x] Store without role
+ [x] Store with admin
+ [x] Update without role
+ [x] Update with admin
+ [x] Update locked with admin
+ [x] Unlock without role
+ [x] Unlock with admin
+
+Command (Tests\Unit\Playground\Auth\Console\Commands\HashPassword\Command)
  [x] Command auth hash password with json
  [x] Command auth hash password
  [x] Command auth hash password without argument and fail
 
-Email Verification Route (Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\EmailVerificationRoute)
- [x] Email verification screen can be rendered
- [x] Email verification screen is not rendered if already verified
- [x] Json send email verification notification as guest
- [x] Send email verification notification as guest and redirect
- [x] Send email verification notification as user
- [x] Send email verification notification when already verified
- [x] Email can be verified
- [x] Email is not verified with invalid hash
- [x] Email is not verified with invalid user id
- [x] Email verified with already verified
+Trait (Tests\Unit\Playground\Auth\Policies\PolicyTrait\Trait)
+ [x] Get entity
+ [x] Get package
+ [x] Has token
+ [x] Get token
+ [x] Set token
+ [x] Verify
+ [x] Verify privileges
+ [x] Verify roles
+ [x] Verify user
 
-Password Confirmation Route (Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\PasswordConfirmationRoute)
- [x] Confirm password screen can be rendered
- [x] Password can be confirmed
- [x] Password is not confirmed with invalid password
+Trait (Tests\Unit\Playground\Auth\Policies\PrivilegeTrait\Trait)
+ [x] Privilege PrivilegePolicy without parameter
+ [x] Privilege PrivilegeModelPolicy without parameter
+ [x] Privilege UserPolicy without parameter
+ [x] Privilege with package and without parameter
+ [x] Privilege with package and entity and without parameter
+ [x] Has privilege
+ [x] HasPrivilege with user hasPrivilege
+ [x] HasPrivilege with user privileges
+ [x] HasPrivilege without privileges enabled
 
-Password Reset Route (Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\PasswordResetRoute)
- [x] Reset password link screen can be rendered
- [x] Reset password link can be requested
- [x] Reset password screen can be rendered
- [x] Password can be reset with valid token
- [x] Password reset with invalid token
- [x] Password reset with invalid user
-
-Registration Route (Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\RegistrationRoute)
- [x] Registration screen can be rendered
- [x] New users can register
+Trait (Tests\Unit\Playground\Auth\Policies\RoleTrait\Trait)
+ [x] Get roles for admin
+ [x] Get roles for action
+ [x] Get roles to view
+ [x] Has role
+ [x] HasRole advanced role
 

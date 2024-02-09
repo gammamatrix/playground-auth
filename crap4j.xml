@@ -1,316 +1,437 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <crap_result>
   <project/>
-  <timestamp>2023-12-01 02:08:23</timestamp>
+  <timestamp>2024-02-09 23:12:12</timestamp>
   <stats>
     <name>Method Crap Stats</name>
-    <methodCount>31</methodCount>
+    <methodCount>42</methodCount>
     <crapMethodCount>1</crapMethodCount>
-    <crapLoad>27</crapLoad>
-    <totalCrap>788.67</totalCrap>
-    <crapMethodPercent>3.23</crapMethodPercent>
+    <crapLoad>7</crapLoad>
+    <totalCrap>173.25</totalCrap>
+    <crapMethodPercent>2.38</crapMethodPercent>
   </stats>
   <methods>
     <method>
-      <package>GammaMatrix\Playground\Auth\Console\Commands</package>
-      <className>GammaMatrix\Playground\Auth\Console\Commands\HashPassword</className>
+      <package>Playground\Auth\Console\Commands</package>
+      <className>Playground\Auth\Console\Commands\HashPassword</className>
       <methodName>handle</methodName>
       <methodSignature>handle()</methodSignature>
       <fullMethod>handle()</fullMethod>
-      <crap>4</crap>
-      <complexity>4</complexity>
-      <coverage>100</coverage>
+      <crap>9.02</crap>
+      <complexity>9</complexity>
+      <coverage>93.75</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
-      <package>GammaMatrix\Playground\Auth\Http\Controllers</package>
-      <className>GammaMatrix\Playground\Auth\Http\Controllers\AuthenticatedSessionController</className>
+      <package>Playground\Auth\Policies</package>
+      <className>Playground\Auth\Policies\ModelPolicy</className>
       <methodName>create</methodName>
-      <methodSignature>create(): Illuminate\View\View</methodSignature>
-      <fullMethod>create(): Illuminate\View\View</fullMethod>
+      <methodSignature>create(Illuminate\Contracts\Auth\Authenticatable $user): bool|\Illuminate\Auth\Access\Response</methodSignature>
+      <fullMethod>create(Illuminate\Contracts\Auth\Authenticatable $user): bool|\Illuminate\Auth\Access\Response</fullMethod>
       <crap>1</crap>
       <complexity>1</complexity>
       <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
-      <package>GammaMatrix\Playground\Auth\Http\Controllers</package>
-      <className>GammaMatrix\Playground\Auth\Http\Controllers\AuthenticatedSessionController</className>
-      <methodName>privileges</methodName>
-      <methodSignature>privileges(Illuminate\Foundation\Auth\User $user): array</methodSignature>
-      <fullMethod>privileges(Illuminate\Foundation\Auth\User $user): array</fullMethod>
-      <crap>702</crap>
-      <complexity>26</complexity>
-      <coverage>0</coverage>
-      <crapLoad>27</crapLoad>
-    </method>
-    <method>
-      <package>GammaMatrix\Playground\Auth\Http\Controllers</package>
-      <className>GammaMatrix\Playground\Auth\Http\Controllers\AuthenticatedSessionController</className>
-      <methodName>issue</methodName>
-      <methodSignature>issue(Illuminate\Http\Request $request): array</methodSignature>
-      <fullMethod>issue(Illuminate\Http\Request $request): array</fullMethod>
+      <package>Playground\Auth\Policies</package>
+      <className>Playground\Auth\Policies\ModelPolicy</className>
+      <methodName>delete</methodName>
+      <methodSignature>delete(Illuminate\Contracts\Auth\Authenticatable $user, Illuminate\Database\Eloquent\Model $model): bool|\Illuminate\Auth\Access\Response</methodSignature>
+      <fullMethod>delete(Illuminate\Contracts\Auth\Authenticatable $user, Illuminate\Database\Eloquent\Model $model): bool|\Illuminate\Auth\Access\Response</fullMethod>
       <crap>2</crap>
-      <complexity>1</complexity>
-      <coverage>0</coverage>
+      <complexity>2</complexity>
+      <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
-      <package>GammaMatrix\Playground\Auth\Http\Controllers</package>
-      <className>GammaMatrix\Playground\Auth\Http\Controllers\AuthenticatedSessionController</className>
+      <package>Playground\Auth\Policies</package>
+      <className>Playground\Auth\Policies\ModelPolicy</className>
+      <methodName>detail</methodName>
+      <methodSignature>detail(Illuminate\Contracts\Auth\Authenticatable $user, Illuminate\Database\Eloquent\Model $model): bool|\Illuminate\Auth\Access\Response</methodSignature>
+      <fullMethod>detail(Illuminate\Contracts\Auth\Authenticatable $user, Illuminate\Database\Eloquent\Model $model): bool|\Illuminate\Auth\Access\Response</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Auth\Policies</package>
+      <className>Playground\Auth\Policies\ModelPolicy</className>
+      <methodName>edit</methodName>
+      <methodSignature>edit(Illuminate\Contracts\Auth\Authenticatable $user, Illuminate\Database\Eloquent\Model $model): bool|\Illuminate\Auth\Access\Response</methodSignature>
+      <fullMethod>edit(Illuminate\Contracts\Auth\Authenticatable $user, Illuminate\Database\Eloquent\Model $model): bool|\Illuminate\Auth\Access\Response</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Auth\Policies</package>
+      <className>Playground\Auth\Policies\ModelPolicy</className>
+      <methodName>forceDelete</methodName>
+      <methodSignature>forceDelete(Illuminate\Contracts\Auth\Authenticatable $user, Illuminate\Database\Eloquent\Model $model): bool|\Illuminate\Auth\Access\Response</methodSignature>
+      <fullMethod>forceDelete(Illuminate\Contracts\Auth\Authenticatable $user, Illuminate\Database\Eloquent\Model $model): bool|\Illuminate\Auth\Access\Response</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Auth\Policies</package>
+      <className>Playground\Auth\Policies\ModelPolicy</className>
+      <methodName>lock</methodName>
+      <methodSignature>lock(Illuminate\Contracts\Auth\Authenticatable $user, Illuminate\Database\Eloquent\Model $model): bool|\Illuminate\Auth\Access\Response</methodSignature>
+      <fullMethod>lock(Illuminate\Contracts\Auth\Authenticatable $user, Illuminate\Database\Eloquent\Model $model): bool|\Illuminate\Auth\Access\Response</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Auth\Policies</package>
+      <className>Playground\Auth\Policies\ModelPolicy</className>
+      <methodName>manage</methodName>
+      <methodSignature>manage(Illuminate\Contracts\Auth\Authenticatable $user, Illuminate\Database\Eloquent\Model $model): bool|\Illuminate\Auth\Access\Response</methodSignature>
+      <fullMethod>manage(Illuminate\Contracts\Auth\Authenticatable $user, Illuminate\Database\Eloquent\Model $model): bool|\Illuminate\Auth\Access\Response</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Auth\Policies</package>
+      <className>Playground\Auth\Policies\ModelPolicy</className>
+      <methodName>restore</methodName>
+      <methodSignature>restore(Illuminate\Contracts\Auth\Authenticatable $user, Illuminate\Database\Eloquent\Model $model): bool|\Illuminate\Auth\Access\Response</methodSignature>
+      <fullMethod>restore(Illuminate\Contracts\Auth\Authenticatable $user, Illuminate\Database\Eloquent\Model $model): bool|\Illuminate\Auth\Access\Response</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Auth\Policies</package>
+      <className>Playground\Auth\Policies\ModelPolicy</className>
       <methodName>store</methodName>
-      <methodSignature>store(GammaMatrix\Playground\Auth\Http\Requests\LoginRequest $request): \Illuminate\Http\JsonResponse|\Illuminate\Http\RedirectResponse</methodSignature>
-      <fullMethod>store(GammaMatrix\Playground\Auth\Http\Requests\LoginRequest $request): \Illuminate\Http\JsonResponse|\Illuminate\Http\RedirectResponse</fullMethod>
-      <crap>4.06</crap>
-      <complexity>4</complexity>
-      <coverage>84.62</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>GammaMatrix\Playground\Auth\Http\Controllers</package>
-      <className>GammaMatrix\Playground\Auth\Http\Controllers\AuthenticatedSessionController</className>
-      <methodName>destroy</methodName>
-      <methodSignature>destroy(Illuminate\Http\Request $request): \Illuminate\Http\JsonResponse|\Illuminate\Http\RedirectResponse</methodSignature>
-      <fullMethod>destroy(Illuminate\Http\Request $request): \Illuminate\Http\JsonResponse|\Illuminate\Http\RedirectResponse</fullMethod>
-      <crap>22.61</crap>
-      <complexity>8</complexity>
-      <coverage>38.89</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>GammaMatrix\Playground\Auth\Http\Controllers</package>
-      <className>GammaMatrix\Playground\Auth\Http\Controllers\AuthenticatedSessionController</className>
-      <methodName>token</methodName>
-      <methodSignature>token(Illuminate\Http\Request $request): Illuminate\Http\JsonResponse</methodSignature>
-      <fullMethod>token(Illuminate\Http\Request $request): Illuminate\Http\JsonResponse</fullMethod>
+      <methodSignature>store(Illuminate\Contracts\Auth\Authenticatable $user): bool|\Illuminate\Auth\Access\Response</methodSignature>
+      <fullMethod>store(Illuminate\Contracts\Auth\Authenticatable $user): bool|\Illuminate\Auth\Access\Response</fullMethod>
       <crap>1</crap>
       <complexity>1</complexity>
       <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
-      <package>GammaMatrix\Playground\Auth\Http\Controllers</package>
-      <className>GammaMatrix\Playground\Auth\Http\Controllers\ConfirmablePasswordController</className>
-      <methodName>show</methodName>
-      <methodSignature>show(): Illuminate\View\View</methodSignature>
-      <fullMethod>show(): Illuminate\View\View</fullMethod>
+      <package>Playground\Auth\Policies</package>
+      <className>Playground\Auth\Policies\ModelPolicy</className>
+      <methodName>update</methodName>
+      <methodSignature>update(Illuminate\Contracts\Auth\Authenticatable $user, Illuminate\Database\Eloquent\Model $model): bool|\Illuminate\Auth\Access\Response</methodSignature>
+      <fullMethod>update(Illuminate\Contracts\Auth\Authenticatable $user, Illuminate\Database\Eloquent\Model $model): bool|\Illuminate\Auth\Access\Response</fullMethod>
+      <crap>2</crap>
+      <complexity>2</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Auth\Policies</package>
+      <className>Playground\Auth\Policies\ModelPolicy</className>
+      <methodName>unlock</methodName>
+      <methodSignature>unlock(Illuminate\Contracts\Auth\Authenticatable $user, Illuminate\Database\Eloquent\Model $model): bool|\Illuminate\Auth\Access\Response</methodSignature>
+      <fullMethod>unlock(Illuminate\Contracts\Auth\Authenticatable $user, Illuminate\Database\Eloquent\Model $model): bool|\Illuminate\Auth\Access\Response</fullMethod>
       <crap>1</crap>
       <complexity>1</complexity>
       <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
-      <package>GammaMatrix\Playground\Auth\Http\Controllers</package>
-      <className>GammaMatrix\Playground\Auth\Http\Controllers\ConfirmablePasswordController</className>
-      <methodName>store</methodName>
-      <methodSignature>store(Illuminate\Http\Request $request): \Illuminate\Http\JsonResponse|\Illuminate\Http\RedirectResponse</methodSignature>
-      <fullMethod>store(Illuminate\Http\Request $request): \Illuminate\Http\JsonResponse|\Illuminate\Http\RedirectResponse</fullMethod>
-      <crap>2</crap>
-      <complexity>2</complexity>
+      <package>Playground\Auth\Policies</package>
+      <className>Playground\Auth\Policies\Policy</className>
+      <methodName>before</methodName>
+      <methodSignature>before(Illuminate\Contracts\Auth\Authenticatable $user, $ability)</methodSignature>
+      <fullMethod>before(Illuminate\Contracts\Auth\Authenticatable $user, $ability)</fullMethod>
+      <crap>5</crap>
+      <complexity>5</complexity>
       <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
-      <package>GammaMatrix\Playground\Auth\Http\Controllers</package>
-      <className>GammaMatrix\Playground\Auth\Http\Controllers\Controller</className>
-      <methodName>getRedirectUrl</methodName>
-      <methodSignature>getRedirectUrl(): string</methodSignature>
-      <fullMethod>getRedirectUrl(): string</fullMethod>
-      <crap>2</crap>
-      <complexity>2</complexity>
+      <package>Playground\Auth\Policies</package>
+      <className>Playground\Auth\Policies\Policy</className>
+      <methodName>index</methodName>
+      <methodSignature>index(Illuminate\Contracts\Auth\Authenticatable $user): bool|\Illuminate\Auth\Access\Response</methodSignature>
+      <fullMethod>index(Illuminate\Contracts\Auth\Authenticatable $user): bool|\Illuminate\Auth\Access\Response</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
       <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
-      <package>GammaMatrix\Playground\Auth\Http\Controllers</package>
-      <className>GammaMatrix\Playground\Auth\Http\Controllers\EmailVerificationController</className>
-      <methodName>show</methodName>
-      <methodSignature>show(Illuminate\Http\Request $request): \Illuminate\Http\Response|\Illuminate\Http\JsonResponse|\Illuminate\Http\RedirectResponse|\Illuminate\View\View</methodSignature>
-      <fullMethod>show(Illuminate\Http\Request $request): \Illuminate\Http\Response|\Illuminate\Http\JsonResponse|\Illuminate\Http\RedirectResponse|\Illuminate\View\View</fullMethod>
-      <crap>2</crap>
-      <complexity>2</complexity>
+      <package>Playground\Auth\Policies</package>
+      <className>Playground\Auth\Policies\Policy</className>
+      <methodName>view</methodName>
+      <methodSignature>view(Illuminate\Contracts\Auth\Authenticatable $user): bool|\Illuminate\Auth\Access\Response</methodSignature>
+      <fullMethod>view(Illuminate\Contracts\Auth\Authenticatable $user): bool|\Illuminate\Auth\Access\Response</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
       <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
-      <package>GammaMatrix\Playground\Auth\Http\Controllers</package>
-      <className>GammaMatrix\Playground\Auth\Http\Controllers\EmailVerificationController</className>
-      <methodName>send</methodName>
-      <methodSignature>send(Illuminate\Http\Request $request): \Illuminate\Http\RedirectResponse|\Illuminate\Http\Response</methodSignature>
-      <fullMethod>send(Illuminate\Http\Request $request): \Illuminate\Http\RedirectResponse|\Illuminate\Http\Response</fullMethod>
-      <crap>2</crap>
-      <complexity>2</complexity>
+      <package>Playground\Auth\Policies</package>
+      <className>Playground\Auth\Policies\PolicyTrait</className>
+      <methodName>hasPrivilege</methodName>
+      <methodSignature>hasPrivilege(Illuminate\Contracts\Auth\Authenticatable $user, string $privilege): bool|\Illuminate\Auth\Access\Response</methodSignature>
+      <fullMethod>hasPrivilege(Illuminate\Contracts\Auth\Authenticatable $user, string $privilege): bool|\Illuminate\Auth\Access\Response</fullMethod>
+      <crap>0</crap>
+      <complexity>0</complexity>
       <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
-      <package>GammaMatrix\Playground\Auth\Http\Controllers</package>
-      <className>GammaMatrix\Playground\Auth\Http\Controllers\EmailVerificationController</className>
+      <package>Playground\Auth\Policies</package>
+      <className>Playground\Auth\Policies\PolicyTrait</className>
+      <methodName>hasRole</methodName>
+      <methodSignature>hasRole(Illuminate\Contracts\Auth\Authenticatable $user, string $ability): bool|\Illuminate\Auth\Access\Response</methodSignature>
+      <fullMethod>hasRole(Illuminate\Contracts\Auth\Authenticatable $user, string $ability): bool|\Illuminate\Auth\Access\Response</fullMethod>
+      <crap>0</crap>
+      <complexity>0</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Auth\Policies</package>
+      <className>Playground\Auth\Policies\PolicyTrait</className>
+      <methodName>privilege</methodName>
+      <methodSignature>privilege(string $ability): string</methodSignature>
+      <fullMethod>privilege(string $ability): string</fullMethod>
+      <crap>0</crap>
+      <complexity>0</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Auth\Policies</package>
+      <className>Playground\Auth\Policies\PolicyTrait</className>
+      <methodName>getEntity</methodName>
+      <methodSignature>getEntity(): string</methodSignature>
+      <fullMethod>getEntity(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Auth\Policies</package>
+      <className>Playground\Auth\Policies\PolicyTrait</className>
+      <methodName>getPackage</methodName>
+      <methodSignature>getPackage(): string</methodSignature>
+      <fullMethod>getPackage(): string</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Auth\Policies</package>
+      <className>Playground\Auth\Policies\PolicyTrait</className>
+      <methodName>hasToken</methodName>
+      <methodSignature>hasToken(): bool</methodSignature>
+      <fullMethod>hasToken(): bool</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Auth\Policies</package>
+      <className>Playground\Auth\Policies\PolicyTrait</className>
+      <methodName>getToken</methodName>
+      <methodSignature>getToken(): ?Laravel\Sanctum\PersonalAccessToken</methodSignature>
+      <fullMethod>getToken(): ?Laravel\Sanctum\PersonalAccessToken</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Auth\Policies</package>
+      <className>Playground\Auth\Policies\PolicyTrait</className>
+      <methodName>setToken</methodName>
+      <methodSignature>setToken(Laravel\Sanctum\PersonalAccessToken $token): self</methodSignature>
+      <fullMethod>setToken(Laravel\Sanctum\PersonalAccessToken $token): self</fullMethod>
+      <crap>1</crap>
+      <complexity>1</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Auth\Policies</package>
+      <className>Playground\Auth\Policies\PolicyTrait</className>
       <methodName>verify</methodName>
-      <methodSignature>verify(GammaMatrix\Playground\Auth\Http\Requests\EmailVerificationRequest $request): \Illuminate\Http\Response|\Illuminate\Http\JsonResponse|\Illuminate\Http\RedirectResponse|\Illuminate\View\View</methodSignature>
-      <fullMethod>verify(GammaMatrix\Playground\Auth\Http\Requests\EmailVerificationRequest $request): \Illuminate\Http\Response|\Illuminate\Http\JsonResponse|\Illuminate\Http\RedirectResponse|\Illuminate\View\View</fullMethod>
-      <crap>3</crap>
-      <complexity>3</complexity>
-      <coverage>100</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>GammaMatrix\Playground\Auth\Http\Controllers</package>
-      <className>GammaMatrix\Playground\Auth\Http\Controllers\NewPasswordController</className>
-      <methodName>create</methodName>
-      <methodSignature>create(Illuminate\Http\Request $request)</methodSignature>
-      <fullMethod>create(Illuminate\Http\Request $request)</fullMethod>
-      <crap>1</crap>
-      <complexity>1</complexity>
-      <coverage>100</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>GammaMatrix\Playground\Auth\Http\Controllers</package>
-      <className>GammaMatrix\Playground\Auth\Http\Controllers\NewPasswordController</className>
-      <methodName>store</methodName>
-      <methodSignature>store(Illuminate\Http\Request $request)</methodSignature>
-      <fullMethod>store(Illuminate\Http\Request $request)</fullMethod>
-      <crap>2</crap>
-      <complexity>2</complexity>
-      <coverage>100</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>GammaMatrix\Playground\Auth\Http\Controllers</package>
-      <className>GammaMatrix\Playground\Auth\Http\Controllers\PasswordResetLinkController</className>
-      <methodName>create</methodName>
-      <methodSignature>create(): Illuminate\View\View</methodSignature>
-      <fullMethod>create(): Illuminate\View\View</fullMethod>
-      <crap>1</crap>
-      <complexity>1</complexity>
-      <coverage>100</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>GammaMatrix\Playground\Auth\Http\Controllers</package>
-      <className>GammaMatrix\Playground\Auth\Http\Controllers\PasswordResetLinkController</className>
-      <methodName>store</methodName>
-      <methodSignature>store(GammaMatrix\Playground\Auth\Http\Requests\PasswordResetRequest $request): Illuminate\Http\RedirectResponse</methodSignature>
-      <fullMethod>store(GammaMatrix\Playground\Auth\Http\Requests\PasswordResetRequest $request): Illuminate\Http\RedirectResponse</fullMethod>
-      <crap>2</crap>
-      <complexity>2</complexity>
-      <coverage>100</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>GammaMatrix\Playground\Auth\Http\Controllers</package>
-      <className>GammaMatrix\Playground\Auth\Http\Controllers\RegisteredUserController</className>
-      <methodName>create</methodName>
-      <methodSignature>create()</methodSignature>
-      <fullMethod>create()</fullMethod>
-      <crap>1</crap>
-      <complexity>1</complexity>
-      <coverage>100</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>GammaMatrix\Playground\Auth\Http\Controllers</package>
-      <className>GammaMatrix\Playground\Auth\Http\Controllers\RegisteredUserController</className>
-      <methodName>store</methodName>
-      <methodSignature>store(Illuminate\Http\Request $request)</methodSignature>
-      <fullMethod>store(Illuminate\Http\Request $request)</fullMethod>
-      <crap>1</crap>
-      <complexity>1</complexity>
-      <coverage>100</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>GammaMatrix\Playground\Auth\Http\Requests</package>
-      <className>GammaMatrix\Playground\Auth\Http\Requests\EmailVerificationRequest</className>
-      <methodName>authorize</methodName>
-      <methodSignature>authorize()</methodSignature>
-      <fullMethod>authorize()</fullMethod>
+      <methodSignature>verify(Illuminate\Contracts\Auth\Authenticatable $user, string $ability): bool|\Illuminate\Auth\Access\Response</methodSignature>
+      <fullMethod>verify(Illuminate\Contracts\Auth\Authenticatable $user, string $ability): bool|\Illuminate\Auth\Access\Response</fullMethod>
       <crap>4</crap>
       <complexity>4</complexity>
       <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
-      <package>GammaMatrix\Playground\Auth\Http\Requests</package>
-      <className>GammaMatrix\Playground\Auth\Http\Requests\LoginRequest</className>
-      <methodName>authorize</methodName>
-      <methodSignature>authorize()</methodSignature>
-      <fullMethod>authorize()</fullMethod>
+      <package>Playground\Auth\Policies</package>
+      <className>Playground\Auth\Policies\PrivilegeTrait</className>
+      <methodName>getPackage</methodName>
+      <methodSignature>getPackage(): string</methodSignature>
+      <fullMethod>getPackage(): string</fullMethod>
+      <crap>0</crap>
+      <complexity>0</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Auth\Policies</package>
+      <className>Playground\Auth\Policies\PrivilegeTrait</className>
+      <methodName>getEntity</methodName>
+      <methodSignature>getEntity(): string</methodSignature>
+      <fullMethod>getEntity(): string</fullMethod>
+      <crap>0</crap>
+      <complexity>0</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Auth\Policies</package>
+      <className>Playground\Auth\Policies\PrivilegeTrait</className>
+      <methodName>getToken</methodName>
+      <methodSignature>getToken(): ?Laravel\Sanctum\PersonalAccessToken</methodSignature>
+      <fullMethod>getToken(): ?Laravel\Sanctum\PersonalAccessToken</fullMethod>
+      <crap>0</crap>
+      <complexity>0</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Auth\Policies</package>
+      <className>Playground\Auth\Policies\PrivilegeTrait</className>
+      <methodName>hasToken</methodName>
+      <methodSignature>hasToken(): bool</methodSignature>
+      <fullMethod>hasToken(): bool</fullMethod>
+      <crap>0</crap>
+      <complexity>0</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Auth\Policies</package>
+      <className>Playground\Auth\Policies\PrivilegeTrait</className>
+      <methodName>setToken</methodName>
+      <methodSignature>setToken(Laravel\Sanctum\PersonalAccessToken $token): self</methodSignature>
+      <fullMethod>setToken(Laravel\Sanctum\PersonalAccessToken $token): self</fullMethod>
+      <crap>0</crap>
+      <complexity>0</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Auth\Policies</package>
+      <className>Playground\Auth\Policies\PrivilegeTrait</className>
+      <methodName>privilege</methodName>
+      <methodSignature>privilege(string $ability): string</methodSignature>
+      <fullMethod>privilege(string $ability): string</fullMethod>
+      <crap>6</crap>
+      <complexity>6</complexity>
+      <coverage>100</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Auth\Policies</package>
+      <className>Playground\Auth\Policies\PrivilegeTrait</className>
+      <methodName>hasPrivilegeWildcard</methodName>
+      <methodSignature>hasPrivilegeWildcard(string $privilege): bool</methodSignature>
+      <fullMethod>hasPrivilegeWildcard(string $privilege): bool</fullMethod>
+      <crap>20</crap>
+      <complexity>4</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Auth\Policies</package>
+      <className>Playground\Auth\Policies\PrivilegeTrait</className>
+      <methodName>hasPrivilege</methodName>
+      <methodSignature>hasPrivilege(Illuminate\Contracts\Auth\Authenticatable $user, string $privilege): bool|\Illuminate\Auth\Access\Response</methodSignature>
+      <fullMethod>hasPrivilege(Illuminate\Contracts\Auth\Authenticatable $user, string $privilege): bool|\Illuminate\Auth\Access\Response</fullMethod>
+      <crap>11.23</crap>
+      <complexity>10</complexity>
+      <coverage>76.92</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Auth\Policies</package>
+      <className>Playground\Auth\Policies\PrivilegeTrait</className>
+      <methodName>hasPrivilegeSanctum</methodName>
+      <methodSignature>hasPrivilegeSanctum(Laravel\Sanctum\Contracts\HasApiTokens $user, string $privilege): bool|\Illuminate\Auth\Access\Response</methodSignature>
+      <fullMethod>hasPrivilegeSanctum(Laravel\Sanctum\Contracts\HasApiTokens $user, string $privilege): bool|\Illuminate\Auth\Access\Response</fullMethod>
+      <crap>56</crap>
+      <complexity>7</complexity>
+      <coverage>0</coverage>
+      <crapLoad>7</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Auth\Policies</package>
+      <className>Playground\Auth\Policies\RoleTrait</className>
+      <methodName>getRolesForAdmin</methodName>
+      <methodSignature>getRolesForAdmin(): array</methodSignature>
+      <fullMethod>getRolesForAdmin(): array</fullMethod>
       <crap>1</crap>
       <complexity>1</complexity>
       <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
-      <package>GammaMatrix\Playground\Auth\Http\Requests</package>
-      <className>GammaMatrix\Playground\Auth\Http\Requests\LoginRequest</className>
-      <methodName>rules</methodName>
-      <methodSignature>rules()</methodSignature>
-      <fullMethod>rules()</fullMethod>
+      <package>Playground\Auth\Policies</package>
+      <className>Playground\Auth\Policies\RoleTrait</className>
+      <methodName>getRolesForAction</methodName>
+      <methodSignature>getRolesForAction(): array</methodSignature>
+      <fullMethod>getRolesForAction(): array</fullMethod>
       <crap>1</crap>
       <complexity>1</complexity>
       <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
-      <package>GammaMatrix\Playground\Auth\Http\Requests</package>
-      <className>GammaMatrix\Playground\Auth\Http\Requests\LoginRequest</className>
-      <methodName>authenticate</methodName>
-      <methodSignature>authenticate()</methodSignature>
-      <fullMethod>authenticate()</fullMethod>
+      <package>Playground\Auth\Policies</package>
+      <className>Playground\Auth\Policies\RoleTrait</className>
+      <methodName>isRoot</methodName>
+      <methodSignature>isRoot(Illuminate\Contracts\Auth\Authenticatable $user): bool</methodSignature>
+      <fullMethod>isRoot(Illuminate\Contracts\Auth\Authenticatable $user): bool</fullMethod>
       <crap>2</crap>
       <complexity>2</complexity>
       <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
-      <package>GammaMatrix\Playground\Auth\Http\Requests</package>
-      <className>GammaMatrix\Playground\Auth\Http\Requests\LoginRequest</className>
-      <methodName>ensureIsNotRateLimited</methodName>
-      <methodSignature>ensureIsNotRateLimited()</methodSignature>
-      <fullMethod>ensureIsNotRateLimited()</fullMethod>
-      <crap>2</crap>
-      <complexity>2</complexity>
-      <coverage>100</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>GammaMatrix\Playground\Auth\Http\Requests</package>
-      <className>GammaMatrix\Playground\Auth\Http\Requests\LoginRequest</className>
-      <methodName>throttleKey</methodName>
-      <methodSignature>throttleKey()</methodSignature>
-      <fullMethod>throttleKey()</fullMethod>
+      <package>Playground\Auth\Policies</package>
+      <className>Playground\Auth\Policies\RoleTrait</className>
+      <methodName>getRolesToView</methodName>
+      <methodSignature>getRolesToView(): array</methodSignature>
+      <fullMethod>getRolesToView(): array</fullMethod>
       <crap>1</crap>
       <complexity>1</complexity>
       <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
-      <package>GammaMatrix\Playground\Auth\Http\Requests</package>
-      <className>GammaMatrix\Playground\Auth\Http\Requests\PasswordResetRequest</className>
-      <methodName>authorize</methodName>
-      <methodSignature>authorize()</methodSignature>
-      <fullMethod>authorize()</fullMethod>
-      <crap>1</crap>
-      <complexity>1</complexity>
+      <package>Playground\Auth\Policies</package>
+      <className>Playground\Auth\Policies\RoleTrait</className>
+      <methodName>hasRole</methodName>
+      <methodSignature>hasRole(Illuminate\Contracts\Auth\Authenticatable $user, string $ability): bool|\Illuminate\Auth\Access\Response</methodSignature>
+      <fullMethod>hasRole(Illuminate\Contracts\Auth\Authenticatable $user, string $ability): bool|\Illuminate\Auth\Access\Response</fullMethod>
+      <crap>18</crap>
+      <complexity>18</complexity>
       <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
-      <package>GammaMatrix\Playground\Auth\Http\Requests</package>
-      <className>GammaMatrix\Playground\Auth\Http\Requests\PasswordResetRequest</className>
-      <methodName>rules</methodName>
-      <methodSignature>rules()</methodSignature>
-      <fullMethod>rules()</fullMethod>
-      <crap>1</crap>
-      <complexity>1</complexity>
-      <coverage>100</coverage>
-      <crapLoad>0</crapLoad>
-    </method>
-    <method>
-      <package>GammaMatrix\Playground\Auth</package>
-      <className>GammaMatrix\Playground\Auth\ServiceProvider</className>
+      <package>Playground\Auth</package>
+      <className>Playground\Auth\ServiceProvider</className>
       <methodName>boot</methodName>
       <methodSignature>boot()</methodSignature>
       <fullMethod>boot()</fullMethod>
@@ -320,33 +441,33 @@
       <crapLoad>0</crapLoad>
     </method>
     <method>
-      <package>GammaMatrix\Playground\Auth</package>
-      <className>GammaMatrix\Playground\Auth\ServiceProvider</className>
+      <package>Playground\Auth</package>
+      <className>Playground\Auth\ServiceProvider</className>
       <methodName>register</methodName>
-      <methodSignature>register()</methodSignature>
-      <fullMethod>register()</fullMethod>
+      <methodSignature>register(): void</methodSignature>
+      <fullMethod>register(): void</fullMethod>
       <crap>1</crap>
       <complexity>1</complexity>
       <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
-      <package>GammaMatrix\Playground\Auth</package>
-      <className>GammaMatrix\Playground\Auth\ServiceProvider</className>
+      <package>Playground\Auth</package>
+      <className>Playground\Auth\ServiceProvider</className>
       <methodName>about</methodName>
-      <methodSignature>about()</methodSignature>
-      <fullMethod>about()</fullMethod>
+      <methodSignature>about(): void</methodSignature>
+      <fullMethod>about(): void</fullMethod>
       <crap>11</crap>
       <complexity>11</complexity>
       <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
-      <package>GammaMatrix\Playground\Auth</package>
-      <className>GammaMatrix\Playground\Auth\ServiceProvider</className>
+      <package>Playground\Auth</package>
+      <className>Playground\Auth\ServiceProvider</className>
       <methodName>version</methodName>
-      <methodSignature>version()</methodSignature>
-      <fullMethod>version()</fullMethod>
+      <methodSignature>version(): string</methodSignature>
+      <fullMethod>version(): string</fullMethod>
       <crap>1</crap>
       <complexity>1</complexity>
       <coverage>100</coverage>

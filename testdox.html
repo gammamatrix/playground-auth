@@ -51,56 +51,80 @@
         </style>
     </head>
     <body>
-        <h2>Authentication Route (Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\AuthenticationRoute)</h2>
+        <h2>Abstract (Tests\Unit\Playground\Auth\Policies\Policy\Abstract)</h2>
         <ul>
-            <li class="success">Login screen can be rendered</li>
-            <li class="success">Users can authenticate using the login screen</li>
-            <li class="success">Users cannot authenticate with invalid password</li>
-            <li class="success">Users can logout on get request</li>
-            <li class="success">Users can logout on post request</li>
-            <li class="success">Guests can logout on get request</li>
-            <li class="success">Csfr token request</li>
-            <li class="success">Login repeat under rate limit and clear</li>
-            <li class="success">Login repeat and hit rate limit</li>
+            <li class="success">Before with root</li>
+            <li class="success">Before with root as secondary fails</li>
+            <li class="success">Index without role</li>
+            <li class="success">Index with admin</li>
+            <li class="success">View without role</li>
+            <li class="success">View with admin</li>
+            <li class="success">View with admin in roles</li>
         </ul>
-        <h2>Command (Tests\Unit\GammaMatrix\Playground\Auth\Console\Commands\HashPassword\Command)</h2>
+        <h2>Abstract Role (Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRole)</h2>
+        <ul>
+            <li class="success">Create without role</li>
+            <li class="success">Create with admin</li>
+            <li class="success">Delete without role</li>
+            <li class="success">Delete with admin</li>
+            <li class="success">Delete locked with admin</li>
+            <li class="success">Detail without role</li>
+            <li class="success">Detail with admin</li>
+            <li class="success">Edit without role</li>
+            <li class="success">Edit with admin</li>
+            <li class="success">ForceDelete without role</li>
+            <li class="success">ForceDelete with admin</li>
+            <li class="success">Lock without role</li>
+            <li class="success">Lock with admin</li>
+            <li class="success">Manage without role</li>
+            <li class="success">Manage with admin</li>
+            <li class="success">Restore without role</li>
+            <li class="success">Restore with admin</li>
+            <li class="success">Store without role</li>
+            <li class="success">Store with admin</li>
+            <li class="success">Update without role</li>
+            <li class="success">Update with admin</li>
+            <li class="success">Update locked with admin</li>
+            <li class="success">Unlock without role</li>
+            <li class="success">Unlock with admin</li>
+        </ul>
+        <h2>Command (Tests\Unit\Playground\Auth\Console\Commands\HashPassword\Command)</h2>
         <ul>
             <li class="success">Command auth hash password with json</li>
             <li class="success">Command auth hash password</li>
             <li class="success">Command auth hash password without argument and fail</li>
         </ul>
-        <h2>Email Verification Route (Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\EmailVerificationRoute)</h2>
+        <h2>Trait (Tests\Unit\Playground\Auth\Policies\PolicyTrait\Trait)</h2>
         <ul>
-            <li class="success">Email verification screen can be rendered</li>
-            <li class="success">Email verification screen is not rendered if already verified</li>
-            <li class="success">Json send email verification notification as guest</li>
-            <li class="success">Send email verification notification as guest and redirect</li>
-            <li class="success">Send email verification notification as user</li>
-            <li class="success">Send email verification notification when already verified</li>
-            <li class="success">Email can be verified</li>
-            <li class="success">Email is not verified with invalid hash</li>
-            <li class="success">Email is not verified with invalid user id</li>
-            <li class="success">Email verified with already verified</li>
+            <li class="success">Get entity</li>
+            <li class="success">Get package</li>
+            <li class="success">Has token</li>
+            <li class="success">Get token</li>
+            <li class="success">Set token</li>
+            <li class="success">Verify</li>
+            <li class="success">Verify privileges</li>
+            <li class="success">Verify roles</li>
+            <li class="success">Verify user</li>
         </ul>
-        <h2>Password Confirmation Route (Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\PasswordConfirmationRoute)</h2>
+        <h2>Trait (Tests\Unit\Playground\Auth\Policies\PrivilegeTrait\Trait)</h2>
         <ul>
-            <li class="success">Confirm password screen can be rendered</li>
-            <li class="success">Password can be confirmed</li>
-            <li class="success">Password is not confirmed with invalid password</li>
+            <li class="success">Privilege PrivilegePolicy without parameter</li>
+            <li class="success">Privilege PrivilegeModelPolicy without parameter</li>
+            <li class="success">Privilege UserPolicy without parameter</li>
+            <li class="success">Privilege with package and without parameter</li>
+            <li class="success">Privilege with package and entity and without parameter</li>
+            <li class="success">Has privilege</li>
+            <li class="success">HasPrivilege with user hasPrivilege</li>
+            <li class="success">HasPrivilege with user privileges</li>
+            <li class="success">HasPrivilege without privileges enabled</li>
         </ul>
-        <h2>Password Reset Route (Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\PasswordResetRoute)</h2>
+        <h2>Trait (Tests\Unit\Playground\Auth\Policies\RoleTrait\Trait)</h2>
         <ul>
-            <li class="success">Reset password link screen can be rendered</li>
-            <li class="success">Reset password link can be requested</li>
-            <li class="success">Reset password screen can be rendered</li>
-            <li class="success">Password can be reset with valid token</li>
-            <li class="success">Password reset with invalid token</li>
-            <li class="success">Password reset with invalid user</li>
-        </ul>
-        <h2>Registration Route (Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\RegistrationRoute)</h2>
-        <ul>
-            <li class="success">Registration screen can be rendered</li>
-            <li class="success">New users can register</li>
+            <li class="success">Get roles for admin</li>
+            <li class="success">Get roles for action</li>
+            <li class="success">Get roles to view</li>
+            <li class="success">Has role</li>
+            <li class="success">HasRole advanced role</li>
         </ul>
     </body>
 </html>

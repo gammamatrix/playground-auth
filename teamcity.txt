@@ -1,170 +1,258 @@
 
-##teamcity[testCount count='33' flowId='1']
-
-##teamcity[testSuiteStarted name='/app/phpunit.xml.dist' flowId='1']
+##teamcity[testCount count='57' flowId='1']
 
 ##teamcity[testSuiteStarted name='Unit' flowId='1']
 
-##teamcity[testSuiteStarted name='Tests\Unit\GammaMatrix\Playground\Auth\Console\Commands\HashPassword\CommandTest' locationHint='php_qn:///app/tests/Unit/Console/Commands/HashPassword/CommandTest.php::\Tests\Unit\GammaMatrix\Playground\Auth\Console\Commands\HashPassword\CommandTest' flowId='1']
+##teamcity[testSuiteStarted name='Tests\Unit\Playground\Auth\Console\Commands\HashPassword\CommandTest' locationHint='php_qn:///app/tests/Unit/Console/Commands/HashPassword/CommandTest.php::\Tests\Unit\Playground\Auth\Console\Commands\HashPassword\CommandTest' flowId='1']
 
-##teamcity[testStarted name='test_command_auth_hash_password_with_json' locationHint='php_qn:///app/tests/Unit/Console/Commands/HashPassword/CommandTest.php::\Tests\Unit\GammaMatrix\Playground\Auth\Console\Commands\HashPassword\CommandTest::test_command_auth_hash_password_with_json' flowId='1']
+##teamcity[testStarted name='test_command_auth_hash_password_with_json' locationHint='php_qn:///app/tests/Unit/Console/Commands/HashPassword/CommandTest.php::\Tests\Unit\Playground\Auth\Console\Commands\HashPassword\CommandTest::test_command_auth_hash_password_with_json' flowId='1']
 
-##teamcity[testFinished name='test_command_auth_hash_password_with_json' duration='194' flowId='1']
+##teamcity[testFinished name='test_command_auth_hash_password_with_json' duration='203' flowId='1']
 
-##teamcity[testStarted name='test_command_auth_hash_password' locationHint='php_qn:///app/tests/Unit/Console/Commands/HashPassword/CommandTest.php::\Tests\Unit\GammaMatrix\Playground\Auth\Console\Commands\HashPassword\CommandTest::test_command_auth_hash_password' flowId='1']
+##teamcity[testStarted name='test_command_auth_hash_password' locationHint='php_qn:///app/tests/Unit/Console/Commands/HashPassword/CommandTest.php::\Tests\Unit\Playground\Auth\Console\Commands\HashPassword\CommandTest::test_command_auth_hash_password' flowId='1']
 
 ##teamcity[testFinished name='test_command_auth_hash_password' duration='9' flowId='1']
 
-##teamcity[testStarted name='test_command_auth_hash_password_without_argument_and_fail' locationHint='php_qn:///app/tests/Unit/Console/Commands/HashPassword/CommandTest.php::\Tests\Unit\GammaMatrix\Playground\Auth\Console\Commands\HashPassword\CommandTest::test_command_auth_hash_password_without_argument_and_fail' flowId='1']
+##teamcity[testStarted name='test_command_auth_hash_password_without_argument_and_fail' locationHint='php_qn:///app/tests/Unit/Console/Commands/HashPassword/CommandTest.php::\Tests\Unit\Playground\Auth\Console\Commands\HashPassword\CommandTest::test_command_auth_hash_password_without_argument_and_fail' flowId='1']
 
 ##teamcity[testFinished name='test_command_auth_hash_password_without_argument_and_fail' duration='8' flowId='1']
 
-##teamcity[testSuiteFinished name='Tests\Unit\GammaMatrix\Playground\Auth\Console\Commands\HashPassword\CommandTest' flowId='1']
+##teamcity[testSuiteFinished name='Tests\Unit\Playground\Auth\Console\Commands\HashPassword\CommandTest' flowId='1']
+
+##teamcity[testSuiteStarted name='Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest' locationHint='php_qn:///app/tests/Unit/Policies/ModelPolicy/AbstractRoleTest.php::\Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest' flowId='1']
+
+##teamcity[testStarted name='test_create_without_role' locationHint='php_qn:///app/tests/Unit/Policies/ModelPolicy/AbstractRoleTest.php::\Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_create_without_role' flowId='1']
+
+##teamcity[testFinished name='test_create_without_role' duration='87' flowId='1']
+
+##teamcity[testStarted name='test_create_with_admin' locationHint='php_qn:///app/tests/Unit/Policies/ModelPolicy/AbstractRoleTest.php::\Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_create_with_admin' flowId='1']
+
+##teamcity[testFinished name='test_create_with_admin' duration='19' flowId='1']
+
+##teamcity[testStarted name='test_delete_without_role' locationHint='php_qn:///app/tests/Unit/Policies/ModelPolicy/AbstractRoleTest.php::\Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_delete_without_role' flowId='1']
+
+##teamcity[testFinished name='test_delete_without_role' duration='8' flowId='1']
+
+##teamcity[testStarted name='test_delete_with_admin' locationHint='php_qn:///app/tests/Unit/Policies/ModelPolicy/AbstractRoleTest.php::\Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_delete_with_admin' flowId='1']
+
+##teamcity[testFinished name='test_delete_with_admin' duration='7' flowId='1']
+
+##teamcity[testStarted name='test_delete_locked_with_admin' locationHint='php_qn:///app/tests/Unit/Policies/ModelPolicy/AbstractRoleTest.php::\Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_delete_locked_with_admin' flowId='1']
+
+##teamcity[testFinished name='test_delete_locked_with_admin' duration='8' flowId='1']
+
+##teamcity[testStarted name='test_detail_without_role' locationHint='php_qn:///app/tests/Unit/Policies/ModelPolicy/AbstractRoleTest.php::\Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_detail_without_role' flowId='1']
+
+##teamcity[testFinished name='test_detail_without_role' duration='7' flowId='1']
+
+##teamcity[testStarted name='test_detail_with_admin' locationHint='php_qn:///app/tests/Unit/Policies/ModelPolicy/AbstractRoleTest.php::\Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_detail_with_admin' flowId='1']
+
+##teamcity[testFinished name='test_detail_with_admin' duration='7' flowId='1']
+
+##teamcity[testStarted name='test_edit_without_role' locationHint='php_qn:///app/tests/Unit/Policies/ModelPolicy/AbstractRoleTest.php::\Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_edit_without_role' flowId='1']
+
+##teamcity[testFinished name='test_edit_without_role' duration='7' flowId='1']
+
+##teamcity[testStarted name='test_edit_with_admin' locationHint='php_qn:///app/tests/Unit/Policies/ModelPolicy/AbstractRoleTest.php::\Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_edit_with_admin' flowId='1']
+
+##teamcity[testFinished name='test_edit_with_admin' duration='7' flowId='1']
+
+##teamcity[testStarted name='test_forceDelete_without_role' locationHint='php_qn:///app/tests/Unit/Policies/ModelPolicy/AbstractRoleTest.php::\Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_forceDelete_without_role' flowId='1']
+
+##teamcity[testFinished name='test_forceDelete_without_role' duration='7' flowId='1']
+
+##teamcity[testStarted name='test_forceDelete_with_admin' locationHint='php_qn:///app/tests/Unit/Policies/ModelPolicy/AbstractRoleTest.php::\Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_forceDelete_with_admin' flowId='1']
+
+##teamcity[testFinished name='test_forceDelete_with_admin' duration='7' flowId='1']
+
+##teamcity[testStarted name='test_lock_without_role' locationHint='php_qn:///app/tests/Unit/Policies/ModelPolicy/AbstractRoleTest.php::\Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_lock_without_role' flowId='1']
+
+##teamcity[testFinished name='test_lock_without_role' duration='7' flowId='1']
+
+##teamcity[testStarted name='test_lock_with_admin' locationHint='php_qn:///app/tests/Unit/Policies/ModelPolicy/AbstractRoleTest.php::\Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_lock_with_admin' flowId='1']
+
+##teamcity[testFinished name='test_lock_with_admin' duration='7' flowId='1']
+
+##teamcity[testStarted name='test_manage_without_role' locationHint='php_qn:///app/tests/Unit/Policies/ModelPolicy/AbstractRoleTest.php::\Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_manage_without_role' flowId='1']
+
+##teamcity[testFinished name='test_manage_without_role' duration='7' flowId='1']
+
+##teamcity[testStarted name='test_manage_with_admin' locationHint='php_qn:///app/tests/Unit/Policies/ModelPolicy/AbstractRoleTest.php::\Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_manage_with_admin' flowId='1']
+
+##teamcity[testFinished name='test_manage_with_admin' duration='7' flowId='1']
+
+##teamcity[testStarted name='test_restore_without_role' locationHint='php_qn:///app/tests/Unit/Policies/ModelPolicy/AbstractRoleTest.php::\Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_restore_without_role' flowId='1']
+
+##teamcity[testFinished name='test_restore_without_role' duration='7' flowId='1']
+
+##teamcity[testStarted name='test_restore_with_admin' locationHint='php_qn:///app/tests/Unit/Policies/ModelPolicy/AbstractRoleTest.php::\Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_restore_with_admin' flowId='1']
+
+##teamcity[testFinished name='test_restore_with_admin' duration='7' flowId='1']
+
+##teamcity[testStarted name='test_store_without_role' locationHint='php_qn:///app/tests/Unit/Policies/ModelPolicy/AbstractRoleTest.php::\Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_store_without_role' flowId='1']
+
+##teamcity[testFinished name='test_store_without_role' duration='7' flowId='1']
+
+##teamcity[testStarted name='test_store_with_admin' locationHint='php_qn:///app/tests/Unit/Policies/ModelPolicy/AbstractRoleTest.php::\Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_store_with_admin' flowId='1']
+
+##teamcity[testFinished name='test_store_with_admin' duration='7' flowId='1']
+
+##teamcity[testStarted name='test_update_without_role' locationHint='php_qn:///app/tests/Unit/Policies/ModelPolicy/AbstractRoleTest.php::\Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_update_without_role' flowId='1']
+
+##teamcity[testFinished name='test_update_without_role' duration='7' flowId='1']
+
+##teamcity[testStarted name='test_update_with_admin' locationHint='php_qn:///app/tests/Unit/Policies/ModelPolicy/AbstractRoleTest.php::\Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_update_with_admin' flowId='1']
+
+##teamcity[testFinished name='test_update_with_admin' duration='7' flowId='1']
+
+##teamcity[testStarted name='test_update_locked_with_admin' locationHint='php_qn:///app/tests/Unit/Policies/ModelPolicy/AbstractRoleTest.php::\Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_update_locked_with_admin' flowId='1']
+
+##teamcity[testFinished name='test_update_locked_with_admin' duration='7' flowId='1']
+
+##teamcity[testStarted name='test_unlock_without_role' locationHint='php_qn:///app/tests/Unit/Policies/ModelPolicy/AbstractRoleTest.php::\Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_unlock_without_role' flowId='1']
+
+##teamcity[testFinished name='test_unlock_without_role' duration='7' flowId='1']
+
+##teamcity[testStarted name='test_unlock_with_admin' locationHint='php_qn:///app/tests/Unit/Policies/ModelPolicy/AbstractRoleTest.php::\Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_unlock_with_admin' flowId='1']
+
+##teamcity[testFinished name='test_unlock_with_admin' duration='7' flowId='1']
+
+##teamcity[testSuiteFinished name='Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest' flowId='1']
+
+##teamcity[testSuiteStarted name='Tests\Unit\Playground\Auth\Policies\Policy\AbstractTest' locationHint='php_qn:///app/tests/Unit/Policies/Policy/AbstractTest.php::\Tests\Unit\Playground\Auth\Policies\Policy\AbstractTest' flowId='1']
+
+##teamcity[testStarted name='test_before_with_root' locationHint='php_qn:///app/tests/Unit/Policies/Policy/AbstractTest.php::\Tests\Unit\Playground\Auth\Policies\Policy\AbstractTest::test_before_with_root' flowId='1']
+
+##teamcity[testFinished name='test_before_with_root' duration='8' flowId='1']
+
+##teamcity[testStarted name='test_before_with_root_as_secondary_fails' locationHint='php_qn:///app/tests/Unit/Policies/Policy/AbstractTest.php::\Tests\Unit\Playground\Auth\Policies\Policy\AbstractTest::test_before_with_root_as_secondary_fails' flowId='1']
+
+##teamcity[testFinished name='test_before_with_root_as_secondary_fails' duration='7' flowId='1']
+
+##teamcity[testStarted name='test_index_without_role' locationHint='php_qn:///app/tests/Unit/Policies/Policy/AbstractTest.php::\Tests\Unit\Playground\Auth\Policies\Policy\AbstractTest::test_index_without_role' flowId='1']
+
+##teamcity[testFinished name='test_index_without_role' duration='7' flowId='1']
+
+##teamcity[testStarted name='test_index_with_admin' locationHint='php_qn:///app/tests/Unit/Policies/Policy/AbstractTest.php::\Tests\Unit\Playground\Auth\Policies\Policy\AbstractTest::test_index_with_admin' flowId='1']
+
+##teamcity[testFinished name='test_index_with_admin' duration='7' flowId='1']
+
+##teamcity[testStarted name='test_view_without_role' locationHint='php_qn:///app/tests/Unit/Policies/Policy/AbstractTest.php::\Tests\Unit\Playground\Auth\Policies\Policy\AbstractTest::test_view_without_role' flowId='1']
+
+##teamcity[testFinished name='test_view_without_role' duration='8' flowId='1']
+
+##teamcity[testStarted name='test_view_with_admin' locationHint='php_qn:///app/tests/Unit/Policies/Policy/AbstractTest.php::\Tests\Unit\Playground\Auth\Policies\Policy\AbstractTest::test_view_with_admin' flowId='1']
+
+##teamcity[testFinished name='test_view_with_admin' duration='7' flowId='1']
+
+##teamcity[testStarted name='test_view_with_admin_in_roles' locationHint='php_qn:///app/tests/Unit/Policies/Policy/AbstractTest.php::\Tests\Unit\Playground\Auth\Policies\Policy\AbstractTest::test_view_with_admin_in_roles' flowId='1']
+
+##teamcity[testFinished name='test_view_with_admin_in_roles' duration='7' flowId='1']
+
+##teamcity[testSuiteFinished name='Tests\Unit\Playground\Auth\Policies\Policy\AbstractTest' flowId='1']
+
+##teamcity[testSuiteStarted name='Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest' locationHint='php_qn:///app/tests/Unit/Policies/PolicyTrait/TraitTest.php::\Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest' flowId='1']
+
+##teamcity[testStarted name='test_getEntity' locationHint='php_qn:///app/tests/Unit/Policies/PolicyTrait/TraitTest.php::\Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_getEntity' flowId='1']
+
+##teamcity[testFinished name='test_getEntity' duration='4' flowId='1']
+
+##teamcity[testStarted name='test_getPackage' locationHint='php_qn:///app/tests/Unit/Policies/PolicyTrait/TraitTest.php::\Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_getPackage' flowId='1']
+
+##teamcity[testFinished name='test_getPackage' duration='4' flowId='1']
+
+##teamcity[testStarted name='test_hasToken' locationHint='php_qn:///app/tests/Unit/Policies/PolicyTrait/TraitTest.php::\Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_hasToken' flowId='1']
+
+##teamcity[testFinished name='test_hasToken' duration='4' flowId='1']
+
+##teamcity[testStarted name='test_getToken' locationHint='php_qn:///app/tests/Unit/Policies/PolicyTrait/TraitTest.php::\Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_getToken' flowId='1']
+
+##teamcity[testFinished name='test_getToken' duration='4' flowId='1']
+
+##teamcity[testStarted name='test_setToken' locationHint='php_qn:///app/tests/Unit/Policies/PolicyTrait/TraitTest.php::\Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_setToken' flowId='1']
+
+##teamcity[testFinished name='test_setToken' duration='4' flowId='1']
+
+##teamcity[testStarted name='test_verify' locationHint='php_qn:///app/tests/Unit/Policies/PolicyTrait/TraitTest.php::\Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_verify' flowId='1']
+
+##teamcity[testFinished name='test_verify' duration='9' flowId='1']
+
+##teamcity[testStarted name='test_verify_privileges' locationHint='php_qn:///app/tests/Unit/Policies/PolicyTrait/TraitTest.php::\Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_verify_privileges' flowId='1']
+
+##teamcity[testFinished name='test_verify_privileges' duration='7' flowId='1']
+
+##teamcity[testStarted name='test_verify_roles' locationHint='php_qn:///app/tests/Unit/Policies/PolicyTrait/TraitTest.php::\Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_verify_roles' flowId='1']
+
+##teamcity[testFinished name='test_verify_roles' duration='7' flowId='1']
+
+##teamcity[testStarted name='test_verify_user' locationHint='php_qn:///app/tests/Unit/Policies/PolicyTrait/TraitTest.php::\Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_verify_user' flowId='1']
+
+##teamcity[testFinished name='test_verify_user' duration='7' flowId='1']
+
+##teamcity[testSuiteFinished name='Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest' flowId='1']
+
+##teamcity[testSuiteStarted name='Tests\Unit\Playground\Auth\Policies\PrivilegeTrait\TraitTest' locationHint='php_qn:///app/tests/Unit/Policies/PrivilegeTrait/TraitTest.php::\Tests\Unit\Playground\Auth\Policies\PrivilegeTrait\TraitTest' flowId='1']
+
+##teamcity[testStarted name='test_privilege_PrivilegePolicy_without_parameter' locationHint='php_qn:///app/tests/Unit/Policies/PrivilegeTrait/TraitTest.php::\Tests\Unit\Playground\Auth\Policies\PrivilegeTrait\TraitTest::test_privilege_PrivilegePolicy_without_parameter' flowId='1']
+
+##teamcity[testFinished name='test_privilege_PrivilegePolicy_without_parameter' duration='4' flowId='1']
+
+##teamcity[testStarted name='test_privilege_PrivilegeModelPolicy_without_parameter' locationHint='php_qn:///app/tests/Unit/Policies/PrivilegeTrait/TraitTest.php::\Tests\Unit\Playground\Auth\Policies\PrivilegeTrait\TraitTest::test_privilege_PrivilegeModelPolicy_without_parameter' flowId='1']
+
+##teamcity[testFinished name='test_privilege_PrivilegeModelPolicy_without_parameter' duration='4' flowId='1']
+
+##teamcity[testStarted name='test_privilege_UserPolicy_without_parameter' locationHint='php_qn:///app/tests/Unit/Policies/PrivilegeTrait/TraitTest.php::\Tests\Unit\Playground\Auth\Policies\PrivilegeTrait\TraitTest::test_privilege_UserPolicy_without_parameter' flowId='1']
+
+##teamcity[testFinished name='test_privilege_UserPolicy_without_parameter' duration='4' flowId='1']
+
+##teamcity[testStarted name='test_privilege_with_package_and_without_parameter' locationHint='php_qn:///app/tests/Unit/Policies/PrivilegeTrait/TraitTest.php::\Tests\Unit\Playground\Auth\Policies\PrivilegeTrait\TraitTest::test_privilege_with_package_and_without_parameter' flowId='1']
+
+##teamcity[testFinished name='test_privilege_with_package_and_without_parameter' duration='4' flowId='1']
+
+##teamcity[testStarted name='test_privilege_with_package_and_entity_and_without_parameter' locationHint='php_qn:///app/tests/Unit/Policies/PrivilegeTrait/TraitTest.php::\Tests\Unit\Playground\Auth\Policies\PrivilegeTrait\TraitTest::test_privilege_with_package_and_entity_and_without_parameter' flowId='1']
+
+##teamcity[testFinished name='test_privilege_with_package_and_entity_and_without_parameter' duration='4' flowId='1']
+
+##teamcity[testStarted name='test_hasPrivilege' locationHint='php_qn:///app/tests/Unit/Policies/PrivilegeTrait/TraitTest.php::\Tests\Unit\Playground\Auth\Policies\PrivilegeTrait\TraitTest::test_hasPrivilege' flowId='1']
+
+##teamcity[testFinished name='test_hasPrivilege' duration='7' flowId='1']
+
+##teamcity[testStarted name='test_hasPrivilege_with_user_hasPrivilege' locationHint='php_qn:///app/tests/Unit/Policies/PrivilegeTrait/TraitTest.php::\Tests\Unit\Playground\Auth\Policies\PrivilegeTrait\TraitTest::test_hasPrivilege_with_user_hasPrivilege' flowId='1']
+
+##teamcity[testFinished name='test_hasPrivilege_with_user_hasPrivilege' duration='7' flowId='1']
+
+##teamcity[testStarted name='test_hasPrivilege_with_user_privileges' locationHint='php_qn:///app/tests/Unit/Policies/PrivilegeTrait/TraitTest.php::\Tests\Unit\Playground\Auth\Policies\PrivilegeTrait\TraitTest::test_hasPrivilege_with_user_privileges' flowId='1']
+
+##teamcity[testFinished name='test_hasPrivilege_with_user_privileges' duration='7' flowId='1']
+
+##teamcity[testStarted name='test_hasPrivilege_without_privileges_enabled' locationHint='php_qn:///app/tests/Unit/Policies/PrivilegeTrait/TraitTest.php::\Tests\Unit\Playground\Auth\Policies\PrivilegeTrait\TraitTest::test_hasPrivilege_without_privileges_enabled' flowId='1']
+
+##teamcity[testFinished name='test_hasPrivilege_without_privileges_enabled' duration='7' flowId='1']
+
+##teamcity[testSuiteFinished name='Tests\Unit\Playground\Auth\Policies\PrivilegeTrait\TraitTest' flowId='1']
+
+##teamcity[testSuiteStarted name='Tests\Unit\Playground\Auth\Policies\RoleTrait\TraitTest' locationHint='php_qn:///app/tests/Unit/Policies/RoleTrait/TraitTest.php::\Tests\Unit\Playground\Auth\Policies\RoleTrait\TraitTest' flowId='1']
+
+##teamcity[testStarted name='test_getRolesForAdmin' locationHint='php_qn:///app/tests/Unit/Policies/RoleTrait/TraitTest.php::\Tests\Unit\Playground\Auth\Policies\RoleTrait\TraitTest::test_getRolesForAdmin' flowId='1']
+
+##teamcity[testFinished name='test_getRolesForAdmin' duration='4' flowId='1']
+
+##teamcity[testStarted name='test_getRolesForAction' locationHint='php_qn:///app/tests/Unit/Policies/RoleTrait/TraitTest.php::\Tests\Unit\Playground\Auth\Policies\RoleTrait\TraitTest::test_getRolesForAction' flowId='1']
+
+##teamcity[testFinished name='test_getRolesForAction' duration='4' flowId='1']
+
+##teamcity[testStarted name='test_getRolesToView' locationHint='php_qn:///app/tests/Unit/Policies/RoleTrait/TraitTest.php::\Tests\Unit\Playground\Auth\Policies\RoleTrait\TraitTest::test_getRolesToView' flowId='1']
+
+##teamcity[testFinished name='test_getRolesToView' duration='4' flowId='1']
+
+##teamcity[testStarted name='test_hasRole' locationHint='php_qn:///app/tests/Unit/Policies/RoleTrait/TraitTest.php::\Tests\Unit\Playground\Auth\Policies\RoleTrait\TraitTest::test_hasRole' flowId='1']
+
+##teamcity[testFinished name='test_hasRole' duration='7' flowId='1']
+
+##teamcity[testStarted name='test_hasRole_advanced_role' locationHint='php_qn:///app/tests/Unit/Policies/RoleTrait/TraitTest.php::\Tests\Unit\Playground\Auth\Policies\RoleTrait\TraitTest::test_hasRole_advanced_role' flowId='1']
+
+##teamcity[testFinished name='test_hasRole_advanced_role' duration='7' flowId='1']
+
+##teamcity[testSuiteFinished name='Tests\Unit\Playground\Auth\Policies\RoleTrait\TraitTest' flowId='1']
 
 ##teamcity[testSuiteFinished name='Unit' flowId='1']
-
-##teamcity[testSuiteStarted name='Feature' flowId='1']
-
-##teamcity[testSuiteStarted name='Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\AuthenticationRouteTest' locationHint='php_qn:///app/tests/Feature/Http/Controllers/AuthenticationRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\AuthenticationRouteTest' flowId='1']
-
-##teamcity[testStarted name='test_login_screen_can_be_rendered' locationHint='php_qn:///app/tests/Feature/Http/Controllers/AuthenticationRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\AuthenticationRouteTest::test_login_screen_can_be_rendered' flowId='1']
-
-##teamcity[testFinished name='test_login_screen_can_be_rendered' duration='109' flowId='1']
-
-##teamcity[testStarted name='test_users_can_authenticate_using_the_login_screen' locationHint='php_qn:///app/tests/Feature/Http/Controllers/AuthenticationRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\AuthenticationRouteTest::test_users_can_authenticate_using_the_login_screen' flowId='1']
-
-##teamcity[testFinished name='test_users_can_authenticate_using_the_login_screen' duration='59' flowId='1']
-
-##teamcity[testStarted name='test_users_cannot_authenticate_with_invalid_password' locationHint='php_qn:///app/tests/Feature/Http/Controllers/AuthenticationRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\AuthenticationRouteTest::test_users_cannot_authenticate_with_invalid_password' flowId='1']
-
-##teamcity[testFinished name='test_users_cannot_authenticate_with_invalid_password' duration='232' flowId='1']
-
-##teamcity[testStarted name='test_users_can_logout_on_get_request' locationHint='php_qn:///app/tests/Feature/Http/Controllers/AuthenticationRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\AuthenticationRouteTest::test_users_can_logout_on_get_request' flowId='1']
-
-##teamcity[testFinished name='test_users_can_logout_on_get_request' duration='24' flowId='1']
-
-##teamcity[testStarted name='test_users_can_logout_on_post_request' locationHint='php_qn:///app/tests/Feature/Http/Controllers/AuthenticationRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\AuthenticationRouteTest::test_users_can_logout_on_post_request' flowId='1']
-
-##teamcity[testFinished name='test_users_can_logout_on_post_request' duration='24' flowId='1']
-
-##teamcity[testStarted name='test_guests_can_logout_on_get_request' locationHint='php_qn:///app/tests/Feature/Http/Controllers/AuthenticationRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\AuthenticationRouteTest::test_guests_can_logout_on_get_request' flowId='1']
-
-##teamcity[testFinished name='test_guests_can_logout_on_get_request' duration='20' flowId='1']
-
-##teamcity[testStarted name='test_csfr_token_request' locationHint='php_qn:///app/tests/Feature/Http/Controllers/AuthenticationRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\AuthenticationRouteTest::test_csfr_token_request' flowId='1']
-
-##teamcity[testFinished name='test_csfr_token_request' duration='21' flowId='1']
-
-##teamcity[testStarted name='test_login_repeat_under_rate_limit_and_clear' locationHint='php_qn:///app/tests/Feature/Http/Controllers/AuthenticationRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\AuthenticationRouteTest::test_login_repeat_under_rate_limit_and_clear' flowId='1']
-
-##teamcity[testFinished name='test_login_repeat_under_rate_limit_and_clear' duration='442' flowId='1']
-
-##teamcity[testStarted name='test_login_repeat_and_hit_rate_limit' locationHint='php_qn:///app/tests/Feature/Http/Controllers/AuthenticationRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\AuthenticationRouteTest::test_login_repeat_and_hit_rate_limit' flowId='1']
-
-##teamcity[testFinished name='test_login_repeat_and_hit_rate_limit' duration='1060' flowId='1']
-
-##teamcity[testSuiteFinished name='Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\AuthenticationRouteTest' flowId='1']
-
-##teamcity[testSuiteStarted name='Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\EmailVerificationRouteTest' locationHint='php_qn:///app/tests/Feature/Http/Controllers/EmailVerificationRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\EmailVerificationRouteTest' flowId='1']
-
-##teamcity[testStarted name='test_email_verification_screen_can_be_rendered' locationHint='php_qn:///app/tests/Feature/Http/Controllers/EmailVerificationRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\EmailVerificationRouteTest::test_email_verification_screen_can_be_rendered' flowId='1']
-
-##teamcity[testFinished name='test_email_verification_screen_can_be_rendered' duration='41' flowId='1']
-
-##teamcity[testStarted name='test_email_verification_screen_is_not_rendered_if_already_verified' locationHint='php_qn:///app/tests/Feature/Http/Controllers/EmailVerificationRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\EmailVerificationRouteTest::test_email_verification_screen_is_not_rendered_if_already_verified' flowId='1']
-
-##teamcity[testFinished name='test_email_verification_screen_is_not_rendered_if_already_verified' duration='23' flowId='1']
-
-##teamcity[testStarted name='test_json_send_email_verification_notification_as_guest' locationHint='php_qn:///app/tests/Feature/Http/Controllers/EmailVerificationRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\EmailVerificationRouteTest::test_json_send_email_verification_notification_as_guest' flowId='1']
-
-##teamcity[testFinished name='test_json_send_email_verification_notification_as_guest' duration='27' flowId='1']
-
-##teamcity[testStarted name='test_send_email_verification_notification_as_guest_and_redirect' locationHint='php_qn:///app/tests/Feature/Http/Controllers/EmailVerificationRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\EmailVerificationRouteTest::test_send_email_verification_notification_as_guest_and_redirect' flowId='1']
-
-##teamcity[testFinished name='test_send_email_verification_notification_as_guest_and_redirect' duration='22' flowId='1']
-
-##teamcity[testStarted name='test_send_email_verification_notification_as_user' locationHint='php_qn:///app/tests/Feature/Http/Controllers/EmailVerificationRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\EmailVerificationRouteTest::test_send_email_verification_notification_as_user' flowId='1']
-
-##teamcity[testFinished name='test_send_email_verification_notification_as_user' duration='31' flowId='1']
-
-##teamcity[testStarted name='test_send_email_verification_notification_when_already_verified' locationHint='php_qn:///app/tests/Feature/Http/Controllers/EmailVerificationRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\EmailVerificationRouteTest::test_send_email_verification_notification_when_already_verified' flowId='1']
-
-##teamcity[testFinished name='test_send_email_verification_notification_when_already_verified' duration='24' flowId='1']
-
-##teamcity[testStarted name='test_email_can_be_verified' locationHint='php_qn:///app/tests/Feature/Http/Controllers/EmailVerificationRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\EmailVerificationRouteTest::test_email_can_be_verified' flowId='1']
-
-##teamcity[testFinished name='test_email_can_be_verified' duration='33' flowId='1']
-
-##teamcity[testStarted name='test_email_is_not_verified_with_invalid_hash' locationHint='php_qn:///app/tests/Feature/Http/Controllers/EmailVerificationRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\EmailVerificationRouteTest::test_email_is_not_verified_with_invalid_hash' flowId='1']
-
-##teamcity[testFinished name='test_email_is_not_verified_with_invalid_hash' duration='28' flowId='1']
-
-##teamcity[testStarted name='test_email_is_not_verified_with_invalid_user_id' locationHint='php_qn:///app/tests/Feature/Http/Controllers/EmailVerificationRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\EmailVerificationRouteTest::test_email_is_not_verified_with_invalid_user_id' flowId='1']
-
-##teamcity[testFinished name='test_email_is_not_verified_with_invalid_user_id' duration='26' flowId='1']
-
-##teamcity[testStarted name='test_email_verified_with_already_verified' locationHint='php_qn:///app/tests/Feature/Http/Controllers/EmailVerificationRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\EmailVerificationRouteTest::test_email_verified_with_already_verified' flowId='1']
-
-##teamcity[testFinished name='test_email_verified_with_already_verified' duration='26' flowId='1']
-
-##teamcity[testSuiteFinished name='Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\EmailVerificationRouteTest' flowId='1']
-
-##teamcity[testSuiteStarted name='Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\PasswordConfirmationRouteTest' locationHint='php_qn:///app/tests/Feature/Http/Controllers/PasswordConfirmationRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\PasswordConfirmationRouteTest' flowId='1']
-
-##teamcity[testStarted name='test_confirm_password_screen_can_be_rendered' locationHint='php_qn:///app/tests/Feature/Http/Controllers/PasswordConfirmationRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\PasswordConfirmationRouteTest::test_confirm_password_screen_can_be_rendered' flowId='1']
-
-##teamcity[testFinished name='test_confirm_password_screen_can_be_rendered' duration='40' flowId='1']
-
-##teamcity[testStarted name='test_password_can_be_confirmed' locationHint='php_qn:///app/tests/Feature/Http/Controllers/PasswordConfirmationRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\PasswordConfirmationRouteTest::test_password_can_be_confirmed' flowId='1']
-
-##teamcity[testFinished name='test_password_can_be_confirmed' duration='26' flowId='1']
-
-##teamcity[testStarted name='test_password_is_not_confirmed_with_invalid_password' locationHint='php_qn:///app/tests/Feature/Http/Controllers/PasswordConfirmationRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\PasswordConfirmationRouteTest::test_password_is_not_confirmed_with_invalid_password' flowId='1']
-
-##teamcity[testFinished name='test_password_is_not_confirmed_with_invalid_password' duration='226' flowId='1']
-
-##teamcity[testSuiteFinished name='Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\PasswordConfirmationRouteTest' flowId='1']
-
-##teamcity[testSuiteStarted name='Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\PasswordResetRouteTest' locationHint='php_qn:///app/tests/Feature/Http/Controllers/PasswordResetRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\PasswordResetRouteTest' flowId='1']
-
-##teamcity[testStarted name='test_reset_password_link_screen_can_be_rendered' locationHint='php_qn:///app/tests/Feature/Http/Controllers/PasswordResetRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\PasswordResetRouteTest::test_reset_password_link_screen_can_be_rendered' flowId='1']
-
-##teamcity[testFinished name='test_reset_password_link_screen_can_be_rendered' duration='37' flowId='1']
-
-##teamcity[testStarted name='test_reset_password_link_can_be_requested' locationHint='php_qn:///app/tests/Feature/Http/Controllers/PasswordResetRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\PasswordResetRouteTest::test_reset_password_link_can_be_requested' flowId='1']
-
-##teamcity[testFinished name='test_reset_password_link_can_be_requested' duration='31' flowId='1']
-
-##teamcity[testStarted name='test_reset_password_screen_can_be_rendered' locationHint='php_qn:///app/tests/Feature/Http/Controllers/PasswordResetRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\PasswordResetRouteTest::test_reset_password_screen_can_be_rendered' flowId='1']
-
-##teamcity[testFinished name='test_reset_password_screen_can_be_rendered' duration='52' flowId='1']
-
-##teamcity[testStarted name='test_password_can_be_reset_with_valid_token' locationHint='php_qn:///app/tests/Feature/Http/Controllers/PasswordResetRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\PasswordResetRouteTest::test_password_can_be_reset_with_valid_token' flowId='1']
-
-##teamcity[testFinished name='test_password_can_be_reset_with_valid_token' duration='39' flowId='1']
-
-##teamcity[testStarted name='test_password_reset_with_invalid_token' locationHint='php_qn:///app/tests/Feature/Http/Controllers/PasswordResetRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\PasswordResetRouteTest::test_password_reset_with_invalid_token' flowId='1']
-
-##teamcity[testFinished name='test_password_reset_with_invalid_token' duration='33' flowId='1']
-
-##teamcity[testStarted name='test_password_reset_with_invalid_user' locationHint='php_qn:///app/tests/Feature/Http/Controllers/PasswordResetRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\PasswordResetRouteTest::test_password_reset_with_invalid_user' flowId='1']
-
-##teamcity[testFinished name='test_password_reset_with_invalid_user' duration='25' flowId='1']
-
-##teamcity[testSuiteFinished name='Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\PasswordResetRouteTest' flowId='1']
-
-##teamcity[testSuiteStarted name='Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\RegistrationRouteTest' locationHint='php_qn:///app/tests/Feature/Http/Controllers/RegistrationRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\RegistrationRouteTest' flowId='1']
-
-##teamcity[testStarted name='test_registration_screen_can_be_rendered' locationHint='php_qn:///app/tests/Feature/Http/Controllers/RegistrationRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\RegistrationRouteTest::test_registration_screen_can_be_rendered' flowId='1']
-
-##teamcity[testFinished name='test_registration_screen_can_be_rendered' duration='38' flowId='1']
-
-##teamcity[testStarted name='test_new_users_can_register' locationHint='php_qn:///app/tests/Feature/Http/Controllers/RegistrationRouteTest.php::\Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\RegistrationRouteTest::test_new_users_can_register' flowId='1']
-
-##teamcity[testFinished name='test_new_users_can_register' duration='26' flowId='1']
-
-##teamcity[testSuiteFinished name='Tests\Feature\GammaMatrix\Playground\Auth\Http\Controllers\RegistrationRouteTest' flowId='1']
-
-##teamcity[testSuiteFinished name='Feature' flowId='1']
-
-##teamcity[testSuiteFinished name='/app/phpunit.xml.dist' flowId='1']
