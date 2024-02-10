@@ -7,11 +7,11 @@
 
 ##teamcity[testStarted name='test_command_auth_hash_password_with_json' locationHint='php_qn:///app/tests/Unit/Console/Commands/HashPassword/CommandTest.php::\Tests\Unit\Playground\Auth\Console\Commands\HashPassword\CommandTest::test_command_auth_hash_password_with_json' flowId='1']
 
-##teamcity[testFinished name='test_command_auth_hash_password_with_json' duration='218' flowId='1']
+##teamcity[testFinished name='test_command_auth_hash_password_with_json' duration='226' flowId='1']
 
 ##teamcity[testStarted name='test_command_auth_hash_password' locationHint='php_qn:///app/tests/Unit/Console/Commands/HashPassword/CommandTest.php::\Tests\Unit\Playground\Auth\Console\Commands\HashPassword\CommandTest::test_command_auth_hash_password' flowId='1']
 
-##teamcity[testFinished name='test_command_auth_hash_password' duration='9' flowId='1']
+##teamcity[testFinished name='test_command_auth_hash_password' duration='10' flowId='1']
 
 ##teamcity[testStarted name='test_command_auth_hash_password_without_argument_and_fail' locationHint='php_qn:///app/tests/Unit/Console/Commands/HashPassword/CommandTest.php::\Tests\Unit\Playground\Auth\Console\Commands\HashPassword\CommandTest::test_command_auth_hash_password_without_argument_and_fail' flowId='1']
 
@@ -23,7 +23,7 @@
 
 ##teamcity[testStarted name='test_create_without_role' locationHint='php_qn:///app/tests/Unit/Policies/ModelPolicy/AbstractRoleTest.php::\Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_create_without_role' flowId='1']
 
-##teamcity[testFinished name='test_create_without_role' duration='86' flowId='1']
+##teamcity[testFinished name='test_create_without_role' duration='85' flowId='1']
 
 ##teamcity[testStarted name='test_create_with_admin' locationHint='php_qn:///app/tests/Unit/Policies/ModelPolicy/AbstractRoleTest.php::\Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_create_with_admin' flowId='1']
 
@@ -111,11 +111,11 @@
 
 ##teamcity[testStarted name='test_unlock_without_role' locationHint='php_qn:///app/tests/Unit/Policies/ModelPolicy/AbstractRoleTest.php::\Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_unlock_without_role' flowId='1']
 
-##teamcity[testFinished name='test_unlock_without_role' duration='7' flowId='1']
+##teamcity[testFinished name='test_unlock_without_role' duration='11' flowId='1']
 
 ##teamcity[testStarted name='test_unlock_with_admin' locationHint='php_qn:///app/tests/Unit/Policies/ModelPolicy/AbstractRoleTest.php::\Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_unlock_with_admin' flowId='1']
 
-##teamcity[testFinished name='test_unlock_with_admin' duration='7' flowId='1']
+##teamcity[testFinished name='test_unlock_with_admin' duration='10' flowId='1']
 
 ##teamcity[testSuiteFinished name='Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest' flowId='1']
 
