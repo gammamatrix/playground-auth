@@ -16,6 +16,9 @@ You can install the package via composer:
 composer require gammamatrix/playground-auth
 ```
 
+**NOTE:** This package is required by [Playground: Login Blade](https://github.com/gammamatrix/playground-login-blade)
+
+
 ## Configuration
 
 You can publish the config file with:

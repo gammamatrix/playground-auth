@@ -8,6 +8,7 @@
         "laravel",
         "playground",
         "playground-auth",
+        "playground-login-blade",
         "sanctum"
     ],
     "homepage": "https://github.com/gammamatrix/playground-auth/wiki",
