@@ -4,10 +4,14 @@ return [
     'redirect' => env('PLAYGROUND_AUTH_REDIRECT', null),
     // 'session' => false,
     'token' => [
-        // 'expires' => 60 * 24,
-        'expires' => 'tomorrow midnight',
+        // 'abilities' => '',
+        // 'abilities' => 'user',
+        'abilities' => 'merge',
+        // 'expires' => 'tomorrow midnight',
+        'expires' => null,
         'name' => 'app',
         // @see playground.auth.token.name
+        'listed' => false,
         'roles' => false,
         'privileges' => true,
         'sanctum' => true,
@@ -29,7 +33,7 @@ return [
     'managers' => [
         // 'manager@example.com',
     ],
-    'privileges' => [
+    'abilities' => [
         'root' => [
             '*',
             'app:*',
