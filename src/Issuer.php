@@ -150,7 +150,10 @@ class Issuer
                     $this->isAdmin = $user->hasRole('admin');
                 }
                 $this->isUser = $user->hasRole('user');
-                $this->isGuest = ! ($this->isRoot || $this->isAdmin || $this->isManager || $this->isUser);
+                $this->isManager = $user->hasRole('manager');
+                if ($user->hasRole('guest')) {
+                    $this->isGuest = true;
+                }
             }
         } else {
             $this->hasRoles = false;
@@ -161,6 +164,10 @@ class Issuer
 
         if (! empty($config['listed'])) {
             $this->listed($user);
+        }
+
+        if (! $this->isGuest) {
+            $this->isGuest = ! ($this->isRoot || $this->isAdmin || $this->isManager || $this->isUser);
         }
     }
 
