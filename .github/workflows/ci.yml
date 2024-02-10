@@ -121,7 +121,6 @@ jobs:
       with:
         level: 9
         php_version: "8.2"
-        error_format: table
         path: config/ database/ lang/ src/ tests/Unit/ tests/Feature/
         args: --verbose --debug
     - name: Stopping timer
