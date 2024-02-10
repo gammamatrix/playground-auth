@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <crap_result>
   <project/>
-  <timestamp>2024-02-10 10:15:10</timestamp>
+  <timestamp>2024-02-10 17:27:43</timestamp>
   <stats>
     <name>Method Crap Stats</name>
     <methodCount>47</methodCount>
     <crapMethodCount>4</crapMethodCount>
     <crapLoad>41</crapLoad>
-    <totalCrap>621.25</totalCrap>
+    <totalCrap>643.25</totalCrap>
     <crapMethodPercent>8.51</crapMethodPercent>
   </stats>
   <methods>
@@ -72,8 +72,8 @@
       <methodName>sanctum</methodName>
       <methodSignature>sanctum(Laravel\Sanctum\Contracts\HasApiTokens $user): array</methodSignature>
       <fullMethod>sanctum(Laravel\Sanctum\Contracts\HasApiTokens $user): array</fullMethod>
-      <crap>20</crap>
-      <complexity>4</complexity>
+      <crap>42</crap>
+      <complexity>6</complexity>
       <coverage>0</coverage>
       <crapLoad>0</crapLoad>
     </method>
