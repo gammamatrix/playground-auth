@@ -25,7 +25,31 @@ php artisan vendor:publish --provider="Playground\Auth\ServiceProvider" --tag="p
 
 See the contents of the published config file: [config/playground-auth.php](config/playground-auth.php)
 
+The default configuration utitlizes:
+- Sanctum with role based abilities
+- Users may have additional abilities in the model Playground\Models\User: `users.abilities`
+
 ### Environment Variables
+
+### User model types
+
+Playground tests many different User model types to support any ecosystem.
+
+Make sure your app is configured for the proper user model in the Laravel configuration:
+
+```php
+    'providers' => [
+        'users' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\User::class,
+        ],
+```
+
+During testing, Playground tests user various models.
+```php
+config(['auth.providers.users.model' => 'Playground\\Models\\User'])
+```
+
 
 #### Loading
 
@@ -52,13 +76,34 @@ artisan auth:hash-password 'some password' --json --pretty
 }
 ```
 
+## PHPStan
+
+Tests at level 9 on:
+- `config/`
+- `database/`
+- `lang/`
+- `resources/views/`
+- `src/`
+- `tests/Feature/`
+- `tests/Unit/`
+
+```sh
+composer analyse
+```
+
+## Coding Standards
+
+```sh
+composer format
+```
+
 ## Testing
 
 ```sh
 composer test
 ```
 
-## About
+## `artisan about`
 
 Playground Auth provides information in the `artisan about` command.
 
