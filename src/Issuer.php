@@ -206,6 +206,7 @@ class Issuer
             $name = $config['name'];
         }
 
+        // https://github.com/laravel/sanctum/pull/498
         $expiresAt = null;
         if (! empty($config['expires']) && is_string($config['expires'])) {
             $expiresAt = Carbon::parse($config['expires']);
@@ -217,8 +218,7 @@ class Issuer
         // ]);
         $tokens[$name] = $user->createToken(
             $name,
-            $this->abilities($user),
-            $expiresAt
+            $this->abilities($user)
         )->plainTextToken;
 
         return $tokens;
