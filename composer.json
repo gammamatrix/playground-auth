@@ -4,11 +4,11 @@
     "keywords": [
         "auth",
         "authentication",
-        "blade",
         "gammamatrix",
         "laravel",
         "playground",
         "playground-auth",
+        "playground-login-blade",
         "sanctum"
     ],
     "homepage": "https://github.com/gammamatrix/playground-auth/wiki",
@@ -18,16 +18,6 @@
             "name": "Jeremy Postlethwaite",
             "email": "jeremy.postlethwaite@gmail.com",
             "role": "Developer"
-        }
-    ],
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "git@github.com:gammamatrix/playground.git"
-        },
-        {
-            "type": "vcs",
-            "url": "git@github.com:gammamatrix/playground-test.git"
         }
     ],
     "require": {
@@ -41,13 +31,13 @@
     "prefer-stable": true,
     "autoload": {
         "psr-4": {
-            "GammaMatrix\\Playground\\Auth\\": "src/"
+            "Playground\\Auth\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\Feature\\GammaMatrix\\Playground\\Auth\\": "tests/Feature/",
-            "Tests\\Unit\\GammaMatrix\\Playground\\Auth\\": "tests/Unit/"
+            "Tests\\Feature\\Playground\\Auth\\": "tests/Feature/",
+            "Tests\\Unit\\Playground\\Auth\\": "tests/Unit/"
         }
     },
     "config": {
@@ -64,13 +54,13 @@
         },
         "laravel": {
             "providers": [
-                "GammaMatrix\\Playground\\Auth\\ServiceProvider"
+                "Playground\\Auth\\ServiceProvider"
             ]
         }
     },
     "scripts": {
-        "test": "phpunit",
-        "format": "php-cs-fixer fix --allow-risky=yes",
-        "analyse": "phpstan analyse"
+        "test": "vendor/bin/phpunit",
+        "format": "vendor/bin/php-cs-fixer fix",
+        "analyse": "vendor/bin/phpstan analyse --verbose --debug --level max"
     }
 }

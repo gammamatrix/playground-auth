@@ -18,4 +18,5 @@ return [
     'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
     'required' => 'Authentication is required. Please log in.',
 
+    'sanctum.disabled' => 'Sorry, Sanctum authenticaction is currently disabled.',
 ];

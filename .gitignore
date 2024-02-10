@@ -32,6 +32,7 @@ vendor
 # Test and Docs ignores
 ################################################################################
 coverage
+output
 phpunit.xml
 phpstan.neon
 testbench.yaml
