@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage line-rate="0.84924623115578" branch-rate="0" lines-covered="169" lines-valid="199" branches-covered="0" branches-valid="0" complexity="107" version="0.4" timestamp="1707537022">
+<coverage line-rate="0.84924623115578" branch-rate="0" lines-covered="169" lines-valid="199" branches-covered="0" branches-valid="0" complexity="107" version="0.4" timestamp="1707540692">
   <sources>
     <source>/app/src</source>
   </sources>
@@ -52,21 +52,6 @@
       </classes>
     </package>
     <package name="Policies/Contracts/Role.php" line-rate="0" branch-rate="0" complexity="0">
-      <classes/>
-    </package>
-    <package name="Policies/Interfaces/WithCreatorInterface.php" line-rate="0" branch-rate="0" complexity="0">
-      <classes/>
-    </package>
-    <package name="Policies/Interfaces/WithModifierInterface.php" line-rate="0" branch-rate="0" complexity="0">
-      <classes/>
-    </package>
-    <package name="Policies/Interfaces/WithOwnerInterface.php" line-rate="0" branch-rate="0" complexity="0">
-      <classes/>
-    </package>
-    <package name="Policies/Interfaces/WithParentInterface.php" line-rate="0" branch-rate="0" complexity="0">
-      <classes/>
-    </package>
-    <package name="Policies/Interfaces/WithRevisionInterface.php" line-rate="0" branch-rate="0" complexity="0">
       <classes/>
     </package>
     <package name="Policies/ModelPolicy.php" line-rate="1" branch-rate="0" complexity="13">
