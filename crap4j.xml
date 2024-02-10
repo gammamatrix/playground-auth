@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <crap_result>
   <project/>
-  <timestamp>2024-02-10 04:51:32</timestamp>
+  <timestamp>2024-02-10 10:15:10</timestamp>
   <stats>
     <name>Method Crap Stats</name>
-    <methodCount>42</methodCount>
-    <crapMethodCount>1</crapMethodCount>
-    <crapLoad>7</crapLoad>
-    <totalCrap>173.25</totalCrap>
-    <crapMethodPercent>2.38</crapMethodPercent>
+    <methodCount>47</methodCount>
+    <crapMethodCount>4</crapMethodCount>
+    <crapLoad>41</crapLoad>
+    <totalCrap>621.25</totalCrap>
+    <crapMethodPercent>8.51</crapMethodPercent>
   </stats>
   <methods>
     <method>
@@ -20,6 +20,61 @@
       <crap>9.02</crap>
       <complexity>9</complexity>
       <coverage>93.75</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Auth</package>
+      <className>Playground\Auth\Issuer</className>
+      <methodName>abilitiesByGroup</methodName>
+      <methodSignature>abilitiesByGroup(string $group): array</methodSignature>
+      <fullMethod>abilitiesByGroup(string $group): array</fullMethod>
+      <crap>6</crap>
+      <complexity>2</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Auth</package>
+      <className>Playground\Auth\Issuer</className>
+      <methodName>abilities</methodName>
+      <methodSignature>abilities(Illuminate\Foundation\Auth\User $user): array</methodSignature>
+      <fullMethod>abilities(Illuminate\Foundation\Auth\User $user): array</fullMethod>
+      <crap>156</crap>
+      <complexity>12</complexity>
+      <coverage>0</coverage>
+      <crapLoad>12</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Auth</package>
+      <className>Playground\Auth\Issuer</className>
+      <methodName>init</methodName>
+      <methodSignature>init(Illuminate\Foundation\Auth\User $user, array $config): void</methodSignature>
+      <fullMethod>init(Illuminate\Foundation\Auth\User $user, array $config): void</fullMethod>
+      <crap>210</crap>
+      <complexity>14</complexity>
+      <coverage>0</coverage>
+      <crapLoad>14</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Auth</package>
+      <className>Playground\Auth\Issuer</className>
+      <methodName>listed</methodName>
+      <methodSignature>listed(Illuminate\Foundation\Auth\User $user): void</methodSignature>
+      <fullMethod>listed(Illuminate\Foundation\Auth\User $user): void</fullMethod>
+      <crap>56</crap>
+      <complexity>7</complexity>
+      <coverage>0</coverage>
+      <crapLoad>7</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Auth</package>
+      <className>Playground\Auth\Issuer</className>
+      <methodName>sanctum</methodName>
+      <methodSignature>sanctum(Laravel\Sanctum\Contracts\HasApiTokens $user): array</methodSignature>
+      <fullMethod>sanctum(Laravel\Sanctum\Contracts\HasApiTokens $user): array</fullMethod>
+      <crap>20</crap>
+      <complexity>4</complexity>
+      <coverage>0</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
