@@ -7,8 +7,8 @@ return [
         // 'abilities' => '',
         // 'abilities' => 'user',
         'abilities' => 'merge',
-        // 'expires' => 'tomorrow midnight',
-        'expires' => null,
+        'expires' => 'tomorrow midnight',
+        // 'expires' => null,
         'name' => 'app',
         // @see playground.auth.token.name
         'listed' => false,

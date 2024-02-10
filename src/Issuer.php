@@ -206,10 +206,10 @@ class Issuer
             $name = $config['name'];
         }
 
-        // $expiresAt = null;
-        // if (! empty($config['expires']) && is_string($config['expires'])) {
-        //     $expiresAt = new Carbon($config['expires']);
-        // }
+        $expiresAt = null;
+        if (! empty($config['expires']) && is_string($config['expires'])) {
+            $expiresAt = Carbon::parse($config['expires']);
+        }
 
         // dd([
         //     '__METHOD__' => __METHOD__,
@@ -217,7 +217,8 @@ class Issuer
         // ]);
         $tokens[$name] = $user->createToken(
             $name,
-            $this->abilities($user)
+            $this->abilities($user),
+            $expiresAt
         )->plainTextToken;
 
         return $tokens;
