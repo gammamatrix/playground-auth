@@ -18,6 +18,12 @@ composer require gammamatrix/playground-auth
 
 **NOTE:** This package is required by [Playground: Login Blade](https://github.com/gammamatrix/playground-login-blade)
 
+## `artisan about`
+
+Playground Auth provides information in the `artisan about` command.
+
+<img src="resources/docs/artisan-about-playground-auth.png" alt="screenshot of artisan about command with Playground Auth.">
+
 
 ## Configuration
 
@@ -30,7 +36,56 @@ See the contents of the published config file: [config/playground-auth.php](conf
 
 The default configuration utitlizes:
 - Sanctum with role based abilities
-- Users may have additional abilities in the model Playground\Models\User: `users.abilities`
+- Users may have additional abilities in the [`Playground\Models\User`](https://github.com/gammamatrix/playground/blob/develop/src/Models/User.php): `users.abilities`
+- The Playground user model uses a UUID primary key along with additional fields. See the [migration for `Playground\Models\User`](https://github.com/gammamatrix/playground/blob/develop/database/migrations-playground/2014_10_12_000000_create_users_table.php)
+
+## Abilities, Privileges, Roles and Sanctum
+
+Depending on your needs, there are multiple middleware, authentication and authorization options available.
+
+Abilities may be used with wildcards at multiple levels. Optionally, these abilities may be used with [Sanctum](https://laravel.com/docs/10.x/sanctum) for API Tokens.
+
+Here is an example of the configurable abilities:
+```php
+    'abilities' => [
+        'root' => [
+            '*',
+        ],
+        'admin' => [
+            'app:*',
+            'playground:*',
+            'playground-auth:*',
+            'playground-cms:*',
+            'playground-cms-resource:*',
+            'playground-matrix:*',
+            'playground-matrix-resource:*',
+        ],
+        'manager' => [
+            'app:view',
+
+            'playground:view',
+
+            'playground-auth:logout',
+            'playground-auth:reset-password',
+// ...
+        'user' => [
+            'app:view',
+// ...
+        ],
+        // No abilities for guests:
+        'guest' => [
+            'none',
+        ],
+        // Allow abilities for guests:
+        'guest' => [
+             'app:view',
+
+             'playground:view',
+
+             'playground-auth:logout',
+             'playground-auth:reset-password',
+// ...
+```
 
 ### Environment Variables
 
@@ -105,12 +160,6 @@ composer format
 ```sh
 composer test
 ```
-
-## `artisan about`
-
-Playground Auth provides information in the `artisan about` command.
-
-<img src="resources/docs/artisan-about-playground-auth.png" alt="screenshot of artisan about command with Playground Auth.">
 
 ## Changelog
 

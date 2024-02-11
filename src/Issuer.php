@@ -4,7 +4,7 @@
  */
 namespace Playground\Auth;
 
-use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Support\Carbon;
 // use Illuminate\Support\Facades\Auth;
 use Laravel\Sanctum\Contracts\HasApiTokens;
@@ -56,19 +56,6 @@ class Issuer
     }
 
     /**
-     * TODO This should work with any kind of authentication system. Identify what is supported.
-     *
-     * Types:
-     * - User::$priviliges
-     * - User::hasPrivilige()
-     * - User::$roles
-     * - User::hasRole() - with string or array?
-     * - User::hasRoles()
-     * - Auth::user()?->currentAccessToken()?->can('app:*')
-     * - Auth::user()?->currentAccessToken()?->can($withPrivilege.':create')
-     *
-     * @experimental Subject to change
-     *
      * @return array<int, string>
      */
     protected function abilities(Authenticatable $user): array
@@ -219,10 +206,6 @@ class Issuer
             $expiresAt = Carbon::parse($config['expires']);
         }
 
-        // dd([
-        //     '__METHOD__' => __METHOD__,
-        //     'createToken' => $user->createToken($name, $abilities, $expiresAt)->toArray(),
-        // ]);
         $tokens[$name] = $user->createToken(
             $name,
             $this->abilities($user)
