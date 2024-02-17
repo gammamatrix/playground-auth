@@ -44,7 +44,9 @@ Trait (Tests\Unit\Playground\Auth\Policies\PolicyTrait\Trait)
  [x] Has token
  [x] Get token
  [x] Set token
- [x] Verify
+ [x] Verify does not log when app debugging is disabled
+ [x] Verify does not log when auth debugging is disabled
+ [x] Verify logs with debugging enabled
  [x] Verify privileges
  [x] Verify roles
  [x] Verify user

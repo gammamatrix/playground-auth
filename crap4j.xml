@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <crap_result>
   <project/>
-  <timestamp>2024-02-11 04:49:11</timestamp>
+  <timestamp>2024-02-17 22:47:33</timestamp>
   <stats>
     <name>Method Crap Stats</name>
-    <methodCount>47</methodCount>
-    <crapMethodCount>4</crapMethodCount>
-    <crapLoad>43</crapLoad>
-    <totalCrap>739.32</totalCrap>
-    <crapMethodPercent>8.51</crapMethodPercent>
+    <methodCount>48</methodCount>
+    <crapMethodCount>5</crapMethodCount>
+    <crapLoad>71</crapLoad>
+    <totalCrap>1550.18</totalCrap>
+    <crapMethodPercent>10.42</crapMethodPercent>
   </stats>
   <methods>
     <method>
@@ -25,11 +25,22 @@
     <method>
       <package>Playground\Auth</package>
       <className>Playground\Auth\Issuer</className>
+      <methodName>compileAbilitiesByGroup</methodName>
+      <methodSignature>compileAbilitiesByGroup(string $group): array</methodSignature>
+      <fullMethod>compileAbilitiesByGroup(string $group): array</fullMethod>
+      <crap>812</crap>
+      <complexity>28</complexity>
+      <coverage>0</coverage>
+      <crapLoad>29</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Auth</package>
+      <className>Playground\Auth\Issuer</className>
       <methodName>abilitiesByGroup</methodName>
       <methodSignature>abilitiesByGroup(string $group): array</methodSignature>
       <fullMethod>abilitiesByGroup(string $group): array</fullMethod>
-      <crap>6</crap>
-      <complexity>2</complexity>
+      <crap>2</crap>
+      <complexity>1</complexity>
       <coverage>0</coverage>
       <crapLoad>0</crapLoad>
     </method>
@@ -325,8 +336,8 @@
       <methodName>verify</methodName>
       <methodSignature>verify(Illuminate\Contracts\Auth\Authenticatable $user, string $ability): bool|\Illuminate\Auth\Access\Response</methodSignature>
       <fullMethod>verify(Illuminate\Contracts\Auth\Authenticatable $user, string $ability): bool|\Illuminate\Auth\Access\Response</fullMethod>
-      <crap>4</crap>
-      <complexity>4</complexity>
+      <crap>6</crap>
+      <complexity>6</complexity>
       <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
@@ -413,9 +424,9 @@
       <methodName>hasPrivilege</methodName>
       <methodSignature>hasPrivilege(Illuminate\Contracts\Auth\Authenticatable $user, string $privilege): bool|\Illuminate\Auth\Access\Response</methodSignature>
       <fullMethod>hasPrivilege(Illuminate\Contracts\Auth\Authenticatable $user, string $privilege): bool|\Illuminate\Auth\Access\Response</fullMethod>
-      <crap>11.23</crap>
+      <crap>10.05</crap>
       <complexity>10</complexity>
-      <coverage>76.92</coverage>
+      <coverage>92.31</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
@@ -512,9 +523,9 @@
       <methodName>about</methodName>
       <methodSignature>about(): void</methodSignature>
       <fullMethod>about(): void</fullMethod>
-      <crap>45.07</crap>
-      <complexity>44</complexity>
-      <coverage>91.8</coverage>
+      <crap>47.11</crap>
+      <complexity>46</complexity>
+      <coverage>91.94</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
