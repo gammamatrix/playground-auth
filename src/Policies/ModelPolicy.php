@@ -35,7 +35,7 @@ abstract class ModelPolicy extends Policy
         // NOTE: This lock check is bypassed by a root user.
         if ($model->getAttribute('locked')) {
             // return Response::denyWithStatus(423);
-            return Response::denyWithStatus(423, __('playground::auth.model.locked', [
+            return Response::denyWithStatus(423, __('playground-auth::auth.model.locked', [
                 'model' => Str::of(class_basename($model))
                     ->snake()->replace('_', ' ')->title()->lower(),
             ]));
@@ -111,7 +111,7 @@ abstract class ModelPolicy extends Policy
         // NOTE: This lock check is bypassed by a root user.
         if ($model->getAttribute('locked')) {
             // return Response::denyWithStatus(423);
-            return Response::denyWithStatus(423, __('playground::auth.model.locked', [
+            return Response::denyWithStatus(423, __('playground-auth::auth.model.locked', [
                 'model' => Str::of(class_basename($model))->snake()->replace('_', ' ')->title()->lower(),
             ]));
         }

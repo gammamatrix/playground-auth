@@ -35,7 +35,7 @@ php artisan vendor:publish --provider="Playground\Auth\ServiceProvider" --tag="p
 See the contents of the published config file: [config/playground-auth.php](config/playground-auth.php)
 
 The default configuration utitlizes:
-- Sanctum with role based abilities
+- Sanctum
 - Users may have additional abilities in the [`Playground\Models\User`](https://github.com/gammamatrix/playground/blob/develop/src/Models/User.php): `users.abilities`
 - The Playground user model uses a UUID primary key along with additional fields. See the [migration for `Playground\Models\User`](https://github.com/gammamatrix/playground/blob/develop/database/migrations-playground/2014_10_12_000000_create_users_table.php)
 
@@ -86,8 +86,11 @@ Here is an example of the configurable abilities:
              'playground-auth:reset-password',
 // ...
 ```
+- Packages may also be enabled to load privileges with the [PLAYGROUND_AUTH_PACKAGES environment variable.](https://github.com/gammamatrix/playground-auth/wiki/Environment-Variables)
 
 ### Environment Variables
+
+Read more about [`playground-auth` environment variables](https://github.com/gammamatrix/playground-auth/wiki/Environment-Variables) on the [`playground-auth` wiki](https://github.com/gammamatrix/playground-auth/wiki/).
 
 ### User model types
 
@@ -99,7 +102,8 @@ Make sure your app is configured for the proper user model in the Laravel config
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => App\Models\User::class,
+            // 'model' => App\Models\User::class,
+            'model' => env('AUTH_PROVIDERS_USERS_MODEL', App\Models\User::class),
         ],
 ```
 
@@ -107,15 +111,6 @@ During testing, Playground tests user various models.
 ```php
 config(['auth.providers.users.model' => 'Playground\\Models\\User'])
 ```
-
-
-#### Loading
-
-| env()                               | config()                            |
-|-------------------------------------|-------------------------------------|
-| `PLAYGROUND_AUTH_LOAD_COMMANDS`     | `playground-auth.load.commands`     |
-| `PLAYGROUND_AUTH_LOAD_TRANSLATIONS` | `playground-auth.load.translations` |
-
 
 ## Commands
 

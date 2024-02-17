@@ -13,10 +13,21 @@ return [
     |
     */
 
+    // 401 - Unauthorized
+    'unauthorized' => 'Unauthorized',
+    // 403 - Forbidden
+    'forbidden' => 'Forbidden',
+    // 406 - Not Acceptable
+    'unacceptable' => 'Not Acceptable',
+
+    'model.locked' => 'The :model record is locked. You must unlock it to make changes.',
+
     'failed' => 'These credentials do not match our records.',
     'password' => 'The provided password is incorrect.',
-    'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
+    'permission' => 'You do not have permission.',
     'required' => 'Authentication is required. Please log in.',
+    'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
 
     'sanctum.disabled' => 'Sorry, Sanctum authenticaction is currently disabled.',
+
 ];

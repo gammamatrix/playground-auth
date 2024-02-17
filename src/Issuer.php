@@ -7,6 +7,7 @@ namespace Playground\Auth;
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Support\Carbon;
 // use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
 use Laravel\Sanctum\Contracts\HasApiTokens;
 use Playground\Models\Contracts\Abilities;
 use Playground\Models\Contracts\Admin;
@@ -46,13 +47,158 @@ class Issuer
     protected bool $onlyUserAbilities = false;
 
     /**
+     * @var array<int, string>
+     */
+    protected array $rootAccessGroups = [
+        'root',
+        'admin',
+    ];
+
+    /**
+     * @var array<int, string>
+     */
+    protected array $rootAbilities = [
+        '*',
+        'root',
+    ];
+
+    /**
+     * @return array<int, string>
+     */
+    protected function compileAbilitiesByGroup(string $group): array
+    {
+        /**
+         * @var array<int, string> $packages
+         */
+        $packages = config('playground-auth.packages');
+
+        if (! empty(config('playground-auth.require.package_abilities'))) {
+            if (! in_array('playground-auth', $packages)) {
+                array_unshift($packages, 'playground-auth');
+            }
+        }
+
+        /**
+         * @var array<string, array<string, mixed>> $package_abilities
+         */
+        $package_abilities = [];
+
+        /**
+         * @var array<int, string> $abilities
+         */
+        $abilities = [];
+
+        if (empty($group)) {
+            // Set the lowest permission scheme for abilities.
+            $group = 'guest';
+        }
+
+        if (! empty($packages) && is_array($packages)) {
+            foreach ($packages as $package) {
+                $config = config($package.'.abilities.'.$group);
+                $package_abilities[$package] = is_array($config) ? $config : [];
+            }
+        }
+
+        foreach ($package_abilities as $package => $list) {
+            if (! empty($list)) {
+                foreach ($list as $ability) {
+                    if (empty($ability) || ! is_string($ability)) {
+                        if (config('app.debug') && config('playground-auth.debug')) {
+                            Log::debug(__METHOD__, [
+                                'error' => 'Invalid abilities defined in package.',
+                                '$ability' => $ability,
+                                '$group' => $group,
+                                '$package' => $package,
+                                '$list' => $list,
+                            ]);
+                        }
+
+                        continue;
+                    }
+                    if (in_array('deny', $abilities)) {
+                        if ($package !== 'playground-auth') {
+                            if (config('app.debug') && config('playground-auth.debug')) {
+                                Log::debug(__METHOD__, [
+                                    'error' => 'Only the playground-auth configuration may implement deny for a group.',
+                                    '$ability' => $ability,
+                                    '$group' => $group,
+                                    '$package' => $package,
+                                    '$list' => $list,
+                                ]);
+                            }
+
+                            continue;
+                        }
+                        $abilities = [
+                            'deny',
+                        ];
+                    }
+                    if ($ability === 'deny') {
+                        if ($package !== 'playground-auth') {
+                            if (config('app.debug') && config('playground-auth.debug')) {
+                                Log::debug(__METHOD__, [
+                                    'error' => 'Only the playground-auth configuration may implement deny for a group.',
+                                    '$ability' => $ability,
+                                    '$group' => $group,
+                                    '$package' => $package,
+                                    '$list' => $list,
+                                ]);
+                            }
+
+                            continue;
+                        }
+                        $abilities = [
+                            'deny',
+                        ];
+                    }
+                    if (in_array($ability, $this->rootAbilities)
+                        && ! in_array($group, $this->rootAccessGroups)
+                    ) {
+                        if (config('app.debug') && config('playground-auth.debug')) {
+                            Log::debug(__METHOD__, [
+                                'error' => sprintf('Root abilites are limited to the groups: %1$s', implode(', ', $this->rootAccessGroups)),
+                                '$ability' => $ability,
+                                '$group' => $group,
+                                '$package' => $package,
+                                '$list' => $list,
+                                '$this->rootAccessGroups' => $this->rootAccessGroups,
+                                '$this->rootAbilities' => $this->rootAbilities,
+                            ]);
+
+                        }
+
+                        continue;
+                    }
+                    if (! in_array($ability, $abilities)) {
+                        $abilities[] = $ability;
+                    }
+                }
+            }
+        }
+
+        // dump([
+        //     '__METHOD__' => __METHOD__,
+        //     '$group' => $group,
+        //     '$abilities' => $abilities,
+        //     '$package_abilities' => $package_abilities,
+        //     '$this->rootAccessGroups' => $this->rootAccessGroups,
+        //     '$this->rootAbilities' => $this->rootAbilities,
+        //     '$this->isRoot' => $this->isRoot,
+        //     '$this->isAdmin' => $this->isAdmin,
+        //     '$this->isManager' => $this->isManager,
+        //     '$this->isUser' => $this->isUser,
+        //     '$this->isGuest' => $this->isGuest,
+        // ]);
+        return $abilities;
+    }
+
+    /**
      * @return array<int, string>
      */
     protected function abilitiesByGroup(string $group): array
     {
-        $abilities = config('playground-auth.abilities.'.$group);
-
-        return is_array($abilities) ? $abilities : [];
+        return $this->compileAbilitiesByGroup($group);
     }
 
     /**
@@ -86,7 +232,7 @@ class Issuer
         }
 
         if (empty($this->abilities)) {
-            $this->abilities[] = 'none';
+            // $this->abilities[] = 'deny';
         }
 
         return $this->abilities;
@@ -102,6 +248,11 @@ class Issuer
         } else {
             $this->hasSanctum = false;
         }
+        // dump([
+        //     '__METHOD__' => __METHOD__,
+        //     '$user' => $user->toArray(),
+        //     '$config' => $config,
+        // ]);
 
         if ($user instanceof Abilities) {
             if (empty($config['abilities'])) {

@@ -67,7 +67,7 @@ class TraitTest extends TestCase
     {
         $instance = new PrivilegeModelPolicy;
 
-        config(['playground.auth.sanctum' => true]);
+        config(['playground-auth.sanctum' => true]);
 
         /**
          * @var UserWithSanctum $user
@@ -86,7 +86,10 @@ class TraitTest extends TestCase
     {
         $instance = new PrivilegeModelPolicy;
 
-        config(['playground.auth.hasPrivilege' => true]);
+        config([
+            'playground-auth.hasPrivilege' => true,
+            'playground-auth.sanctum' => false,
+        ]);
 
         /**
          * @var UserWithRoleAndRolesAndPrivileges $user
@@ -106,7 +109,10 @@ class TraitTest extends TestCase
     {
         $instance = new PrivilegeModelPolicy;
 
-        config(['playground.auth.userPrivileges' => true]);
+        config([
+            'playground-auth.userPrivileges' => true,
+            'playground-auth.sanctum' => false,
+        ]);
 
         /**
          * @var UserWithRoleAndRolesAndPrivileges $user
@@ -127,8 +133,9 @@ class TraitTest extends TestCase
         $instance = new PrivilegeModelPolicy;
 
         config([
-            'playground.auth.hasPrivilege' => false,
-            'playground.auth.userPrivileges' => false,
+            'playground-auth.hasPrivilege' => false,
+            'playground-auth.userPrivileges' => false,
+            'playground-auth.sanctum' => false,
         ]);
 
         /**

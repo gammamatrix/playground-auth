@@ -45,12 +45,12 @@ abstract class Policy
         //     '$ability' => $ability,
         //     '$this->allowRootOverride' => $this->allowRootOverride,
         // ]);
-        // dd([
+        // dump([
         //     '__METHOD__' => __METHOD__,
         //     '__FILE__' => __FILE__,
         //     '__LINE__' => __LINE__,
         //     'static::class' => static::class,
-        //     '$user' => $user ? $user->toArray(): $user,
+        //     '$user' => $user->toArray(),
         //     '$ability' => $ability,
         //     '$this->allowRootOverride' => $this->allowRootOverride,
         //     '$this->package' => $this->package,
@@ -74,6 +74,17 @@ abstract class Policy
      */
     public function index(Authenticatable $user): bool|Response
     {
+        // dump([
+        //     '__METHOD__' => __METHOD__,
+        //     '__FILE__' => __FILE__,
+        //     '__LINE__' => __LINE__,
+        //     'static::class' => static::class,
+        //     '$user' => $user->toArray(),
+        //     '$this->allowRootOverride' => $this->allowRootOverride,
+        //     '$this->package' => $this->package,
+        //     '$this->entity' => $this->entity,
+        // ]);
+
         // \Log::debug(__METHOD__, [
         //     '$user' => $user,
         // ]);

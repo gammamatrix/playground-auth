@@ -67,36 +67,36 @@ trait PrivilegeTrait
     public function hasPrivilege(Authenticatable $user, string $privilege): bool|Response
     {
         if (empty($privilege)) {
-            return Response::denyWithStatus(406, __('playground::auth.unacceptable'));
+            return Response::denyWithStatus(406, __('playground-auth::auth.unacceptable'));
         }
 
-        if (config('playground.auth.sanctum')) {
+        if (config('playground-auth.sanctum')) {
 
             if ($user instanceof HasApiTokens) {
                 return $this->hasPrivilegeSanctum($user, $privilege);
             } else {
-                return Response::denyWithStatus(401, __('playground::auth.unauthorized'));
+                return Response::denyWithStatus(401, __('playground-auth::auth.unauthorized'));
             }
         }
 
-        if (config('playground.auth.hasPrivilege') && method_exists($user, 'hasPrivilege')) {
+        if (config('playground-auth.hasPrivilege') && method_exists($user, 'hasPrivilege')) {
             return $user->hasPrivilege($privilege);
         }
 
-        if (config('playground.auth.userPrivileges') && array_key_exists('privileges', $user->getAttributes())) {
+        if (config('playground-auth.userPrivileges') && array_key_exists('privileges', $user->getAttributes())) {
             $privileges = $user->getAttribute('privileges');
             if (is_array($privileges) && in_array($privilege, $privileges)) {
                 return true;
             }
         }
 
-        return Response::denyWithStatus(401, __('playground::auth.unauthorized'));
+        return Response::denyWithStatus(401, __('playground-auth::auth.unauthorized'));
     }
 
     private function hasPrivilegeSanctum(HasApiTokens $user, string $privilege): bool|Response
     {
         if (empty($privilege)) {
-            return Response::denyWithStatus(406, __('playground::auth.unacceptable'));
+            return Response::denyWithStatus(406, __('playground-auth::auth.unacceptable'));
         }
 
         if (! $this->hasToken()) {
@@ -104,7 +104,7 @@ trait PrivilegeTrait
              * @var PersonalAccessToken $token
              */
             $token = $user->tokens()
-                ->where('name', config('playground.auth.token.name'))
+                ->where('name', config('playground-auth.token.name'))
                 // Get the latest created token.
                 ->orderBy('created_at', 'desc')
                 ->first();
@@ -113,7 +113,7 @@ trait PrivilegeTrait
                 $this->setToken($token);
                 $user->withAccessToken($token);
             } else {
-                return Response::denyWithStatus(401, __('playground::auth.unauthorized'));
+                return Response::denyWithStatus(401, __('playground-auth::auth.unauthorized'));
             }
         }
 
@@ -124,7 +124,7 @@ trait PrivilegeTrait
         $token = $this->getToken();
 
         if (! $token || $token->cant($privilege)) {
-            return Response::denyWithStatus(401, __('playground::auth.unauthorized'));
+            return Response::denyWithStatus(401, __('playground-auth::auth.unauthorized'));
         }
 
         // dd([

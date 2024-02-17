@@ -63,7 +63,7 @@ trait RoleTrait
     {
         $isRoot = false;
 
-        if (! empty(config('playground.auth.userRole'))) {
+        if (! empty(config('playground-auth.userRole'))) {
             $isRoot = $user->getAttributeValue('role') === 'root';
         }
 
@@ -109,10 +109,10 @@ trait RoleTrait
         } else {
             $roles = $this->getRolesForAdmin();
             // // Invalid role
-            // return Response::denyWithStatus(406, __('playground::auth.unacceptable'));
+            // return Response::denyWithStatus(406, __('playground-auth::auth.unacceptable'));
         }
 
-        if (config('playground.auth.hasRole') && method_exists($user, 'hasRole')) {
+        if (config('playground-auth.hasRole') && method_exists($user, 'hasRole')) {
             // Check for any role.
             foreach ($roles as $role) {
                 if ($user->hasRole($role)) {
@@ -121,7 +121,7 @@ trait RoleTrait
             }
         }
 
-        if (config('playground.auth.userRole')) {
+        if (config('playground-auth.userRole')) {
             // Check for any role.
             foreach ($roles as $role) {
                 if (! empty($user->role) && $role === $user->role) {
@@ -130,7 +130,7 @@ trait RoleTrait
             }
         }
 
-        if (config('playground.auth.userRoles')) {
+        if (config('playground-auth.userRoles')) {
             if (is_array($roles)
                 && ! empty($user->roles)
             && is_array($user->roles)
@@ -143,16 +143,15 @@ trait RoleTrait
             }
         }
 
-        // dd([
-        //     '__METHOD__' => __METHOD__,
+        // dump([
         //     '__METHOD__' => __METHOD__,
         //     '$user' => $user,
-        //     'userRole' => config('playground.auth.userRole'),
-        //     'userRoles' => config('playground.auth.userRoles'),
-        //     'hasRole' => config('playground.auth.hasRole') && method_exists($user, 'hasRole'),
+        //     'userRole' => config('playground-auth.userRole'),
+        //     'userRoles' => config('playground-auth.userRoles'),
+        //     'hasRole' => config('playground-auth.hasRole') && method_exists($user, 'hasRole'),
         //     '$ability' => $ability,
         //     '$roles' => $roles,
         // ]);
-        return Response::denyWithStatus(401, __('playground::auth.unauthorized'));
+        return Response::denyWithStatus(401, __('playground-auth::auth.unauthorized'));
     }
 }

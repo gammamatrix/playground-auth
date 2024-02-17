@@ -1,39 +1,213 @@
 <?php
 
 return [
-    'redirect' => env('PLAYGROUND_AUTH_REDIRECT', null),
-    // 'session' => false,
-    'token' => [
-        // 'abilities' => '',
-        // 'abilities' => 'user',
-        'abilities' => 'merge',
-        'expires' => 'tomorrow midnight',
-        // 'expires' => null,
-        'name' => 'app',
-        // @see playground.auth.token.name
-        'listed' => true,
-        'roles' => false,
-        'privileges' => false,
-        'sanctum' => true,
+
+    /*
+    |--------------------------------------------------------------------------
+    | Packages
+    |--------------------------------------------------------------------------
+    |
+    | PLAYGROUND_AUTH_PACKAGES may be used to load abilities from other packages.
+    |
+    | PLAYGROUND_AUTH_REQUIRE_PACKAGE_ABILITIES is enabled by default. When
+    |   using token abilities, this value ensures that `playground-auth` is
+    |   included in `PLAYGROUND_AUTH_PACKAGES` if omitted in the .env.
+    |
+    | PLAYGROUND_AUTH_DEBUG Requires config(app.debug) to be true to display logs.
+    */
+
+    'packages' => is_string(env('PLAYGROUND_AUTH_PACKAGES', 'playground-auth')) ? array_map(
+        'trim',
+        explode(',', env('PLAYGROUND_AUTH_PACKAGES', 'playground-auth'))
+    ) : [],
+
+    'require' => [
+        /**
+         * @var bool package_abilities   By default, require
+         */
+        'package_abilities' => (bool) env('PLAYGROUND_AUTH_REQUIRE_PACKAGE_ABILITIES', true),
     ],
+
+    /**
+     * @var bool debug   Enable authentication debugging messages.
+     */
+    'debug' => (bool) env('PLAYGROUND_AUTH_DEBUG', false),
+    // 'debug' => (bool) env('PLAYGROUND_AUTH_DEBUG', true),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Loading
+    |--------------------------------------------------------------------------
+    |
+    | PLAYGROUND_AUTH_LOAD_COMMANDS enables Console\Commands\HashPassword
+    |
+    | PLAYGROUND_AUTH_LOAD_TRANSLATIONS loads translations in /lang
+    |
+    */
+
     'load' => [
         'commands' => (bool) env('PLAYGROUND_AUTH_LOAD_COMMANDS', true),
         'translations' => (bool) env('PLAYGROUND_AUTH_LOAD_TRANSLATIONS', true),
     ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Redirects
+    |--------------------------------------------------------------------------
+    |
+    | PLAYGROUND_AUTH_REDIRECT may be disabled to show an error page instead.
+    */
+
     /**
-     * Provide an array of email addresses for admin privileges.
+     * @var ?string redirect   Specify for redirect()->guest($redirect)
+     */
+    'redirect' => env('PLAYGROUND_AUTH_REDIRECT', 'login'),
+    // 'redirect' => null,
+
+    /*
+    |--------------------------------------------------------------------------
+    | Policies
+    |--------------------------------------------------------------------------
+    |
+    | ModelPolicy supports multiple security implementations.
+    |
+    | Options for Sanctum:
+    | - PLAYGROUND_AUTH_USER_PRIVILEGES - allow saving privileges in the user model.
+    | - PLAYGROUND_AUTH_VERIFY === privileges
+    |
+    */
+
+    /**
+     * @var string verify   user|privileges|roles
+     */
+    'verify' => env('PLAYGROUND_AUTH_VERIFY', 'privileges'),
+
+    /**
+     * @var bool sanctum   Enable Sanctum
+     */
+    'sanctum' => (bool) env('PLAYGROUND_AUTH_SANCTUM', true),
+
+    /**
+     * @var bool hasPrivilege   Enable if the user model has $user->hasPrivilege($privilege)
+     */
+    'hasPrivilege' => (bool) env('PLAYGROUND_AUTH_HAS_PRIVILEGE', false),
+
+    /**
+     * @var bool hasPrivilege   Enable if the user model has the attribute User::$privileges
+     */
+    'userPrivileges' => (bool) env('PLAYGROUND_AUTH_USER_PRIVILEGES', false),
+
+    /**
+     * @var bool hasRole   Enable if the user model has $user->hasRole($role)
+     */
+    'hasRole' => (bool) env('PLAYGROUND_AUTH_HAS_ROLE', false),
+    // 'hasRole' => (bool) env('PLAYGROUND_AUTH_HAS_ROLE', true),
+
+    /**
+     * @var bool userRole   Enable if the user model has the attribute User::$role
+     */
+    'userRole' => (bool) env('PLAYGROUND_AUTH_USER_ROLE', false),
+    // 'userRole' => (bool) env('PLAYGROUND_AUTH_USER_ROLE', true),
+
+    /**
+     * @var bool userRoles   Enable if the user model has the attribute User::$roles
+     */
+    'userRoles' => (bool) env('PLAYGROUND_AUTH_USER_ROLES', false),
+    // 'userRoles' => (bool) env('PLAYGROUND_AUTH_USER_ROLES', true),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Token configuration
+    |--------------------------------------------------------------------------
+    |
+    | Enabling Sanctum provides token and API key support.
+    |
+    */
+
+    'token' => [
+
+        /**
+         * @var string abilities   merge|user
+         */
+        'abilities' => env('PLAYGROUND_AUTH_TOKEN_ABILITIES', 'merge'),
+
+        /**
+         * @var ?string expires   Set expires to null to allow tokens to live forever.
+         */
+        'expires' => env('PLAYGROUND_AUTH_TOKEN_EXPIRES', 'tomorrow midnight'),
+
+        /**
+         * @var string name   The token name.
+         */
+        'name' => env('PLAYGROUND_AUTH_TOKEN_NAME', 'app'),
+
+        /**
+         * @var bool listed   Use the listed admins and managers in this configuration.
+         */
+        'listed' => (bool) env('PLAYGROUND_AUTH_TOKEN_LISTED', false),
+
+        /**
+         * @var bool roles   Check the user role(s) for applying abilities.
+         */
+        'roles' => (bool) env('PLAYGROUND_AUTH_TOKEN_ROLES', false),
+        // 'roles' => (bool) env('PLAYGROUND_AUTH_TOKEN_ROLES', true),
+
+        /**
+         * @var bool privileges  Allow the attribute User::$privileges to be used for authorization.
+         */
+        'privileges' => (bool) env('PLAYGROUND_AUTH_TOKEN_PRIVILEGES', false),
+        // 'privileges' => (bool) env('PLAYGROUND_AUTH_TOKEN_PRIVILEGES', true),
+
+        /**
+         * @var bool sanctum   The token will use Sanctum.
+         */
+        'sanctum' => (bool) env('PLAYGROUND_AUTH_TOKEN_SANCTUM', true),
+        // 'sanctum' => (bool) env('PLAYGROUND_AUTH_TOKEN_SANCTUM', false),
+
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Listed admins and managers
+    |--------------------------------------------------------------------------
+    |
+    | Allow specifying a set of admins and/or managers.
+    |
+    */
+
+    /**
+     * @var array<int, string> admins Provide an array of email addresses for admin privileges.
      */
     'admins' => [
         // 'cindy@example.com',
         // 'joe@example.com',
         // 'tim@example.com',
     ],
+
     /**
-     * Provide an array of email addresses for manager privileges.
+     * @var array<int, string> managers Provide an array of email addresses for manager privileges.
      */
     'managers' => [
         // 'sally@example.com',
     ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Abilities
+    |--------------------------------------------------------------------------
+    |
+    | Root: has all privileges, where applicable.
+    |
+    | Admins: have wildcard access, at top level of resources.
+    |
+    | Manager: Has wildcard access at the model level.
+    |
+    | User: Has specific privileges and no wildcards.
+    |
+    | Guest: Specify `deny` for no privileges.
+    |
+    */
+
     'abilities' => [
         'root' => [
             '*',
@@ -42,8 +216,6 @@ return [
             'app:*',
             'playground:*',
             'playground-auth:*',
-            'playground-matrix:*',
-            'playground-matrix-resource:*',
         ],
         'manager' => [
             'app:view',
@@ -52,25 +224,6 @@ return [
 
             'playground-auth:logout',
             'playground-auth:reset-password',
-
-            'playground-matrix:view',
-            'playground-matrix-resource:view',
-
-            'playground-matrix-resource:backlog:*',
-            'playground-matrix-resource:board:*',
-            'playground-matrix-resource:epic:*',
-            'playground-matrix-resource:flow:*',
-            'playground-matrix-resource:milestone:*',
-            'playground-matrix-resource:note:*',
-            'playground-matrix-resource:project:*',
-            'playground-matrix-resource:release:*',
-            'playground-matrix-resource:roadmap:*',
-            'playground-matrix-resource:source:*',
-            'playground-matrix-resource:sprint:*',
-            'playground-matrix-resource:tag:*',
-            'playground-matrix-resource:team:*',
-            'playground-matrix-resource:ticket:*',
-            'playground-matrix-resource:version:*',
         ],
         'user' => [
             'app:view',
@@ -79,47 +232,9 @@ return [
 
             'playground-auth:logout',
             'playground-auth:reset-password',
-
-            'playground-matrix:view',
-            'playground-matrix-resource:view',
-
-            'playground-matrix-resource:backlog:view',
-            'playground-matrix-resource:backlog:viewAny',
-            'playground-matrix-resource:board:view',
-            'playground-matrix-resource:board:viewAny',
-            'playground-matrix-resource:epic:view',
-            'playground-matrix-resource:epic:viewAny',
-            'playground-matrix-resource:flow:view',
-            'playground-matrix-resource:flow:viewAny',
-            'playground-matrix-resource:milestone:view',
-            'playground-matrix-resource:milestone:viewAny',
-            'playground-matrix-resource:note:view',
-            'playground-matrix-resource:note:viewAny',
-            'playground-matrix-resource:project:view',
-            'playground-matrix-resource:project:viewAny',
-            'playground-matrix-resource:release:view',
-            'playground-matrix-resource:release:viewAny',
-            'playground-matrix-resource:roadmap:view',
-            'playground-matrix-resource:roadmap:viewAny',
-            'playground-matrix-resource:source:view',
-            'playground-matrix-resource:source:viewAny',
-            'playground-matrix-resource:sprint:view',
-            'playground-matrix-resource:sprint:viewAny',
-            'playground-matrix-resource:tag:view',
-            'playground-matrix-resource:tag:viewAny',
-            'playground-matrix-resource:team:view',
-            'playground-matrix-resource:team:viewAny',
-            'playground-matrix-resource:ticket:view',
-            'playground-matrix-resource:ticket:viewAny',
-            'playground-matrix-resource:ticket:create',
-            'playground-matrix-resource:ticket:edit',
-            'playground-matrix-resource:ticket:store',
-            'playground-matrix-resource:ticket:update',
-            'playground-matrix-resource:version:view',
-            'playground-matrix-resource:version:viewAny',
         ],
         'guest' => [
-            'none',
+            'deny',
         ],
         // 'guest' => [
         //     'app:view',
@@ -128,37 +243,6 @@ return [
 
         //     'playground-auth:logout',
         //     'playground-auth:reset-password',
-
-        //     'playground-matrix-resource:backlog:view',
-        //     'playground-matrix-resource:backlog:viewAny',
-        //     'playground-matrix-resource:board:view',
-        //     'playground-matrix-resource:board:viewAny',
-        //     'playground-matrix-resource:epic:view',
-        //     'playground-matrix-resource:epic:viewAny',
-        //     'playground-matrix-resource:flow:view',
-        //     'playground-matrix-resource:flow:viewAny',
-        //     'playground-matrix-resource:milestone:view',
-        //     'playground-matrix-resource:milestone:viewAny',
-        //     'playground-matrix-resource:note:view',
-        //     'playground-matrix-resource:note:viewAny',
-        //     'playground-matrix-resource:project:view',
-        //     'playground-matrix-resource:project:viewAny',
-        //     'playground-matrix-resource:release:view',
-        //     'playground-matrix-resource:release:viewAny',
-        //     'playground-matrix-resource:roadmap:view',
-        //     'playground-matrix-resource:roadmap:viewAny',
-        //     'playground-matrix-resource:source:view',
-        //     'playground-matrix-resource:source:viewAny',
-        //     'playground-matrix-resource:sprint:view',
-        //     'playground-matrix-resource:sprint:viewAny',
-        //     'playground-matrix-resource:tag:view',
-        //     'playground-matrix-resource:tag:viewAny',
-        //     'playground-matrix-resource:team:view',
-        //     'playground-matrix-resource:team:viewAny',
-        //     'playground-matrix-resource:ticket:view',
-        //     'playground-matrix-resource:ticket:viewAny',
-        //     'playground-matrix-resource:version:view',
-        //     'playground-matrix-resource:version:viewAny',
         // ],
     ],
 ];

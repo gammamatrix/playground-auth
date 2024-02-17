@@ -139,6 +139,8 @@ class ServiceProvider extends AuthServiceProvider
             '<fg=yellow;options=bold>Load</> Commands' => ! empty($load['commands']) ? '<fg=green;options=bold>ENABLED</>' : '<fg=yellow;options=bold>DISABLED</>',
             '<fg=yellow;options=bold>Load</> Translations' => ! empty($load['translations']) ? '<fg=green;options=bold>ENABLED</>' : '<fg=yellow;options=bold>DISABLED</>',
 
+            '<fg=yellow;options=bold>Debug Mode</>' => ! empty($config['debug']) && ! empty(config('app.debug')) ? '<fg=yellow;options=bold>ENABLED</>' : '<fg=green;options=bold>OFF</>',
+
             '<fg=cyan;options=bold>Token</> [Abilities]' => sprintf('[%s]', $token['abilities']),
             '<fg=cyan;options=bold>Token</> [Expires]' => sprintf('[%s]', $token['expires']),
             '<fg=cyan;options=bold>Token</> [Name]' => sprintf('[%s]', $token['name']),

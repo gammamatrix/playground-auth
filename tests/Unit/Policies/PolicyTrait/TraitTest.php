@@ -45,8 +45,13 @@ class TraitTest extends TestCase
         $this->assertIsObject($instance->setToken());
     }
 
-    public function test_verify(): void
+    public function test_verify_does_not_log_when_app_debugging_is_disabled(): void
     {
+        config([
+            'app.debug' => false,
+            'playground-auth.debug' => true,
+        ]);
+
         $instance = new Policy;
 
         $log = LogFake::bind();
@@ -58,7 +63,61 @@ class TraitTest extends TestCase
 
         $verify = 'invalid-verifier';
 
-        config(['playground.auth.verify' => $verify]);
+        config(['playground-auth.verify' => $verify]);
+
+        $ability = 'view';
+
+        $this->assertFalse($instance->verify($user, $ability));
+
+        $log->assertNothingLogged();
+    }
+
+    public function test_verify_does_not_log_when_auth_debugging_is_disabled(): void
+    {
+        config([
+            'app.debug' => true,
+            'playground-auth.debug' => false,
+        ]);
+
+        $instance = new Policy;
+
+        $log = LogFake::bind();
+
+        /**
+         * @var User $user
+         */
+        $user = User::factory()->make();
+
+        $verify = 'invalid-verifier';
+
+        config(['playground-auth.verify' => $verify]);
+
+        $ability = 'view';
+
+        $this->assertFalse($instance->verify($user, $ability));
+
+        $log->assertNothingLogged();
+    }
+
+    public function test_verify_logs_with_debugging_enabled(): void
+    {
+        config([
+            'app.debug' => true,
+            'playground-auth.debug' => true,
+        ]);
+
+        $instance = new Policy;
+
+        $log = LogFake::bind();
+
+        /**
+         * @var User $user
+         */
+        $user = User::factory()->make();
+
+        $verify = 'invalid-verifier';
+
+        config(['playground-auth.verify' => $verify]);
 
         $ability = 'view';
 
@@ -87,7 +146,7 @@ class TraitTest extends TestCase
 
         $verify = 'privileges';
 
-        config(['playground.auth.verify' => $verify]);
+        config(['playground-auth.verify' => $verify]);
 
         $ability = 'view';
 
@@ -108,7 +167,7 @@ class TraitTest extends TestCase
 
         $verify = 'roles';
 
-        config(['playground.auth.verify' => $verify]);
+        config(['playground-auth.verify' => $verify]);
 
         $ability = 'view';
 
@@ -129,7 +188,7 @@ class TraitTest extends TestCase
 
         $verify = 'user';
 
-        config(['playground.auth.verify' => $verify]);
+        config(['playground-auth.verify' => $verify]);
 
         $ability = 'view';
 

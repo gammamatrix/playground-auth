@@ -30,7 +30,7 @@ class TestCase extends OrchestraTestCase
     {
         // dd(__METHOD__);
         $app['config']->set('auth.providers.users.model', 'Playground\\Test\\Models\\User');
-        $app['config']->set('playground.auth.verify', 'user');
+        $app['config']->set('playground-auth.verify', 'user');
 
         // $app['config']->set('playground-auth.redirect', true);
         // $app['config']->set('playground-auth.session', true);

@@ -21,9 +21,9 @@ class AbstractTest extends TestCase
         parent::setUp();
 
         config([
-            'playground.auth.userRole' => true,
-            'playground.auth.userRoles' => true,
-            'playground.auth.verify' => 'roles',
+            'playground-auth.userRole' => true,
+            'playground-auth.userRoles' => true,
+            'playground-auth.verify' => 'roles',
         ]);
     }
 

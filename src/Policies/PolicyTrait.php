@@ -60,7 +60,7 @@ trait PolicyTrait
 
     public function verify(Authenticatable $user, string $ability): bool|Response
     {
-        $verify = config('playground.auth.verify');
+        $verify = config('playground-auth.verify');
         // dd([
         //     '__METHOD__' => __METHOD__,
         //     '$verify' => $verify,
@@ -75,10 +75,15 @@ trait PolicyTrait
             // A user with an email address passes.
             return ! empty($user->getAttribute('email'));
         }
-        Log::debug(__METHOD__, [
-            '$ability' => $ability,
-            '$user' => $user,
-        ]);
+
+        if (config('app.debug') && config('playground-auth.debug')) {
+            Log::debug(__METHOD__, [
+                'error' => 'Unexpected verify security mechanism for playground-auth.verify or PLAYGROUND_AUTH_VERIFY. Options: privileges|roles|user',
+                '$ability' => $ability,
+                '$verify' => $verify,
+                '$user' => $user->toArray(),
+            ]);
+        }
 
         return false;
     }
