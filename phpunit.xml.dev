@@ -37,20 +37,20 @@
         ignoreDeprecatedCodeUnits="true"
         disableCodeCoverageIgnore="true">
         <report>
-            <clover outputFile="tests/logs/clover.xml"/>
-            <cobertura outputFile="tests/logs/cobertura.xml"/>
-            <crap4j outputFile="tests/logs/crap4j.xml" threshold="50"/>
-            <html outputDirectory="tests/logs/html" lowUpperBound="50" highLowerBound="90"/>
-            <php outputFile="tests/logs/coverage.php"/>
-            <text outputFile="tests/logs/coverage.txt" showUncoveredFiles="false" showOnlySummary="true"/>
-            <xml outputDirectory="tests/logs/xml"/>
+            <clover outputFile="output/clover.xml"/>
+            <cobertura outputFile="output/cobertura.xml"/>
+            <crap4j outputFile="output/crap4j.xml" threshold="50"/>
+            <html outputDirectory="output/html" lowUpperBound="50" highLowerBound="90"/>
+            <php outputFile="output/coverage.php"/>
+            <text outputFile="output/coverage.txt" showUncoveredFiles="false" showOnlySummary="true"/>
+            <xml outputDirectory="output/xml"/>
         </report>
     </coverage>
     <logging>
-        <junit outputFile="tests/logs/junit.xml"/>
-        <teamcity outputFile="tests/logs/teamcity.txt"/>
-        <testdoxHtml outputFile="tests/logs/testdox.html"/>
-        <testdoxText outputFile="tests/logs/testdox.txt"/>
+        <junit outputFile="output/junit.xml"/>
+        <teamcity outputFile="output/teamcity.txt"/>
+        <testdoxHtml outputFile="output/testdox.html"/>
+        <testdoxText outputFile="output/testdox.txt"/>
     </logging>
     <source>
         <include>

@@ -99,7 +99,7 @@ jobs:
       env:
         XDEBUG_MODE: coverage
       with:
-        version: "10.1"
+        version: "10.5"
         php_version: "8.2"
         php_extensions: intl xdebug
         coverage_clover: clover.xml
