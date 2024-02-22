@@ -33,6 +33,9 @@ Abstract Role (Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRole)
  [x] Unlock without role
  [x] Unlock with admin
 
+Command (Tests\Feature\Playground\Auth\Console\Commands\About\Command)
+ [x] Command about displays package information and succeed with code 0
+
 Command (Tests\Unit\Playground\Auth\Console\Commands\HashPassword\Command)
  [x] Command auth hash password with json
  [x] Command auth hash password
