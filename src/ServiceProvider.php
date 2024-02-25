@@ -33,7 +33,7 @@ class ServiceProvider extends AuthServiceProvider
 
             if (! empty($config['load']['translations'])) {
                 $this->loadTranslationsFrom(
-                    dirname(__DIR__).'/resources/lang',
+                    dirname(__DIR__).'/lang',
                     $this->package
                 );
             }
@@ -64,6 +64,10 @@ class ServiceProvider extends AuthServiceProvider
             sprintf('%1$s/config/%2$s.php', dirname(__DIR__), $this->package),
             $this->package
         );
+
+        $this->app->scoped('playground-auth-can', function () {
+            return new Can();
+        });
     }
 
     public function about(): void
