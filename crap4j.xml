@@ -1,16 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <crap_result>
   <project/>
-  <timestamp>2024-02-22 02:34:49</timestamp>
+  <timestamp>2024-02-25 21:42:14</timestamp>
   <stats>
     <name>Method Crap Stats</name>
-    <methodCount>48</methodCount>
-    <crapMethodCount>5</crapMethodCount>
-    <crapLoad>71</crapLoad>
-    <totalCrap>1550.18</totalCrap>
-    <crapMethodPercent>10.42</crapMethodPercent>
+    <methodCount>56</methodCount>
+    <crapMethodCount>9</crapMethodCount>
+    <crapLoad>151</crapLoad>
+    <totalCrap>4148.18</totalCrap>
+    <crapMethodPercent>16.07</crapMethodPercent>
   </stats>
   <methods>
+    <method>
+      <package>Playground\Auth</package>
+      <className>Playground\Auth\Can</className>
+      <methodName>matches</methodName>
+      <methodSignature>matches(?Illuminate\Contracts\Auth\Authenticatable $user): bool</methodSignature>
+      <fullMethod>matches(?Illuminate\Contracts\Auth\Authenticatable $user): bool</fullMethod>
+      <crap>72</crap>
+      <complexity>8</complexity>
+      <coverage>0</coverage>
+      <crapLoad>8</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Auth</package>
+      <className>Playground\Auth\Can</className>
+      <methodName>init</methodName>
+      <methodSignature>init(?Illuminate\Contracts\Auth\Authenticatable $user): self</methodSignature>
+      <fullMethod>init(?Illuminate\Contracts\Auth\Authenticatable $user): self</fullMethod>
+      <crap>210</crap>
+      <complexity>14</complexity>
+      <coverage>0</coverage>
+      <crapLoad>14</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Auth</package>
+      <className>Playground\Auth\Can</className>
+      <methodName>reset</methodName>
+      <methodSignature>reset(?Illuminate\Contracts\Auth\Authenticatable $user): self</methodSignature>
+      <fullMethod>reset(?Illuminate\Contracts\Auth\Authenticatable $user): self</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Auth</package>
+      <className>Playground\Auth\Can</className>
+      <methodName>isGuest</methodName>
+      <methodSignature>isGuest(?Illuminate\Contracts\Auth\Authenticatable $user): bool</methodSignature>
+      <fullMethod>isGuest(?Illuminate\Contracts\Auth\Authenticatable $user): bool</fullMethod>
+      <crap>20</crap>
+      <complexity>4</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Auth</package>
+      <className>Playground\Auth\Can</className>
+      <methodName>map</methodName>
+      <methodSignature>map(array $_privileges, ?Illuminate\Contracts\Auth\Authenticatable $user): array</methodSignature>
+      <fullMethod>map(array $_privileges, ?Illuminate\Contracts\Auth\Authenticatable $user): array</fullMethod>
+      <crap>20</crap>
+      <complexity>4</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Auth</package>
+      <className>Playground\Auth\Can</className>
+      <methodName>wildcards</methodName>
+      <methodSignature>wildcards(string $privilege): array</methodSignature>
+      <fullMethod>wildcards(string $privilege): array</fullMethod>
+      <crap>110</crap>
+      <complexity>10</complexity>
+      <coverage>0</coverage>
+      <crapLoad>10</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Auth</package>
+      <className>Playground\Auth\Can</className>
+      <methodName>access</methodName>
+      <methodSignature>access(?Illuminate\Contracts\Auth\Authenticatable $user, array $options): bool</methodSignature>
+      <fullMethod>access(?Illuminate\Contracts\Auth\Authenticatable $user, array $options): bool</fullMethod>
+      <crap>2162</crap>
+      <complexity>46</complexity>
+      <coverage>0</coverage>
+      <crapLoad>47</crapLoad>
+    </method>
     <method>
       <package>Playground\Auth\Console\Commands</package>
       <className>Playground\Auth\Console\Commands\HashPassword</className>
@@ -20,6 +97,17 @@
       <crap>9.02</crap>
       <complexity>9</complexity>
       <coverage>93.75</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Auth\Facades</package>
+      <className>Playground\Auth\Facades\Can</className>
+      <methodName>getFacadeAccessor</methodName>
+      <methodSignature>getFacadeAccessor()</methodSignature>
+      <fullMethod>getFacadeAccessor()</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
@@ -514,7 +602,7 @@
       <fullMethod>register(): void</fullMethod>
       <crap>1</crap>
       <complexity>1</complexity>
-      <coverage>100</coverage>
+      <coverage>85.71</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
