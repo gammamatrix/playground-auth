@@ -4,10 +4,15 @@
  */
 namespace Playground\Auth\Facades;
 
+use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Support\Facades\Facade;
+use Playground\Auth\Permission;
 
 /**
  * \Playground\Auth\Facades\Can
+ *
+ * @method static Permission access(?Authenticatable $user, array $_privileges)
+ * @method static array<string, Permission> map(array $privileges, ?Authenticatable $user)
  */
 class Can extends Facade
 {

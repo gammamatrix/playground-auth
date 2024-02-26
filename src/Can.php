@@ -7,7 +7,6 @@ namespace Playground\Auth;
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Support\Str;
 use Laravel\Sanctum\PersonalAccessToken;
-use Playground\Models\Contracts\Privileges;
 
 /**
  * \Playground\Auth\Can
@@ -166,23 +165,31 @@ class Can
     }
 
     /**
-     * @param array<string, mixed> $_privileges
-     * @return array<string, mixed>
+     * @param array<string, mixed> $privileges
+     * @return array<string, Permission>
      */
-    public function map(array &$_privileges, ?Authenticatable $user): array
+    public function map(array $privileges, ?Authenticatable $user): array
     {
         $this->init($user);
 
-        foreach ($_privileges as $entity => $options) {
-            if (is_array($_privileges[$entity])) {
-                $_privileges[$entity]['allow'] = $this->access(
+        $map = [];
+
+        foreach ($privileges as $entity => $options) {
+
+            $map[$entity] = $this->access(
+                $user,
+                is_array($options) ? $options : []
+            );
+
+            if (is_array($privileges[$entity])) {
+                $privileges[$entity]['allow'] = $this->access(
                     $user,
                     is_array($options) ? $options : []
                 );
             }
         }
 
-        return $_privileges;
+        return $map;
     }
 
     /**
@@ -232,16 +239,22 @@ class Can
     /**
      * @param array<string, mixed> $options
      */
-    public function access(?Authenticatable $user, array $options = []): bool
+    public function access(?Authenticatable $user, array $options = []): Permission
     {
         $this->init($user);
 
         $isGuest = $this->isGuest($this->user);
 
-        if ($isGuest) {
+        $permission = new Permission($this->verify);
+
+        if ($this->isGuest($this->user)) {
+            $permission->markIsGuest();
+        }
+
+        if ($permission->isGuest()) {
             // Deny if guest is not permitted
             if (empty($options['guest'])) {
-                return false;
+                return $permission;
             }
         }
 
@@ -273,11 +286,11 @@ class Can
 
             if (empty($privilege)) {
                 // A privilege is required for checking.
-                return false;
+                return $permission;
             }
 
             if ($this->noSanctumToken) {
-                return false;
+                return $permission;
             }
 
             if (! $this->sanctumToken && is_callable([$this->user, 'currentAccessToken'])) {
@@ -301,41 +314,51 @@ class Can
             }
 
             if (! $this->sanctumToken) {
-                return false;
+                return $permission;
             }
 
             // Check the provided privilege before wildcards.
             if ($this->sanctumToken->can($privilege)) {
-                return true;
+                $permission->markAllowed();
+
+                return $permission;
             }
 
             foreach ($this->wildcards($privilege) as $wildcard) {
                 if ($wildcard && is_string($wildcard)) {
                     if ($this->sanctumToken->can($wildcard)) {
-                        return true;
+                        $permission->markAllowed();
+
+                        return $permission;
                     }
                 }
             }
 
-            return false;
+            return $permission;
 
         } elseif ($this->verify === 'policy') {
             if (is_callable([$this->user, 'can'])
                 && $this->user->can($privilege)
             ) {
-                return true;
+                $permission->markAllowed();
+
+                return $permission;
             }
         } elseif ($this->verify === 'admin') {
             if (is_callable([$this->user, 'isAdmin'])
                 && $this->user->isAdmin()
             ) {
-                return true;
+                $permission->markAllowed();
+
+                return $permission;
             }
         } elseif ($this->verify === 'privileges') {
             if (is_callable([$this->user, 'hasPrivilege'])
                 && $this->user->hasPrivilege($privilege)
             ) {
-                return true;
+                $permission->markAllowed();
+
+                return $permission;
             }
         } elseif ($this->verify === 'roles') {
             $allowed = false;
@@ -358,11 +381,19 @@ class Can
                 }
             }
 
-            return $allowed && ! $denied;
+            if ($allowed && ! $denied) {
+                $permission->markAllowed();
+            }
+
+            return $permission;
         } elseif ($this->verify === 'user') {
-            return ! $isGuest;
+            if (! $isGuest) {
+                $permission->markAllowed();
+            }
+
+            return $permission;
         }
 
-        return false;
+        return $permission;
     }
 }
