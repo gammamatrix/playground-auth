@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <crap_result>
   <project/>
-  <timestamp>2024-02-25 22:13:06</timestamp>
+  <timestamp>2024-02-26 00:07:09</timestamp>
   <stats>
     <name>Method Crap Stats</name>
-    <methodCount>56</methodCount>
+    <methodCount>61</methodCount>
     <crapMethodCount>9</crapMethodCount>
-    <crapLoad>151</crapLoad>
-    <totalCrap>4148.18</totalCrap>
-    <crapMethodPercent>16.07</crapMethodPercent>
+    <crapLoad>154</crapLoad>
+    <totalCrap>4456.18</totalCrap>
+    <crapMethodPercent>14.75</crapMethodPercent>
   </stats>
   <methods>
     <method>
@@ -59,10 +59,10 @@
       <package>Playground\Auth</package>
       <className>Playground\Auth\Can</className>
       <methodName>map</methodName>
-      <methodSignature>map(array $_privileges, ?Illuminate\Contracts\Auth\Authenticatable $user): array</methodSignature>
-      <fullMethod>map(array $_privileges, ?Illuminate\Contracts\Auth\Authenticatable $user): array</fullMethod>
-      <crap>20</crap>
-      <complexity>4</complexity>
+      <methodSignature>map(array $privileges, ?Illuminate\Contracts\Auth\Authenticatable $user): array</methodSignature>
+      <fullMethod>map(array $privileges, ?Illuminate\Contracts\Auth\Authenticatable $user): array</fullMethod>
+      <crap>30</crap>
+      <complexity>5</complexity>
       <coverage>0</coverage>
       <crapLoad>0</crapLoad>
     </method>
@@ -81,12 +81,12 @@
       <package>Playground\Auth</package>
       <className>Playground\Auth\Can</className>
       <methodName>access</methodName>
-      <methodSignature>access(?Illuminate\Contracts\Auth\Authenticatable $user, array $options): bool</methodSignature>
-      <fullMethod>access(?Illuminate\Contracts\Auth\Authenticatable $user, array $options): bool</fullMethod>
-      <crap>2162</crap>
-      <complexity>46</complexity>
+      <methodSignature>access(?Illuminate\Contracts\Auth\Authenticatable $user, array $options): Playground\Auth\Permission</methodSignature>
+      <fullMethod>access(?Illuminate\Contracts\Auth\Authenticatable $user, array $options): Playground\Auth\Permission</fullMethod>
+      <crap>2450</crap>
+      <complexity>49</complexity>
       <coverage>0</coverage>
-      <crapLoad>47</crapLoad>
+      <crapLoad>50</crapLoad>
     </method>
     <method>
       <package>Playground\Auth\Console\Commands</package>
@@ -173,6 +173,61 @@
       <fullMethod>sanctum(Laravel\Sanctum\Contracts\HasApiTokens $user): array</fullMethod>
       <crap>42</crap>
       <complexity>6</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Auth</package>
+      <className>Playground\Auth\Permission</className>
+      <methodName>__construct</methodName>
+      <methodSignature>__construct(string $verify)</methodSignature>
+      <fullMethod>__construct(string $verify)</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Auth</package>
+      <className>Playground\Auth\Permission</className>
+      <methodName>markAllowed</methodName>
+      <methodSignature>markAllowed(): self</methodSignature>
+      <fullMethod>markAllowed(): self</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Auth</package>
+      <className>Playground\Auth\Permission</className>
+      <methodName>markIsGuest</methodName>
+      <methodSignature>markIsGuest(): self</methodSignature>
+      <fullMethod>markIsGuest(): self</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Auth</package>
+      <className>Playground\Auth\Permission</className>
+      <methodName>allowed</methodName>
+      <methodSignature>allowed(): bool</methodSignature>
+      <fullMethod>allowed(): bool</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Auth</package>
+      <className>Playground\Auth\Permission</className>
+      <methodName>isGuest</methodName>
+      <methodSignature>isGuest(): bool</methodSignature>
+      <fullMethod>isGuest(): bool</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
       <coverage>0</coverage>
       <crapLoad>0</crapLoad>
     </method>
