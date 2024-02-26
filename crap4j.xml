@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <crap_result>
   <project/>
-  <timestamp>2024-02-26 01:29:16</timestamp>
+  <timestamp>2024-02-26 06:39:55</timestamp>
   <stats>
     <name>Method Crap Stats</name>
     <methodCount>62</methodCount>
     <crapMethodCount>9</crapMethodCount>
     <crapLoad>154</crapLoad>
-    <totalCrap>4498.18</totalCrap>
+    <totalCrap>4500.19</totalCrap>
     <crapMethodPercent>14.52</crapMethodPercent>
   </stats>
   <methods>
@@ -490,9 +490,9 @@
       <methodName>verify</methodName>
       <methodSignature>verify(Illuminate\Contracts\Auth\Authenticatable $user, string $ability): bool|\Illuminate\Auth\Access\Response</methodSignature>
       <fullMethod>verify(Illuminate\Contracts\Auth\Authenticatable $user, string $ability): bool|\Illuminate\Auth\Access\Response</fullMethod>
-      <crap>6</crap>
-      <complexity>6</complexity>
-      <coverage>100</coverage>
+      <crap>8.01</crap>
+      <complexity>8</complexity>
+      <coverage>94.12</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
