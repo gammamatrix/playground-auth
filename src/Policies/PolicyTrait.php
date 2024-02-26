@@ -67,10 +67,12 @@ trait PolicyTrait
         //     '$ability' => $ability,
         //     '$user' => $user,
         // ]);
-        if ($verify === 'privileges') {
+        if (in_array($verify, ['policy', 'privileges', 'sanctum'])) {
             return $this->hasPrivilege($user, $this->privilege($ability));
         } elseif ($verify === 'roles') {
             return $this->hasRole($user, $ability);
+        } elseif ($verify === 'admin') {
+            return is_callable([$user, 'isAdmin']) && $user->isAdmin();
         } elseif ($verify === 'user') {
             // A user with an email address passes.
             return ! empty($user->getAttribute('email'));
