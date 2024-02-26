@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage line-rate="0.37673611111111" branch-rate="0" lines-covered="217" lines-valid="576" branches-covered="0" branches-valid="0" complexity="311" version="0.4" timestamp="1708906029">
+<coverage line-rate="0.37157534246575" branch-rate="0" lines-covered="217" lines-valid="584" branches-covered="0" branches-valid="0" complexity="317" version="0.4" timestamp="1708910956">
   <sources>
     <source>/app/src</source>
   </sources>
   <packages>
-    <package name="Can.php" line-rate="0" branch-rate="0" complexity="91">
+    <package name="Can.php" line-rate="0" branch-rate="0" complexity="97">
       <classes>
-        <class name="Playground\Auth\Can" filename="Can.php" line-rate="0" branch-rate="0" complexity="91">
+        <class name="Playground\Auth\Can" filename="Can.php" line-rate="0" branch-rate="0" complexity="97">
           <methods>
             <method name="matches" signature="?Illuminate\Contracts\Auth\Authenticatable $user" line-rate="0" branch-rate="0" complexity="8">
               <lines>
@@ -204,6 +204,18 @@
                 <line number="397" hits="0"/>
               </lines>
             </method>
+            <method name="withPrivilege" signature="array $meta" line-rate="0" branch-rate="0" complexity="6">
+              <lines>
+                <line number="405" hits="0"/>
+                <line number="406" hits="0"/>
+                <line number="408" hits="0"/>
+                <line number="409" hits="0"/>
+                <line number="410" hits="0"/>
+                <line number="411" hits="0"/>
+                <line number="413" hits="0"/>
+                <line number="416" hits="0"/>
+              </lines>
+            </method>
           </methods>
           <lines>
             <line number="66" hits="0"/>
@@ -373,6 +385,14 @@
             <line number="391" hits="0"/>
             <line number="394" hits="0"/>
             <line number="397" hits="0"/>
+            <line number="405" hits="0"/>
+            <line number="406" hits="0"/>
+            <line number="408" hits="0"/>
+            <line number="409" hits="0"/>
+            <line number="410" hits="0"/>
+            <line number="411" hits="0"/>
+            <line number="413" hits="0"/>
+            <line number="416" hits="0"/>
           </lines>
         </class>
       </classes>
@@ -429,12 +449,12 @@
           <methods>
             <method name="getFacadeAccessor" signature="" line-rate="0" branch-rate="0" complexity="1">
               <lines>
-                <line number="28" hits="0"/>
+                <line number="29" hits="0"/>
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="28" hits="0"/>
+            <line number="29" hits="0"/>
           </lines>
         </class>
       </classes>

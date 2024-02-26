@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <crap_result>
   <project/>
-  <timestamp>2024-02-26 00:07:09</timestamp>
+  <timestamp>2024-02-26 01:29:16</timestamp>
   <stats>
     <name>Method Crap Stats</name>
-    <methodCount>61</methodCount>
+    <methodCount>62</methodCount>
     <crapMethodCount>9</crapMethodCount>
     <crapLoad>154</crapLoad>
-    <totalCrap>4456.18</totalCrap>
-    <crapMethodPercent>14.75</crapMethodPercent>
+    <totalCrap>4498.18</totalCrap>
+    <crapMethodPercent>14.52</crapMethodPercent>
   </stats>
   <methods>
     <method>
@@ -87,6 +87,17 @@
       <complexity>49</complexity>
       <coverage>0</coverage>
       <crapLoad>50</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Auth</package>
+      <className>Playground\Auth\Can</className>
+      <methodName>withPrivilege</methodName>
+      <methodSignature>withPrivilege(array $meta): string</methodSignature>
+      <fullMethod>withPrivilege(array $meta): string</fullMethod>
+      <crap>42</crap>
+      <complexity>6</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
     </method>
     <method>
       <package>Playground\Auth\Console\Commands</package>
