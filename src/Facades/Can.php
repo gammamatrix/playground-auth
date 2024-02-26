@@ -13,6 +13,7 @@ use Playground\Auth\Permission;
  *
  * @method static Permission access(?Authenticatable $user, array $_privileges)
  * @method static array<string, Permission> map(array $privileges, ?Authenticatable $user)
+ * @method static string withPrivilege(array $meta)
  */
 class Can extends Facade
 {

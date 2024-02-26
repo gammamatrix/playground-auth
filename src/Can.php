@@ -396,4 +396,23 @@ class Can
 
         return $permission;
     }
+
+    /**
+     * @param array<string, mixed> $meta
+     */
+    public function withPrivilege(array $meta = []): string
+    {
+        $canDefault = config('playground-auth.canDefault');
+        $withPrivilege = is_string($canDefault) ? $canDefault : '';
+
+        if (! empty($meta['info'])
+            && is_array($meta['info'])
+            && ! empty($meta['info']['privilege'])
+            && is_string($meta['info']['privilege'])
+        ) {
+            $withPrivilege = $meta['info']['privilege'];
+        }
+
+        return $withPrivilege;
+    }
 }
