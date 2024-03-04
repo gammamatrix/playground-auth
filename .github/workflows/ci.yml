@@ -30,7 +30,7 @@ jobs:
         echo "TIMESTAMP_START=$(date +'%s')" >> $GITHUB_OUTPUT
     - name: "Slack notification: IN PROGRESS"
       id: slack
-      uses: slackapi/slack-github-action@v1.24.0
+      uses: slackapi/slack-github-action@v1.25.0
       with:
         channel-id: 'C068A06PV43'
         payload: |
@@ -132,7 +132,7 @@ jobs:
         echo "DATE_END=$(date +'%Y-%m-%d %H:%M:%S')" >> $GITHUB_OUTPUT
         echo "DURATION_PHRASE=$(($(date +'%s')-$TIMESTAMP_START)) seconds" >> $GITHUB_OUTPUT
     - name: "Slack notification: Done"
-      uses: slackapi/slack-github-action@v1.24.0
+      uses: slackapi/slack-github-action@v1.25.0
       with:
         channel-id: 'C068A06PV43'
         update-ts: ${{ steps.slack.outputs.ts }}
@@ -193,7 +193,7 @@ jobs:
         SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
     - name: "Send a notification for failures"
       if: ${{ failure() }}
-      uses: slackapi/slack-github-action@v1.24.0
+      uses: slackapi/slack-github-action@v1.25.0
       with:
         channel-id: 'C068A06PV43'
         update-ts: ${{ steps.slack.outputs.ts }}
