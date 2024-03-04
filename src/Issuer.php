@@ -341,7 +341,7 @@ class Issuer
         $this->init($user, $config);
 
         if (! $this->hasSanctum) {
-            throw new \Exception(__('playground-auth:auth.sanctum.disabled'));
+            throw new \Exception(__('playground-auth::auth.sanctum.disabled'));
         }
 
         $tokens = [];
