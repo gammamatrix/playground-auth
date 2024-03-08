@@ -24,6 +24,8 @@ class Issuer
      */
     protected array $abilities = [];
 
+    protected bool $init = false;
+
     protected bool $isRoot = false;
 
     protected bool $isAdmin = false;
@@ -238,17 +240,21 @@ class Issuer
         return $this->abilities;
     }
 
-    /**
-     * @param array<string, mixed> $config
-     */
-    public function init(Authenticatable $user, array $config): void
+    public function init(Authenticatable $user): self
     {
-        if ($user instanceof HasApiTokens) {
+        if ($this->init) {
+            return $this;
+        }
+
+        $config = config('playground-auth');
+        $config = is_array($config) ? $config : [];
+
+        if ($user instanceof HasApiTokens || is_callable([$user, 'createToken'])) {
             $this->hasSanctum = ! empty($config['sanctum']);
         } else {
             $this->hasSanctum = false;
         }
-        // dump([
+        // dd([
         //     '__METHOD__' => __METHOD__,
         //     '$user' => $user->toArray(),
         //     '$config' => $config,
@@ -300,13 +306,17 @@ class Issuer
             $this->isGuest = false;
         }
 
-        if (! empty($config['listed'])) {
+        if (empty($config['listed'])) {
             $this->listed($user);
         }
 
         if (! $this->isGuest) {
             $this->isGuest = ! ($this->isRoot || $this->isAdmin || $this->isManager || $this->isUser);
         }
+
+        $this->init = true;
+
+        return $this;
     }
 
     public function listed(Authenticatable $user): void
@@ -328,23 +338,40 @@ class Issuer
     }
 
     /**
-     * @param Authenticatable&HasApiTokens $user
+     * @return array<string, ?string> Returns tokens for authorization.
+     */
+    public function authorize(Authenticatable $user): array
+    {
+        $this->init($user);
+
+        if ($this->hasSanctum && $this->useSanctum) {
+            $tokens = $this->sanctum($user);
+        } else {
+            $tokens = [];
+        }
+
+        return $tokens;
+    }
+
+    /**
      * @return array<string, ?string>
      */
-    public function sanctum(HasApiTokens $user): array
+    public function sanctum(Authenticatable $user): array
     {
         /**
          * @var array<string, mixed> $config
          */
         $config = config('playground-auth.token');
 
-        $this->init($user, $config);
-
-        if (! $this->hasSanctum) {
-            throw new \Exception(__('playground-auth::auth.sanctum.disabled'));
-        }
+        $this->init($user);
 
         $tokens = [];
+
+        if (! $this->hasSanctum) {
+            Log::debug(__('playground-auth::auth.sanctum.disabled'));
+
+            return $tokens;
+        }
 
         $name = 'app';
         if (! empty($config['name']) && is_string($config['name'])) {
@@ -357,10 +384,13 @@ class Issuer
             $expiresAt = Carbon::parse($config['expires']);
         }
 
-        $tokens[$name] = $user->createToken(
-            $name,
-            $this->abilities($user)
-        )->plainTextToken;
+        if (is_callable([$user, 'createToken'])) {
+            $tokens[$name] = $user->createToken(
+                $name,
+                $this->abilities($user)
+                // $expiresAt
+            )->plainTextToken;
+        }
 
         return $tokens;
     }
