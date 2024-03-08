@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <crap_result>
   <project/>
-  <timestamp>2024-03-08 04:25:36</timestamp>
+  <timestamp>2024-03-08 19:24:14</timestamp>
   <stats>
     <name>Method Crap Stats</name>
-    <methodCount>63</methodCount>
+    <methodCount>64</methodCount>
     <crapMethodCount>10</crapMethodCount>
-    <crapLoad>164</crapLoad>
-    <totalCrap>4634.19</totalCrap>
-    <crapMethodPercent>15.87</crapMethodPercent>
+    <crapLoad>166</crapLoad>
+    <totalCrap>4718.19</totalCrap>
+    <crapMethodPercent>15.63</crapMethodPercent>
   </stats>
   <methods>
     <method>
@@ -124,6 +124,17 @@
     <method>
       <package>Playground\Auth</package>
       <className>Playground\Auth\Issuer</className>
+      <methodName>useSanctum</methodName>
+      <methodSignature>useSanctum(): bool</methodSignature>
+      <fullMethod>useSanctum(): bool</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Auth</package>
+      <className>Playground\Auth\Issuer</className>
       <methodName>compileAbilitiesByGroup</methodName>
       <methodSignature>compileAbilitiesByGroup(string $group): array</methodSignature>
       <fullMethod>compileAbilitiesByGroup(string $group): array</fullMethod>
@@ -160,10 +171,10 @@
       <methodName>init</methodName>
       <methodSignature>init(Illuminate\Contracts\Auth\Authenticatable $user): self</methodSignature>
       <fullMethod>init(Illuminate\Contracts\Auth\Authenticatable $user): self</fullMethod>
-      <crap>380</crap>
-      <complexity>19</complexity>
+      <crap>462</crap>
+      <complexity>21</complexity>
       <coverage>0</coverage>
-      <crapLoad>19</crapLoad>
+      <crapLoad>21</crapLoad>
     </method>
     <method>
       <package>Playground\Auth</package>
