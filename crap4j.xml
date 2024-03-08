@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <crap_result>
   <project/>
-  <timestamp>2024-03-04 21:17:59</timestamp>
+  <timestamp>2024-03-08 04:22:54</timestamp>
   <stats>
     <name>Method Crap Stats</name>
-    <methodCount>62</methodCount>
-    <crapMethodCount>9</crapMethodCount>
-    <crapLoad>154</crapLoad>
-    <totalCrap>4500.19</totalCrap>
-    <crapMethodPercent>14.52</crapMethodPercent>
+    <methodCount>63</methodCount>
+    <crapMethodCount>10</crapMethodCount>
+    <crapLoad>164</crapLoad>
+    <totalCrap>4634.19</totalCrap>
+    <crapMethodPercent>15.87</crapMethodPercent>
   </stats>
   <methods>
     <method>
@@ -158,12 +158,12 @@
       <package>Playground\Auth</package>
       <className>Playground\Auth\Issuer</className>
       <methodName>init</methodName>
-      <methodSignature>init(Illuminate\Contracts\Auth\Authenticatable $user, array $config): void</methodSignature>
-      <fullMethod>init(Illuminate\Contracts\Auth\Authenticatable $user, array $config): void</fullMethod>
-      <crap>272</crap>
-      <complexity>16</complexity>
+      <methodSignature>init(Illuminate\Contracts\Auth\Authenticatable $user): self</methodSignature>
+      <fullMethod>init(Illuminate\Contracts\Auth\Authenticatable $user): self</fullMethod>
+      <crap>380</crap>
+      <complexity>19</complexity>
       <coverage>0</coverage>
-      <crapLoad>16</crapLoad>
+      <crapLoad>19</crapLoad>
     </method>
     <method>
       <package>Playground\Auth</package>
@@ -179,13 +179,24 @@
     <method>
       <package>Playground\Auth</package>
       <className>Playground\Auth\Issuer</className>
-      <methodName>sanctum</methodName>
-      <methodSignature>sanctum(Laravel\Sanctum\Contracts\HasApiTokens $user): array</methodSignature>
-      <fullMethod>sanctum(Laravel\Sanctum\Contracts\HasApiTokens $user): array</fullMethod>
-      <crap>42</crap>
-      <complexity>6</complexity>
+      <methodName>authorize</methodName>
+      <methodSignature>authorize(Illuminate\Contracts\Auth\Authenticatable $user): array</methodSignature>
+      <fullMethod>authorize(Illuminate\Contracts\Auth\Authenticatable $user): array</fullMethod>
+      <crap>12</crap>
+      <complexity>3</complexity>
       <coverage>0</coverage>
       <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package>Playground\Auth</package>
+      <className>Playground\Auth\Issuer</className>
+      <methodName>sanctum</methodName>
+      <methodSignature>sanctum(Illuminate\Contracts\Auth\Authenticatable $user): array</methodSignature>
+      <fullMethod>sanctum(Illuminate\Contracts\Auth\Authenticatable $user): array</fullMethod>
+      <crap>56</crap>
+      <complexity>7</complexity>
+      <coverage>0</coverage>
+      <crapLoad>7</crapLoad>
     </method>
     <method>
       <package>Playground\Auth</package>
