@@ -64,6 +64,11 @@ class Issuer
         'root',
     ];
 
+    public function useSanctum(): bool
+    {
+        return $this->useSanctum;
+    }
+
     /**
      * @return array<int, string>
      */
@@ -250,9 +255,13 @@ class Issuer
         $config = is_array($config) ? $config : [];
 
         if ($user instanceof HasApiTokens || is_callable([$user, 'createToken'])) {
-            $this->hasSanctum = ! empty($config['sanctum']);
+            $this->hasSanctum = true;
         } else {
             $this->hasSanctum = false;
+        }
+
+        if ($this->hasSanctum && ! empty($config['sanctum'])) {
+            $this->useSanctum = true;
         }
         // dd([
         //     '__METHOD__' => __METHOD__,
@@ -349,6 +358,11 @@ class Issuer
         } else {
             $tokens = [];
         }
+        // dd([
+        //     '$tokens' => $tokens,
+        //     '$this->useSanctum' => $this->useSanctum,
+        //     '$this->hasSanctum' => $this->hasSanctum,
+        // ]);
 
         return $tokens;
     }
@@ -362,6 +376,9 @@ class Issuer
          * @var array<string, mixed> $config
          */
         $config = config('playground-auth.token');
+        // dump([
+        //     '$config' => $config,
+        // ]);
 
         $this->init($user);
 
