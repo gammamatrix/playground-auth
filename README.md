@@ -4,9 +4,9 @@
 [![Test Coverage](https://raw.githubusercontent.com/gammamatrix/playground-auth/testing/develop/coverage.svg)](tests)
 [![PHPStan Level 9](https://img.shields.io/badge/PHPStan-level%209-brightgreen)](.github/workflows/ci.yml#L120)
 
-The Playground authentication and authorization package for [Laravel](https://laravel.com/docs/10.x) applications.
+The Playground authentication and authorization package for [Laravel](https://laravel.com/docs/11.x) applications.
 
-More information is available [on the Playground Auth wiki.](https://github.com/gammamatrix/playground-auth/wiki)
+Read more on using Playground Auth [at the Read the Docs for Playground.](https://gammamatrix-playground.readthedocs.io/)
 
 ## Installation
 
@@ -43,7 +43,7 @@ The default configuration utitlizes:
 
 Depending on your needs, there are multiple middleware, authentication and authorization options available.
 
-Abilities may be used with wildcards at multiple levels. Optionally, these abilities may be used with [Sanctum](https://laravel.com/docs/10.x/sanctum) for API Tokens.
+Abilities may be used with wildcards at multiple levels. Optionally, these abilities may be used with [Sanctum](https://laravel.com/docs/11.x/sanctum) for API Tokens.
 
 Here is an example of the configurable abilities:
 ```php

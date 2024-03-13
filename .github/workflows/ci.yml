@@ -1,4 +1,4 @@
-name: 'Tests: Playground Auth'
+name: 'CI'
 
 on:
   push:
@@ -99,7 +99,7 @@ jobs:
       env:
         XDEBUG_MODE: coverage
       with:
-        version: "10.5"
+        version: "11.0"
         php_version: "8.2"
         php_extensions: intl xdebug
         coverage_clover: clover.xml

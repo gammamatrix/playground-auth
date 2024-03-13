@@ -45,7 +45,7 @@ $rules_laravel = [
     'class_definition' => [
         'multi_line_extends_each_single_line' => true,
         'single_item_single_line' => true,
-        'single_line' => true,
+        'single_line' => false,
     ],
     'clean_namespace' => true,
     'compact_nullable_typehint' => true,
@@ -59,6 +59,7 @@ $rules_laravel = [
     'encoding' => true,
     'full_opening_tag' => true,
     'fully_qualified_strict_types' => true,
+    'declare_strict_types' => true,
     'function_declaration' => true,
     'general_phpdoc_tag_rename' => true,
     'heredoc_to_nowdoc' => true,
@@ -215,12 +216,13 @@ $finder = PhpCsFixer\Finder::create()
     ->in([
         __DIR__.'/config',
         __DIR__.'/database',
-        __DIR__ . '/lang',
+        __DIR__.'/lang',
         __DIR__.'/src',
         __DIR__.'/tests/Feature',
-        __DIR__ . '/tests/Unit',
+        __DIR__.'/tests/Unit',
     ])
     ->name('*.php')
+    ->name('*.phps')
     ->notName('*.blade.php')
     ->ignoreDotFiles(true)
     ->ignoreVCS(true)

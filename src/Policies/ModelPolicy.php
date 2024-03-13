@@ -1,4 +1,6 @@
 <?php
+
+declare(strict_types=1);
 /**
  * Playground
  */
@@ -37,7 +39,7 @@ abstract class ModelPolicy extends Policy
             // return Response::denyWithStatus(423);
             return Response::denyWithStatus(423, __('playground-auth::auth.model.locked', [
                 'model' => Str::of(class_basename($model))
-                    ->snake()->replace('_', ' ')->title()->lower(),
+                    ->snake()->replace('_', ' ')->title()->lower()->toString(),
             ]));
         }
 
@@ -112,7 +114,7 @@ abstract class ModelPolicy extends Policy
         if ($model->getAttribute('locked')) {
             // return Response::denyWithStatus(423);
             return Response::denyWithStatus(423, __('playground-auth::auth.model.locked', [
-                'model' => Str::of(class_basename($model))->snake()->replace('_', ' ')->title()->lower(),
+                'model' => Str::of(class_basename($model))->snake()->replace('_', ' ')->title()->lower()->toString(),
             ]));
         }
 
