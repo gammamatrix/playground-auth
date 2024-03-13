@@ -37,7 +37,7 @@ See the contents of the published config file: [config/playground-auth.php](conf
 The default configuration utitlizes:
 - Sanctum
 - Users may have additional abilities in the [`Playground\Models\User`](https://github.com/gammamatrix/playground/blob/develop/src/Models/User.php): `users.abilities`
-- The Playground user model uses a UUID primary key along with additional fields. See the [migration for `Playground\Models\User`](https://github.com/gammamatrix/playground/blob/develop/database/migrations-playground/2014_10_12_000000_create_users_table.php)
+- The Playground user model uses a UUID primary key along with additional fields. See the [migration for `Playground\Models\User`](https://github.com/gammamatrix/playground/blob/develop/database/migrations-playground/0001_01_01_000000_create_users_table.php)
 
 ## Abilities, Privileges, Roles and Sanctum
 
@@ -90,7 +90,7 @@ Here is an example of the configurable abilities:
 
 ### Environment Variables
 
-Read more about [`playground-auth` environment variables](https://github.com/gammamatrix/playground-auth/wiki/Environment-Variables) on the [`playground-auth` wiki](https://github.com/gammamatrix/playground-auth/wiki/).
+Read more about [environment variables in the `config/playground-auth.php`](https://github.com/gammamatrix/playground-auth/blob/develop/config/playground-auth.php) on [Read the Docs: Playground](https://gammamatrix-playground.readthedocs.io/en/latest/playground/auth.html).
 
 ### User model types
 
@@ -102,8 +102,7 @@ Make sure your app is configured for the proper user model in the Laravel config
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            // 'model' => App\Models\User::class,
-            'model' => env('AUTH_PROVIDERS_USERS_MODEL', App\Models\User::class),
+            'model' => env('AUTH__MODEL', App\Models\User::class),
         ],
 ```
 
