@@ -186,19 +186,6 @@ class Issuer
             }
         }
 
-        // dump([
-        //     '__METHOD__' => __METHOD__,
-        //     '$group' => $group,
-        //     '$abilities' => $abilities,
-        //     '$package_abilities' => $package_abilities,
-        //     '$this->rootAccessGroups' => $this->rootAccessGroups,
-        //     '$this->rootAbilities' => $this->rootAbilities,
-        //     '$this->isRoot' => $this->isRoot,
-        //     '$this->isAdmin' => $this->isAdmin,
-        //     '$this->isManager' => $this->isManager,
-        //     '$this->isUser' => $this->isUser,
-        //     '$this->isGuest' => $this->isGuest,
-        // ]);
         return $abilities;
     }
 
@@ -360,11 +347,6 @@ class Issuer
         } else {
             $tokens = [];
         }
-        // dd([
-        //     '$tokens' => $tokens,
-        //     '$this->useSanctum' => $this->useSanctum,
-        //     '$this->hasSanctum' => $this->hasSanctum,
-        // ]);
 
         return $tokens;
     }
@@ -378,9 +360,6 @@ class Issuer
          * @var array<string, mixed> $config
          */
         $config = config('playground-auth.token');
-        // dump([
-        //     '$config' => $config,
-        // ]);
 
         $this->init($user);
 
@@ -406,8 +385,8 @@ class Issuer
         if (is_callable([$user, 'createToken'])) {
             $tokens[$name] = $user->createToken(
                 $name,
-                $this->abilities($user)
-                // $expiresAt
+                $this->abilities($user),
+                $expiresAt
             )->plainTextToken;
         }
 

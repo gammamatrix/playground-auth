@@ -8,8 +8,10 @@ namespace Playground\Auth\Policies;
 
 use Illuminate\Auth\Access\Response;
 use Illuminate\Contracts\Auth\Authenticatable;
+use Illuminate\Support\Facades\Log;
 use Laravel\Sanctum\Contracts\HasApiTokens;
 use Laravel\Sanctum\PersonalAccessToken;
+use Laravel\Sanctum\TransientToken;
 
 /**
  * \Playground\Auth\Policies\PrivilegeTrait
@@ -52,13 +54,17 @@ trait PrivilegeTrait
 
     private function hasPrivilegeWildcard(string $privilege): bool
     {
+        $token = $this->getToken();
+        if (! $token) {
+            return false;
+        }
         $check = '';
         foreach (explode(':', $privilege) as $part) {
             if ($check) {
                 $check .= ':';
             }
             $check .= $part;
-            if ($this->getToken()?->can($check.':*')) {
+            if ($token->can($check.':*')) {
                 return true;
             }
         }
@@ -74,7 +80,7 @@ trait PrivilegeTrait
 
         if (config('playground-auth.sanctum')) {
 
-            if ($user instanceof HasApiTokens) {
+            if ($user instanceof HasApiTokens || is_callable([$user, 'tokenCan'])) {
                 return $this->hasPrivilegeSanctum($user, $privilege);
             } else {
                 return Response::denyWithStatus(401, __('playground-auth::auth.unauthorized'));
@@ -95,26 +101,48 @@ trait PrivilegeTrait
         return Response::denyWithStatus(401, __('playground-auth::auth.unauthorized'));
     }
 
-    private function hasPrivilegeSanctum(HasApiTokens $user, string $privilege): bool|Response
+    private function hasPrivilegeSanctum(Authenticatable $user, string $privilege): bool|Response
     {
+        if (! ($user instanceof HasApiTokens || is_callable([$user, 'tokenCan']))) {
+            Log::error('The user model does not support Sanctum. Use HasApiTokens.', [
+                'user' => $user,
+                'privilege' => $privilege,
+                'config(playground-auth)' => config('playground-auth'),
+            ]);
+
+            return Response::denyWithStatus(500, __('playground-auth::auth.sanctum.disabled'));
+        }
+
         if (empty($privilege)) {
             return Response::denyWithStatus(406, __('playground-auth::auth.unacceptable'));
         }
 
         if (! $this->hasToken()) {
-            /**
-             * @var PersonalAccessToken $token
-             */
-            $token = $user->tokens()
-                ->where('name', config('playground-auth.token.name'))
-                // Get the latest created token.
-                ->orderBy('created_at', 'desc')
-                ->first();
 
-            if ($token) {
-                $this->setToken($token);
-                $user->withAccessToken($token);
-            } else {
+            /**
+             * @var ?PersonalAccessToken $token
+             */
+            $token = method_exists($user, 'currentAccessToken') ? $user->currentAccessToken() : null;
+            if ($token instanceof TransientToken) {
+                if (empty(config('playground-auth.token.transient'))) {
+                    $token = null;
+                }
+            }
+
+            if (! $token && method_exists($user, 'tokens')) {
+                $token = $user->tokens()
+                    ->where('name', config('playground-auth.token.name'))
+                    // Get the latest created token.
+                    ->orderBy('created_at', 'desc')
+                    ->first();
+
+                if ($token && method_exists($user, 'withAccessToken')) {
+                    $this->setToken($token);
+                    $user->withAccessToken($token);
+                }
+            }
+
+            if (! $token) {
                 return Response::denyWithStatus(401, __('playground-auth::auth.unauthorized'));
             }
         }
@@ -129,13 +157,6 @@ trait PrivilegeTrait
             return Response::denyWithStatus(401, __('playground-auth::auth.unauthorized'));
         }
 
-        // dd([
-        //     '__METHOD__' => __METHOD__,
-        //     '$privilege' => $privilege,
-        //     '$user->tokens()->first()' => $user->tokens()->where('name', config('playground-auth.token.name'))->first()->can($privilege),
-        //     '$user->currentAccessToken()->can($privilege)' => $user->currentAccessToken()->can($privilege),
-        //     '$user->currentAccessToken()->cant($privilege)' => $user->currentAccessToken()->cant($privilege),
-        // ]);
         return true;
     }
 }

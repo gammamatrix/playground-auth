@@ -145,15 +145,6 @@ trait RoleTrait
             }
         }
 
-        // dump([
-        //     '__METHOD__' => __METHOD__,
-        //     '$user' => $user,
-        //     'userRole' => config('playground-auth.userRole'),
-        //     'userRoles' => config('playground-auth.userRoles'),
-        //     'hasRole' => config('playground-auth.hasRole') && method_exists($user, 'hasRole'),
-        //     '$ability' => $ability,
-        //     '$roles' => $roles,
-        // ]);
         return Response::denyWithStatus(401, __('playground-auth::auth.unauthorized'));
     }
 }

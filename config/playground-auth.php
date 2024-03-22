@@ -184,6 +184,11 @@ return [
          * @var string session_name   The session name for the token.
          */
         'session_name' => env('PLAYGROUND_AUTH_TOKEN_SESSION_NAME', 'sanctum'),
+
+        /**
+         * @var bool transient   Allow transient tokens in policies.
+         */
+        'transient' => (bool) env('PLAYGROUND_AUTH_TOKEN_TRANSIENT', false),
     ],
 
     /*
