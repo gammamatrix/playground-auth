@@ -51,6 +51,17 @@ abstract class ModelPolicy extends Policy
      */
     public function detail(Authenticatable $user, Model $model): bool|Response
     {
+        // dd([
+        //     '__METHOD__' => __METHOD__,
+        //     '__FILE__' => __FILE__,
+        //     '__LINE__' => __LINE__,
+        //     'static::class' => static::class,
+        //     '$user' => $user->toArray(),
+        //     '$this->allowRootOverride' => $this->allowRootOverride,
+        //     '$this->package' => $this->package,
+        //     '$this->entity' => $this->entity,
+        //     'config(playground-auth)' => config('playground-auth'),
+        // ]);
         return $this->verify($user, 'view');
     }
 
@@ -109,6 +120,17 @@ abstract class ModelPolicy extends Policy
      */
     public function update(Authenticatable $user, Model $model): bool|Response
     {
+        // dd([
+        //     '__METHOD__' => __METHOD__,
+        //     '__FILE__' => __FILE__,
+        //     '__LINE__' => __LINE__,
+        //     'static::class' => static::class,
+        //     '$user' => $user->toArray(),
+        //     '$this->allowRootOverride' => $this->allowRootOverride,
+        //     '$this->package' => $this->package,
+        //     '$this->entity' => $this->entity,
+        //     'config(playground-auth)' => config('playground-auth'),
+        // ]);
         // Models must be unlocked to allow updating.
         // NOTE: This lock check is bypassed by a root user.
         if ($model->getAttribute('locked')) {

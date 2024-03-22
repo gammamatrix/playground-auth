@@ -63,11 +63,12 @@ trait PolicyTrait
     public function verify(Authenticatable $user, string $ability): bool|Response
     {
         $verify = config('playground-auth.verify');
-        // dd([
+        // dump([
         //     '__METHOD__' => __METHOD__,
         //     '$verify' => $verify,
         //     '$ability' => $ability,
         //     '$user' => $user,
+        //     'test' => config('app.debug') && config('playground-auth.debug'),
         // ]);
         if (in_array($verify, ['policy', 'privileges', 'sanctum'])) {
             return $this->hasPrivilege($user, $this->privilege($ability));

@@ -147,6 +147,8 @@ class ServiceProvider extends AuthServiceProvider
 
             '<fg=yellow;options=bold>Debug Mode</>' => ! empty($config['debug']) && ! empty(config('app.debug')) ? '<fg=yellow;options=bold>ENABLED</>' : '<fg=green;options=bold>OFF</>',
 
+            '<fg=cyan;options=bold>Verify</>' => ! empty($config['verify']) && is_string($config['verify']) ? sprintf('[%s]', $config['verify']) : '',
+
             '<fg=cyan;options=bold>Token</> [Abilities]' => sprintf('[%s]', $token['abilities']),
             '<fg=cyan;options=bold>Token</> [Expires]' => sprintf('[%s]', $token['expires']),
             '<fg=cyan;options=bold>Token</> [Name]' => sprintf('[%s]', $token['name']),

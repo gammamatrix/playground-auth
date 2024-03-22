@@ -9,9 +9,8 @@ namespace Tests\Unit\Playground\Auth\Policies\PolicyTrait;
 use Illuminate\Auth\Access\Response;
 use Playground\Test\Models\User;
 use Tests\Unit\Playground\Auth\TestCase;
-
-// use TiMacDonald\Log\LogEntry;
-// use TiMacDonald\Log\LogFake;
+use TiMacDonald\Log\LogEntry;
+use TiMacDonald\Log\LogFake;
 
 /**
  * \Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest
@@ -57,7 +56,7 @@ class TraitTest extends TestCase
 
         $instance = new Policy;
 
-        // $log = LogFake::bind();
+        $log = LogFake::bind();
 
         /**
          * @var User $user
@@ -72,7 +71,7 @@ class TraitTest extends TestCase
 
         $this->assertFalse($instance->verify($user, $ability));
 
-        // $log->assertNothingLogged();
+        $log->assertNothingLogged();
     }
 
     public function test_verify_does_not_log_when_auth_debugging_is_disabled(): void
@@ -84,7 +83,7 @@ class TraitTest extends TestCase
 
         $instance = new Policy;
 
-        // $log = LogFake::bind();
+        $log = LogFake::bind();
 
         /**
          * @var User $user
@@ -99,7 +98,7 @@ class TraitTest extends TestCase
 
         $this->assertFalse($instance->verify($user, $ability));
 
-        // $log->assertNothingLogged();
+        $log->assertNothingLogged();
     }
 
     public function test_verify_logs_with_debugging_enabled(): void
@@ -111,7 +110,7 @@ class TraitTest extends TestCase
 
         $instance = new Policy;
 
-        // $log = LogFake::bind();
+        $log = LogFake::bind();
 
         /**
          * @var User $user
@@ -126,16 +125,16 @@ class TraitTest extends TestCase
 
         $this->assertFalse($instance->verify($user, $ability));
 
-        // $log->assertLogged(
-        //     fn (LogEntry $log) => $log->level === 'debug'
-        // );
+        $log->assertLogged(
+            fn (LogEntry $log) => $log->level === 'debug'
+        );
 
-        // $log->assertLogged(
-        //     fn (LogEntry $log) => str_contains(
-        //         is_string($log->context['$ability']) ? $log->context['$ability'] : '',
-        //         $ability
-        //     )
-        // );
+        $log->assertLogged(
+            fn (LogEntry $log) => str_contains(
+                is_string($log->context['$ability']) ? $log->context['$ability'] : '',
+                $ability
+            )
+        );
     }
 
     public function test_verify_privileges(): void

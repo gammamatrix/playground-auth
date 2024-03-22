@@ -85,6 +85,7 @@ abstract class Policy
         //     '$this->allowRootOverride' => $this->allowRootOverride,
         //     '$this->package' => $this->package,
         //     '$this->entity' => $this->entity,
+        //     'config(playground-auth)' => config('playground-auth'),
         // ]);
 
         // \Log::debug(__METHOD__, [

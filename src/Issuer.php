@@ -406,8 +406,8 @@ class Issuer
         if (is_callable([$user, 'createToken'])) {
             $tokens[$name] = $user->createToken(
                 $name,
-                $this->abilities($user)
-                // $expiresAt
+                $this->abilities($user),
+                $expiresAt
             )->plainTextToken;
         }
 
