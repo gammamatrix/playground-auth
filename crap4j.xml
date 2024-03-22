@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <crap_result>
   <project/>
-  <timestamp>2024-03-14 05:05:58</timestamp>
+  <timestamp>2024-03-22 22:43:33</timestamp>
   <stats>
     <name>Method Crap Stats</name>
     <methodCount>64</methodCount>
     <crapMethodCount>10</crapMethodCount>
-    <crapLoad>166</crapLoad>
-    <totalCrap>4718.19</totalCrap>
+    <crapLoad>171</crapLoad>
+    <totalCrap>4795.79</totalCrap>
     <crapMethodPercent>15.63</crapMethodPercent>
   </stats>
   <methods>
@@ -589,8 +589,8 @@
       <methodName>hasPrivilegeWildcard</methodName>
       <methodSignature>hasPrivilegeWildcard(string $privilege): bool</methodSignature>
       <fullMethod>hasPrivilegeWildcard(string $privilege): bool</fullMethod>
-      <crap>20</crap>
-      <complexity>4</complexity>
+      <crap>30</crap>
+      <complexity>5</complexity>
       <coverage>0</coverage>
       <crapLoad>0</crapLoad>
     </method>
@@ -600,8 +600,8 @@
       <methodName>hasPrivilege</methodName>
       <methodSignature>hasPrivilege(Illuminate\Contracts\Auth\Authenticatable $user, string $privilege): bool|\Illuminate\Auth\Access\Response</methodSignature>
       <fullMethod>hasPrivilege(Illuminate\Contracts\Auth\Authenticatable $user, string $privilege): bool|\Illuminate\Auth\Access\Response</fullMethod>
-      <crap>10.05</crap>
-      <complexity>10</complexity>
+      <crap>11.06</crap>
+      <complexity>11</complexity>
       <coverage>92.31</coverage>
       <crapLoad>0</crapLoad>
     </method>
@@ -609,12 +609,12 @@
       <package>Playground\Auth\Policies</package>
       <className>Playground\Auth\Policies\PrivilegeTrait</className>
       <methodName>hasPrivilegeSanctum</methodName>
-      <methodSignature>hasPrivilegeSanctum(Laravel\Sanctum\Contracts\HasApiTokens $user, string $privilege): bool|\Illuminate\Auth\Access\Response</methodSignature>
-      <fullMethod>hasPrivilegeSanctum(Laravel\Sanctum\Contracts\HasApiTokens $user, string $privilege): bool|\Illuminate\Auth\Access\Response</fullMethod>
-      <crap>56</crap>
-      <complexity>7</complexity>
-      <coverage>0</coverage>
-      <crapLoad>7</crapLoad>
+      <methodSignature>hasPrivilegeSanctum(Illuminate\Contracts\Auth\Authenticatable $user, string $privilege): bool|\Illuminate\Auth\Access\Response</methodSignature>
+      <fullMethod>hasPrivilegeSanctum(Illuminate\Contracts\Auth\Authenticatable $user, string $privilege): bool|\Illuminate\Auth\Access\Response</fullMethod>
+      <crap>120.55</crap>
+      <complexity>16</complexity>
+      <coverage>25.81</coverage>
+      <crapLoad>12</crapLoad>
     </method>
     <method>
       <package>Playground\Auth\Policies</package>
@@ -699,9 +699,9 @@
       <methodName>about</methodName>
       <methodSignature>about(): void</methodSignature>
       <fullMethod>about(): void</fullMethod>
-      <crap>47.11</crap>
-      <complexity>46</complexity>
-      <coverage>91.94</coverage>
+      <crap>49.15</crap>
+      <complexity>48</complexity>
+      <coverage>92.06</coverage>
       <crapLoad>0</crapLoad>
     </method>
     <method>
