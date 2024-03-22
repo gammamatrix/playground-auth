@@ -252,11 +252,6 @@ class Can
         if ($this->isGuest($this->user)) {
             $permission->markIsGuest();
         }
-        // dump([
-        //     '$isGuest' => $isGuest,
-        //     '$permission' => $permission,
-        //     '$user' => $user,
-        // ]);
 
         if ($permission->isGuest()) {
             // Deny if guest is not permitted
