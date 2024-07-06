@@ -128,6 +128,16 @@ artisan auth:hash-password 'some password' --json --pretty
 }
 ```
 
+## Cloc
+
+```sh
+composer cloc
+```
+
+```
+
+```
+
 ## PHPStan
 
 Tests at level 9 on:

@@ -8,8 +8,8 @@ namespace Tests\Feature\Playground\Auth\Console\Commands\About;
 
 use PHPUnit\Framework\Attributes\CoversClass;
 use Playground\Auth\ServiceProvider;
-use Playground\ServiceProvider as PlaygroundServiceProvider;
 use Playground\Test\OrchestraTestCase;
+use Tests\Unit\Playground\Auth\PackageProviders;
 
 /**
  * \Tests\Feature\Playground\Auth\Console\Commands\About
@@ -17,13 +17,7 @@ use Playground\Test\OrchestraTestCase;
 #[CoversClass(ServiceProvider::class)]
 class CommandTest extends OrchestraTestCase
 {
-    protected function getPackageProviders($app)
-    {
-        return [
-            PlaygroundServiceProvider::class,
-            ServiceProvider::class,
-        ];
-    }
+    use PackageProviders;
 
     public function test_command_about_displays_package_information_and_succeed_with_code_0(): void
     {

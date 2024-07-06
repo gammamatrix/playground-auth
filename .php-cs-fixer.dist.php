@@ -215,7 +215,6 @@ $rules_laravel = [
 $finder = PhpCsFixer\Finder::create()
     ->in([
         __DIR__.'/config',
-        __DIR__.'/database',
         __DIR__.'/lang',
         __DIR__.'/src',
         __DIR__.'/tests/Feature',

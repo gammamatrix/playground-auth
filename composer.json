@@ -59,8 +59,9 @@
         }
     },
     "scripts": {
-        "test": "vendor/bin/phpunit",
+        "analyse": "vendor/bin/phpstan analyse --verbose --debug --level max",
+        "cloc": "cloc --exclude-dir=output,vendor .",
         "format": "vendor/bin/php-cs-fixer fix",
-        "analyse": "vendor/bin/phpstan analyse --verbose --debug --level max"
+        "test": "vendor/bin/phpunit"
     }
 }

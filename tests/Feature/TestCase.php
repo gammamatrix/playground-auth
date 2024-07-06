@@ -21,19 +21,31 @@ class TestCase extends BaseTestCase
     protected bool $load_migrations_playground = false;
 
     /**
-     * Setup the test environment.
+     * Define database migrations.
+     *
+     * @api
+     *
+     * @return void
      */
-    protected function setUp(): void
+    protected function defineDatabaseMigrations()
     {
-        parent::setUp();
-
         if (! empty(env('TEST_DB_MIGRATIONS'))) {
             if ($this->load_migrations_laravel) {
-                $this->loadMigrationsFrom(dirname(dirname(__DIR__)).'/database/migrations-laravel');
+                $this->loadPlaygroundMigration('migrations-laravel');
             }
             if ($this->load_migrations_playground) {
-                $this->loadMigrationsFrom(dirname(dirname(__DIR__)).'/database/migrations-playground');
+                $this->loadPlaygroundMigration('migrations-playground');
             }
+        }
+    }
+
+    protected function loadPlaygroundMigration(string $folder): void
+    {
+        $playground_database = sprintf('%1$s/playground/database', dirname(dirname(dirname(__DIR__))));
+        $migrations = sprintf('%1$s/%2$s', $playground_database, $folder);
+
+        if ($folder && is_dir($playground_database) && is_dir($migrations)) {
+            $this->loadMigrationsFrom($playground_database.'/'.$folder);
         }
     }
 }

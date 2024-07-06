@@ -8,7 +8,6 @@ parameters:
 
     paths:
         - config
-        - database
         - lang
         - src
         - tests
@@ -18,4 +17,5 @@ parameters:
 
     treatPhpDocTypesAsCertain: false
 
-    checkGenericClassInNonGenericObjectType: false
+    # editorUrl: 'vscode://file/%%file%%:%%line%%'
+    # editorUrl: 'phpstorm://open?file=%%file%%&line=%%line%%'

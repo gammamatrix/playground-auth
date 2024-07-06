@@ -1,9 +1,9 @@
 <?php
-
-declare(strict_types=1);
 /**
  * Playground
  */
+
+declare(strict_types=1);
 namespace Playground\Auth\Console\Commands;
 
 use Illuminate\Console\Command;
@@ -41,7 +41,7 @@ class HashPassword extends Command
      */
     public function handle()
     {
-        $this->json = $this->option('json');
+        $this->json = ! empty($this->option('json'));
 
         if ($this->hasArgument('password')) {
             $password = $this->argument('password');
