@@ -1,0 +1,923 @@
+<?xml version="1.0"?>
+<phpunit xmlns="https://schema.phpunit.de/coverage/1.0">
+  <file name="PolicyTrait.php" path="/Policies">
+    <totals>
+      <lines total="89" comments="10" code="79" executable="23" executed="22" percent="95.65"/>
+      <methods count="6" tested="5" percent="83.33"/>
+      <functions count="0" tested="0" percent="0"/>
+      <classes count="0" tested="0" percent="0"/>
+      <traits count="1" tested="0" percent="0.00"/>
+    </totals>
+    <trait name="Playground\Auth\Policies\PolicyTrait" start="17" executable="23" executed="22" crap="13">
+      <namespace name="Playground\Auth\Policies"/>
+      <method name="hasPrivilege" signature="hasPrivilege(Illuminate\Contracts\Auth\Authenticatable $user, string $privilege): bool|\Illuminate\Auth\Access\Response" start="30" end="30" crap="0" executable="0" executed="0" coverage="100"/>
+      <method name="hasRole" signature="hasRole(Illuminate\Contracts\Auth\Authenticatable $user, string $ability): bool|\Illuminate\Auth\Access\Response" start="32" end="32" crap="0" executable="0" executed="0" coverage="100"/>
+      <method name="privilege" signature="privilege(string $ability): string" start="34" end="34" crap="0" executable="0" executed="0" coverage="100"/>
+      <method name="getEntity" signature="getEntity(): string" start="36" end="39" crap="1" executable="1" executed="1" coverage="100"/>
+      <method name="getPackage" signature="getPackage(): string" start="41" end="44" crap="1" executable="1" executed="1" coverage="100"/>
+      <method name="hasToken" signature="hasToken(): bool" start="46" end="49" crap="1" executable="1" executed="1" coverage="100"/>
+      <method name="getToken" signature="getToken(): ?Laravel\Sanctum\PersonalAccessToken" start="51" end="54" crap="1" executable="1" executed="1" coverage="100"/>
+      <method name="setToken" signature="setToken(Laravel\Sanctum\PersonalAccessToken $token): self" start="56" end="61" crap="1" executable="2" executed="2" coverage="100"/>
+      <method name="verify" signature="verify(Illuminate\Contracts\Auth\Authenticatable $user, string $ability): bool|\Illuminate\Auth\Access\Response" start="63" end="87" crap="8.01" executable="17" executed="16" coverage="94.117647058824"/>
+    </trait>
+    <coverage>
+      <line nr="38">
+        <covered by="Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_getEntity"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_verify_privileges"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\PrivilegeTrait\TraitTest::test_privilege_PrivilegePolicy_without_parameter"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\PrivilegeTrait\TraitTest::test_privilege_PrivilegeModelPolicy_without_parameter"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\PrivilegeTrait\TraitTest::test_privilege_UserPolicy_without_parameter"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\PrivilegeTrait\TraitTest::test_privilege_with_package_and_without_parameter"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\PrivilegeTrait\TraitTest::test_privilege_with_package_and_entity_and_without_parameter"/>
+      </line>
+      <line nr="43">
+        <covered by="Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_getPackage"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_verify_privileges"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\PrivilegeTrait\TraitTest::test_privilege_PrivilegePolicy_without_parameter"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\PrivilegeTrait\TraitTest::test_privilege_PrivilegeModelPolicy_without_parameter"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\PrivilegeTrait\TraitTest::test_privilege_UserPolicy_without_parameter"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\PrivilegeTrait\TraitTest::test_privilege_with_package_and_without_parameter"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\PrivilegeTrait\TraitTest::test_privilege_with_package_and_entity_and_without_parameter"/>
+      </line>
+      <line nr="48">
+        <covered by="Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_hasToken"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_verify_privileges"/>
+      </line>
+      <line nr="53">
+        <covered by="Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_getToken"/>
+      </line>
+      <line nr="58">
+        <covered by="Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_setToken"/>
+      </line>
+      <line nr="60">
+        <covered by="Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_setToken"/>
+      </line>
+      <line nr="65">
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_create_without_role"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_create_with_admin"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_delete_without_role"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_delete_with_admin"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_detail_without_role"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_detail_with_admin"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_edit_without_role"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_edit_with_admin"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_forceDelete_without_role"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_forceDelete_with_admin"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_lock_without_role"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_lock_with_admin"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_manage_without_role"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_manage_with_admin"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_restore_without_role"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_restore_with_admin"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_store_without_role"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_store_with_admin"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_update_without_role"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_update_with_admin"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_unlock_without_role"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_unlock_with_admin"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\Policy\AbstractTest::test_index_without_role"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\Policy\AbstractTest::test_index_with_admin"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\Policy\AbstractTest::test_view_without_role"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\Policy\AbstractTest::test_view_with_admin"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\Policy\AbstractTest::test_view_with_admin_in_roles"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_verify_does_not_log_when_app_debugging_is_disabled"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_verify_does_not_log_when_auth_debugging_is_disabled"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_verify_logs_with_debugging_enabled"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_verify_privileges"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_verify_roles"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_verify_user"/>
+      </line>
+      <line nr="66">
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_create_without_role"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_create_with_admin"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_delete_without_role"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_delete_with_admin"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_detail_without_role"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_detail_with_admin"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_edit_without_role"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_edit_with_admin"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_forceDelete_without_role"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_forceDelete_with_admin"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_lock_without_role"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_lock_with_admin"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_manage_without_role"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_manage_with_admin"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_restore_without_role"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_restore_with_admin"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_store_without_role"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_store_with_admin"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_update_without_role"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_update_with_admin"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_unlock_without_role"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_unlock_with_admin"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\Policy\AbstractTest::test_index_without_role"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\Policy\AbstractTest::test_index_with_admin"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\Policy\AbstractTest::test_view_without_role"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\Policy\AbstractTest::test_view_with_admin"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\Policy\AbstractTest::test_view_with_admin_in_roles"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_verify_does_not_log_when_app_debugging_is_disabled"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_verify_does_not_log_when_auth_debugging_is_disabled"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_verify_logs_with_debugging_enabled"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_verify_privileges"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_verify_roles"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_verify_user"/>
+      </line>
+      <line nr="67">
+        <covered by="Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_verify_privileges"/>
+      </line>
+      <line nr="68">
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_create_without_role"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_create_with_admin"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_delete_without_role"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_delete_with_admin"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_detail_without_role"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_detail_with_admin"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_edit_without_role"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_edit_with_admin"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_forceDelete_without_role"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_forceDelete_with_admin"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_lock_without_role"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_lock_with_admin"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_manage_without_role"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_manage_with_admin"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_restore_without_role"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_restore_with_admin"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_store_without_role"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_store_with_admin"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_update_without_role"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_update_with_admin"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_unlock_without_role"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_unlock_with_admin"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\Policy\AbstractTest::test_index_without_role"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\Policy\AbstractTest::test_index_with_admin"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\Policy\AbstractTest::test_view_without_role"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\Policy\AbstractTest::test_view_with_admin"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\Policy\AbstractTest::test_view_with_admin_in_roles"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_verify_does_not_log_when_app_debugging_is_disabled"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_verify_does_not_log_when_auth_debugging_is_disabled"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_verify_logs_with_debugging_enabled"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_verify_roles"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_verify_user"/>
+      </line>
+      <line nr="69">
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_create_without_role"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_create_with_admin"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_delete_without_role"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_delete_with_admin"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_detail_without_role"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_detail_with_admin"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_edit_without_role"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_edit_with_admin"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_forceDelete_without_role"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_forceDelete_with_admin"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_lock_without_role"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_lock_with_admin"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_manage_without_role"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_manage_with_admin"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_restore_without_role"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_restore_with_admin"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_store_without_role"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_store_with_admin"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_update_without_role"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_update_with_admin"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_unlock_without_role"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_unlock_with_admin"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\Policy\AbstractTest::test_index_without_role"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\Policy\AbstractTest::test_index_with_admin"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\Policy\AbstractTest::test_view_without_role"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\Policy\AbstractTest::test_view_with_admin"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\Policy\AbstractTest::test_view_with_admin_in_roles"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_verify_roles"/>
+      </line>
+      <line nr="70">
+        <covered by="Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_verify_does_not_log_when_app_debugging_is_disabled"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_verify_does_not_log_when_auth_debugging_is_disabled"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_verify_logs_with_debugging_enabled"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_verify_user"/>
+      </line>
+      <line nr="72">
+        <covered by="Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_verify_does_not_log_when_app_debugging_is_disabled"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_verify_does_not_log_when_auth_debugging_is_disabled"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_verify_logs_with_debugging_enabled"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_verify_user"/>
+      </line>
+      <line nr="74">
+        <covered by="Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_verify_user"/>
+      </line>
+      <line nr="77">
+        <covered by="Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_verify_does_not_log_when_app_debugging_is_disabled"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_verify_does_not_log_when_auth_debugging_is_disabled"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_verify_logs_with_debugging_enabled"/>
+      </line>
+      <line nr="78">
+        <covered by="Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_verify_logs_with_debugging_enabled"/>
+      </line>
+      <line nr="79">
+        <covered by="Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_verify_logs_with_debugging_enabled"/>
+      </line>
+      <line nr="80">
+        <covered by="Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_verify_logs_with_debugging_enabled"/>
+      </line>
+      <line nr="81">
+        <covered by="Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_verify_logs_with_debugging_enabled"/>
+      </line>
+      <line nr="82">
+        <covered by="Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_verify_logs_with_debugging_enabled"/>
+      </line>
+      <line nr="86">
+        <covered by="Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_verify_does_not_log_when_app_debugging_is_disabled"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_verify_does_not_log_when_auth_debugging_is_disabled"/>
+        <covered by="Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_verify_logs_with_debugging_enabled"/>
+      </line>
+      <line nr="83">
+        <covered by="Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_verify_logs_with_debugging_enabled"/>
+      </line>
+    </coverage>
+    <source>
+      <line no="1">
+        <token name="T_OPEN_TAG">&lt;?php</token>
+      </line>
+      <line no="2"/>
+      <line no="3">
+        <token name="T_DECLARE">declare</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_STRING">strict_types</token>
+        <token name="T_EQUAL">=</token>
+        <token name="T_LNUMBER">1</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="4">
+        <token name="T_DOC_COMMENT">/**</token>
+      </line>
+      <line no="5">
+        <token name="T_DOC_COMMENT"> * Playground</token>
+      </line>
+      <line no="6">
+        <token name="T_DOC_COMMENT"> */</token>
+      </line>
+      <line no="7">
+        <token name="T_NAMESPACE">namespace</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_NAME_QUALIFIED">Playground\Auth\Policies</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="8"/>
+      <line no="9">
+        <token name="T_USE">use</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_NAME_QUALIFIED">Illuminate\Auth\Access\Response</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="10">
+        <token name="T_USE">use</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_NAME_QUALIFIED">Illuminate\Contracts\Auth\Authenticatable</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="11">
+        <token name="T_USE">use</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_NAME_QUALIFIED">Illuminate\Support\Facades\Log</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="12">
+        <token name="T_USE">use</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_NAME_QUALIFIED">Laravel\Sanctum\PersonalAccessToken</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="13"/>
+      <line no="14">
+        <token name="T_DOC_COMMENT">/**</token>
+      </line>
+      <line no="15">
+        <token name="T_DOC_COMMENT"> * \Playground\Auth\Policies\PolicyTrait</token>
+      </line>
+      <line no="16">
+        <token name="T_DOC_COMMENT"> */</token>
+      </line>
+      <line no="17">
+        <token name="T_TRAIT">trait</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">PolicyTrait</token>
+      </line>
+      <line no="18">
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="19">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_DOC_COMMENT">/**</token>
+      </line>
+      <line no="20">
+        <token name="T_DOC_COMMENT">     * @var bool Allow root to override rules in before().</token>
+      </line>
+      <line no="21">
+        <token name="T_DOC_COMMENT">     */</token>
+      </line>
+      <line no="22">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PROTECTED">protected</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$allowRootOverride</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EQUAL">=</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">true</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="23"/>
+      <line no="24">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PROTECTED">protected</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">string</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$package</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EQUAL">=</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">''</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="25"/>
+      <line no="26">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PROTECTED">protected</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">string</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$entity</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EQUAL">=</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">''</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="27"/>
+      <line no="28">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PROTECTED">protected</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_QUESTION_MARK">?</token>
+        <token name="T_STRING">PersonalAccessToken</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$token</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EQUAL">=</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">null</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="29"/>
+      <line no="30">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_ABSTRACT">abstract</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_PUBLIC">public</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_FUNCTION">function</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">hasPrivilege</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_STRING">Authenticatable</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$user</token>
+        <token name="T_COMMA">,</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">string</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$privilege</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_COLON">:</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">bool</token>
+        <token name="T_PIPE">|</token>
+        <token name="T_STRING">Response</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="31"/>
+      <line no="32">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_ABSTRACT">abstract</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_PUBLIC">public</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_FUNCTION">function</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">hasRole</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_STRING">Authenticatable</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$user</token>
+        <token name="T_COMMA">,</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">string</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$ability</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_COLON">:</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">bool</token>
+        <token name="T_PIPE">|</token>
+        <token name="T_STRING">Response</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="33"/>
+      <line no="34">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_ABSTRACT">abstract</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_PUBLIC">public</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_FUNCTION">function</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">privilege</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_STRING">string</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$ability</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EQUAL">=</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'*'</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_COLON">:</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">string</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="35"/>
+      <line no="36">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PUBLIC">public</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_FUNCTION">function</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">getEntity</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_COLON">:</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">string</token>
+      </line>
+      <line no="37">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="38">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_RETURN">return</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$this</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">entity</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="39">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="40"/>
+      <line no="41">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PUBLIC">public</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_FUNCTION">function</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">getPackage</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_COLON">:</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">string</token>
+      </line>
+      <line no="42">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="43">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_RETURN">return</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$this</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">package</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="44">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="45"/>
+      <line no="46">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PUBLIC">public</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_FUNCTION">function</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">hasToken</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_COLON">:</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">bool</token>
+      </line>
+      <line no="47">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="48">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_RETURN">return</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EXCLAMATION_MARK">!</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EMPTY">empty</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_VARIABLE">$this</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">token</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="49">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="50"/>
+      <line no="51">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PUBLIC">public</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_FUNCTION">function</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">getToken</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_COLON">:</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_QUESTION_MARK">?</token>
+        <token name="T_STRING">PersonalAccessToken</token>
+      </line>
+      <line no="52">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="53">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_RETURN">return</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$this</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">token</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="54">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="55"/>
+      <line no="56">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PUBLIC">public</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_FUNCTION">function</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">setToken</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_STRING">PersonalAccessToken</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$token</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EQUAL">=</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">null</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_COLON">:</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">self</token>
+      </line>
+      <line no="57">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="58">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_VARIABLE">$this</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">token</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EQUAL">=</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$token</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="59"/>
+      <line no="60">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_RETURN">return</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$this</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="61">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="62"/>
+      <line no="63">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_PUBLIC">public</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_FUNCTION">function</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">verify</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_STRING">Authenticatable</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$user</token>
+        <token name="T_COMMA">,</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">string</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$ability</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_COLON">:</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">bool</token>
+        <token name="T_PIPE">|</token>
+        <token name="T_STRING">Response</token>
+      </line>
+      <line no="64">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="65">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_VARIABLE">$verify</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EQUAL">=</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">config</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'playground-auth.verify'</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="66">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_IF">if</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_STRING">in_array</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_VARIABLE">$verify</token>
+        <token name="T_COMMA">,</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_SQUARE">[</token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'policy'</token>
+        <token name="T_COMMA">,</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'privileges'</token>
+        <token name="T_COMMA">,</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'sanctum'</token>
+        <token name="T_CLOSE_SQUARE">]</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="67">
+        <token name="T_WHITESPACE">            </token>
+        <token name="T_RETURN">return</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$this</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">hasPrivilege</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_VARIABLE">$user</token>
+        <token name="T_COMMA">,</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$this</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">privilege</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_VARIABLE">$ability</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="68">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_CLOSE_CURLY">}</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_ELSEIF">elseif</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_VARIABLE">$verify</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_IS_IDENTICAL">===</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'roles'</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="69">
+        <token name="T_WHITESPACE">            </token>
+        <token name="T_RETURN">return</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$this</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">hasRole</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_VARIABLE">$user</token>
+        <token name="T_COMMA">,</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$ability</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="70">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_CLOSE_CURLY">}</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_ELSEIF">elseif</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_VARIABLE">$verify</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_IS_IDENTICAL">===</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'admin'</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="71">
+        <token name="T_WHITESPACE">            </token>
+        <token name="T_RETURN">return</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">is_callable</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_OPEN_SQUARE">[</token>
+        <token name="T_VARIABLE">$user</token>
+        <token name="T_COMMA">,</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'isAdmin'</token>
+        <token name="T_CLOSE_SQUARE">]</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_BOOLEAN_AND">&amp;&amp;</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$user</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">isAdmin</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="72">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_CLOSE_CURLY">}</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_ELSEIF">elseif</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_VARIABLE">$verify</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_IS_IDENTICAL">===</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'user'</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="73">
+        <token name="T_WHITESPACE">            </token>
+        <token name="T_COMMENT">// A user with an email address passes.</token>
+      </line>
+      <line no="74">
+        <token name="T_WHITESPACE">            </token>
+        <token name="T_RETURN">return</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EXCLAMATION_MARK">!</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EMPTY">empty</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_VARIABLE">$user</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">getAttribute</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'email'</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="75">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="76"/>
+      <line no="77">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_IF">if</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_STRING">config</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'app.debug'</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_BOOLEAN_AND">&amp;&amp;</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">config</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'playground-auth.debug'</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="78">
+        <token name="T_WHITESPACE">            </token>
+        <token name="T_STRING">Log</token>
+        <token name="T_DOUBLE_COLON">::</token>
+        <token name="T_STRING">debug</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_METHOD_C">__METHOD__</token>
+        <token name="T_COMMA">,</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_SQUARE">[</token>
+      </line>
+      <line no="79">
+        <token name="T_WHITESPACE">                </token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'error'</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_DOUBLE_ARROW">=&gt;</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'Unexpected verify security mechanism for playground-auth.verify or PLAYGROUND_AUTH_VERIFY. Options: privileges|roles|user'</token>
+        <token name="T_COMMA">,</token>
+      </line>
+      <line no="80">
+        <token name="T_WHITESPACE">                </token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'$ability'</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_DOUBLE_ARROW">=&gt;</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$ability</token>
+        <token name="T_COMMA">,</token>
+      </line>
+      <line no="81">
+        <token name="T_WHITESPACE">                </token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'$verify'</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_DOUBLE_ARROW">=&gt;</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$verify</token>
+        <token name="T_COMMA">,</token>
+      </line>
+      <line no="82">
+        <token name="T_WHITESPACE">                </token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'$user'</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_DOUBLE_ARROW">=&gt;</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$user</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">toArray</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_COMMA">,</token>
+      </line>
+      <line no="83">
+        <token name="T_WHITESPACE">            </token>
+        <token name="T_CLOSE_SQUARE">]</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="84">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="85"/>
+      <line no="86">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_RETURN">return</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">false</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="87">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="88">
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="89"/>
+    </source>
+  </file>
+</phpunit>

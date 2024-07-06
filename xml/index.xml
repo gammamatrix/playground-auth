@@ -1,0 +1,233 @@
+<?xml version="1.0"?>
+<phpunit xmlns="https://schema.phpunit.de/coverage/1.0">
+  <build time="Sat Jul 6 21:09:39 UTC 2024" phpunit="11.0.10" coverage="11.0.3">
+    <runtime name="PHP" version="8.2.21" url="https://www.php.net/"/>
+    <driver name="xdebug" version="3.3.2"/>
+  </build>
+  <project source="/app/src">
+    <tests>
+      <test name="Tests\Unit\Playground\Auth\Console\Commands\HashPassword\CommandTest::test_command_auth_hash_password_with_json" size="unknown" status="success"/>
+      <test name="Tests\Unit\Playground\Auth\Console\Commands\HashPassword\CommandTest::test_command_auth_hash_password" size="unknown" status="success"/>
+      <test name="Tests\Unit\Playground\Auth\Console\Commands\HashPassword\CommandTest::test_command_auth_hash_password_without_argument_and_fail" size="unknown" status="success"/>
+      <test name="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_create_without_role" size="unknown" status="success"/>
+      <test name="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_create_with_admin" size="unknown" status="success"/>
+      <test name="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_delete_without_role" size="unknown" status="success"/>
+      <test name="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_delete_with_admin" size="unknown" status="success"/>
+      <test name="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_delete_locked_with_admin" size="unknown" status="success"/>
+      <test name="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_detail_without_role" size="unknown" status="success"/>
+      <test name="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_detail_with_admin" size="unknown" status="success"/>
+      <test name="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_edit_without_role" size="unknown" status="success"/>
+      <test name="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_edit_with_admin" size="unknown" status="success"/>
+      <test name="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_forceDelete_without_role" size="unknown" status="success"/>
+      <test name="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_forceDelete_with_admin" size="unknown" status="success"/>
+      <test name="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_lock_without_role" size="unknown" status="success"/>
+      <test name="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_lock_with_admin" size="unknown" status="success"/>
+      <test name="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_manage_without_role" size="unknown" status="success"/>
+      <test name="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_manage_with_admin" size="unknown" status="success"/>
+      <test name="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_restore_without_role" size="unknown" status="success"/>
+      <test name="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_restore_with_admin" size="unknown" status="success"/>
+      <test name="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_store_without_role" size="unknown" status="success"/>
+      <test name="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_store_with_admin" size="unknown" status="success"/>
+      <test name="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_update_without_role" size="unknown" status="success"/>
+      <test name="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_update_with_admin" size="unknown" status="success"/>
+      <test name="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_update_locked_with_admin" size="unknown" status="success"/>
+      <test name="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_unlock_without_role" size="unknown" status="success"/>
+      <test name="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_unlock_with_admin" size="unknown" status="success"/>
+      <test name="Tests\Unit\Playground\Auth\Policies\Policy\AbstractTest::test_before_with_root" size="unknown" status="success"/>
+      <test name="Tests\Unit\Playground\Auth\Policies\Policy\AbstractTest::test_before_with_root_as_secondary_fails" size="unknown" status="success"/>
+      <test name="Tests\Unit\Playground\Auth\Policies\Policy\AbstractTest::test_index_without_role" size="unknown" status="success"/>
+      <test name="Tests\Unit\Playground\Auth\Policies\Policy\AbstractTest::test_index_with_admin" size="unknown" status="success"/>
+      <test name="Tests\Unit\Playground\Auth\Policies\Policy\AbstractTest::test_view_without_role" size="unknown" status="success"/>
+      <test name="Tests\Unit\Playground\Auth\Policies\Policy\AbstractTest::test_view_with_admin" size="unknown" status="success"/>
+      <test name="Tests\Unit\Playground\Auth\Policies\Policy\AbstractTest::test_view_with_admin_in_roles" size="unknown" status="success"/>
+      <test name="Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_getEntity" size="unknown" status="success"/>
+      <test name="Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_getPackage" size="unknown" status="success"/>
+      <test name="Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_hasToken" size="unknown" status="success"/>
+      <test name="Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_getToken" size="unknown" status="success"/>
+      <test name="Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_setToken" size="unknown" status="success"/>
+      <test name="Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_verify_does_not_log_when_app_debugging_is_disabled" size="unknown" status="success"/>
+      <test name="Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_verify_does_not_log_when_auth_debugging_is_disabled" size="unknown" status="success"/>
+      <test name="Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_verify_logs_with_debugging_enabled" size="unknown" status="success"/>
+      <test name="Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_verify_privileges" size="unknown" status="success"/>
+      <test name="Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_verify_roles" size="unknown" status="success"/>
+      <test name="Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_verify_user" size="unknown" status="success"/>
+      <test name="Tests\Unit\Playground\Auth\Policies\PrivilegeTrait\TraitTest::test_privilege_PrivilegePolicy_without_parameter" size="unknown" status="success"/>
+      <test name="Tests\Unit\Playground\Auth\Policies\PrivilegeTrait\TraitTest::test_privilege_PrivilegeModelPolicy_without_parameter" size="unknown" status="success"/>
+      <test name="Tests\Unit\Playground\Auth\Policies\PrivilegeTrait\TraitTest::test_privilege_UserPolicy_without_parameter" size="unknown" status="success"/>
+      <test name="Tests\Unit\Playground\Auth\Policies\PrivilegeTrait\TraitTest::test_privilege_with_package_and_without_parameter" size="unknown" status="success"/>
+      <test name="Tests\Unit\Playground\Auth\Policies\PrivilegeTrait\TraitTest::test_privilege_with_package_and_entity_and_without_parameter" size="unknown" status="success"/>
+      <test name="Tests\Unit\Playground\Auth\Policies\PrivilegeTrait\TraitTest::test_hasPrivilege" size="unknown" status="success"/>
+      <test name="Tests\Unit\Playground\Auth\Policies\PrivilegeTrait\TraitTest::test_hasPrivilege_with_user_hasPrivilege" size="unknown" status="success"/>
+      <test name="Tests\Unit\Playground\Auth\Policies\PrivilegeTrait\TraitTest::test_hasPrivilege_with_user_privileges" size="unknown" status="success"/>
+      <test name="Tests\Unit\Playground\Auth\Policies\PrivilegeTrait\TraitTest::test_hasPrivilege_without_privileges_enabled" size="unknown" status="success"/>
+      <test name="Tests\Unit\Playground\Auth\Policies\RoleTrait\TraitTest::test_getRolesForAdmin" size="unknown" status="success"/>
+      <test name="Tests\Unit\Playground\Auth\Policies\RoleTrait\TraitTest::test_getRolesForAction" size="unknown" status="success"/>
+      <test name="Tests\Unit\Playground\Auth\Policies\RoleTrait\TraitTest::test_getRolesToView" size="unknown" status="success"/>
+      <test name="Tests\Unit\Playground\Auth\Policies\RoleTrait\TraitTest::test_hasRole" size="unknown" status="success"/>
+      <test name="Tests\Unit\Playground\Auth\Policies\RoleTrait\TraitTest::test_hasRole_advanced_role" size="unknown" status="success"/>
+      <test name="Tests\Feature\Playground\Auth\Console\Commands\About\CommandTest::test_command_about_displays_package_information_and_succeed_with_code_0" size="unknown" status="success"/>
+    </tests>
+    <directory name="/">
+      <totals>
+        <lines total="1836" comments="338" code="1498" executable="620" executed="227" percent="36.61"/>
+        <methods count="56" tested="27" percent="48.21"/>
+        <functions count="0" tested="0" percent="0"/>
+        <classes count="8" tested="3" percent="37.50"/>
+        <traits count="3" tested="0" percent="0.00"/>
+      </totals>
+      <directory name="Console">
+        <totals>
+          <lines total="72" comments="20" code="52" executable="16" executed="15" percent="93.75"/>
+          <methods count="1" tested="0" percent="0.00"/>
+          <functions count="0" tested="0" percent="0"/>
+          <classes count="1" tested="0" percent="0.00"/>
+          <traits count="0" tested="0" percent="0"/>
+        </totals>
+        <directory name="Commands">
+          <totals>
+            <lines total="72" comments="20" code="52" executable="16" executed="15" percent="93.75"/>
+            <methods count="1" tested="0" percent="0.00"/>
+            <functions count="0" tested="0" percent="0"/>
+            <classes count="1" tested="0" percent="0.00"/>
+            <traits count="0" tested="0" percent="0"/>
+          </totals>
+          <file name="HashPassword.php" href="Console/Commands/HashPassword.php.xml">
+            <totals>
+              <lines total="72" comments="20" code="52" executable="16" executed="15" percent="93.75"/>
+              <methods count="1" tested="0" percent="0.00"/>
+              <functions count="0" tested="0" percent="0"/>
+              <classes count="1" tested="0" percent="0.00"/>
+              <traits count="0" tested="0" percent="0"/>
+            </totals>
+          </file>
+        </directory>
+      </directory>
+      <directory name="Facades">
+        <totals>
+          <lines total="34" comments="17" code="17" executable="1" executed="0" percent="0.00"/>
+          <methods count="1" tested="0" percent="0.00"/>
+          <functions count="0" tested="0" percent="0"/>
+          <classes count="1" tested="0" percent="0.00"/>
+          <traits count="0" tested="0" percent="0"/>
+        </totals>
+        <file name="Can.php" href="Facades/Can.php.xml">
+          <totals>
+            <lines total="34" comments="17" code="17" executable="1" executed="0" percent="0.00"/>
+            <methods count="1" tested="0" percent="0.00"/>
+            <functions count="0" tested="0" percent="0"/>
+            <classes count="1" tested="0" percent="0.00"/>
+            <traits count="0" tested="0" percent="0"/>
+          </totals>
+        </file>
+      </directory>
+      <directory name="Policies">
+        <totals>
+          <lines total="685" comments="183" code="502" executable="167" executed="131" percent="78.44"/>
+          <methods count="29" tested="25" percent="86.21"/>
+          <functions count="0" tested="0" percent="0"/>
+          <classes count="2" tested="3" percent="150.00"/>
+          <traits count="3" tested="0" percent="0.00"/>
+        </totals>
+        <directory name="Contracts">
+          <totals>
+            <lines total="42" comments="21" code="21" executable="0" executed="0" percent="0"/>
+            <methods count="0" tested="0" percent="0"/>
+            <functions count="0" tested="0" percent="0"/>
+            <classes count="0" tested="0" percent="0"/>
+            <traits count="0" tested="0" percent="0"/>
+          </totals>
+          <file name="Role.php" href="Policies/Contracts/Role.php.xml">
+            <totals>
+              <lines total="42" comments="21" code="21" executable="0" executed="0" percent="0"/>
+              <methods count="0" tested="0" percent="0"/>
+              <functions count="0" tested="0" percent="0"/>
+              <classes count="0" tested="0" percent="0"/>
+              <traits count="0" tested="0" percent="0"/>
+            </totals>
+          </file>
+        </directory>
+        <file name="ModelPolicy.php" href="Policies/ModelPolicy.php.xml">
+          <totals>
+            <lines total="132" comments="49" code="83" executable="20" executed="20" percent="100.00"/>
+            <methods count="11" tested="11" percent="100.00"/>
+            <functions count="0" tested="0" percent="0"/>
+            <classes count="1" tested="1" percent="100.00"/>
+            <traits count="0" tested="0" percent="0"/>
+          </totals>
+        </file>
+        <file name="Policy.php" href="Policies/Policy.php.xml">
+          <totals>
+            <lines total="108" comments="60" code="48" executable="9" executed="9" percent="100.00"/>
+            <methods count="3" tested="3" percent="100.00"/>
+            <functions count="0" tested="0" percent="0"/>
+            <classes count="1" tested="1" percent="100.00"/>
+            <traits count="0" tested="0" percent="0"/>
+          </totals>
+        </file>
+        <file name="PolicyTrait.php" href="Policies/PolicyTrait.php.xml">
+          <totals>
+            <lines total="89" comments="10" code="79" executable="23" executed="22" percent="95.65"/>
+            <methods count="6" tested="5" percent="83.33"/>
+            <functions count="0" tested="0" percent="0"/>
+            <classes count="0" tested="0" percent="0"/>
+            <traits count="1" tested="0" percent="0.00"/>
+          </totals>
+        </file>
+        <file name="PrivilegeTrait.php" href="Policies/PrivilegeTrait.php.xml">
+          <totals>
+            <lines total="163" comments="9" code="154" executable="67" executed="32" percent="47.76"/>
+            <methods count="4" tested="1" percent="25.00"/>
+            <functions count="0" tested="0" percent="0"/>
+            <classes count="0" tested="0" percent="0"/>
+            <traits count="1" tested="0" percent="0.00"/>
+          </totals>
+        </file>
+        <file name="RoleTrait.php" href="Policies/RoleTrait.php.xml">
+          <totals>
+            <lines total="151" comments="34" code="117" executable="48" executed="48" percent="100.00"/>
+            <methods count="5" tested="5" percent="100.00"/>
+            <functions count="0" tested="0" percent="0"/>
+            <classes count="0" tested="1" percent="0"/>
+            <traits count="1" tested="0" percent="0.00"/>
+          </totals>
+        </file>
+      </directory>
+      <file name="Can.php" href="Can.php.xml">
+        <totals>
+          <lines total="421" comments="37" code="384" executable="175" executed="0" percent="0.00"/>
+          <methods count="8" tested="0" percent="0.00"/>
+          <functions count="0" tested="0" percent="0"/>
+          <classes count="1" tested="0" percent="0.00"/>
+          <traits count="0" tested="0" percent="0"/>
+        </totals>
+      </file>
+      <file name="Issuer.php" href="Issuer.php.xml">
+        <totals>
+          <lines total="396" comments="51" code="345" executable="167" executed="0" percent="0.00"/>
+          <methods count="8" tested="0" percent="0.00"/>
+          <functions count="0" tested="0" percent="0"/>
+          <classes count="1" tested="0" percent="0.00"/>
+          <traits count="0" tested="0" percent="0"/>
+        </totals>
+      </file>
+      <file name="Permission.php" href="Permission.php.xml">
+        <totals>
+          <lines total="51" comments="6" code="45" executable="7" executed="0" percent="0.00"/>
+          <methods count="5" tested="0" percent="0.00"/>
+          <functions count="0" tested="0" percent="0"/>
+          <classes count="1" tested="0" percent="0.00"/>
+          <traits count="0" tested="0" percent="0"/>
+        </totals>
+      </file>
+      <file name="ServiceProvider.php" href="ServiceProvider.php.xml">
+        <totals>
+          <lines total="177" comments="24" code="153" executable="87" executed="81" percent="93.10"/>
+          <methods count="4" tested="2" percent="50.00"/>
+          <functions count="0" tested="0" percent="0"/>
+          <classes count="1" tested="0" percent="0.00"/>
+          <traits count="0" tested="0" percent="0"/>
+        </totals>
+      </file>
+    </directory>
+  </project>
+</phpunit>
