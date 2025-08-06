@@ -17,8 +17,8 @@ Abstract Role (Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRole)
  [x] Detail with admin
  [x] Edit without role
  [x] Edit with admin
- [x] ForceDelete without role
- [x] ForceDelete with admin
+ [x] Force delete without role
+ [x] Force delete with admin
  [x] Lock without role
  [x] Lock with admin
  [x] Manage without role
@@ -55,20 +55,20 @@ Trait (Tests\Unit\Playground\Auth\Policies\PolicyTrait\Trait)
  [x] Verify user
 
 Trait (Tests\Unit\Playground\Auth\Policies\PrivilegeTrait\Trait)
- [x] Privilege PrivilegePolicy without parameter
- [x] Privilege PrivilegeModelPolicy without parameter
- [x] Privilege UserPolicy without parameter
+ [x] Privilege privilege policy without parameter
+ [x] Privilege privilege model policy without parameter
+ [x] Privilege user policy without parameter
  [x] Privilege with package and without parameter
  [x] Privilege with package and entity and without parameter
  [x] Has privilege
- [x] HasPrivilege with user hasPrivilege
- [x] HasPrivilege with user privileges
- [x] HasPrivilege without privileges enabled
+ [x] Has privilege with user has privilege
+ [x] Has privilege with user privileges
+ [x] Has privilege without privileges enabled
 
 Trait (Tests\Unit\Playground\Auth\Policies\RoleTrait\Trait)
  [x] Get roles for admin
  [x] Get roles for action
  [x] Get roles to view
  [x] Has role
- [x] HasRole advanced role
+ [x] Has role advanced role
 

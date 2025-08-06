@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <crap_result>
   <project/>
-  <timestamp>2024-07-06 21:09:39</timestamp>
+  <timestamp>2025-08-06 01:49:38</timestamp>
   <stats>
     <name>Method Crap Stats</name>
     <methodCount>64</methodCount>
@@ -301,8 +301,8 @@
       <package>Playground\Auth\Policies</package>
       <className>Playground\Auth\Policies\ModelPolicy</className>
       <methodName>edit</methodName>
-      <methodSignature>edit(Illuminate\Contracts\Auth\Authenticatable $user, Illuminate\Database\Eloquent\Model $model): bool|\Illuminate\Auth\Access\Response</methodSignature>
-      <fullMethod>edit(Illuminate\Contracts\Auth\Authenticatable $user, Illuminate\Database\Eloquent\Model $model): bool|\Illuminate\Auth\Access\Response</fullMethod>
+      <methodSignature>edit(Illuminate\Contracts\Auth\Authenticatable $user, ?Illuminate\Database\Eloquent\Model $model): bool|\Illuminate\Auth\Access\Response</methodSignature>
+      <fullMethod>edit(Illuminate\Contracts\Auth\Authenticatable $user, ?Illuminate\Database\Eloquent\Model $model): bool|\Illuminate\Auth\Access\Response</fullMethod>
       <crap>1</crap>
       <complexity>1</complexity>
       <coverage>100</coverage>
@@ -499,8 +499,8 @@
       <package>Playground\Auth\Policies</package>
       <className>Playground\Auth\Policies\PolicyTrait</className>
       <methodName>setToken</methodName>
-      <methodSignature>setToken(Laravel\Sanctum\PersonalAccessToken $token): self</methodSignature>
-      <fullMethod>setToken(Laravel\Sanctum\PersonalAccessToken $token): self</fullMethod>
+      <methodSignature>setToken(?Laravel\Sanctum\PersonalAccessToken $token): self</methodSignature>
+      <fullMethod>setToken(?Laravel\Sanctum\PersonalAccessToken $token): self</fullMethod>
       <crap>1</crap>
       <complexity>1</complexity>
       <coverage>100</coverage>
@@ -565,8 +565,8 @@
       <package>Playground\Auth\Policies</package>
       <className>Playground\Auth\Policies\PrivilegeTrait</className>
       <methodName>setToken</methodName>
-      <methodSignature>setToken(Laravel\Sanctum\PersonalAccessToken $token): self</methodSignature>
-      <fullMethod>setToken(Laravel\Sanctum\PersonalAccessToken $token): self</fullMethod>
+      <methodSignature>setToken(?Laravel\Sanctum\PersonalAccessToken $token): self</methodSignature>
+      <fullMethod>setToken(?Laravel\Sanctum\PersonalAccessToken $token): self</fullMethod>
       <crap>0</crap>
       <complexity>0</complexity>
       <coverage>100</coverage>

@@ -2,19 +2,19 @@
 <phpunit xmlns="https://schema.phpunit.de/coverage/1.0">
   <file name="Permission.php" path="/">
     <totals>
-      <lines total="51" comments="6" code="45" executable="7" executed="0" percent="0.00"/>
+      <lines total="52" comments="6" code="46" executable="7" executed="0" percent="0.00"/>
       <methods count="5" tested="0" percent="0.00"/>
       <functions count="0" tested="0" percent="0"/>
       <classes count="1" tested="0" percent="0.00"/>
       <traits count="0" tested="0" percent="0"/>
     </totals>
-    <class name="Playground\Auth\Permission" start="12" executable="7" executed="0" crap="30">
+    <class name="Playground\Auth\Permission" start="13" executable="7" executed="0" crap="30">
       <namespace name="Playground\Auth"/>
-      <method name="__construct" signature="__construct(string $verify)" start="22" end="25" crap="2" executable="1" executed="0" coverage="0"/>
-      <method name="markAllowed" signature="markAllowed(): self" start="27" end="32" crap="2" executable="2" executed="0" coverage="0"/>
-      <method name="markIsGuest" signature="markIsGuest(): self" start="34" end="39" crap="2" executable="2" executed="0" coverage="0"/>
-      <method name="allowed" signature="allowed(): bool" start="41" end="44" crap="2" executable="1" executed="0" coverage="0"/>
-      <method name="isGuest" signature="isGuest(): bool" start="46" end="49" crap="2" executable="1" executed="0" coverage="0"/>
+      <method name="__construct" signature="__construct(string $verify)" start="23" end="26" crap="2" executable="1" executed="0" coverage="0"/>
+      <method name="markAllowed" signature="markAllowed(): self" start="28" end="33" crap="2" executable="2" executed="0" coverage="0"/>
+      <method name="markIsGuest" signature="markIsGuest(): self" start="35" end="40" crap="2" executable="2" executed="0" coverage="0"/>
+      <method name="allowed" signature="allowed(): bool" start="42" end="45" crap="2" executable="1" executed="0" coverage="0"/>
+      <method name="isGuest" signature="isGuest(): bool" start="47" end="50" crap="2" executable="1" executed="0" coverage="0"/>
     </class>
     <source>
       <line no="1">
@@ -39,31 +39,32 @@
       <line no="6">
         <token name="T_DOC_COMMENT"> */</token>
       </line>
-      <line no="7">
+      <line no="7"/>
+      <line no="8">
         <token name="T_NAMESPACE">namespace</token>
         <token name="T_WHITESPACE"> </token>
         <token name="T_NAME_QUALIFIED">Playground\Auth</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="8"/>
-      <line no="9">
+      <line no="9"/>
+      <line no="10">
         <token name="T_DOC_COMMENT">/**</token>
       </line>
-      <line no="10">
+      <line no="11">
         <token name="T_DOC_COMMENT"> * \Playground\Auth\Permission</token>
       </line>
-      <line no="11">
+      <line no="12">
         <token name="T_DOC_COMMENT"> */</token>
       </line>
-      <line no="12">
+      <line no="13">
         <token name="T_CLASS">class</token>
         <token name="T_WHITESPACE"> </token>
         <token name="T_STRING">Permission</token>
       </line>
-      <line no="13">
+      <line no="14">
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="14">
+      <line no="15">
         <token name="T_WHITESPACE">    </token>
         <token name="T_PROTECTED">protected</token>
         <token name="T_WHITESPACE"> </token>
@@ -76,8 +77,8 @@
         <token name="T_STRING">false</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="15"/>
-      <line no="16">
+      <line no="16"/>
+      <line no="17">
         <token name="T_WHITESPACE">    </token>
         <token name="T_PROTECTED">protected</token>
         <token name="T_WHITESPACE"> </token>
@@ -90,8 +91,8 @@
         <token name="T_STRING">null</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="17"/>
-      <line no="18">
+      <line no="18"/>
+      <line no="19">
         <token name="T_WHITESPACE">    </token>
         <token name="T_PROTECTED">protected</token>
         <token name="T_WHITESPACE"> </token>
@@ -104,8 +105,8 @@
         <token name="T_STRING">false</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="19"/>
-      <line no="20">
+      <line no="20"/>
+      <line no="21">
         <token name="T_WHITESPACE">    </token>
         <token name="T_PROTECTED">protected</token>
         <token name="T_WHITESPACE"> </token>
@@ -118,8 +119,8 @@
         <token name="T_CONSTANT_ENCAPSED_STRING">''</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="21"/>
-      <line no="22">
+      <line no="22"/>
+      <line no="23">
         <token name="T_WHITESPACE">    </token>
         <token name="T_PUBLIC">public</token>
         <token name="T_WHITESPACE"> </token>
@@ -132,11 +133,11 @@
         <token name="T_VARIABLE">$verify</token>
         <token name="T_CLOSE_BRACKET">)</token>
       </line>
-      <line no="23">
+      <line no="24">
         <token name="T_WHITESPACE">    </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="24">
+      <line no="25">
         <token name="T_WHITESPACE">        </token>
         <token name="T_VARIABLE">$this</token>
         <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -147,12 +148,12 @@
         <token name="T_VARIABLE">$verify</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="25">
+      <line no="26">
         <token name="T_WHITESPACE">    </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="26"/>
-      <line no="27">
+      <line no="27"/>
+      <line no="28">
         <token name="T_WHITESPACE">    </token>
         <token name="T_PUBLIC">public</token>
         <token name="T_WHITESPACE"> </token>
@@ -165,11 +166,11 @@
         <token name="T_WHITESPACE"> </token>
         <token name="T_STRING">self</token>
       </line>
-      <line no="28">
+      <line no="29">
         <token name="T_WHITESPACE">    </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="29">
+      <line no="30">
         <token name="T_WHITESPACE">        </token>
         <token name="T_VARIABLE">$this</token>
         <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -180,20 +181,20 @@
         <token name="T_STRING">true</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="30"/>
-      <line no="31">
+      <line no="31"/>
+      <line no="32">
         <token name="T_WHITESPACE">        </token>
         <token name="T_RETURN">return</token>
         <token name="T_WHITESPACE"> </token>
         <token name="T_VARIABLE">$this</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="32">
+      <line no="33">
         <token name="T_WHITESPACE">    </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="33"/>
-      <line no="34">
+      <line no="34"/>
+      <line no="35">
         <token name="T_WHITESPACE">    </token>
         <token name="T_PUBLIC">public</token>
         <token name="T_WHITESPACE"> </token>
@@ -206,11 +207,11 @@
         <token name="T_WHITESPACE"> </token>
         <token name="T_STRING">self</token>
       </line>
-      <line no="35">
+      <line no="36">
         <token name="T_WHITESPACE">    </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="36">
+      <line no="37">
         <token name="T_WHITESPACE">        </token>
         <token name="T_VARIABLE">$this</token>
         <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -221,37 +222,37 @@
         <token name="T_STRING">true</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="37"/>
-      <line no="38">
+      <line no="38"/>
+      <line no="39">
         <token name="T_WHITESPACE">        </token>
         <token name="T_RETURN">return</token>
         <token name="T_WHITESPACE"> </token>
         <token name="T_VARIABLE">$this</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="39">
+      <line no="40">
         <token name="T_WHITESPACE">    </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="40"/>
-      <line no="41">
-        <token name="T_WHITESPACE">    </token>
-        <token name="T_PUBLIC">public</token>
-        <token name="T_WHITESPACE"> </token>
-        <token name="T_FUNCTION">function</token>
-        <token name="T_WHITESPACE"> </token>
-        <token name="T_STRING">allowed</token>
-        <token name="T_OPEN_BRACKET">(</token>
-        <token name="T_CLOSE_BRACKET">)</token>
-        <token name="T_COLON">:</token>
-        <token name="T_WHITESPACE"> </token>
-        <token name="T_STRING">bool</token>
-      </line>
+      <line no="41"/>
       <line no="42">
         <token name="T_WHITESPACE">    </token>
-        <token name="T_OPEN_CURLY">{</token>
+        <token name="T_PUBLIC">public</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_FUNCTION">function</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">allowed</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_COLON">:</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">bool</token>
       </line>
       <line no="43">
+        <token name="T_WHITESPACE">    </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="44">
         <token name="T_WHITESPACE">        </token>
         <token name="T_RETURN">return</token>
         <token name="T_WHITESPACE"> </token>
@@ -260,12 +261,12 @@
         <token name="T_STRING">allowed</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="44">
+      <line no="45">
         <token name="T_WHITESPACE">    </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="45"/>
-      <line no="46">
+      <line no="46"/>
+      <line no="47">
         <token name="T_WHITESPACE">    </token>
         <token name="T_PUBLIC">public</token>
         <token name="T_WHITESPACE"> </token>
@@ -278,11 +279,11 @@
         <token name="T_WHITESPACE"> </token>
         <token name="T_STRING">bool</token>
       </line>
-      <line no="47">
+      <line no="48">
         <token name="T_WHITESPACE">    </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="48">
+      <line no="49">
         <token name="T_WHITESPACE">        </token>
         <token name="T_RETURN">return</token>
         <token name="T_WHITESPACE"> </token>
@@ -291,14 +292,14 @@
         <token name="T_STRING">isGuest</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="49">
+      <line no="50">
         <token name="T_WHITESPACE">    </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="50">
+      <line no="51">
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="51"/>
+      <line no="52"/>
     </source>
   </file>
 </phpunit>

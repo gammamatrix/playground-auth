@@ -2,15 +2,15 @@
 <phpunit xmlns="https://schema.phpunit.de/coverage/1.0">
   <file name="Can.php" path="/Facades">
     <totals>
-      <lines total="34" comments="17" code="17" executable="1" executed="0" percent="0.00"/>
+      <lines total="35" comments="17" code="18" executable="1" executed="0" percent="0.00"/>
       <methods count="1" tested="0" percent="0.00"/>
       <functions count="0" tested="0" percent="0"/>
       <classes count="1" tested="0" percent="0.00"/>
       <traits count="0" tested="0" percent="0"/>
     </totals>
-    <class name="Playground\Auth\Facades\Can" start="20" executable="1" executed="0" crap="2">
+    <class name="Playground\Auth\Facades\Can" start="21" executable="1" executed="0" crap="2">
       <namespace name="Playground\Auth\Facades"/>
-      <method name="getFacadeAccessor" signature="getFacadeAccessor()" start="29" end="32" crap="2" executable="1" executed="0" coverage="0"/>
+      <method name="getFacadeAccessor" signature="getFacadeAccessor()" start="30" end="33" crap="2" executable="1" executed="0" coverage="0"/>
     </class>
     <source>
       <line no="1">
@@ -35,54 +35,55 @@
       <line no="6">
         <token name="T_DOC_COMMENT"> */</token>
       </line>
-      <line no="7">
+      <line no="7"/>
+      <line no="8">
         <token name="T_NAMESPACE">namespace</token>
         <token name="T_WHITESPACE"> </token>
         <token name="T_NAME_QUALIFIED">Playground\Auth\Facades</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="8"/>
-      <line no="9">
+      <line no="9"/>
+      <line no="10">
         <token name="T_USE">use</token>
         <token name="T_WHITESPACE"> </token>
         <token name="T_NAME_QUALIFIED">Illuminate\Contracts\Auth\Authenticatable</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="10">
+      <line no="11">
         <token name="T_USE">use</token>
         <token name="T_WHITESPACE"> </token>
         <token name="T_NAME_QUALIFIED">Illuminate\Support\Facades\Facade</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="11">
+      <line no="12">
         <token name="T_USE">use</token>
         <token name="T_WHITESPACE"> </token>
         <token name="T_NAME_QUALIFIED">Playground\Auth\Permission</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="12"/>
-      <line no="13">
+      <line no="13"/>
+      <line no="14">
         <token name="T_DOC_COMMENT">/**</token>
       </line>
-      <line no="14">
+      <line no="15">
         <token name="T_DOC_COMMENT"> * \Playground\Auth\Facades\Can</token>
       </line>
-      <line no="15">
+      <line no="16">
         <token name="T_DOC_COMMENT"> *</token>
       </line>
-      <line no="16">
+      <line no="17">
         <token name="T_DOC_COMMENT"> * @method static Permission access(?Authenticatable $user, array $_privileges)</token>
       </line>
-      <line no="17">
+      <line no="18">
         <token name="T_DOC_COMMENT"> * @method static array&lt;string, Permission&gt; map(array $privileges, ?Authenticatable $user)</token>
       </line>
-      <line no="18">
+      <line no="19">
         <token name="T_DOC_COMMENT"> * @method static string withPrivilege(array $meta)</token>
       </line>
-      <line no="19">
+      <line no="20">
         <token name="T_DOC_COMMENT"> */</token>
       </line>
-      <line no="20">
+      <line no="21">
         <token name="T_CLASS">class</token>
         <token name="T_WHITESPACE"> </token>
         <token name="T_STRING">Can</token>
@@ -91,32 +92,32 @@
         <token name="T_WHITESPACE"> </token>
         <token name="T_STRING">Facade</token>
       </line>
-      <line no="21">
+      <line no="22">
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="22">
+      <line no="23">
         <token name="T_WHITESPACE">    </token>
         <token name="T_DOC_COMMENT">/**</token>
       </line>
-      <line no="23">
+      <line no="24">
         <token name="T_DOC_COMMENT">     * Get the registered name of the component.</token>
       </line>
-      <line no="24">
-        <token name="T_DOC_COMMENT">     *</token>
-      </line>
       <line no="25">
-        <token name="T_DOC_COMMENT">     * @return string</token>
+        <token name="T_DOC_COMMENT">     *</token>
       </line>
       <line no="26">
-        <token name="T_DOC_COMMENT">     *</token>
+        <token name="T_DOC_COMMENT">     * @return string</token>
       </line>
       <line no="27">
-        <token name="T_DOC_COMMENT">     * @throws \RuntimeException</token>
+        <token name="T_DOC_COMMENT">     *</token>
       </line>
       <line no="28">
-        <token name="T_DOC_COMMENT">     */</token>
+        <token name="T_DOC_COMMENT">     * @throws \RuntimeException</token>
       </line>
       <line no="29">
+        <token name="T_DOC_COMMENT">     */</token>
+      </line>
+      <line no="30">
         <token name="T_WHITESPACE">    </token>
         <token name="T_PROTECTED">protected</token>
         <token name="T_WHITESPACE"> </token>
@@ -128,25 +129,25 @@
         <token name="T_OPEN_BRACKET">(</token>
         <token name="T_CLOSE_BRACKET">)</token>
       </line>
-      <line no="30">
+      <line no="31">
         <token name="T_WHITESPACE">    </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="31">
+      <line no="32">
         <token name="T_WHITESPACE">        </token>
         <token name="T_RETURN">return</token>
         <token name="T_WHITESPACE"> </token>
         <token name="T_CONSTANT_ENCAPSED_STRING">'playground-auth-can'</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="32">
+      <line no="33">
         <token name="T_WHITESPACE">    </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="33">
+      <line no="34">
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="34"/>
+      <line no="35"/>
     </source>
   </file>
 </phpunit>
