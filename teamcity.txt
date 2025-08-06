@@ -9,7 +9,7 @@
 
 ##teamcity[testStarted name='test_command_auth_hash_password_with_json' locationHint='php_qn:///app/tests/Unit/Console/Commands/HashPassword/CommandTest.php::\Tests\Unit\Playground\Auth\Console\Commands\HashPassword\CommandTest::test_command_auth_hash_password_with_json' flowId='1']
 
-##teamcity[testFinished name='test_command_auth_hash_password_with_json' duration='202' flowId='1']
+##teamcity[testFinished name='test_command_auth_hash_password_with_json' duration='204' flowId='1']
 
 ##teamcity[testStarted name='test_command_auth_hash_password' locationHint='php_qn:///app/tests/Unit/Console/Commands/HashPassword/CommandTest.php::\Tests\Unit\Playground\Auth\Console\Commands\HashPassword\CommandTest::test_command_auth_hash_password' flowId='1']
 
@@ -41,7 +41,7 @@
 
 ##teamcity[testStarted name='test_delete_locked_with_admin' locationHint='php_qn:///app/tests/Unit/Policies/ModelPolicy/AbstractRoleTest.php::\Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_delete_locked_with_admin' flowId='1']
 
-##teamcity[testFinished name='test_delete_locked_with_admin' duration='9' flowId='1']
+##teamcity[testFinished name='test_delete_locked_with_admin' duration='8' flowId='1']
 
 ##teamcity[testStarted name='test_detail_without_role' locationHint='php_qn:///app/tests/Unit/Policies/ModelPolicy/AbstractRoleTest.php::\Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_detail_without_role' flowId='1']
 
@@ -53,7 +53,7 @@
 
 ##teamcity[testStarted name='test_edit_without_role' locationHint='php_qn:///app/tests/Unit/Policies/ModelPolicy/AbstractRoleTest.php::\Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_edit_without_role' flowId='1']
 
-##teamcity[testFinished name='test_edit_without_role' duration='8' flowId='1']
+##teamcity[testFinished name='test_edit_without_role' duration='7' flowId='1']
 
 ##teamcity[testStarted name='test_edit_with_admin' locationHint='php_qn:///app/tests/Unit/Policies/ModelPolicy/AbstractRoleTest.php::\Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_edit_with_admin' flowId='1']
 
@@ -69,11 +69,11 @@
 
 ##teamcity[testStarted name='test_lock_without_role' locationHint='php_qn:///app/tests/Unit/Policies/ModelPolicy/AbstractRoleTest.php::\Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_lock_without_role' flowId='1']
 
-##teamcity[testFinished name='test_lock_without_role' duration='8' flowId='1']
+##teamcity[testFinished name='test_lock_without_role' duration='7' flowId='1']
 
 ##teamcity[testStarted name='test_lock_with_admin' locationHint='php_qn:///app/tests/Unit/Policies/ModelPolicy/AbstractRoleTest.php::\Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_lock_with_admin' flowId='1']
 
-##teamcity[testFinished name='test_lock_with_admin' duration='8' flowId='1']
+##teamcity[testFinished name='test_lock_with_admin' duration='7' flowId='1']
 
 ##teamcity[testStarted name='test_manage_without_role' locationHint='php_qn:///app/tests/Unit/Policies/ModelPolicy/AbstractRoleTest.php::\Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_manage_without_role' flowId='1']
 
@@ -85,7 +85,7 @@
 
 ##teamcity[testStarted name='test_restore_without_role' locationHint='php_qn:///app/tests/Unit/Policies/ModelPolicy/AbstractRoleTest.php::\Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_restore_without_role' flowId='1']
 
-##teamcity[testFinished name='test_restore_without_role' duration='8' flowId='1']
+##teamcity[testFinished name='test_restore_without_role' duration='7' flowId='1']
 
 ##teamcity[testStarted name='test_restore_with_admin' locationHint='php_qn:///app/tests/Unit/Policies/ModelPolicy/AbstractRoleTest.php::\Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_restore_with_admin' flowId='1']
 
@@ -93,7 +93,7 @@
 
 ##teamcity[testStarted name='test_store_without_role' locationHint='php_qn:///app/tests/Unit/Policies/ModelPolicy/AbstractRoleTest.php::\Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_store_without_role' flowId='1']
 
-##teamcity[testFinished name='test_store_without_role' duration='8' flowId='1']
+##teamcity[testFinished name='test_store_without_role' duration='7' flowId='1']
 
 ##teamcity[testStarted name='test_store_with_admin' locationHint='php_qn:///app/tests/Unit/Policies/ModelPolicy/AbstractRoleTest.php::\Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_store_with_admin' flowId='1']
 
@@ -101,7 +101,7 @@
 
 ##teamcity[testStarted name='test_update_without_role' locationHint='php_qn:///app/tests/Unit/Policies/ModelPolicy/AbstractRoleTest.php::\Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_update_without_role' flowId='1']
 
-##teamcity[testFinished name='test_update_without_role' duration='8' flowId='1']
+##teamcity[testFinished name='test_update_without_role' duration='7' flowId='1']
 
 ##teamcity[testStarted name='test_update_with_admin' locationHint='php_qn:///app/tests/Unit/Policies/ModelPolicy/AbstractRoleTest.php::\Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_update_with_admin' flowId='1']
 
@@ -113,7 +113,7 @@
 
 ##teamcity[testStarted name='test_unlock_without_role' locationHint='php_qn:///app/tests/Unit/Policies/ModelPolicy/AbstractRoleTest.php::\Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_unlock_without_role' flowId='1']
 
-##teamcity[testFinished name='test_unlock_without_role' duration='8' flowId='1']
+##teamcity[testFinished name='test_unlock_without_role' duration='7' flowId='1']
 
 ##teamcity[testStarted name='test_unlock_with_admin' locationHint='php_qn:///app/tests/Unit/Policies/ModelPolicy/AbstractRoleTest.php::\Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_unlock_with_admin' flowId='1']
 
@@ -137,7 +137,7 @@
 
 ##teamcity[testStarted name='test_index_with_admin' locationHint='php_qn:///app/tests/Unit/Policies/Policy/AbstractTest.php::\Tests\Unit\Playground\Auth\Policies\Policy\AbstractTest::test_index_with_admin' flowId='1']
 
-##teamcity[testFinished name='test_index_with_admin' duration='7' flowId='1']
+##teamcity[testFinished name='test_index_with_admin' duration='6' flowId='1']
 
 ##teamcity[testStarted name='test_view_without_role' locationHint='php_qn:///app/tests/Unit/Policies/Policy/AbstractTest.php::\Tests\Unit\Playground\Auth\Policies\Policy\AbstractTest::test_view_without_role' flowId='1']
 
@@ -145,7 +145,7 @@
 
 ##teamcity[testStarted name='test_view_with_admin' locationHint='php_qn:///app/tests/Unit/Policies/Policy/AbstractTest.php::\Tests\Unit\Playground\Auth\Policies\Policy\AbstractTest::test_view_with_admin' flowId='1']
 
-##teamcity[testFinished name='test_view_with_admin' duration='7' flowId='1']
+##teamcity[testFinished name='test_view_with_admin' duration='6' flowId='1']
 
 ##teamcity[testStarted name='test_view_with_admin_in_roles' locationHint='php_qn:///app/tests/Unit/Policies/Policy/AbstractTest.php::\Tests\Unit\Playground\Auth\Policies\Policy\AbstractTest::test_view_with_admin_in_roles' flowId='1']
 
@@ -205,15 +205,15 @@
 
 ##teamcity[testStarted name='test_privilege_privilege_policy_without_parameter' locationHint='php_qn:///app/tests/Unit/Policies/PrivilegeTrait/TraitTest.php::\Tests\Unit\Playground\Auth\Policies\PrivilegeTrait\TraitTest::test_privilege_privilege_policy_without_parameter' flowId='1']
 
-##teamcity[testFinished name='test_privilege_privilege_policy_without_parameter' duration='5' flowId='1']
+##teamcity[testFinished name='test_privilege_privilege_policy_without_parameter' duration='4' flowId='1']
 
 ##teamcity[testStarted name='test_privilege_privilege_model_policy_without_parameter' locationHint='php_qn:///app/tests/Unit/Policies/PrivilegeTrait/TraitTest.php::\Tests\Unit\Playground\Auth\Policies\PrivilegeTrait\TraitTest::test_privilege_privilege_model_policy_without_parameter' flowId='1']
 
-##teamcity[testFinished name='test_privilege_privilege_model_policy_without_parameter' duration='5' flowId='1']
+##teamcity[testFinished name='test_privilege_privilege_model_policy_without_parameter' duration='4' flowId='1']
 
 ##teamcity[testStarted name='test_privilege_user_policy_without_parameter' locationHint='php_qn:///app/tests/Unit/Policies/PrivilegeTrait/TraitTest.php::\Tests\Unit\Playground\Auth\Policies\PrivilegeTrait\TraitTest::test_privilege_user_policy_without_parameter' flowId='1']
 
-##teamcity[testFinished name='test_privilege_user_policy_without_parameter' duration='4' flowId='1']
+##teamcity[testFinished name='test_privilege_user_policy_without_parameter' duration='6' flowId='1']
 
 ##teamcity[testStarted name='test_privilege_with_package_and_without_parameter' locationHint='php_qn:///app/tests/Unit/Policies/PrivilegeTrait/TraitTest.php::\Tests\Unit\Playground\Auth\Policies\PrivilegeTrait\TraitTest::test_privilege_with_package_and_without_parameter' flowId='1']
 
@@ -237,7 +237,7 @@
 
 ##teamcity[testStarted name='test_has_privilege_without_privileges_enabled' locationHint='php_qn:///app/tests/Unit/Policies/PrivilegeTrait/TraitTest.php::\Tests\Unit\Playground\Auth\Policies\PrivilegeTrait\TraitTest::test_has_privilege_without_privileges_enabled' flowId='1']
 
-##teamcity[testFinished name='test_has_privilege_without_privileges_enabled' duration='7' flowId='1']
+##teamcity[testFinished name='test_has_privilege_without_privileges_enabled' duration='18' flowId='1']
 
 ##teamcity[testSuiteFinished name='Tests\Unit\Playground\Auth\Policies\PrivilegeTrait\TraitTest' flowId='1']
 
@@ -273,7 +273,7 @@
 
 ##teamcity[testStarted name='test_command_about_displays_package_information_and_succeed_with_code_0' locationHint='php_qn:///app/tests/Feature/Console/Commands/About/CommandTest.php::\Tests\Feature\Playground\Auth\Console\Commands\About\CommandTest::test_command_about_displays_package_information_and_succeed_with_code_0' flowId='1']
 
-##teamcity[testFinished name='test_command_about_displays_package_information_and_succeed_with_code_0' duration='117' flowId='1']
+##teamcity[testFinished name='test_command_about_displays_package_information_and_succeed_with_code_0' duration='122' flowId='1']
 
 ##teamcity[testSuiteFinished name='Tests\Feature\Playground\Auth\Console\Commands\About\CommandTest' flowId='1']
 
