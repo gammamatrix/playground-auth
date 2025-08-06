@@ -4,6 +4,7 @@ declare(strict_types=1);
 /**
  * Playground
  */
+
 namespace Playground\Auth\Policies;
 
 use Illuminate\Auth\Access\Response;
@@ -57,7 +58,7 @@ abstract class ModelPolicy extends Policy
     /**
      * Determine whether the user can edit a model.
      */
-    public function edit(Authenticatable $user, Model $model = null): bool|Response
+    public function edit(Authenticatable $user, ?Model $model = null): bool|Response
     {
         return $this->verify($user, 'edit');
     }

@@ -4,6 +4,7 @@ declare(strict_types=1);
 /**
  * Playground
  */
+
 namespace Playground\Auth\Policies;
 
 use Illuminate\Auth\Access\Response;
@@ -26,7 +27,7 @@ trait PrivilegeTrait
 
     abstract public function hasToken(): bool;
 
-    abstract public function setToken(PersonalAccessToken $token = null): self;
+    abstract public function setToken(?PersonalAccessToken $token = null): self;
 
     public function privilege(string $ability = '*'): string
     {

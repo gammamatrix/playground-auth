@@ -4,6 +4,7 @@ declare(strict_types=1);
 /**
  * Playground
  */
+
 namespace Playground\Auth;
 
 use Illuminate\Foundation\Console\AboutCommand;
@@ -68,7 +69,7 @@ class ServiceProvider extends AuthServiceProvider
         );
 
         $this->app->scoped('playground-auth-can', function () {
-            return new Can();
+            return new Can;
         });
     }
 

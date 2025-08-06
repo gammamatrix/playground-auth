@@ -4,6 +4,7 @@ declare(strict_types=1);
 /**
  * Playground
  */
+
 namespace Tests\Unit\Playground\Auth\Policies\ModelPolicy;
 
 use Illuminate\Auth\Access\Response;
@@ -205,7 +206,7 @@ class AbstractRoleTest extends TestCase
         $this->assertTrue($instance->edit($user, $model));
     }
 
-    public function test_forceDelete_without_role(): void
+    public function test_force_delete_without_role(): void
     {
         $instance = new TestPolicy;
 
@@ -219,7 +220,7 @@ class AbstractRoleTest extends TestCase
         $this->assertInstanceOf(Response::class, $instance->forceDelete($user, $model));
     }
 
-    public function test_forceDelete_with_admin(): void
+    public function test_force_delete_with_admin(): void
     {
         $instance = new TestPolicy;
 

@@ -4,6 +4,7 @@ declare(strict_types=1);
 /**
  * Playground
  */
+
 namespace Tests\Unit\Playground\Auth\Console\Commands\HashPassword;
 
 // use Illuminate\Support\Facades\Artisan;

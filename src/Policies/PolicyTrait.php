@@ -4,6 +4,7 @@ declare(strict_types=1);
 /**
  * Playground
  */
+
 namespace Playground\Auth\Policies;
 
 use Illuminate\Auth\Access\Response;
@@ -53,7 +54,7 @@ trait PolicyTrait
         return $this->token;
     }
 
-    public function setToken(PersonalAccessToken $token = null): self
+    public function setToken(?PersonalAccessToken $token = null): self
     {
         $this->token = $token;
 

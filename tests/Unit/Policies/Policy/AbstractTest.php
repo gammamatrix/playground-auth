@@ -4,6 +4,7 @@ declare(strict_types=1);
 /**
  * Playground
  */
+
 namespace Tests\Unit\Playground\Auth\Policies\Policy;
 
 use Illuminate\Auth\Access\Response;

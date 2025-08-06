@@ -123,7 +123,7 @@ return [
 
     /**
      * @var string canDefault  The default privilege for Auth\Can::class checks.
-     *                         A value is required for Sanctum checks.
+     *             A value is required for Sanctum checks.
      */
     'canDefault' => env('PLAYGROUND_AUTH_CAN_DEFAULT', 'app'),
 

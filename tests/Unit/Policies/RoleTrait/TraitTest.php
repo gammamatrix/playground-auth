@@ -4,6 +4,7 @@ declare(strict_types=1);
 /**
  * Playground
  */
+
 namespace Tests\Unit\Playground\Auth\Policies\RoleTrait;
 
 use Illuminate\Auth\Access\Response;
@@ -17,7 +18,7 @@ use Tests\Unit\Playground\Auth\TestCase;
  */
 class TraitTest extends TestCase
 {
-    public function test_getRolesForAdmin(): void
+    public function test_get_roles_for_admin(): void
     {
         $instance = new RoleModelPolicy;
 
@@ -30,7 +31,7 @@ class TraitTest extends TestCase
         $this->assertSame($expected, $instance->getRolesForAdmin());
     }
 
-    public function test_getRolesForAction(): void
+    public function test_get_roles_for_action(): void
     {
         $instance = new RoleModelPolicy;
 
@@ -43,7 +44,7 @@ class TraitTest extends TestCase
         $this->assertSame($expected, $instance->getRolesForAction());
     }
 
-    public function test_getRolesToView(): void
+    public function test_get_roles_to_view(): void
     {
         $instance = new RoleModelPolicy;
 
@@ -56,7 +57,7 @@ class TraitTest extends TestCase
         $this->assertSame($expected, $instance->getRolesToView());
     }
 
-    public function test_hasRole(): void
+    public function test_has_role(): void
     {
         $instance = new RoleModelPolicy;
 
@@ -72,7 +73,7 @@ class TraitTest extends TestCase
         ));
     }
 
-    public function test_hasRole_advanced_role(): void
+    public function test_has_role_advanced_role(): void
     {
         $instance = new RoleModelPolicy;
 

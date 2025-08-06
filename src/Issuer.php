@@ -4,6 +4,7 @@ declare(strict_types=1);
 /**
  * Playground
  */
+
 namespace Playground\Auth;
 
 use Illuminate\Contracts\Auth\Authenticatable;

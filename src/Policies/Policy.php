@@ -4,6 +4,7 @@ declare(strict_types=1);
 /**
  * Playground
  */
+
 namespace Playground\Auth\Policies;
 
 use Illuminate\Auth\Access\HandlesAuthorization;
@@ -27,7 +28,7 @@ abstract class Policy
      *
      * NOTE Override this method when the root user should not have access.
      *
-     * @param  string  $ability The ability represents an action in the MCA.
+     * @param  string  $ability  The ability represents an action in the MCA.
      * @return mixed Returns true if the user has the root role assigned.
      */
     public function before(Authenticatable $user, $ability)
@@ -65,11 +66,11 @@ abstract class Policy
         return null;
     }
 
-    ////////////////////////////////////////////////////////////////////////////
+    // //////////////////////////////////////////////////////////////////////////
     //
     // Abilities
     //
-    ////////////////////////////////////////////////////////////////////////////
+    // //////////////////////////////////////////////////////////////////////////
 
     /**
      * Determine whether the user can view the index.

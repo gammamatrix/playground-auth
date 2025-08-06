@@ -4,6 +4,7 @@ declare(strict_types=1);
 /**
  * Playground
  */
+
 namespace Tests\Unit\Playground\Auth\Policies\PolicyTrait;
 
 use Illuminate\Auth\Access\Response;
@@ -17,31 +18,31 @@ use TiMacDonald\Log\LogFake;
  */
 class TraitTest extends TestCase
 {
-    public function test_getEntity(): void
+    public function test_get_entity(): void
     {
         $instance = new Policy;
         $this->assertSame('', $instance->getEntity());
     }
 
-    public function test_getPackage(): void
+    public function test_get_package(): void
     {
         $instance = new Policy;
         $this->assertSame('', $instance->getPackage());
     }
 
-    public function test_hasToken(): void
+    public function test_has_token(): void
     {
         $instance = new Policy;
         $this->assertFalse($instance->hasToken());
     }
 
-    public function test_getToken(): void
+    public function test_get_token(): void
     {
         $instance = new Policy;
         $this->assertNull($instance->getToken());
     }
 
-    public function test_setToken(): void
+    public function test_set_token(): void
     {
         $instance = new Policy;
         $this->assertIsObject($instance->setToken());

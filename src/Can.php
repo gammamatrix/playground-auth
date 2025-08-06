@@ -4,6 +4,7 @@ declare(strict_types=1);
 /**
  * Playground
  */
+
 namespace Playground\Auth;
 
 use Illuminate\Contracts\Auth\Authenticatable;
@@ -167,7 +168,7 @@ class Can
     }
 
     /**
-     * @param array<string, mixed> $privileges
+     * @param  array<string, mixed>  $privileges
      * @return array<string, Permission>
      */
     public function map(array $privileges, ?Authenticatable $user): array
@@ -239,7 +240,7 @@ class Can
     }
 
     /**
-     * @param array<string, mixed> $options
+     * @param  array<string, mixed>  $options
      */
     public function access(?Authenticatable $user, array $options = []): Permission
     {
@@ -400,7 +401,7 @@ class Can
     }
 
     /**
-     * @param array<string, mixed> $meta
+     * @param  array<string, mixed>  $meta
      */
     public function withPrivilege(array $meta = []): string
     {
