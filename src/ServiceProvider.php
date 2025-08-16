@@ -15,7 +15,7 @@ use Illuminate\Foundation\Support\Providers\AuthServiceProvider;
  */
 class ServiceProvider extends AuthServiceProvider
 {
-    public const VERSION = '73.0.0';
+    public const string VERSION = '74.0.0';
 
     protected string $package = 'playground-auth';
 
@@ -150,9 +150,9 @@ class ServiceProvider extends AuthServiceProvider
 
             '<fg=cyan;options=bold>Verify</>' => ! empty($config['verify']) && is_string($config['verify']) ? sprintf('[%s]', $config['verify']) : '',
 
-            '<fg=cyan;options=bold>Token</> [Abilities]' => sprintf('[%s]', $token['abilities']),
-            '<fg=cyan;options=bold>Token</> [Expires]' => sprintf('[%s]', $token['expires']),
-            '<fg=cyan;options=bold>Token</> [Name]' => sprintf('[%s]', $token['name']),
+            '<fg=cyan;options=bold>Token</> [Abilities]' => sprintf('[%s]', is_string($token['abilities']) ? $token['abilities'] : ''),
+            '<fg=cyan;options=bold>Token</> [Expires]' => sprintf('[%s]', is_string($token['expires']) ? $token['expires'] : ''),
+            '<fg=cyan;options=bold>Token</> [Name]' => sprintf('[%s]', is_string($token['name']) ? $token['name'] : ''),
             '<fg=cyan;options=bold>Token Listed Admins</>' => ! empty($token['listed']) ? sprintf('<fg=green;options=bold>%1$d</>', $listed_admins) : '<fg=yellow;options=bold>DISABLED</>',
             '<fg=cyan;options=bold>Token Listed Managers</>' => ! empty($token['listed']) ? sprintf('<fg=green;options=bold>%1$d</>', $listed_managers) : '<fg=yellow;options=bold>DISABLED</>',
             '<fg=cyan;options=bold>Token Roles</>' => ! empty($token['roles']) ? '<fg=green;options=bold>ENABLED</>' : '<fg=yellow;options=bold>DISABLED</>',

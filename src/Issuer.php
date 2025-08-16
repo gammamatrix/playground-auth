@@ -265,7 +265,14 @@ class Issuer
                 $this->onlyUserAbilities = false;
             } else {
                 $abilities = $user->getAttributeValue('abilities');
-                $this->abilities = is_array($abilities) ? $abilities : [];
+                $this->abilities = [];
+                if (is_array($abilities)) {
+                    foreach ($abilities as $ability) {
+                        if (is_string($ability) && ! in_array($ability, $this->abilities)) {
+                            $this->abilities[] = $ability;
+                        }
+                    }
+                }
                 $this->onlyUserAbilities = $config['abilities'] === 'user';
             }
         } else {
@@ -364,6 +371,9 @@ class Issuer
 
         $this->init($user);
 
+        /**
+         * @var array<string, ?string> $tokens
+         */
         $tokens = [];
 
         if (! $this->hasSanctum) {
@@ -383,12 +393,14 @@ class Issuer
             $expiresAt = Carbon::parse($config['expires']);
         }
 
-        if (is_callable([$user, 'createToken'])) {
-            $tokens[$name] = $user->createToken(
+        if (is_callable([$user, 'createToken']) && $user instanceof HasApiTokens) {
+            $createdToken = $user->createToken(
                 $name,
                 $this->abilities($user),
                 $expiresAt
             )->plainTextToken;
+
+            $tokens[$name] = is_string($createdToken) ? $createdToken : null;
         }
 
         return $tokens;

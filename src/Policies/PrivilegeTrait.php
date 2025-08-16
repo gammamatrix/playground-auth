@@ -89,7 +89,7 @@ trait PrivilegeTrait
         }
 
         if (config('playground-auth.hasPrivilege') && method_exists($user, 'hasPrivilege')) {
-            return $user->hasPrivilege($privilege);
+            return ! empty($user->hasPrivilege($privilege));
         }
 
         if (config('playground-auth.userPrivileges') && array_key_exists('privileges', $user->getAttributes())) {
@@ -130,14 +130,17 @@ trait PrivilegeTrait
                 }
             }
 
-            if (! $token && method_exists($user, 'tokens')) {
+            if (! $token && method_exists($user, 'tokens') && $user instanceof HasApiTokens) {
+                /**
+                 * @var PersonalAccessToken $token
+                 */
                 $token = $user->tokens()
                     ->where('name', config('playground-auth.token.name'))
                     // Get the latest created token.
                     ->orderBy('created_at', 'desc')
                     ->first();
 
-                if ($token && method_exists($user, 'withAccessToken')) {
+                if ($token) {
                     $this->setToken($token);
                     $user->withAccessToken($token);
                 }

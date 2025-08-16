@@ -9,6 +9,7 @@ namespace Playground\Auth;
 
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Support\Str;
+use Laravel\Sanctum\Contracts\HasAbilities;
 use Laravel\Sanctum\PersonalAccessToken;
 
 /**
@@ -168,7 +169,7 @@ class Can
     }
 
     /**
-     * @param  array<string, mixed>  $privileges
+     * @param  array<string, array<string, mixed>>  $privileges
      * @return array<string, Permission>
      */
     public function map(array $privileges, ?Authenticatable $user): array
@@ -187,7 +188,7 @@ class Can
             if (is_array($privileges[$entity])) {
                 $privileges[$entity]['allow'] = $this->access(
                     $user,
-                    is_array($options) ? $options : []
+                    $options
                 );
             }
         }
@@ -223,7 +224,7 @@ class Can
         $p = '';
         $wc = '';
         foreach ($exploded as $key) {
-            if ($key && is_string($key)) {
+            if ($key) {
                 if ($p) {
                     $p .= ':';
                 }
@@ -296,10 +297,11 @@ class Can
                 return $permission;
             }
 
-            if (! $this->sanctumToken && is_callable([$this->user, 'currentAccessToken'])) {
+            if (! $this->sanctumToken && is_callable([$this->user, 'currentAccessToken']) && $this->user instanceof HasAbilities) {
 
                 // Check if the user already has their token assigned.
-                $this->sanctumToken = $this->user->currentAccessToken();
+                $accessToken = $this->user->currentAccessToken();
+                $this->sanctumToken = $accessToken instanceof PersonalAccessToken ? $accessToken : null;
 
                 if (empty($this->sanctumToken)
                     && $this->sessionToken

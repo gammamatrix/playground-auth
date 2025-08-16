@@ -4,7 +4,7 @@ includes:
     - vendor/phpstan/phpstan-phpunit/rules.neon
 
 parameters:
-    level: 9
+    level: 10
 
     paths:
         - config
@@ -24,8 +24,3 @@ parameters:
         -
             message: "#Called 'env' outside of the config directory which returns null when the config is cached, use 'config'.#"
             path: *config/*.php
-
-        # TODO hiding these errors until we can add tests for them
-        -
-            identifier: trait.unused
-

@@ -134,8 +134,7 @@ trait RoleTrait
         }
 
         if (config('playground-auth.userRoles')) {
-            if (is_array($roles)
-                && ! empty($user->roles)
+            if (! empty($user->roles)
             && is_array($user->roles)
             ) {
                 foreach ($roles as $role) {

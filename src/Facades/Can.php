@@ -14,9 +14,9 @@ use Playground\Auth\Permission;
 /**
  * \Playground\Auth\Facades\Can
  *
- * @method static Permission access(?Authenticatable $user, array $_privileges)
- * @method static array<string, Permission> map(array $privileges, ?Authenticatable $user)
- * @method static string withPrivilege(array $meta)
+ * @method static Permission access(?Authenticatable $user, array<string, mixed> $options)
+ * @method static array<string, Permission> map(array<string, mixed> $privileges, ?Authenticatable $user)
+ * @method static string withPrivilege(array<string, mixed> $meta)
  */
 class Can extends Facade
 {
@@ -24,8 +24,6 @@ class Can extends Facade
      * Get the registered name of the component.
      *
      * @return string
-     *
-     * @throws \RuntimeException
      */
     protected static function getFacadeAccessor()
     {
