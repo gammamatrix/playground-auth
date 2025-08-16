@@ -2,7 +2,7 @@
 <phpunit xmlns="https://schema.phpunit.de/coverage/1.0">
   <file name="PrivilegeTrait.php" path="/Policies">
     <totals>
-      <lines total="164" comments="9" code="155" executable="67" executed="32" percent="47.76"/>
+      <lines total="167" comments="12" code="155" executable="67" executed="32" percent="47.76"/>
       <methods count="4" tested="1" percent="25.00"/>
       <functions count="0" tested="0" percent="0"/>
       <classes count="0" tested="0" percent="0"/>
@@ -18,7 +18,7 @@
       <method name="privilege" signature="privilege(string $ability): string" start="32" end="54" crap="6" executable="12" executed="12" coverage="100"/>
       <method name="hasPrivilegeWildcard" signature="hasPrivilegeWildcard(string $privilege): bool" start="56" end="74" crap="30" executable="11" executed="0" coverage="0"/>
       <method name="hasPrivilege" signature="hasPrivilege(Illuminate\Contracts\Auth\Authenticatable $user, string $privilege): bool|\Illuminate\Auth\Access\Response" start="76" end="103" crap="11.06" executable="13" executed="12" coverage="92.307692307692"/>
-      <method name="hasPrivilegeSanctum" signature="hasPrivilegeSanctum(Illuminate\Contracts\Auth\Authenticatable $user, string $privilege): bool|\Illuminate\Auth\Access\Response" start="105" end="162" crap="120.55" executable="31" executed="8" coverage="25.806451612903"/>
+      <method name="hasPrivilegeSanctum" signature="hasPrivilegeSanctum(Illuminate\Contracts\Auth\Authenticatable $user, string $privilege): bool|\Illuminate\Auth\Access\Response" start="105" end="165" crap="120.55" executable="31" executed="8" coverage="25.806451612903"/>
     </trait>
     <coverage>
       <line nr="34">
@@ -166,10 +166,10 @@
       <line nr="133">
         <covered by="Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_verify_privileges"/>
       </line>
-      <line nr="146">
+      <line nr="149">
         <covered by="Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_verify_privileges"/>
       </line>
-      <line nr="147">
+      <line nr="150">
         <covered by="Tests\Unit\Playground\Auth\Policies\PolicyTrait\TraitTest::test_verify_privileges"/>
       </line>
     </coverage>
@@ -898,11 +898,16 @@
         <token name="T_WHITESPACE">            </token>
         <token name="T_RETURN">return</token>
         <token name="T_WHITESPACE"> </token>
+        <token name="T_EXCLAMATION_MARK">!</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EMPTY">empty</token>
+        <token name="T_OPEN_BRACKET">(</token>
         <token name="T_VARIABLE">$user</token>
         <token name="T_OBJECT_OPERATOR">-&gt;</token>
         <token name="T_STRING">hasPrivilege</token>
         <token name="T_OPEN_BRACKET">(</token>
         <token name="T_VARIABLE">$privilege</token>
+        <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
@@ -1298,11 +1303,29 @@
         <token name="T_WHITESPACE"> </token>
         <token name="T_CONSTANT_ENCAPSED_STRING">'tokens'</token>
         <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_BOOLEAN_AND">&amp;&amp;</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$user</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_INSTANCEOF">instanceof</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">HasApiTokens</token>
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_WHITESPACE"> </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
       <line no="134">
+        <token name="T_WHITESPACE">                </token>
+        <token name="T_DOC_COMMENT">/**</token>
+      </line>
+      <line no="135">
+        <token name="T_DOC_COMMENT">                 * @var PersonalAccessToken $token</token>
+      </line>
+      <line no="136">
+        <token name="T_DOC_COMMENT">                 */</token>
+      </line>
+      <line no="137">
         <token name="T_WHITESPACE">                </token>
         <token name="T_VARIABLE">$token</token>
         <token name="T_WHITESPACE"> </token>
@@ -1314,7 +1337,7 @@
         <token name="T_OPEN_BRACKET">(</token>
         <token name="T_CLOSE_BRACKET">)</token>
       </line>
-      <line no="135">
+      <line no="138">
         <token name="T_WHITESPACE">                    </token>
         <token name="T_OBJECT_OPERATOR">-&gt;</token>
         <token name="T_STRING">where</token>
@@ -1328,11 +1351,11 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_CLOSE_BRACKET">)</token>
       </line>
-      <line no="136">
+      <line no="139">
         <token name="T_WHITESPACE">                    </token>
         <token name="T_COMMENT">// Get the latest created token.</token>
       </line>
-      <line no="137">
+      <line no="140">
         <token name="T_WHITESPACE">                    </token>
         <token name="T_OBJECT_OPERATOR">-&gt;</token>
         <token name="T_STRING">orderBy</token>
@@ -1343,7 +1366,7 @@
         <token name="T_CONSTANT_ENCAPSED_STRING">'desc'</token>
         <token name="T_CLOSE_BRACKET">)</token>
       </line>
-      <line no="138">
+      <line no="141">
         <token name="T_WHITESPACE">                    </token>
         <token name="T_OBJECT_OPERATOR">-&gt;</token>
         <token name="T_STRING">first</token>
@@ -1351,28 +1374,18 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="139"/>
-      <line no="140">
+      <line no="142"/>
+      <line no="143">
         <token name="T_WHITESPACE">                </token>
         <token name="T_IF">if</token>
         <token name="T_WHITESPACE"> </token>
         <token name="T_OPEN_BRACKET">(</token>
         <token name="T_VARIABLE">$token</token>
-        <token name="T_WHITESPACE"> </token>
-        <token name="T_BOOLEAN_AND">&amp;&amp;</token>
-        <token name="T_WHITESPACE"> </token>
-        <token name="T_STRING">method_exists</token>
-        <token name="T_OPEN_BRACKET">(</token>
-        <token name="T_VARIABLE">$user</token>
-        <token name="T_COMMA">,</token>
-        <token name="T_WHITESPACE"> </token>
-        <token name="T_CONSTANT_ENCAPSED_STRING">'withAccessToken'</token>
-        <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_WHITESPACE"> </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="141">
+      <line no="144">
         <token name="T_WHITESPACE">                    </token>
         <token name="T_VARIABLE">$this</token>
         <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -1382,7 +1395,7 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="142">
+      <line no="145">
         <token name="T_WHITESPACE">                    </token>
         <token name="T_VARIABLE">$user</token>
         <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -1392,16 +1405,16 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="143">
+      <line no="146">
         <token name="T_WHITESPACE">                </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="144">
+      <line no="147">
         <token name="T_WHITESPACE">            </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="145"/>
-      <line no="146">
+      <line no="148"/>
+      <line no="149">
         <token name="T_WHITESPACE">            </token>
         <token name="T_IF">if</token>
         <token name="T_WHITESPACE"> </token>
@@ -1413,7 +1426,7 @@
         <token name="T_WHITESPACE"> </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="147">
+      <line no="150">
         <token name="T_WHITESPACE">                </token>
         <token name="T_RETURN">return</token>
         <token name="T_WHITESPACE"> </token>
@@ -1431,16 +1444,16 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="148">
+      <line no="151">
         <token name="T_WHITESPACE">            </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="149">
+      <line no="152">
         <token name="T_WHITESPACE">        </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="150"/>
-      <line no="151">
+      <line no="153"/>
+      <line no="154">
         <token name="T_WHITESPACE">        </token>
         <token name="T_IF">if</token>
         <token name="T_WHITESPACE"> </token>
@@ -1455,19 +1468,19 @@
         <token name="T_WHITESPACE"> </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="152">
+      <line no="155">
         <token name="T_WHITESPACE">            </token>
         <token name="T_RETURN">return</token>
         <token name="T_WHITESPACE"> </token>
         <token name="T_STRING">true</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="153">
+      <line no="156">
         <token name="T_WHITESPACE">        </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="154"/>
-      <line no="155">
+      <line no="157"/>
+      <line no="158">
         <token name="T_WHITESPACE">        </token>
         <token name="T_VARIABLE">$token</token>
         <token name="T_WHITESPACE"> </token>
@@ -1480,8 +1493,8 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="156"/>
-      <line no="157">
+      <line no="159"/>
+      <line no="160">
         <token name="T_WHITESPACE">        </token>
         <token name="T_IF">if</token>
         <token name="T_WHITESPACE"> </token>
@@ -1502,7 +1515,7 @@
         <token name="T_WHITESPACE"> </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="158">
+      <line no="161">
         <token name="T_WHITESPACE">            </token>
         <token name="T_RETURN">return</token>
         <token name="T_WHITESPACE"> </token>
@@ -1520,26 +1533,26 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="159">
+      <line no="162">
         <token name="T_WHITESPACE">        </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="160"/>
-      <line no="161">
+      <line no="163"/>
+      <line no="164">
         <token name="T_WHITESPACE">        </token>
         <token name="T_RETURN">return</token>
         <token name="T_WHITESPACE"> </token>
         <token name="T_STRING">true</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="162">
+      <line no="165">
         <token name="T_WHITESPACE">    </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="163">
+      <line no="166">
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="164"/>
+      <line no="167"/>
     </source>
   </file>
 </phpunit>

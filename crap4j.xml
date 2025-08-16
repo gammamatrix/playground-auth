@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <crap_result>
   <project/>
-  <timestamp>2025-08-06 14:45:07</timestamp>
+  <timestamp>2025-08-16 01:04:15</timestamp>
   <stats>
     <name>Method Crap Stats</name>
     <methodCount>64</methodCount>
-    <crapMethodCount>10</crapMethodCount>
-    <crapLoad>171</crapLoad>
-    <totalCrap>4795.79</totalCrap>
-    <crapMethodPercent>15.63</crapMethodPercent>
+    <crapMethodCount>11</crapMethodCount>
+    <crapLoad>182</crapLoad>
+    <totalCrap>5141.94</totalCrap>
+    <crapMethodPercent>17.19</crapMethodPercent>
   </stats>
   <methods>
     <method>
@@ -61,8 +61,8 @@
       <methodName>map</methodName>
       <methodSignature>map(array $privileges, ?Illuminate\Contracts\Auth\Authenticatable $user): array</methodSignature>
       <fullMethod>map(array $privileges, ?Illuminate\Contracts\Auth\Authenticatable $user): array</fullMethod>
-      <crap>30</crap>
-      <complexity>5</complexity>
+      <crap>20</crap>
+      <complexity>4</complexity>
       <coverage>0</coverage>
       <crapLoad>0</crapLoad>
     </method>
@@ -72,10 +72,10 @@
       <methodName>wildcards</methodName>
       <methodSignature>wildcards(string $privilege): array</methodSignature>
       <fullMethod>wildcards(string $privilege): array</fullMethod>
-      <crap>110</crap>
-      <complexity>10</complexity>
+      <crap>90</crap>
+      <complexity>9</complexity>
       <coverage>0</coverage>
-      <crapLoad>10</crapLoad>
+      <crapLoad>9</crapLoad>
     </method>
     <method>
       <package>Playground\Auth</package>
@@ -83,10 +83,10 @@
       <methodName>access</methodName>
       <methodSignature>access(?Illuminate\Contracts\Auth\Authenticatable $user, array $options): Playground\Auth\Permission</methodSignature>
       <fullMethod>access(?Illuminate\Contracts\Auth\Authenticatable $user, array $options): Playground\Auth\Permission</fullMethod>
-      <crap>2450</crap>
-      <complexity>49</complexity>
+      <crap>2652</crap>
+      <complexity>51</complexity>
       <coverage>0</coverage>
-      <crapLoad>50</crapLoad>
+      <crapLoad>52</crapLoad>
     </method>
     <method>
       <package>Playground\Auth</package>
@@ -171,10 +171,10 @@
       <methodName>init</methodName>
       <methodSignature>init(Illuminate\Contracts\Auth\Authenticatable $user): self</methodSignature>
       <fullMethod>init(Illuminate\Contracts\Auth\Authenticatable $user): self</fullMethod>
-      <crap>462</crap>
-      <complexity>21</complexity>
+      <crap>600</crap>
+      <complexity>24</complexity>
       <coverage>0</coverage>
-      <crapLoad>21</crapLoad>
+      <crapLoad>24</crapLoad>
     </method>
     <method>
       <package>Playground\Auth</package>
@@ -204,10 +204,10 @@
       <methodName>sanctum</methodName>
       <methodSignature>sanctum(Illuminate\Contracts\Auth\Authenticatable $user): array</methodSignature>
       <fullMethod>sanctum(Illuminate\Contracts\Auth\Authenticatable $user): array</fullMethod>
-      <crap>56</crap>
-      <complexity>7</complexity>
+      <crap>90</crap>
+      <complexity>9</complexity>
       <coverage>0</coverage>
-      <crapLoad>7</crapLoad>
+      <crapLoad>9</crapLoad>
     </method>
     <method>
       <package>Playground\Auth</package>
@@ -666,8 +666,8 @@
       <methodName>hasRole</methodName>
       <methodSignature>hasRole(Illuminate\Contracts\Auth\Authenticatable $user, string $ability): bool|\Illuminate\Auth\Access\Response</methodSignature>
       <fullMethod>hasRole(Illuminate\Contracts\Auth\Authenticatable $user, string $ability): bool|\Illuminate\Auth\Access\Response</fullMethod>
-      <crap>18</crap>
-      <complexity>18</complexity>
+      <crap>17</crap>
+      <complexity>17</complexity>
       <coverage>100</coverage>
       <crapLoad>0</crapLoad>
     </method>
@@ -699,10 +699,10 @@
       <methodName>about</methodName>
       <methodSignature>about(): void</methodSignature>
       <fullMethod>about(): void</fullMethod>
-      <crap>49.15</crap>
-      <complexity>48</complexity>
+      <crap>52.3</crap>
+      <complexity>51</complexity>
       <coverage>92.06</coverage>
-      <crapLoad>0</crapLoad>
+      <crapLoad>5</crapLoad>
     </method>
     <method>
       <package>Playground\Auth</package>

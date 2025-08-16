@@ -2,22 +2,22 @@
 <phpunit xmlns="https://schema.phpunit.de/coverage/1.0">
   <file name="Issuer.php" path="/">
     <totals>
-      <lines total="397" comments="51" code="346" executable="167" executed="0" percent="0.00"/>
+      <lines total="409" comments="54" code="355" executable="172" executed="0" percent="0.00"/>
       <methods count="8" tested="0" percent="0.00"/>
       <functions count="0" tested="0" percent="0"/>
       <classes count="1" tested="0" percent="0.00"/>
       <traits count="0" tested="0" percent="0"/>
     </totals>
-    <class name="Playground\Auth\Issuer" start="23" executable="167" executed="0" crap="6480">
+    <class name="Playground\Auth\Issuer" start="23" executable="172" executed="0" crap="7310">
       <namespace name="Playground\Auth"/>
       <method name="useSanctum" signature="useSanctum(): bool" start="70" end="73" crap="2" executable="1" executed="0" coverage="0"/>
       <method name="compileAbilitiesByGroup" signature="compileAbilitiesByGroup(string $group): array" start="78" end="191" crap="812" executable="69" executed="0" coverage="0"/>
       <method name="abilitiesByGroup" signature="abilitiesByGroup(string $group): array" start="196" end="199" crap="2" executable="1" executed="0" coverage="0"/>
       <method name="abilities" signature="abilities(Illuminate\Contracts\Auth\Authenticatable $user): array" start="204" end="236" crap="156" executable="19" executed="0" coverage="0"/>
-      <method name="init" signature="init(Illuminate\Contracts\Auth\Authenticatable $user): self" start="238" end="319" crap="462" executable="44" executed="0" coverage="0"/>
-      <method name="listed" signature="listed(Illuminate\Contracts\Auth\Authenticatable $user): void" start="321" end="337" crap="56" executable="9" executed="0" coverage="0"/>
-      <method name="authorize" signature="authorize(Illuminate\Contracts\Auth\Authenticatable $user): array" start="342" end="353" crap="12" executable="5" executed="0" coverage="0"/>
-      <method name="sanctum" signature="sanctum(Illuminate\Contracts\Auth\Authenticatable $user): array" start="358" end="395" crap="56" executable="19" executed="0" coverage="0"/>
+      <method name="init" signature="init(Illuminate\Contracts\Auth\Authenticatable $user): self" start="238" end="326" crap="600" executable="48" executed="0" coverage="0"/>
+      <method name="listed" signature="listed(Illuminate\Contracts\Auth\Authenticatable $user): void" start="328" end="344" crap="56" executable="9" executed="0" coverage="0"/>
+      <method name="authorize" signature="authorize(Illuminate\Contracts\Auth\Authenticatable $user): array" start="349" end="360" crap="12" executable="5" executed="0" coverage="0"/>
+      <method name="sanctum" signature="sanctum(Illuminate\Contracts\Auth\Authenticatable $user): array" start="365" end="407" crap="90" executable="20" executed="0" coverage="0"/>
     </class>
     <source>
       <line no="1">
@@ -2022,22 +2022,90 @@
         <token name="T_WHITESPACE"> </token>
         <token name="T_EQUAL">=</token>
         <token name="T_WHITESPACE"> </token>
-        <token name="T_STRING">is_array</token>
-        <token name="T_OPEN_BRACKET">(</token>
-        <token name="T_VARIABLE">$abilities</token>
-        <token name="T_CLOSE_BRACKET">)</token>
-        <token name="T_WHITESPACE"> </token>
-        <token name="T_QUESTION_MARK">?</token>
-        <token name="T_WHITESPACE"> </token>
-        <token name="T_VARIABLE">$abilities</token>
-        <token name="T_WHITESPACE"> </token>
-        <token name="T_COLON">:</token>
-        <token name="T_WHITESPACE"> </token>
         <token name="T_OPEN_SQUARE">[</token>
         <token name="T_CLOSE_SQUARE">]</token>
         <token name="T_SEMICOLON">;</token>
       </line>
       <line no="269">
+        <token name="T_WHITESPACE">                </token>
+        <token name="T_IF">if</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_STRING">is_array</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_VARIABLE">$abilities</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="270">
+        <token name="T_WHITESPACE">                    </token>
+        <token name="T_FOREACH">foreach</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_VARIABLE">$abilities</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_AS">as</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$ability</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="271">
+        <token name="T_WHITESPACE">                        </token>
+        <token name="T_IF">if</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_STRING">is_string</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_VARIABLE">$ability</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_BOOLEAN_AND">&amp;&amp;</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EXCLAMATION_MARK">!</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">in_array</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_VARIABLE">$ability</token>
+        <token name="T_COMMA">,</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$this</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">abilities</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="272">
+        <token name="T_WHITESPACE">                            </token>
+        <token name="T_VARIABLE">$this</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">abilities</token>
+        <token name="T_OPEN_SQUARE">[</token>
+        <token name="T_CLOSE_SQUARE">]</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EQUAL">=</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$ability</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="273">
+        <token name="T_WHITESPACE">                        </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="274">
+        <token name="T_WHITESPACE">                    </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="275">
+        <token name="T_WHITESPACE">                </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="276">
         <token name="T_WHITESPACE">                </token>
         <token name="T_VARIABLE">$this</token>
         <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -2055,74 +2123,9 @@
         <token name="T_CONSTANT_ENCAPSED_STRING">'user'</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="270">
-        <token name="T_WHITESPACE">            </token>
-        <token name="T_CLOSE_CURLY">}</token>
-      </line>
-      <line no="271">
-        <token name="T_WHITESPACE">        </token>
-        <token name="T_CLOSE_CURLY">}</token>
-        <token name="T_WHITESPACE"> </token>
-        <token name="T_ELSE">else</token>
-        <token name="T_WHITESPACE"> </token>
-        <token name="T_OPEN_CURLY">{</token>
-      </line>
-      <line no="272">
-        <token name="T_WHITESPACE">            </token>
-        <token name="T_VARIABLE">$this</token>
-        <token name="T_OBJECT_OPERATOR">-&gt;</token>
-        <token name="T_STRING">abilities</token>
-        <token name="T_WHITESPACE"> </token>
-        <token name="T_EQUAL">=</token>
-        <token name="T_WHITESPACE"> </token>
-        <token name="T_OPEN_SQUARE">[</token>
-        <token name="T_CLOSE_SQUARE">]</token>
-        <token name="T_SEMICOLON">;</token>
-      </line>
-      <line no="273">
-        <token name="T_WHITESPACE">            </token>
-        <token name="T_VARIABLE">$this</token>
-        <token name="T_OBJECT_OPERATOR">-&gt;</token>
-        <token name="T_STRING">onlyUserAbilities</token>
-        <token name="T_WHITESPACE"> </token>
-        <token name="T_EQUAL">=</token>
-        <token name="T_WHITESPACE"> </token>
-        <token name="T_STRING">false</token>
-        <token name="T_SEMICOLON">;</token>
-      </line>
-      <line no="274">
-        <token name="T_WHITESPACE">        </token>
-        <token name="T_CLOSE_CURLY">}</token>
-      </line>
-      <line no="275"/>
-      <line no="276">
-        <token name="T_WHITESPACE">        </token>
-        <token name="T_IF">if</token>
-        <token name="T_WHITESPACE"> </token>
-        <token name="T_OPEN_BRACKET">(</token>
-        <token name="T_VARIABLE">$user</token>
-        <token name="T_WHITESPACE"> </token>
-        <token name="T_INSTANCEOF">instanceof</token>
-        <token name="T_WHITESPACE"> </token>
-        <token name="T_STRING">Admin</token>
-        <token name="T_CLOSE_BRACKET">)</token>
-        <token name="T_WHITESPACE"> </token>
-        <token name="T_OPEN_CURLY">{</token>
-      </line>
       <line no="277">
         <token name="T_WHITESPACE">            </token>
-        <token name="T_VARIABLE">$this</token>
-        <token name="T_OBJECT_OPERATOR">-&gt;</token>
-        <token name="T_STRING">isAdmin</token>
-        <token name="T_WHITESPACE"> </token>
-        <token name="T_EQUAL">=</token>
-        <token name="T_WHITESPACE"> </token>
-        <token name="T_VARIABLE">$user</token>
-        <token name="T_OBJECT_OPERATOR">-&gt;</token>
-        <token name="T_STRING">isAdmin</token>
-        <token name="T_OPEN_BRACKET">(</token>
-        <token name="T_CLOSE_BRACKET">)</token>
-        <token name="T_SEMICOLON">;</token>
+        <token name="T_CLOSE_CURLY">}</token>
       </line>
       <line no="278">
         <token name="T_WHITESPACE">        </token>
@@ -2136,6 +2139,71 @@
         <token name="T_WHITESPACE">            </token>
         <token name="T_VARIABLE">$this</token>
         <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">abilities</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EQUAL">=</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_SQUARE">[</token>
+        <token name="T_CLOSE_SQUARE">]</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="280">
+        <token name="T_WHITESPACE">            </token>
+        <token name="T_VARIABLE">$this</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">onlyUserAbilities</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EQUAL">=</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">false</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="281">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="282"/>
+      <line no="283">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_IF">if</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_VARIABLE">$user</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_INSTANCEOF">instanceof</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">Admin</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="284">
+        <token name="T_WHITESPACE">            </token>
+        <token name="T_VARIABLE">$this</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">isAdmin</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EQUAL">=</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$user</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">isAdmin</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="285">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_CLOSE_CURLY">}</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_ELSE">else</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="286">
+        <token name="T_WHITESPACE">            </token>
+        <token name="T_VARIABLE">$this</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
         <token name="T_STRING">isAdmin</token>
         <token name="T_WHITESPACE"> </token>
         <token name="T_EQUAL">=</token>
@@ -2143,12 +2211,12 @@
         <token name="T_STRING">false</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="280">
+      <line no="287">
         <token name="T_WHITESPACE">        </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="281"/>
-      <line no="282">
+      <line no="288"/>
+      <line no="289">
         <token name="T_WHITESPACE">        </token>
         <token name="T_IF">if</token>
         <token name="T_WHITESPACE"> </token>
@@ -2162,7 +2230,7 @@
         <token name="T_WHITESPACE"> </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="283">
+      <line no="290">
         <token name="T_WHITESPACE">            </token>
         <token name="T_VARIABLE">$this</token>
         <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -2181,7 +2249,7 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="284">
+      <line no="291">
         <token name="T_WHITESPACE">        </token>
         <token name="T_CLOSE_CURLY">}</token>
         <token name="T_WHITESPACE"> </token>
@@ -2189,7 +2257,7 @@
         <token name="T_WHITESPACE"> </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="285">
+      <line no="292">
         <token name="T_WHITESPACE">            </token>
         <token name="T_VARIABLE">$this</token>
         <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -2200,12 +2268,12 @@
         <token name="T_STRING">false</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="286">
+      <line no="293">
         <token name="T_WHITESPACE">        </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="287"/>
-      <line no="288">
+      <line no="294"/>
+      <line no="295">
         <token name="T_WHITESPACE">        </token>
         <token name="T_IF">if</token>
         <token name="T_WHITESPACE"> </token>
@@ -2219,7 +2287,7 @@
         <token name="T_WHITESPACE"> </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="289">
+      <line no="296">
         <token name="T_WHITESPACE">            </token>
         <token name="T_VARIABLE">$this</token>
         <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -2238,7 +2306,7 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="290">
+      <line no="297">
         <token name="T_WHITESPACE">            </token>
         <token name="T_IF">if</token>
         <token name="T_WHITESPACE"> </token>
@@ -2250,7 +2318,7 @@
         <token name="T_WHITESPACE"> </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="291">
+      <line no="298">
         <token name="T_WHITESPACE">                </token>
         <token name="T_VARIABLE">$this</token>
         <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -2266,7 +2334,7 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="292">
+      <line no="299">
         <token name="T_WHITESPACE">                </token>
         <token name="T_IF">if</token>
         <token name="T_WHITESPACE"> </token>
@@ -2280,7 +2348,7 @@
         <token name="T_WHITESPACE"> </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="293">
+      <line no="300">
         <token name="T_WHITESPACE">                    </token>
         <token name="T_VARIABLE">$this</token>
         <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -2296,11 +2364,11 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="294">
+      <line no="301">
         <token name="T_WHITESPACE">                </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="295">
+      <line no="302">
         <token name="T_WHITESPACE">                </token>
         <token name="T_VARIABLE">$this</token>
         <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -2316,7 +2384,7 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="296">
+      <line no="303">
         <token name="T_WHITESPACE">                </token>
         <token name="T_VARIABLE">$this</token>
         <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -2332,7 +2400,7 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="297">
+      <line no="304">
         <token name="T_WHITESPACE">                </token>
         <token name="T_IF">if</token>
         <token name="T_WHITESPACE"> </token>
@@ -2347,7 +2415,7 @@
         <token name="T_WHITESPACE"> </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="298">
+      <line no="305">
         <token name="T_WHITESPACE">                    </token>
         <token name="T_VARIABLE">$this</token>
         <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -2358,15 +2426,15 @@
         <token name="T_STRING">true</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="299">
+      <line no="306">
         <token name="T_WHITESPACE">                </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="300">
+      <line no="307">
         <token name="T_WHITESPACE">            </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="301">
+      <line no="308">
         <token name="T_WHITESPACE">        </token>
         <token name="T_CLOSE_CURLY">}</token>
         <token name="T_WHITESPACE"> </token>
@@ -2374,7 +2442,7 @@
         <token name="T_WHITESPACE"> </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="302">
+      <line no="309">
         <token name="T_WHITESPACE">            </token>
         <token name="T_VARIABLE">$this</token>
         <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -2385,7 +2453,7 @@
         <token name="T_STRING">false</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="303">
+      <line no="310">
         <token name="T_WHITESPACE">            </token>
         <token name="T_VARIABLE">$this</token>
         <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -2396,7 +2464,7 @@
         <token name="T_STRING">false</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="304">
+      <line no="311">
         <token name="T_WHITESPACE">            </token>
         <token name="T_VARIABLE">$this</token>
         <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -2407,7 +2475,7 @@
         <token name="T_STRING">false</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="305">
+      <line no="312">
         <token name="T_WHITESPACE">            </token>
         <token name="T_VARIABLE">$this</token>
         <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -2418,12 +2486,12 @@
         <token name="T_STRING">false</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="306">
+      <line no="313">
         <token name="T_WHITESPACE">        </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="307"/>
-      <line no="308">
+      <line no="314"/>
+      <line no="315">
         <token name="T_WHITESPACE">        </token>
         <token name="T_IF">if</token>
         <token name="T_WHITESPACE"> </token>
@@ -2439,7 +2507,7 @@
         <token name="T_WHITESPACE"> </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="309">
+      <line no="316">
         <token name="T_WHITESPACE">            </token>
         <token name="T_VARIABLE">$this</token>
         <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -2449,12 +2517,12 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="310">
+      <line no="317">
         <token name="T_WHITESPACE">        </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="311"/>
-      <line no="312">
+      <line no="318"/>
+      <line no="319">
         <token name="T_WHITESPACE">        </token>
         <token name="T_IF">if</token>
         <token name="T_WHITESPACE"> </token>
@@ -2468,7 +2536,7 @@
         <token name="T_WHITESPACE"> </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="313">
+      <line no="320">
         <token name="T_WHITESPACE">            </token>
         <token name="T_VARIABLE">$this</token>
         <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -2503,12 +2571,12 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="314">
+      <line no="321">
         <token name="T_WHITESPACE">        </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="315"/>
-      <line no="316">
+      <line no="322"/>
+      <line no="323">
         <token name="T_WHITESPACE">        </token>
         <token name="T_VARIABLE">$this</token>
         <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -2519,20 +2587,20 @@
         <token name="T_STRING">true</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="317"/>
-      <line no="318">
+      <line no="324"/>
+      <line no="325">
         <token name="T_WHITESPACE">        </token>
         <token name="T_RETURN">return</token>
         <token name="T_WHITESPACE"> </token>
         <token name="T_VARIABLE">$this</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="319">
+      <line no="326">
         <token name="T_WHITESPACE">    </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="320"/>
-      <line no="321">
+      <line no="327"/>
+      <line no="328">
         <token name="T_WHITESPACE">    </token>
         <token name="T_PUBLIC">public</token>
         <token name="T_WHITESPACE"> </token>
@@ -2548,11 +2616,11 @@
         <token name="T_WHITESPACE"> </token>
         <token name="T_STRING">void</token>
       </line>
-      <line no="322">
+      <line no="329">
         <token name="T_WHITESPACE">    </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="323">
+      <line no="330">
         <token name="T_WHITESPACE">        </token>
         <token name="T_VARIABLE">$email</token>
         <token name="T_WHITESPACE"> </token>
@@ -2566,7 +2634,7 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="324">
+      <line no="331">
         <token name="T_WHITESPACE">        </token>
         <token name="T_VARIABLE">$managers</token>
         <token name="T_WHITESPACE"> </token>
@@ -2578,71 +2646,6 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="325">
-        <token name="T_WHITESPACE">        </token>
-        <token name="T_IF">if</token>
-        <token name="T_WHITESPACE"> </token>
-        <token name="T_OPEN_BRACKET">(</token>
-        <token name="T_STRING">is_array</token>
-        <token name="T_OPEN_BRACKET">(</token>
-        <token name="T_VARIABLE">$managers</token>
-        <token name="T_CLOSE_BRACKET">)</token>
-        <token name="T_CLOSE_BRACKET">)</token>
-        <token name="T_WHITESPACE"> </token>
-        <token name="T_OPEN_CURLY">{</token>
-      </line>
-      <line no="326">
-        <token name="T_WHITESPACE">            </token>
-        <token name="T_IF">if</token>
-        <token name="T_WHITESPACE"> </token>
-        <token name="T_OPEN_BRACKET">(</token>
-        <token name="T_VARIABLE">$email</token>
-        <token name="T_WHITESPACE"> </token>
-        <token name="T_BOOLEAN_AND">&amp;&amp;</token>
-        <token name="T_WHITESPACE"> </token>
-        <token name="T_STRING">in_array</token>
-        <token name="T_OPEN_BRACKET">(</token>
-        <token name="T_VARIABLE">$email</token>
-        <token name="T_COMMA">,</token>
-        <token name="T_WHITESPACE"> </token>
-        <token name="T_VARIABLE">$managers</token>
-        <token name="T_CLOSE_BRACKET">)</token>
-        <token name="T_CLOSE_BRACKET">)</token>
-        <token name="T_WHITESPACE"> </token>
-        <token name="T_OPEN_CURLY">{</token>
-      </line>
-      <line no="327">
-        <token name="T_WHITESPACE">                </token>
-        <token name="T_VARIABLE">$this</token>
-        <token name="T_OBJECT_OPERATOR">-&gt;</token>
-        <token name="T_STRING">isManager</token>
-        <token name="T_WHITESPACE"> </token>
-        <token name="T_EQUAL">=</token>
-        <token name="T_WHITESPACE"> </token>
-        <token name="T_STRING">true</token>
-        <token name="T_SEMICOLON">;</token>
-      </line>
-      <line no="328">
-        <token name="T_WHITESPACE">            </token>
-        <token name="T_CLOSE_CURLY">}</token>
-      </line>
-      <line no="329">
-        <token name="T_WHITESPACE">        </token>
-        <token name="T_CLOSE_CURLY">}</token>
-      </line>
-      <line no="330"/>
-      <line no="331">
-        <token name="T_WHITESPACE">        </token>
-        <token name="T_VARIABLE">$admins</token>
-        <token name="T_WHITESPACE"> </token>
-        <token name="T_EQUAL">=</token>
-        <token name="T_WHITESPACE"> </token>
-        <token name="T_STRING">config</token>
-        <token name="T_OPEN_BRACKET">(</token>
-        <token name="T_CONSTANT_ENCAPSED_STRING">'playground-auth.admins'</token>
-        <token name="T_CLOSE_BRACKET">)</token>
-        <token name="T_SEMICOLON">;</token>
-      </line>
       <line no="332">
         <token name="T_WHITESPACE">        </token>
         <token name="T_IF">if</token>
@@ -2650,7 +2653,7 @@
         <token name="T_OPEN_BRACKET">(</token>
         <token name="T_STRING">is_array</token>
         <token name="T_OPEN_BRACKET">(</token>
-        <token name="T_VARIABLE">$admins</token>
+        <token name="T_VARIABLE">$managers</token>
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_WHITESPACE"> </token>
@@ -2670,7 +2673,7 @@
         <token name="T_VARIABLE">$email</token>
         <token name="T_COMMA">,</token>
         <token name="T_WHITESPACE"> </token>
-        <token name="T_VARIABLE">$admins</token>
+        <token name="T_VARIABLE">$managers</token>
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_WHITESPACE"> </token>
@@ -2680,7 +2683,7 @@
         <token name="T_WHITESPACE">                </token>
         <token name="T_VARIABLE">$this</token>
         <token name="T_OBJECT_OPERATOR">-&gt;</token>
-        <token name="T_STRING">isAdmin</token>
+        <token name="T_STRING">isManager</token>
         <token name="T_WHITESPACE"> </token>
         <token name="T_EQUAL">=</token>
         <token name="T_WHITESPACE"> </token>
@@ -2695,22 +2698,87 @@
         <token name="T_WHITESPACE">        </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="337">
+      <line no="337"/>
+      <line no="338">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_VARIABLE">$admins</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EQUAL">=</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">config</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'playground-auth.admins'</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="339">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_IF">if</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_STRING">is_array</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_VARIABLE">$admins</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="340">
+        <token name="T_WHITESPACE">            </token>
+        <token name="T_IF">if</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_VARIABLE">$email</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_BOOLEAN_AND">&amp;&amp;</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">in_array</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_VARIABLE">$email</token>
+        <token name="T_COMMA">,</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$admins</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_OPEN_CURLY">{</token>
+      </line>
+      <line no="341">
+        <token name="T_WHITESPACE">                </token>
+        <token name="T_VARIABLE">$this</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
+        <token name="T_STRING">isAdmin</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EQUAL">=</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">true</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="342">
+        <token name="T_WHITESPACE">            </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="343">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_CLOSE_CURLY">}</token>
+      </line>
+      <line no="344">
         <token name="T_WHITESPACE">    </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="338"/>
-      <line no="339">
+      <line no="345"/>
+      <line no="346">
         <token name="T_WHITESPACE">    </token>
         <token name="T_DOC_COMMENT">/**</token>
       </line>
-      <line no="340">
+      <line no="347">
         <token name="T_DOC_COMMENT">     * @return array&lt;string, ?string&gt; Returns tokens for authorization.</token>
       </line>
-      <line no="341">
+      <line no="348">
         <token name="T_DOC_COMMENT">     */</token>
       </line>
-      <line no="342">
+      <line no="349">
         <token name="T_WHITESPACE">    </token>
         <token name="T_PUBLIC">public</token>
         <token name="T_WHITESPACE"> </token>
@@ -2726,11 +2794,11 @@
         <token name="T_WHITESPACE"> </token>
         <token name="T_ARRAY">array</token>
       </line>
-      <line no="343">
+      <line no="350">
         <token name="T_WHITESPACE">    </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="344">
+      <line no="351">
         <token name="T_WHITESPACE">        </token>
         <token name="T_VARIABLE">$this</token>
         <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -2740,8 +2808,8 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="345"/>
-      <line no="346">
+      <line no="352"/>
+      <line no="353">
         <token name="T_WHITESPACE">        </token>
         <token name="T_IF">if</token>
         <token name="T_WHITESPACE"> </token>
@@ -2759,7 +2827,7 @@
         <token name="T_WHITESPACE"> </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="347">
+      <line no="354">
         <token name="T_WHITESPACE">            </token>
         <token name="T_VARIABLE">$tokens</token>
         <token name="T_WHITESPACE"> </token>
@@ -2773,7 +2841,7 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="348">
+      <line no="355">
         <token name="T_WHITESPACE">        </token>
         <token name="T_CLOSE_CURLY">}</token>
         <token name="T_WHITESPACE"> </token>
@@ -2781,7 +2849,7 @@
         <token name="T_WHITESPACE"> </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="349">
+      <line no="356">
         <token name="T_WHITESPACE">            </token>
         <token name="T_VARIABLE">$tokens</token>
         <token name="T_WHITESPACE"> </token>
@@ -2791,34 +2859,34 @@
         <token name="T_CLOSE_SQUARE">]</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="350">
+      <line no="357">
         <token name="T_WHITESPACE">        </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="351"/>
-      <line no="352">
+      <line no="358"/>
+      <line no="359">
         <token name="T_WHITESPACE">        </token>
         <token name="T_RETURN">return</token>
         <token name="T_WHITESPACE"> </token>
         <token name="T_VARIABLE">$tokens</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="353">
+      <line no="360">
         <token name="T_WHITESPACE">    </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="354"/>
-      <line no="355">
+      <line no="361"/>
+      <line no="362">
         <token name="T_WHITESPACE">    </token>
         <token name="T_DOC_COMMENT">/**</token>
       </line>
-      <line no="356">
+      <line no="363">
         <token name="T_DOC_COMMENT">     * @return array&lt;string, ?string&gt;</token>
       </line>
-      <line no="357">
+      <line no="364">
         <token name="T_DOC_COMMENT">     */</token>
       </line>
-      <line no="358">
+      <line no="365">
         <token name="T_WHITESPACE">    </token>
         <token name="T_PUBLIC">public</token>
         <token name="T_WHITESPACE"> </token>
@@ -2834,21 +2902,21 @@
         <token name="T_WHITESPACE"> </token>
         <token name="T_ARRAY">array</token>
       </line>
-      <line no="359">
+      <line no="366">
         <token name="T_WHITESPACE">    </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="360">
+      <line no="367">
         <token name="T_WHITESPACE">        </token>
         <token name="T_DOC_COMMENT">/**</token>
       </line>
-      <line no="361">
+      <line no="368">
         <token name="T_DOC_COMMENT">         * @var array&lt;string, mixed&gt; $config</token>
       </line>
-      <line no="362">
+      <line no="369">
         <token name="T_DOC_COMMENT">         */</token>
       </line>
-      <line no="363">
+      <line no="370">
         <token name="T_WHITESPACE">        </token>
         <token name="T_VARIABLE">$config</token>
         <token name="T_WHITESPACE"> </token>
@@ -2860,8 +2928,8 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="364"/>
-      <line no="365">
+      <line no="371"/>
+      <line no="372">
         <token name="T_WHITESPACE">        </token>
         <token name="T_VARIABLE">$this</token>
         <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -2871,8 +2939,18 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="366"/>
-      <line no="367">
+      <line no="373"/>
+      <line no="374">
+        <token name="T_WHITESPACE">        </token>
+        <token name="T_DOC_COMMENT">/**</token>
+      </line>
+      <line no="375">
+        <token name="T_DOC_COMMENT">         * @var array&lt;string, ?string&gt; $tokens</token>
+      </line>
+      <line no="376">
+        <token name="T_DOC_COMMENT">         */</token>
+      </line>
+      <line no="377">
         <token name="T_WHITESPACE">        </token>
         <token name="T_VARIABLE">$tokens</token>
         <token name="T_WHITESPACE"> </token>
@@ -2882,8 +2960,8 @@
         <token name="T_CLOSE_SQUARE">]</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="368"/>
-      <line no="369">
+      <line no="378"/>
+      <line no="379">
         <token name="T_WHITESPACE">        </token>
         <token name="T_IF">if</token>
         <token name="T_WHITESPACE"> </token>
@@ -2897,7 +2975,7 @@
         <token name="T_WHITESPACE"> </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="370">
+      <line no="380">
         <token name="T_WHITESPACE">            </token>
         <token name="T_STRING">Log</token>
         <token name="T_DOUBLE_COLON">::</token>
@@ -2910,20 +2988,20 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="371"/>
-      <line no="372">
+      <line no="381"/>
+      <line no="382">
         <token name="T_WHITESPACE">            </token>
         <token name="T_RETURN">return</token>
         <token name="T_WHITESPACE"> </token>
         <token name="T_VARIABLE">$tokens</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="373">
+      <line no="383">
         <token name="T_WHITESPACE">        </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="374"/>
-      <line no="375">
+      <line no="384"/>
+      <line no="385">
         <token name="T_WHITESPACE">        </token>
         <token name="T_VARIABLE">$name</token>
         <token name="T_WHITESPACE"> </token>
@@ -2932,7 +3010,7 @@
         <token name="T_CONSTANT_ENCAPSED_STRING">'app'</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="376">
+      <line no="386">
         <token name="T_WHITESPACE">        </token>
         <token name="T_IF">if</token>
         <token name="T_WHITESPACE"> </token>
@@ -2960,7 +3038,7 @@
         <token name="T_WHITESPACE"> </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="377">
+      <line no="387">
         <token name="T_WHITESPACE">            </token>
         <token name="T_VARIABLE">$name</token>
         <token name="T_WHITESPACE"> </token>
@@ -2972,16 +3050,16 @@
         <token name="T_CLOSE_SQUARE">]</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="378">
+      <line no="388">
         <token name="T_WHITESPACE">        </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="379"/>
-      <line no="380">
+      <line no="389"/>
+      <line no="390">
         <token name="T_WHITESPACE">        </token>
         <token name="T_COMMENT">// https://github.com/laravel/sanctum/pull/498</token>
       </line>
-      <line no="381">
+      <line no="391">
         <token name="T_WHITESPACE">        </token>
         <token name="T_VARIABLE">$expiresAt</token>
         <token name="T_WHITESPACE"> </token>
@@ -2990,7 +3068,7 @@
         <token name="T_STRING">null</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="382">
+      <line no="392">
         <token name="T_WHITESPACE">        </token>
         <token name="T_IF">if</token>
         <token name="T_WHITESPACE"> </token>
@@ -3018,7 +3096,7 @@
         <token name="T_WHITESPACE"> </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="383">
+      <line no="393">
         <token name="T_WHITESPACE">            </token>
         <token name="T_VARIABLE">$expiresAt</token>
         <token name="T_WHITESPACE"> </token>
@@ -3035,12 +3113,12 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="384">
+      <line no="394">
         <token name="T_WHITESPACE">        </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="385"/>
-      <line no="386">
+      <line no="395"/>
+      <line no="396">
         <token name="T_WHITESPACE">        </token>
         <token name="T_IF">if</token>
         <token name="T_WHITESPACE"> </token>
@@ -3054,16 +3132,21 @@
         <token name="T_CONSTANT_ENCAPSED_STRING">'createToken'</token>
         <token name="T_CLOSE_SQUARE">]</token>
         <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_BOOLEAN_AND">&amp;&amp;</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$user</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_INSTANCEOF">instanceof</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">HasApiTokens</token>
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_WHITESPACE"> </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="387">
+      <line no="397">
         <token name="T_WHITESPACE">            </token>
-        <token name="T_VARIABLE">$tokens</token>
-        <token name="T_OPEN_SQUARE">[</token>
-        <token name="T_VARIABLE">$name</token>
-        <token name="T_CLOSE_SQUARE">]</token>
+        <token name="T_VARIABLE">$createdToken</token>
         <token name="T_WHITESPACE"> </token>
         <token name="T_EQUAL">=</token>
         <token name="T_WHITESPACE"> </token>
@@ -3072,12 +3155,12 @@
         <token name="T_STRING">createToken</token>
         <token name="T_OPEN_BRACKET">(</token>
       </line>
-      <line no="388">
+      <line no="398">
         <token name="T_WHITESPACE">                </token>
         <token name="T_VARIABLE">$name</token>
         <token name="T_COMMA">,</token>
       </line>
-      <line no="389">
+      <line no="399">
         <token name="T_WHITESPACE">                </token>
         <token name="T_VARIABLE">$this</token>
         <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -3087,37 +3170,61 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_COMMA">,</token>
       </line>
-      <line no="390">
+      <line no="400">
         <token name="T_WHITESPACE">                </token>
         <token name="T_VARIABLE">$expiresAt</token>
       </line>
-      <line no="391">
+      <line no="401">
         <token name="T_WHITESPACE">            </token>
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_OBJECT_OPERATOR">-&gt;</token>
         <token name="T_STRING">plainTextToken</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="392">
+      <line no="402"/>
+      <line no="403">
+        <token name="T_WHITESPACE">            </token>
+        <token name="T_VARIABLE">$tokens</token>
+        <token name="T_OPEN_SQUARE">[</token>
+        <token name="T_VARIABLE">$name</token>
+        <token name="T_CLOSE_SQUARE">]</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_EQUAL">=</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">is_string</token>
+        <token name="T_OPEN_BRACKET">(</token>
+        <token name="T_VARIABLE">$createdToken</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_QUESTION_MARK">?</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$createdToken</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_COLON">:</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">null</token>
+        <token name="T_SEMICOLON">;</token>
+      </line>
+      <line no="404">
         <token name="T_WHITESPACE">        </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="393"/>
-      <line no="394">
+      <line no="405"/>
+      <line no="406">
         <token name="T_WHITESPACE">        </token>
         <token name="T_RETURN">return</token>
         <token name="T_WHITESPACE"> </token>
         <token name="T_VARIABLE">$tokens</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="395">
+      <line no="407">
         <token name="T_WHITESPACE">    </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="396">
+      <line no="408">
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="397"/>
+      <line no="409"/>
     </source>
   </file>
 </phpunit>

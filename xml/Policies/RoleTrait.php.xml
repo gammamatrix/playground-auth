@@ -2,19 +2,19 @@
 <phpunit xmlns="https://schema.phpunit.de/coverage/1.0">
   <file name="RoleTrait.php" path="/Policies">
     <totals>
-      <lines total="152" comments="34" code="118" executable="48" executed="48" percent="100.00"/>
+      <lines total="151" comments="34" code="117" executable="47" executed="47" percent="100.00"/>
       <methods count="5" tested="5" percent="100.00"/>
       <functions count="0" tested="0" percent="0"/>
       <classes count="0" tested="1" percent="0"/>
       <traits count="1" tested="0" percent="0.00"/>
     </totals>
-    <trait name="Playground\Auth\Policies\RoleTrait" start="16" executable="48" executed="48" crap="23">
+    <trait name="Playground\Auth\Policies\RoleTrait" start="16" executable="47" executed="47" crap="22">
       <namespace name="Playground\Auth\Policies"/>
       <method name="getRolesForAdmin" signature="getRolesForAdmin(): array" start="50" end="53" crap="1" executable="1" executed="1" coverage="100"/>
       <method name="getRolesForAction" signature="getRolesForAction(): array" start="60" end="63" crap="1" executable="1" executed="1" coverage="100"/>
       <method name="isRoot" signature="isRoot(Illuminate\Contracts\Auth\Authenticatable $user): bool" start="65" end="74" crap="2" executable="4" executed="4" coverage="100"/>
       <method name="getRolesToView" signature="getRolesToView(): array" start="81" end="84" crap="1" executable="1" executed="1" coverage="100"/>
-      <method name="hasRole" signature="hasRole(Illuminate\Contracts\Auth\Authenticatable $user, string $ability): bool|\Illuminate\Auth\Access\Response" start="86" end="150" crap="18" executable="41" executed="41" coverage="100"/>
+      <method name="hasRole" signature="hasRole(Illuminate\Contracts\Auth\Authenticatable $user, string $ability): bool|\Illuminate\Auth\Access\Response" start="86" end="149" crap="17" executable="40" executed="40" coverage="100"/>
     </trait>
     <coverage>
       <line nr="52">
@@ -431,20 +431,7 @@
         <covered by="Tests\Unit\Playground\Auth\Policies\Policy\AbstractTest::test_view_without_role"/>
         <covered by="Tests\Unit\Playground\Auth\Policies\Policy\AbstractTest::test_view_with_admin_in_roles"/>
       </line>
-      <line nr="139">
-        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_create_without_role"/>
-        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_delete_without_role"/>
-        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_detail_without_role"/>
-        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_edit_without_role"/>
-        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_force_delete_without_role"/>
-        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_lock_without_role"/>
-        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_manage_without_role"/>
-        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_restore_without_role"/>
-        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_store_without_role"/>
-        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_update_without_role"/>
-        <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_unlock_without_role"/>
-        <covered by="Tests\Unit\Playground\Auth\Policies\Policy\AbstractTest::test_index_without_role"/>
-        <covered by="Tests\Unit\Playground\Auth\Policies\Policy\AbstractTest::test_view_without_role"/>
+      <line nr="140">
         <covered by="Tests\Unit\Playground\Auth\Policies\Policy\AbstractTest::test_view_with_admin_in_roles"/>
       </line>
       <line nr="141">
@@ -453,10 +440,7 @@
       <line nr="142">
         <covered by="Tests\Unit\Playground\Auth\Policies\Policy\AbstractTest::test_view_with_admin_in_roles"/>
       </line>
-      <line nr="143">
-        <covered by="Tests\Unit\Playground\Auth\Policies\Policy\AbstractTest::test_view_with_admin_in_roles"/>
-      </line>
-      <line nr="149">
+      <line nr="148">
         <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_create_without_role"/>
         <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_delete_without_role"/>
         <covered by="Tests\Unit\Playground\Auth\Policies\ModelPolicy\AbstractRoleTest::test_detail_without_role"/>
@@ -1639,15 +1623,6 @@
         <token name="T_IF">if</token>
         <token name="T_WHITESPACE"> </token>
         <token name="T_OPEN_BRACKET">(</token>
-        <token name="T_STRING">is_array</token>
-        <token name="T_OPEN_BRACKET">(</token>
-        <token name="T_VARIABLE">$roles</token>
-        <token name="T_CLOSE_BRACKET">)</token>
-      </line>
-      <line no="138">
-        <token name="T_WHITESPACE">                </token>
-        <token name="T_BOOLEAN_AND">&amp;&amp;</token>
-        <token name="T_WHITESPACE"> </token>
         <token name="T_EXCLAMATION_MARK">!</token>
         <token name="T_WHITESPACE"> </token>
         <token name="T_EMPTY">empty</token>
@@ -1657,7 +1632,7 @@
         <token name="T_STRING">roles</token>
         <token name="T_CLOSE_BRACKET">)</token>
       </line>
-      <line no="139">
+      <line no="138">
         <token name="T_WHITESPACE">            </token>
         <token name="T_BOOLEAN_AND">&amp;&amp;</token>
         <token name="T_WHITESPACE"> </token>
@@ -1668,13 +1643,13 @@
         <token name="T_STRING">roles</token>
         <token name="T_CLOSE_BRACKET">)</token>
       </line>
-      <line no="140">
+      <line no="139">
         <token name="T_WHITESPACE">            </token>
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_WHITESPACE"> </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="141">
+      <line no="140">
         <token name="T_WHITESPACE">                </token>
         <token name="T_FOREACH">foreach</token>
         <token name="T_WHITESPACE"> </token>
@@ -1688,7 +1663,7 @@
         <token name="T_WHITESPACE"> </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="142">
+      <line no="141">
         <token name="T_WHITESPACE">                    </token>
         <token name="T_IF">if</token>
         <token name="T_WHITESPACE"> </token>
@@ -1706,31 +1681,31 @@
         <token name="T_WHITESPACE"> </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="143">
+      <line no="142">
         <token name="T_WHITESPACE">                        </token>
         <token name="T_RETURN">return</token>
         <token name="T_WHITESPACE"> </token>
         <token name="T_STRING">true</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="144">
+      <line no="143">
         <token name="T_WHITESPACE">                    </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="145">
+      <line no="144">
         <token name="T_WHITESPACE">                </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="146">
+      <line no="145">
         <token name="T_WHITESPACE">            </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="147">
+      <line no="146">
         <token name="T_WHITESPACE">        </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="148"/>
-      <line no="149">
+      <line no="147"/>
+      <line no="148">
         <token name="T_WHITESPACE">        </token>
         <token name="T_RETURN">return</token>
         <token name="T_WHITESPACE"> </token>
@@ -1748,14 +1723,14 @@
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="150">
+      <line no="149">
         <token name="T_WHITESPACE">    </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="151">
+      <line no="150">
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="152"/>
+      <line no="151"/>
     </source>
   </file>
 </phpunit>

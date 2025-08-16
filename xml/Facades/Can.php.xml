@@ -2,7 +2,7 @@
 <phpunit xmlns="https://schema.phpunit.de/coverage/1.0">
   <file name="Can.php" path="/Facades">
     <totals>
-      <lines total="35" comments="17" code="18" executable="1" executed="0" percent="0.00"/>
+      <lines total="33" comments="15" code="18" executable="1" executed="0" percent="0.00"/>
       <methods count="1" tested="0" percent="0.00"/>
       <functions count="0" tested="0" percent="0"/>
       <classes count="1" tested="0" percent="0.00"/>
@@ -10,7 +10,7 @@
     </totals>
     <class name="Playground\Auth\Facades\Can" start="21" executable="1" executed="0" crap="2">
       <namespace name="Playground\Auth\Facades"/>
-      <method name="getFacadeAccessor" signature="getFacadeAccessor()" start="30" end="33" crap="2" executable="1" executed="0" coverage="0"/>
+      <method name="getFacadeAccessor" signature="getFacadeAccessor()" start="28" end="31" crap="2" executable="1" executed="0" coverage="0"/>
     </class>
     <source>
       <line no="1">
@@ -72,13 +72,13 @@
         <token name="T_DOC_COMMENT"> *</token>
       </line>
       <line no="17">
-        <token name="T_DOC_COMMENT"> * @method static Permission access(?Authenticatable $user, array $_privileges)</token>
+        <token name="T_DOC_COMMENT"> * @method static Permission access(?Authenticatable $user, array&lt;string, mixed&gt; $options)</token>
       </line>
       <line no="18">
-        <token name="T_DOC_COMMENT"> * @method static array&lt;string, Permission&gt; map(array $privileges, ?Authenticatable $user)</token>
+        <token name="T_DOC_COMMENT"> * @method static array&lt;string, Permission&gt; map(array&lt;string, mixed&gt; $privileges, ?Authenticatable $user)</token>
       </line>
       <line no="19">
-        <token name="T_DOC_COMMENT"> * @method static string withPrivilege(array $meta)</token>
+        <token name="T_DOC_COMMENT"> * @method static string withPrivilege(array&lt;string, mixed&gt; $meta)</token>
       </line>
       <line no="20">
         <token name="T_DOC_COMMENT"> */</token>
@@ -109,15 +109,9 @@
         <token name="T_DOC_COMMENT">     * @return string</token>
       </line>
       <line no="27">
-        <token name="T_DOC_COMMENT">     *</token>
-      </line>
-      <line no="28">
-        <token name="T_DOC_COMMENT">     * @throws \RuntimeException</token>
-      </line>
-      <line no="29">
         <token name="T_DOC_COMMENT">     */</token>
       </line>
-      <line no="30">
+      <line no="28">
         <token name="T_WHITESPACE">    </token>
         <token name="T_PROTECTED">protected</token>
         <token name="T_WHITESPACE"> </token>
@@ -129,25 +123,25 @@
         <token name="T_OPEN_BRACKET">(</token>
         <token name="T_CLOSE_BRACKET">)</token>
       </line>
-      <line no="31">
+      <line no="29">
         <token name="T_WHITESPACE">    </token>
         <token name="T_OPEN_CURLY">{</token>
       </line>
-      <line no="32">
+      <line no="30">
         <token name="T_WHITESPACE">        </token>
         <token name="T_RETURN">return</token>
         <token name="T_WHITESPACE"> </token>
         <token name="T_CONSTANT_ENCAPSED_STRING">'playground-auth-can'</token>
         <token name="T_SEMICOLON">;</token>
       </line>
-      <line no="33">
+      <line no="31">
         <token name="T_WHITESPACE">    </token>
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="34">
+      <line no="32">
         <token name="T_CLOSE_CURLY">}</token>
       </line>
-      <line no="35"/>
+      <line no="33"/>
     </source>
   </file>
 </phpunit>

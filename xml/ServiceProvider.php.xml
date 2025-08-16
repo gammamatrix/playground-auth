@@ -8,11 +8,11 @@
       <classes count="1" tested="0" percent="0.00"/>
       <traits count="0" tested="0" percent="0"/>
     </totals>
-    <class name="Playground\Auth\ServiceProvider" start="16" executable="87" executed="81" crap="57.03">
+    <class name="Playground\Auth\ServiceProvider" start="16" executable="87" executed="81" crap="60.14">
       <namespace name="Playground\Auth"/>
       <method name="boot" signature="boot()" start="28" end="59" crap="6" executable="16" executed="16" coverage="100"/>
       <method name="register" signature="register(): void" start="64" end="74" crap="1.00" executable="7" executed="6" coverage="85.714285714286"/>
-      <method name="about" signature="about(): void" start="76" end="171" crap="49.15" executable="63" executed="58" coverage="92.063492063492"/>
+      <method name="about" signature="about(): void" start="76" end="171" crap="52.30" executable="63" executed="58" coverage="92.063492063492"/>
       <method name="version" signature="version(): string" start="173" end="176" crap="1" executable="1" executed="1" coverage="100"/>
     </class>
     <coverage>
@@ -5110,11 +5110,13 @@
         <token name="T_WHITESPACE"> </token>
         <token name="T_CONST">const</token>
         <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">string</token>
+        <token name="T_WHITESPACE"> </token>
         <token name="T_STRING">VERSION</token>
         <token name="T_WHITESPACE"> </token>
         <token name="T_EQUAL">=</token>
         <token name="T_WHITESPACE"> </token>
-        <token name="T_CONSTANT_ENCAPSED_STRING">'73.0.0'</token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'74.0.0'</token>
         <token name="T_SEMICOLON">;</token>
       </line>
       <line no="19"/>
@@ -6544,10 +6546,24 @@
         <token name="T_CONSTANT_ENCAPSED_STRING">'[%s]'</token>
         <token name="T_COMMA">,</token>
         <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">is_string</token>
+        <token name="T_OPEN_BRACKET">(</token>
         <token name="T_VARIABLE">$token</token>
         <token name="T_OPEN_SQUARE">[</token>
         <token name="T_CONSTANT_ENCAPSED_STRING">'abilities'</token>
         <token name="T_CLOSE_SQUARE">]</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_QUESTION_MARK">?</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$token</token>
+        <token name="T_OPEN_SQUARE">[</token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'abilities'</token>
+        <token name="T_CLOSE_SQUARE">]</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_COLON">:</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">''</token>
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_COMMA">,</token>
       </line>
@@ -6562,10 +6578,24 @@
         <token name="T_CONSTANT_ENCAPSED_STRING">'[%s]'</token>
         <token name="T_COMMA">,</token>
         <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">is_string</token>
+        <token name="T_OPEN_BRACKET">(</token>
         <token name="T_VARIABLE">$token</token>
         <token name="T_OPEN_SQUARE">[</token>
         <token name="T_CONSTANT_ENCAPSED_STRING">'expires'</token>
         <token name="T_CLOSE_SQUARE">]</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_QUESTION_MARK">?</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$token</token>
+        <token name="T_OPEN_SQUARE">[</token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'expires'</token>
+        <token name="T_CLOSE_SQUARE">]</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_COLON">:</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">''</token>
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_COMMA">,</token>
       </line>
@@ -6580,10 +6610,24 @@
         <token name="T_CONSTANT_ENCAPSED_STRING">'[%s]'</token>
         <token name="T_COMMA">,</token>
         <token name="T_WHITESPACE"> </token>
+        <token name="T_STRING">is_string</token>
+        <token name="T_OPEN_BRACKET">(</token>
         <token name="T_VARIABLE">$token</token>
         <token name="T_OPEN_SQUARE">[</token>
         <token name="T_CONSTANT_ENCAPSED_STRING">'name'</token>
         <token name="T_CLOSE_SQUARE">]</token>
+        <token name="T_CLOSE_BRACKET">)</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_QUESTION_MARK">?</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_VARIABLE">$token</token>
+        <token name="T_OPEN_SQUARE">[</token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">'name'</token>
+        <token name="T_CLOSE_SQUARE">]</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_COLON">:</token>
+        <token name="T_WHITESPACE"> </token>
+        <token name="T_CONSTANT_ENCAPSED_STRING">''</token>
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_COMMA">,</token>
       </line>

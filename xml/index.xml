@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <phpunit xmlns="https://schema.phpunit.de/coverage/1.0">
-  <build time="Wed Aug 6 14:45:08 UTC 2025" phpunit="11.0.10" coverage="11.0.3">
+  <build time="Sat Aug 16 1:04:15 UTC 2025" phpunit="11.0.10" coverage="11.0.3">
     <runtime name="PHP" version="8.4.11" url="https://www.php.net/"/>
     <driver name="xdebug" version="3.4.5"/>
   </build>
@@ -69,7 +69,7 @@
     </tests>
     <directory name="/">
       <totals>
-        <lines total="1849" comments="338" code="1511" executable="620" executed="227" percent="36.61"/>
+        <lines total="1863" comments="342" code="1521" executable="625" executed="226" percent="36.16"/>
         <methods count="56" tested="27" percent="48.21"/>
         <functions count="0" tested="0" percent="0"/>
         <classes count="8" tested="3" percent="37.50"/>
@@ -104,7 +104,7 @@
       </directory>
       <directory name="Facades">
         <totals>
-          <lines total="35" comments="17" code="18" executable="1" executed="0" percent="0.00"/>
+          <lines total="33" comments="15" code="18" executable="1" executed="0" percent="0.00"/>
           <methods count="1" tested="0" percent="0.00"/>
           <functions count="0" tested="0" percent="0"/>
           <classes count="1" tested="0" percent="0.00"/>
@@ -112,7 +112,7 @@
         </totals>
         <file name="Can.php" href="Facades/Can.php.xml">
           <totals>
-            <lines total="35" comments="17" code="18" executable="1" executed="0" percent="0.00"/>
+            <lines total="33" comments="15" code="18" executable="1" executed="0" percent="0.00"/>
             <methods count="1" tested="0" percent="0.00"/>
             <functions count="0" tested="0" percent="0"/>
             <classes count="1" tested="0" percent="0.00"/>
@@ -122,7 +122,7 @@
       </directory>
       <directory name="Policies">
         <totals>
-          <lines total="691" comments="183" code="508" executable="167" executed="131" percent="78.44"/>
+          <lines total="693" comments="186" code="507" executable="166" executed="130" percent="78.31"/>
           <methods count="29" tested="25" percent="86.21"/>
           <functions count="0" tested="0" percent="0"/>
           <classes count="2" tested="3" percent="150.00"/>
@@ -175,7 +175,7 @@
         </file>
         <file name="PrivilegeTrait.php" href="Policies/PrivilegeTrait.php.xml">
           <totals>
-            <lines total="164" comments="9" code="155" executable="67" executed="32" percent="47.76"/>
+            <lines total="167" comments="12" code="155" executable="67" executed="32" percent="47.76"/>
             <methods count="4" tested="1" percent="25.00"/>
             <functions count="0" tested="0" percent="0"/>
             <classes count="0" tested="0" percent="0"/>
@@ -184,7 +184,7 @@
         </file>
         <file name="RoleTrait.php" href="Policies/RoleTrait.php.xml">
           <totals>
-            <lines total="152" comments="34" code="118" executable="48" executed="48" percent="100.00"/>
+            <lines total="151" comments="34" code="117" executable="47" executed="47" percent="100.00"/>
             <methods count="5" tested="5" percent="100.00"/>
             <functions count="0" tested="0" percent="0"/>
             <classes count="0" tested="1" percent="0"/>
@@ -194,7 +194,7 @@
       </directory>
       <file name="Can.php" href="Can.php.xml">
         <totals>
-          <lines total="422" comments="37" code="385" executable="175" executed="0" percent="0.00"/>
+          <lines total="424" comments="37" code="387" executable="176" executed="0" percent="0.00"/>
           <methods count="8" tested="0" percent="0.00"/>
           <functions count="0" tested="0" percent="0"/>
           <classes count="1" tested="0" percent="0.00"/>
@@ -203,7 +203,7 @@
       </file>
       <file name="Issuer.php" href="Issuer.php.xml">
         <totals>
-          <lines total="397" comments="51" code="346" executable="167" executed="0" percent="0.00"/>
+          <lines total="409" comments="54" code="355" executable="172" executed="0" percent="0.00"/>
           <methods count="8" tested="0" percent="0.00"/>
           <functions count="0" tested="0" percent="0"/>
           <classes count="1" tested="0" percent="0.00"/>
