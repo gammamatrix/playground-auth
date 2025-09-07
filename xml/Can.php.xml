@@ -65,7 +65,7 @@
       <line no="12">
         <token name="T_USE">use</token>
         <token name="T_WHITESPACE"> </token>
-        <token name="T_NAME_QUALIFIED">Laravel\Sanctum\Contracts\HasAbilities</token>
+        <token name="T_NAME_QUALIFIED">Laravel\Sanctum\Contracts\HasApiTokens</token>
         <token name="T_SEMICOLON">;</token>
       </line>
       <line no="13">
@@ -2283,7 +2283,7 @@
         <token name="T_WHITESPACE"> </token>
         <token name="T_INSTANCEOF">instanceof</token>
         <token name="T_WHITESPACE"> </token>
-        <token name="T_STRING">HasAbilities</token>
+        <token name="T_STRING">HasApiTokens</token>
         <token name="T_CLOSE_BRACKET">)</token>
         <token name="T_WHITESPACE"> </token>
         <token name="T_OPEN_CURLY">{</token>

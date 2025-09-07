@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <phpunit xmlns="https://schema.phpunit.de/coverage/1.0">
-  <build time="Sat Aug 16 1:04:15 UTC 2025" phpunit="11.0.10" coverage="11.0.3">
-    <runtime name="PHP" version="8.4.11" url="https://www.php.net/"/>
+  <build time="Sun Sep 7 22:30:11 UTC 2025" phpunit="11.0.10" coverage="11.0.3">
+    <runtime name="PHP" version="8.4.12" url="https://www.php.net/"/>
     <driver name="xdebug" version="3.4.5"/>
   </build>
   <project source="/app/src">
