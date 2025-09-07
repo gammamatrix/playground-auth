@@ -23,12 +23,10 @@
     "require": {
         "php": "^8.4",
         "gammamatrix/playground": "dev-develop|dev-master|dev-feature/*|^74.0@dev|^74.0",
-        "illuminate/support": "^12.0"
+        "laravel/sanctum": "^4.2"
     },
     "require-dev": {
-        "gammamatrix/playground-test": "dev-develop|dev-master|dev-feature/*|^74.0@dev|^74.0",
-        "illuminate/testing": "^12.0",
-        "laravel/sanctum": "^4.2"
+        "gammamatrix/playground-test": "dev-develop|dev-master|dev-feature/*|^74.0@dev|^74.0"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,

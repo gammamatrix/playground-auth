@@ -9,7 +9,7 @@ namespace Playground\Auth;
 
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Support\Str;
-use Laravel\Sanctum\Contracts\HasAbilities;
+use Laravel\Sanctum\Contracts\HasApiTokens;
 use Laravel\Sanctum\PersonalAccessToken;
 
 /**
@@ -297,7 +297,7 @@ class Can
                 return $permission;
             }
 
-            if (! $this->sanctumToken && is_callable([$this->user, 'currentAccessToken']) && $this->user instanceof HasAbilities) {
+            if (! $this->sanctumToken && is_callable([$this->user, 'currentAccessToken']) && $this->user instanceof HasApiTokens) {
 
                 // Check if the user already has their token assigned.
                 $accessToken = $this->user->currentAccessToken();
