@@ -22,11 +22,12 @@
     ],
     "require": {
         "php": "^8.4",
-        "gammamatrix/playground": "dev-develop|dev-master|dev-feature/*|^74.0@dev|^74.0",
-        "laravel/sanctum": "^4.2"
+        "gammamatrix/playground": "75.x-dev",
+        "laravel/sanctum": "^4.3"
     },
     "require-dev": {
-        "gammamatrix/playground-test": "dev-develop|dev-master|dev-feature/*|^74.0@dev|^74.0"
+        "gammamatrix/playground-test": "75.x-dev",
+        "timacdonald/log-fake": "^2.4"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
@@ -50,7 +51,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-develop": "74.x-dev"
+            "dev-develop": "75.x-dev"
         },
         "laravel": {
             "providers": [

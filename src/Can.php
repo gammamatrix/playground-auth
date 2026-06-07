@@ -75,12 +75,12 @@ class Can
             return false;
         }
 
-        if ($user && ! $this->user) {
+        if (! $this->user) {
             return false;
         }
 
-        $currentUserId = $this->user?->getAttribute('id');
-        $userId = $user?->getAttribute('id');
+        $currentUserId = $this->user->getAttribute('id');
+        $userId = $user->getAttribute('id');
 
         return $currentUserId && $currentUserId === $userId;
     }
