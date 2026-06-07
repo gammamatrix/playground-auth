@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage line-rate="0.3616" branch-rate="0" lines-covered="226" lines-valid="625" branches-covered="0" branches-valid="0" complexity="349" version="0.4" timestamp="1757284211">
+<coverage line-rate="0.3616" branch-rate="0" lines-covered="226" lines-valid="625" branches-covered="0" branches-valid="0" complexity="348" version="0.4" timestamp="1780858991">
   <sources>
     <source>/app/src</source>
   </sources>
   <packages>
-    <package name="Can.php" line-rate="0" branch-rate="0" complexity="97">
+    <package name="Can.php" line-rate="0" branch-rate="0" complexity="96">
       <classes>
-        <class name="Playground\Auth\Can" filename="Can.php" line-rate="0" branch-rate="0" complexity="97">
+        <class name="Playground\Auth\Can" filename="Can.php" line-rate="0" branch-rate="0" complexity="96">
           <methods>
-            <method name="matches" signature="?Illuminate\Contracts\Auth\Authenticatable $user" line-rate="0" branch-rate="0" complexity="8">
+            <method name="matches" signature="?Illuminate\Contracts\Auth\Authenticatable $user" line-rate="0" branch-rate="0" complexity="7">
               <lines>
                 <line number="70" hits="0"/>
                 <line number="71" hits="0"/>

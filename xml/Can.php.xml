@@ -8,9 +8,9 @@
       <classes count="1" tested="0" percent="0.00"/>
       <traits count="0" tested="0" percent="0"/>
     </totals>
-    <class name="Playground\Auth\Can" start="26" executable="176" executed="0" crap="9506">
+    <class name="Playground\Auth\Can" start="26" executable="176" executed="0" crap="9312">
       <namespace name="Playground\Auth"/>
-      <method name="matches" signature="matches(?Illuminate\Contracts\Auth\Authenticatable $user): bool" start="68" end="86" crap="72" executable="9" executed="0" coverage="0"/>
+      <method name="matches" signature="matches(?Illuminate\Contracts\Auth\Authenticatable $user): bool" start="68" end="86" crap="56" executable="9" executed="0" coverage="0"/>
       <method name="init" signature="init(?Illuminate\Contracts\Auth\Authenticatable $user): self" start="88" end="146" crap="210" executable="34" executed="0" coverage="0"/>
       <method name="reset" signature="reset(?Illuminate\Contracts\Auth\Authenticatable $user): self" start="148" end="155" crap="2" executable="3" executed="0" coverage="0"/>
       <method name="isGuest" signature="isGuest(?Illuminate\Contracts\Auth\Authenticatable $user): bool" start="157" end="169" crap="20" executable="6" executed="0" coverage="0"/>
@@ -486,10 +486,6 @@
         <token name="T_IF">if</token>
         <token name="T_WHITESPACE"> </token>
         <token name="T_OPEN_BRACKET">(</token>
-        <token name="T_VARIABLE">$user</token>
-        <token name="T_WHITESPACE"> </token>
-        <token name="T_BOOLEAN_AND">&amp;&amp;</token>
-        <token name="T_WHITESPACE"> </token>
         <token name="T_EXCLAMATION_MARK">!</token>
         <token name="T_WHITESPACE"> </token>
         <token name="T_VARIABLE">$this</token>
@@ -520,7 +516,7 @@
         <token name="T_VARIABLE">$this</token>
         <token name="T_OBJECT_OPERATOR">-&gt;</token>
         <token name="T_STRING">user</token>
-        <token name="T_NULLSAFE_OBJECT_OPERATOR">?-&gt;</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
         <token name="T_STRING">getAttribute</token>
         <token name="T_OPEN_BRACKET">(</token>
         <token name="T_CONSTANT_ENCAPSED_STRING">'id'</token>
@@ -534,7 +530,7 @@
         <token name="T_EQUAL">=</token>
         <token name="T_WHITESPACE"> </token>
         <token name="T_VARIABLE">$user</token>
-        <token name="T_NULLSAFE_OBJECT_OPERATOR">?-&gt;</token>
+        <token name="T_OBJECT_OPERATOR">-&gt;</token>
         <token name="T_STRING">getAttribute</token>
         <token name="T_OPEN_BRACKET">(</token>
         <token name="T_CONSTANT_ENCAPSED_STRING">'id'</token>

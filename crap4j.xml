@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <crap_result>
   <project/>
-  <timestamp>2025-09-07 22:30:11</timestamp>
+  <timestamp>2026-06-07 19:03:11</timestamp>
   <stats>
     <name>Method Crap Stats</name>
     <methodCount>64</methodCount>
     <crapMethodCount>11</crapMethodCount>
-    <crapLoad>182</crapLoad>
-    <totalCrap>5141.94</totalCrap>
+    <crapLoad>181</crapLoad>
+    <totalCrap>5125.94</totalCrap>
     <crapMethodPercent>17.19</crapMethodPercent>
   </stats>
   <methods>
@@ -17,10 +17,10 @@
       <methodName>matches</methodName>
       <methodSignature>matches(?Illuminate\Contracts\Auth\Authenticatable $user): bool</methodSignature>
       <fullMethod>matches(?Illuminate\Contracts\Auth\Authenticatable $user): bool</fullMethod>
-      <crap>72</crap>
-      <complexity>8</complexity>
+      <crap>56</crap>
+      <complexity>7</complexity>
       <coverage>0</coverage>
-      <crapLoad>8</crapLoad>
+      <crapLoad>7</crapLoad>
     </method>
     <method>
       <package>Playground\Auth</package>
