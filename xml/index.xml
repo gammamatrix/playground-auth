@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <phpunit xmlns="https://schema.phpunit.de/coverage/1.0">
-  <build time="Sun Jun 7 19:03:11 UTC 2026" phpunit="11.0.10" coverage="11.0.3">
+  <build time="Mon Jun 8 15:41:46 UTC 2026" phpunit="11.0.10" coverage="11.0.3">
     <runtime name="PHP" version="8.4.22" url="https://www.php.net/"/>
-    <driver name="xdebug" version="3.5.1"/>
+    <driver name="xdebug" version="3.5.3"/>
   </build>
   <project source="/app/src">
     <tests>
