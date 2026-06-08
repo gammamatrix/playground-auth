@@ -63,7 +63,14 @@
         "analyse": "vendor/bin/phpstan analyse --verbose --debug --level max",
         "cloc": "cloc --exclude-dir=output,vendor .",
         "format": "vendor/bin/pint",
-        "test": "vendor/bin/phpunit",
-        "test-dev": "vendor/bin/phpunit -c phpunit-dev.xml"
+        "test": "vendor/bin/testbench package:test",
+        "test-dev": [
+            "Composer\\Config::disableProcessTimeout",
+            "vendor/bin/phpunit -c phpunit-dev.xml"
+        ],
+        "test-parallel": [
+            "Composer\\Config::disableProcessTimeout",
+            "vendor/bin/paratest -c phpunit-dev.xml"
+        ]
     }
 }

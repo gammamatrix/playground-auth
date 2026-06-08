@@ -15,7 +15,7 @@ use Illuminate\Foundation\Support\Providers\AuthServiceProvider;
  */
 class ServiceProvider extends AuthServiceProvider
 {
-    public const string VERSION = '74.0.0';
+    public const string VERSION = '75.0.0';
 
     protected string $package = 'playground-auth';
 
